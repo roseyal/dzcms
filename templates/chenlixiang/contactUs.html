@@ -1,0 +1,68 @@
+{include file="./templates/chenlixiang/header.html"}
+	
+    <div class="main"> 
+    	<h2>当前位置：首页>联系我们</h2>
+        	{Dz:nlist name='vo' cateid='5'}
+        <div class="left">
+            <ul>
+            	<li class="curr"><a href="#"><span></span>联系我们</a></li>
+            	<li><a href="#"><span></span>友情链接</a></li>
+                <li><a href="#"><span></span>购物问题</a></li>
+                <li><a href="#"><span></span>账户问题</a></li>
+            </ul>
+            <div class="ad">
+            	<div class="s01"><span></span><p>客服中心</p><span></span></div>
+                <div class="s02"><b><i></i></b></div>
+                <div class="s03"><p>电话：010-57203888</p><p>地址：北京市崇文区崇外大街正仁大厦1段9单元</p></div>
+            </div>
+            <div class="tel">
+            	<div class="box01"><span>服务热线</span><i></i><p>400-888-2837</p></div>
+            </div>
+            <div class="yin"><img src="/templates/chenlixiang/style/images/yin01.png" /> </div>
+        </div>
+        
+        
+        <div class="right">
+            <div class="box01">
+                <h4>化妆品</h4><h3>品牌火热招商中...</h3>
+                <div class="ad">
+
+                    <span><p>{$vo.title}</p><p>{$vo.shorttitle}</p></span>
+                    <a href="#">申请加盟化妆品<p></p></a>
+                </div>
+            </div>
+            <div class="box02">
+                <div id="dituContent"></div>
+                                              <div class="message">
+                                                  <span>在线留言</span>
+                                                  <input type="text" value="姓　　名：" class="name" />
+                                                  <input type="text" value="联系电话：" class="tel" />
+                                                  <input type="text" value="电子邮箱：" class="email" />
+                                                  <input type="text" value="留言内容：" class="messg" />
+                                                  <input type="submit" value="提交留言" class="sub" />
+                                             
+                        
+                     
+        {/Dz:nlist}  </div>
+        </div>
+        </div>
+    </div>
+    
+	
+    <div class="bottom">
+        <div class="bb">
+                <ul>
+                    <li><a href="index.html">首页</a></li>
+                    <li><span></span><a href="news.html">公司新闻</a></li>
+                    <li><span></span><a href="product.html">产品中心</a></li>
+                    <li><span></span><a href="companyIdea.html">公司理念</a></li>
+                    <li><span></span><a href="contactUs.html">联系我们</a></li>
+                </ul>
+        </div>
+        <p>© 上海化妆品有限公司版权所有 沪ICP备11049051号 更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a> </p>
+    </div>
+</body>
+<script src="/templates/chenlixiang/style/js/jquery.js"></script>
+<script src="/templates/chenlixiang/style/js/js.js"></script>
+<script src="/templates/chenlixiang/style/js/map.js"></script>
+</html>

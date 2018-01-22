@@ -1,0 +1,74 @@
+{include file="./templates/xialonghao/header.html"}
+    <!--mobile header start-->
+
+
+
+
+
+    <!--===========layout-container================-->
+    <div class="layout-container">
+      <div class="page-header">
+        <div class="am-container">
+          <h1 class="page-header-title">新闻动态</h1>
+        </div>
+      </div>
+
+      <div class="breadcrumb-box">
+        <div class="am-container">
+          <ol class="am-breadcrumb">
+            <li><a href="../index.html">首页</a></li>
+            <li class="am-active">新闻动态</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <div class="section--header">
+					<h2 class="section--title">News List</h2>
+					<p class="section--description">
+						新闻列表
+					</p>
+				</div>
+
+        <div class="news-contaier">
+          <div class="blog">
+            <div class="am-g">
+                {Dz:newslist limit="3" order="id desc" name="vo" page="true"}
+                    <div class="am-u-lg-4 am-u-md-6">
+                      <div class="article">
+                          <div class="article-img">
+                              <img src="/public/Uploads/{$vo.smallimage}" alt="" />
+                          </div>
+                          <div class="article-header">
+                              <h3><a href="{$vo.url}" rel="">{$vo.title}</a></h3>
+                              <ul class="article--meta">
+                                  <li class="article--meta_item -date">{$vo.inputtime|date="Y-m-d h:i:s",###}</li>
+                              </ul>
+                          </div>
+                          <div class="article--content">
+                              <p>{$vo.abstract}</p>
+                          </div>
+                          <div class="article--footer">
+                              <a href="{$vo.url}" class="link">Read More</a>
+                          </div>
+                      </div>
+                    </div>
+                {/Dz:newslist}
+            </div>
+            <!-- pagination-->
+            <ul class="am-pagination">
+                <li class="am-disabled">{$page}</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+    <!--===========layout-footer================-->
+  {include file="./templates/xialonghao/footer.html"}

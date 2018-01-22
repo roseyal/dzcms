@@ -1,0 +1,55 @@
+{include file="./templates/liudong/header.html"}
+
+<main>
+        {Dz:nlist limit="1"}
+    <div class="index-main-title">
+        <p>{$v.shorttitle}</p>
+        <span>{$v.title}</span>
+    </div>
+    
+    <div class="index-main-md">
+        <div class="left-area" >
+            <img src="/public/Uploads/{$v.smallimage}" style="height: 350px; width: 495px;" alt="">
+        </div>
+        <div class="right-area">
+        
+            <p>{$v.shorttitle}</p>
+            <span>{$v.content}</span>
+            <div></div>
+        {/Dz:nlist}
+        </div>
+    </div>
+    {Dz:nlist limit="1"}
+    <div class="index-main-title">
+        <p>{$v.shorttitle}</p>
+        <span>{$v.title}</span>
+    </div>
+    {/Dz:nlist}
+    <div class="index-main-md-body">
+        <ul>
+        {Dz:nlist limit="3"}
+
+
+            <li>
+                <p><img src="/public/Uploads/{$v.smallimage}" style="height: 300px; width: 350px;"></P>
+                <p>{$v.author}</p>
+                <p>{$v.source}</p><span>{$v.title}</span>
+                </li>
+           {/Dz:nlist}
+        </ul>
+        
+    </div>
+    {Dz:nlist limit="1"}
+    <div class="index-main-title">
+        <p>{$v.shorttitle}</p>
+        <span>{$v.title}</span>
+    </div>
+{/Dz:nlist}
+   
+{Dz:nlist limit="1" id="35"}
+    <p>
+        <img class="sm" style="height: 300px; width: 100%;" src="/public/Uploads/{$v.smallimage}">
+    </p>
+{/Dz:nlist}
+</main>
+{include file="./templates/liudong/footer.html"}

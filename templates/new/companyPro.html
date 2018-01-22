@@ -1,0 +1,159 @@
+{include file="./templates/new/header.html"}
+<!-- ##########页首（end）########## -->
+
+<!-- ##########主体########## -->
+
+
+<div class="container">
+	<!-- 固定图片广告 -->
+	<div class="row">
+		<img class="img-responsive model-img" src="/templates/new/images/gsgk1.jpg" alt="公司概况">
+	</div>
+	
+	<!-- 内容 -->
+	<div class="row row-3">
+		<div class="col-md-3">
+			<div class="model-title theme">
+				关于新纶
+			</div>
+			<div class="model-list">
+				<ul class="list-group">
+                    <li class="list-group-item">
+						<a href="#">公司概况</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#">管理构架</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#">发展历程</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#">产业基地</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#">荣誉资质</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#">营销网络</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#">企业文化</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#">资料下载</a>
+					</li>
+				</ul>
+      
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="model-details-title">
+				公司概况
+			</div>
+			<div class="model-details">
+				<img class="img-responsive" src="/templates/new/images/about-us.jpg" alt="公司简介">
+				{Dz:nlist limit="1" name='vo' cateid='3'}
+					{$vo.content}
+					
+					{/DZ:nlist}
+						
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ##########主体（end）########## -->
+
+<!-- ##########页脚########## -->
+<div class="container web-footer">
+
+	<!-- 网站地图 -->
+	<div class="row" id="map-footer">
+        <div class="col-md-2">
+            <dl>
+			  <dt>关于新纶</dt>
+			  <dd><a href="#">公司概况</a></dd>
+			  <dd><a href="#">管理架构</a></dd>
+			  <dd><a href="#">发展历程</a></dd>
+			  <dd><a href="#">荣誉资质</a></dd>
+			  <dd><a href="#">产业基地</a></dd>
+			  <dd><a href="#">营销网络</a></dd>
+			  <dd><a href="#">企业文化</a></dd>
+			  <dd><a href="#">资料下载</a></dd>
+			</dl>
+        </div>
+		<div class="col-md-2">
+            <dl>
+			  <dt>科技创新</dt>
+			  <dd><a href="#">科创中心介绍</a></dd>
+			  <dd><a href="#">研究领域</a></dd>
+			  <dd><a href="#">科研合作</a></dd>
+			  <dd><a href="#">技术服务</a></dd>
+			  <dd><a href="#">中心荣誉</a></dd>
+			</dl>
+        </div>
+		<div class="col-md-2">
+            <dl>
+			  <dt>产业发展</dt>
+			  <dd><a href="#">产业概况</a></dd>
+			  <dd><a href="#">电子功能材料</a></dd>
+			  <dd><a href="#">新型复合材料</a></dd>
+			  <dd><a href="#">洁净室工程与超净产品</a></dd>
+			  <dd><a href="#">其它产业</a></dd>
+			</dl>
+        </div>
+		<div class="col-md-2">
+            <dl>
+			  <dt>投资者关系</dt>
+			  <dd><a href="#">基本信息</a></dd>
+			  <dd><a href="#">股票动态</a></dd>
+			  <dd><a href="#">公司治理</a></dd>
+			  <dd><a href="#">定期报告</a></dd>
+			  <dd><a href="#">临时公告</a></dd>
+			  <dd><a href="#">研究报告</a></dd>
+			  <dd><a href="#">投资者交流</a></dd>
+			  <dd><a href="#">股息资料</a></dd>
+			</dl>
+        </div>
+        <div class="col-md-4" id="wx">
+			<p>扫描二维码，关注我们</p>
+            <img class="" src="/templates/new/images/wx.jpg" alt="wx">
+			<p>客服热线：<b style="font-size:20px">400 000 2222</b></p>
+        </div>
+    </div>
+	
+	<!-- 底部 -->
+	<div class="row" id="patent-footer">
+			<p> © 2016 江西新纶科技有限公司 版权所有 | 赣ICP备06051111号 来源:<a href="http://www.mycodes.net/" target="_blank">源码之家</a>  </p>
+    </div>
+</div>	
+
+
+
+<script src="/templates/new/js/jquery-1.11.1.min.js"></script>
+<script src="/templates/new/js/bootstrap.min.js"></script>
+<script>
+
+    /*导航条*/
+    $(function () {
+	    $(".dropdown").mouseover(function () {
+	    	
+	        $(this).addClass("open");
+	    });
+
+	    $(".dropdown").mouseleave(function(){
+
+	        $(this).removeClass("open");
+	    })
+	})
+
+	/*导航条标题点击事件*/
+	$(".dropdown-toggle").click(function(){
+		
+		if($(this).attr('href')){
+			window.location = $(this).attr('href');
+		}
+
+	});
+</script>
+</body>
+</html>

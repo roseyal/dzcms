@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	{include file="./templates/xynews/header.html"}
+		
+		<div class="com-banner-box">
+			<img src="/templates/xynews/img/pro-banner.jpg" alt="产品banner" />
+		</div>
+		
+		<div class="main">
+			<div class="ab-wrap" style="background: url(/templates/xynews/img/com-fix-bg.png) no-repeat bottom;">
+			<div class="wrapper">
+				<div class="com-title-box">
+					<div class="common-title common-title-small clearfix">
+						<h1>产品展示</h1>
+						<p>PRODUCTS</p>
+					</div>
+				</div>
+				<!--公共标签-->
+				<div class="com-tabs pro-tabs">
+					<ul class="com-tab-list clearfix">
+						<li class="com-tab-active">管道</li>
+						<li>管廊</li>
+						<li>管件</li>
+					</ul>
+				</div>
+				<div class="product-box">
+					<ul class="tab-list-content clearfix tab-list-show">
+					{Dz:nlist limit="6" page="true" name="vo" cateid="11"}
+						<li>
+							<div class="pro-shadow-layer">
+								<div class="pro-shadow-pic">
+									<img src="/public/Uploads/{$vo.smallimage}" alt="产品" />
+								</div>
+								<div class="shadow-layer">
+									<a href="{$vo.url}">
+										<p class="pro-name">{$vo.title}</p>
+										<p class="pro-size">产品规格：{$vo.shorttitle}（直径）</p>
+										<p class="pro-more">查看详情</p>
+									</a>
+								</div>
+							</div>
+							<p>{$vo.title}</p>
+							<p>产品规格：{$vo.shorttitle}（直径）</p>
+						</li>
+						{/Dz:nlist}
+					</ul>
+					<ul class="tab-list-content clearfix tab-list-show">
+						{Dz:nlist limit="6" page="true" name="vo" cateid="12"}
+						<li>
+							<div class="pro-shadow-layer">
+								<div class="pro-shadow-pic">
+									<img src="/public/Uploads/{$vo.smallimage}" alt="产品"/>
+								</div>
+								<div class="shadow-layer">
+									<a href="{$vo.url}">
+										<p class="pro-name">{$vo.title}</p>
+										<p class="pro-size">产品规格：{$vo.shorttitle}（直径）</p>
+										<p class="pro-more">查看详情</p>
+									</a>
+								</div>
+							</div>
+							<p>{$vo.title}</p>
+							<p>产品规格：{$vo.shorttitle}（直径）</p>
+						</li>
+						{/Dz:nlist}
+					</ul>
+					<ul class="tab-list-content clearfix tab-list-show">
+						{Dz:nlist limit="6" page="true" name="vo" cateid="13"}
+						<li>
+							<div class="pro-shadow-layer">
+								<div class="pro-shadow-pic">
+									<img src="/public/Uploads/{$vo.smallimage}" alt="产品" />
+								</div>
+								<div class="shadow-layer">
+									<a href="{$vo.url}">
+										<p class="pro-name">{$vo.title}</p>
+										<p class="pro-size">产品规格：{$vo.shorttitle}（直径）</p>
+										<p class="pro-more">查看详情</p>
+									</a>
+								</div>
+							</div>
+							<p>{$vo.title}</p>
+							<p>产品规格：{$vo.shorttitle}（直径）</p>
+						</li>
+						{/Dz:nlist}
+					</ul>
+				</div>
+			</div>
+			</div>
+		</div>
+		<!--页脚-->
+		{include file="./templates/xynews/footer.html"}
+		<!--页脚结束-->
+	</body>
+</html>
+<script type="text/javascript" src="/templates/xynews/js/jquery-1.11.0.js"></script>
+<script type="text/javascript">
+	//导航当前效果
+	$(".main-nav .main-nav-item").click(
+		function(){
+			$(this).addClass("nav-active").siblings().removeClass("nav-active");
+		}
+	);
+	//导航二级菜单显示效果
+	$(".main-nav .main-nav-item").hover(
+		function(){
+			$(this).children(".sub-nav").stop().fadeIn();
+			$(this).siblings().children(".sub-nav").stop().hide();
+		},function(){
+			$(this).children(".sub-nav").stop().fadeOut();
+	});
+	//公共切换标签
+	$(".tab-list-content").hide().eq(0).show();
+	$(".com-tab-list li").click(
+		function(){
+			var x=$(this).index();
+			$(this).addClass("com-tab-active").siblings().removeClass("com-tab-active");
+			$(".tab-list-content").hide().eq(x).show();
+		}
+	)
+	//产品中心--产品+阴影层
+	$(".shadow-layer").hide();
+	$(".pro-shadow-layer").mouseenter(function(){
+		$(this).children(".shadow-layer").stop(false,true).fadeIn(300);
+	}).mouseleave(function(){
+		$(this).children(".shadow-layer").stop(false,true).fadeOut();
+	});
+	//返回顶部
+		$(".back-top").click(function () {
+	        var speed=200;//滑动的速度
+	        $('body,html').animate({ scrollTop: 0 }, speed);
+	        return false;
+	 	});
+</script>

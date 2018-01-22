@@ -1,0 +1,33 @@
+<header class="am-topbar header">
+	<div class="am-container-1">
+		<div class="left hw-logo">
+		  <font size="48" color="#0076c5" style="font-weight:bold" >DZ</font>
+		  <font size="6">大智科技</font>
+    </div>
+  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
+          data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span
+      class="am-icon-bars"></span></button>
+
+  <div class="am-collapse am-topbar-collapse right" id="doc-topbar-collapse">
+    
+
+    <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
+      <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
+			{Dz:navlist name="first" limit='7'}
+				<li><a href="{$first.url}">{$first.title}</a></li>
+			{/Dz:navlist}
+			
+<!--       <li class="hw-menu-active"><a href="index.html">首页</a></li>
+      <li ><a href="{:url('Index/solutions')}">解决方案</a></li>
+      <li><a href="product_show.html">产品展示 </a></li>
+      <li><a href="customer_case.html">客户案例</a></li>
+      <li><a href="service_center.html">服务中心 </a></li>
+      <li><a href="news.html">新闻动态 </a></li>
+      <li><a href="{:url('Index/aboutus')}">关于我们</a></li>
+      <li><a href="recruit.html">招贤纳士 </a></li>
+       -->    </ul>
+    </div>
+
+  </div>
+  </div>
+</header>

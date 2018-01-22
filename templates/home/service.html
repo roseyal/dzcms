@@ -1,0 +1,47 @@
+{include file="./templates/home/public/header.html"}
+<!--头部-->
+<div class="banner banner_s"><img src="/templates/home/Assets/upload/banner_a.jpg" alt=""/></div>
+<div class="space_hx">&nbsp;</div>
+<div class="scd clearfix">
+	<div class="scd_l">
+    	<div class="name">支持服务</div>
+        <ul class="s_nav">
+        	<li>
+            	<a href="">K8支持服务</a>
+            </li>
+            <li>
+            	<a href="">N8支持服务</a>
+            </li>
+            <li class="now">
+            	<a href="">A8支持服务</a>
+            </li>
+            <li>
+            	<a href="">D8支持服务</a>
+            </li>
+        </ul>
+    </div>
+    <div class="scd_r">
+    	<div class="dq">
+        	<span class="name">A8支持服务</span>
+            <div class="pst">
+            	<span>您的位置：</span>
+                <a href="">首页</a>
+                <span>></span>
+                <a href="">支持服务</a>
+                <span>></span>
+                <a href="" class="on">A8支持服务</a>
+            </div>
+        </div>
+        <div class="scd_m">
+        	<div class="service">
+            {Dz:nlist  name='vo'  cateid="6" }
+                <h5>{$vo.title}</h5>
+                    <p>{$vo.content}</p>
+            {/Dz:nlist}
+                
+            	
+            </div>
+        </div>
+    </div>
+</div>
+{include file="./templates/home/public/border.html"}

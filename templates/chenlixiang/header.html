@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>产品中心</title>
+<link href="/templates/chenlixiang/style/css/base.css" type="text/css" rel="stylesheet" />
+<link href="/templates/chenlixiang/style/css/product.css" type="text/css" rel="stylesheet" />
+<link href="/templates/chenlixiang/style/css/companyIdea.css" type="text/css" rel="stylesheet" />
+<link href="/templates/chenlixiang/style/css/contactUs.css" type="text/css" rel="stylesheet" />
+<link href="/templates/chenlixiang/style/css/news.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>
+</head>
+
+<body>
+<!--顶部-->
+	<div class="banner">
+<!--头部-->
+        <div class="top">
+        	<div class="logo"></div>
+            <span></span>       
+            <div class="txt01">
+                <p>专注护肤行业<b>10年</b></p>
+                <p>我们只生产最高品质的护肤产品</p>
+            </div>
+            <div class="tel">
+                <p>全国服务咨询热线</p>
+                <b>400-888-2837</b>
+            </div>            
+        </div> 
+<!--导航-->
+        <div class="nav">
+        	<div class="nav_bg">
+            	<ul>
+                	
+                    {Dz:navlist name='vo' limit="5"}
+                        <li><span></span><a href="{$vo.url}">{$vo.title}</a></li>
+                    {/Dz:navlist}
+                </ul>
+                <div class="search">
+                	<div class="s01">产品搜索</div>
+                    <input type="text" value="请输入关键字" class="s02" /><span></span>
+                </div>
+            </div>
+        </div>
+           <i></i>
+    </div>

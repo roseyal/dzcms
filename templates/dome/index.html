@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+{include file="./templates/dome/head.html"}
+
+{include file="./templates/dome/nav.html"}
+ <div id="myCarousel" class="carousel slide"> 
+ 	<!-- 轮播（Carousel）指标 -->
+   <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+   </ol>    
+    <!-- 轮播（Carousel）项目 -->
+   <div class="carousel-inner">
+   
+
+      {Dz:banlist name="vo"}
+      <div class="item active banner01">
+      		<div class="banner_p"><a href="#"><img src="/public/Uploads/{$vo.photo}"/></a></div>
+			<div class="item_banner01">
+             <h1>{$vo.title}</h1><br/>
+             <h2>{$vo.shorttitle}</h2><br/>
+           </div>
+      </div>
+      <div class="item active banner02">
+      		<div class="banner_p"><a href="#"><img src="/public/Uploads/{$vo.photo}"/></a></div>   
+			<div class="item_banner02">
+             <h1>{$vo.title}</h1><br/>
+             <h2>{$vo.shorttitle}</h2><br/>
+           </div>
+      </div>
+    
+      <div class="item active banner03">
+      		<div class="banner_p"><a href="#"><img src="/public/Uploads/{$vo.photo}"/></a></div>   
+			<div class="item_banner03">
+             <h1>{$vo.title}</h1><br/>
+             <h2>{$vo.shorttitle}</h2><br/>
+           </div>
+      </div>
+     {/Dz:banlist} 
+   </div>
+   <!-- 轮播（Carousel）导航 -->
+   <a class="carousel-control left" href="#myCarousel" 
+      data-slide="prev"></a>
+   <a class="carousel-control right" href="#myCarousel" 
+      data-slide="next"></a>
+</div> <!-----------------轮播   end------------------->
+    
+    
+    
+<!--新闻资讯开始-->
+<div class="news_information">
+    <div class="center oh">
+        <div class="left oh">
+		{Dz:nlist name="vo" where="id=14"}
+            <img src="/public/Uploads/{$vo.smallimage}" class="fl">
+            <a href="{$vo.url}" id="maincontenttop_0_newsLink" class="pr c008">
+               {$vo.title} <em></em>
+            </a>  
+		{/Dz:nlist}
+        </div>
+     <div id="maincontenttop_0_newsClass" class="right oh pcOnly">
+                <ul>
+				{Dz:nlist name="vo"}
+                    <li>
+                       <a href="{$vo.url}">{$vo.title}</a>
+                    </li>
+                {/Dz:nlist}
+				
+                </ul>
+               <ol ed_h="1" style="height: 33px;">
+                <li class="news_p_n news_p visibility_hidden">
+                    <img src="/templates/dome/img/index_lf_l.png" class="pa" ed_c="1" style="top: 7.5px; left: 14px;">
+                </li>
+                <li class="news_p_n news_n">
+                    <img src="/templates/dome/img/index_lf_r.png" class="pa" ed_c="1" style="top: 7.5px; left: 14.5px;">
+                </li>
+            </ol>
+
+        </div>
+    </div>
+</div>
+<!--新闻资讯结束-->
+
+<div class="we_big mt20 mb40">
+	<div class="we_content">
+    	<ul>
+		{Dz:nlist limit="3" name='vo'}
+				<li style="margin-left:10px">
+            	<div class="we_img"><a href="{$vo.url}"><img src="/public/Uploads/{$vo.smallimage}" /></a></div>
+                <div class="mt10">
+                	<span><a href="{$vo.url}"  style="color:#63b8ff">{$vo.title}</a></span>
+                    <p>{$vo.content}</p>
+                </div>
+            </li>
+		{/Dz:nlist}
+        	
+			<div class="clear"></div>
+        </ul>
+    </div>
+</div>
+    <!--------------------we_big end------------------------->
+    
+{include file="./templates/dome/footer.html"}   
+
+</body>
+</html>

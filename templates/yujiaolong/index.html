@@ -1,0 +1,150 @@
+
+{include file="./templates/yujiaolong/public/header.html"}
+
+<div class="index-main clearfix">
+
+
+<!--上部分的左侧-->
+	<div class="left-part fl">
+    
+    
+            <!--焦点图-->
+        <div class="focusBox fl">
+                <ul class="pic">
+					{Dz:nlist cateid="10" limit="4" hot="true" order="id desc" }
+                        <li><a href="{$v.url}" ><img src="/public/Uploads/{$v.smallimage}" width="282" height="237" /></a></li>
+					{/Dz:nlist}
+
+                </ul>
+                <div class="txt-bg"></div>
+                <div class="txt">
+                    <ul>
+                        <li><a href="#">图一</a></li>
+                        <li><a href="#">图二</a></li>
+                        <li><a href="#">图三</a></li>
+                    </ul>
+                </div>
+    
+                <ul class="num">
+                    <li><a>1</a><span></span></li>
+                    <li><a>2</a><span></span></li>
+                    <li><a>3</a><span></span></li>
+                    <li><a>4</a><span></span></li>
+                </ul>
+        </div>
+        
+        <!--新闻头条-->
+    <!--<div class="news-tt ml8 fl">
+    	<dl>
+        	<dt>
+				<span>
+				{Dz:nlist cateid="10" hot="true" limit="2" }
+                <a href="{$v.url}" >[{$v.shorttitle}]</a>
+				{/Dz:nlist}
+				</span>
+			</dt>
+			{Dz:nlist cateid="10" limit="4" order="id asc" }
+
+            <dd><a href="{$v.url}">[{$v.title}]</a><a href="{$v.url}">{$v.title}</a></dd>
+
+			{/Dz:nlist}
+
+        </dl>
+    </div>-->
+
+
+		<div class="picCenter" style="width: 276px; float: left; padding: 20px 0 0 20px; margin-top: 10px;">
+			<dl>
+				<dd>
+					<ul>
+						{Dz:nlist cateid="10" limit="3" order="id desc" }
+						<li>
+							<a href="{$v.url}" ><img src="/public/Uploads/{$v.smallimage}" /></a>
+							<p>{$v.shorttitle}</p>
+						</li>
+						{/Dz:nlist}
+
+					</ul>
+					<a class="prev" href="javascript:void(0)"></a>
+					<a class="next" href="javascript:void(0)"></a>
+				</dd>
+			</dl>
+		</div>
+
+
+    <div class="slideTxtBox fl mt10 ml8">
+            <div class="hd h30">
+                {Dz:navlist field="url" where="id=12"}
+            	<a href="{$v.url}" class="fr fm1 pr10">MORE<<</a>
+                {/Dz:navlist}
+                {Dz:navlist field="catename" where="id=12"}
+                <ul><li>{$v.title}</li></ul>
+                {/Dz:navlist}
+            </div>
+            <div class="bd">
+                <ul>
+                    {Dz:nlist cateid="12" limit="7" order="id desc" }
+                    <li><span class="date">{$v.inputtime|date="Y-m-d",###}</span><a href="{$v.url}" >{$v.title}</a></li>
+                    {/Dz:nlist}
+                </ul>
+            </div>
+    </div>
+ </div>
+   
+ <!--上部分的左侧结束-->
+ 
+ 
+ 
+ <div class="right-part fr">
+    <dl class="tabRank" id="tabRank">
+            <dt class="hd">
+				{Dz:navlist field="catename" where="id=12"}
+				<h3 class="on"><a href="javascript:void()">{$v.title}</a></h3>
+				{/Dz:navlist}
+				{Dz:navlist field="catename" where="id=11"}
+				<h3><a href="javascript:void()">{$v.title}</a></h3>
+				{/Dz:navlist}
+			</dt>
+            
+			<dd class="bd">
+				<ul class="ulList">
+                    {Dz:nlist cateid="11" limit="1" hot="true"}
+					<li class="t on">
+							<span class="num">1</span>
+							<div class="c ">
+								<div class="pubpic"><a href="{$v.url}"><img src="/public/Uploads/{$v.smallimage}"></a></div>
+								<div class="pubtitle"><a href="{$v.url}">{$v.shorttitle}</a><p>{$v.inputtime|date="Y-m-d",###}</p></div>
+							</div>
+					</li>
+                    {/Dz:nlist}
+                    <?php $i=2; ?>
+                    {Dz:nlist cateid="11" limit="6" start="2" hot="true"}
+                    <li class="t">
+                        <span class="num"><?php echo $i++; ?></span>
+                        <div class="c ">
+                            <div class="pubpic"><a href="{$v.url}"><img src="/public/Uploads/{$v.smallimage}"></a></div>
+                            <div class="pubtitle"><a href="{$v.url}">{$v.shorttitle}</a><p>{$v.inputtime|date="Y-m-d",###}</p></div>
+                        </div>
+                    </li>
+                    {/Dz:nlist}
+
+                    
+				</ul>
+
+				<ul class="ulList2">
+                    {Dz:nlist cateid="11" limit="13" hot="true"}
+						<li><a href="{$v.url}" >{$v.title}</a></li>
+                    {/Dz:nlist}
+                </ul>
+            </dd>
+			
+	</dl>
+ 
+ </div>
+ <!-- 上部分的右侧TAB结束 -->
+ 
+ 
+
+{include file="./templates/yujiaolong/public/footer.html"}
+</body>
+</html>

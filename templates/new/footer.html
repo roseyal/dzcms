@@ -1,0 +1,112 @@
+<!-- ##########页脚########## -->
+<div class="container web-footer">
+
+	<!-- 网站地图 -->
+	<div class="row" id="map-footer">
+        <div class="col-md-2">
+            <dl>
+			  <dt>关于新纶</dt>
+			  <dd><a href="#">公司概况</a></dd>
+			  <dd><a href="#">管理架构</a></dd>
+			  <dd><a href="#">发展历程</a></dd>
+			  <dd><a href="#">荣誉资质</a></dd>
+			  <dd><a href="#">产业基地</a></dd>
+			  <dd><a href="#">营销网络</a></dd>
+			  <dd><a href="#">企业文化</a></dd>
+			  <dd><a href="#">资料下载</a></dd>
+			</dl>
+        </div>
+		<div class="col-md-2">
+            <dl>
+			  <dt>科技创新</dt>
+			  <dd><a href="#">科创中心介绍</a></dd>
+			  <dd><a href="#">研究领域</a></dd>
+			  <dd><a href="#">科研合作</a></dd>
+			  <dd><a href="#">技术服务</a></dd>
+			  <dd><a href="#">中心荣誉</a></dd>
+			</dl>
+        </div>
+		<div class="col-md-2">
+            <dl>
+			  <dt>产业发展</dt>
+			  <dd><a href="#">产业概况</a></dd>
+			  <dd><a href="#">电子功能材料</a></dd>
+			  <dd><a href="#">新型复合材料</a></dd>
+			  <dd><a href="#">洁净室工程与超净产品</a></dd>
+			  <dd><a href="#">其它产业</a></dd>
+			</dl>
+        </div>
+		<div class="col-md-2">
+            <dl>
+			  <dt>投资者关系</dt>
+			  <dd><a href="#">基本信息</a></dd>
+			  <dd><a href="#">股票动态</a></dd>
+			  <dd><a href="#">公司治理</a></dd>
+			  <dd><a href="#">定期报告</a></dd>
+			  <dd><a href="#">临时公告</a></dd>
+			  <dd><a href="#">研究报告</a></dd>
+			  <dd><a href="#">投资者交流</a></dd>
+			  <dd><a href="#">股息资料</a></dd>
+			</dl>
+        </div>
+        <div class="col-md-4" id="wx">
+			<p>扫描二维码，关注我们</p>
+            <img class="" src="/templates/new/images/wx.jpg" alt="wx">
+			<p>客服热线：<b style="font-size:20px">400 000 2222</b></p>
+        </div>
+    </div>
+	
+	<!-- 底部 -->
+	<div class="row" id="patent-footer">
+			<p> © 2016 江西新纶科技有限公司 版权所有 | 赣ICP备06051111号 来源:<a href="http://www.mycodes.net/" target="_blank">源码之家</a>  </p>
+    </div>
+</div>	
+
+
+
+<script src="/templates/new/js/jquery-1.11.1.min.js"></script>
+<script src="/templates/new/js/bootstrap.min.js"></script>
+<script>
+
+	/*导航条标题点击事件*/
+	$(".dropdown-toggle").click(function(){
+		
+		if($(this).attr('href')){
+			window.location = $(this).attr('href');
+		}
+
+	});
+
+	/*广告轮播*/
+    $(function () {
+        $('#ad-carousel').carousel();
+        $('#menu-nav .navbar-collapse a').click(function (e) {
+            var href = $(this).attr('href');
+            var tabId = $(this).attr('data-tab');
+            if ('#' !== href) {
+                e.preventDefault();
+                $(document).scrollTop($(href).offset().top - 70);
+                if (tabId) {
+                    $('#feature-tab a[href=#' + tabId + ']').tab('show');
+                }
+            }
+        });
+    });
+
+
+    /*导航条*/
+    $(function () {
+	    $(".dropdown").mouseover(function () {
+	    	
+	        $(this).addClass("open");
+	    });
+
+	    $(".dropdown").mouseleave(function(){
+
+	        $(this).removeClass("open");
+	    });
+	});
+
+</script>
+</body>
+</html>

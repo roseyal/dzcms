@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<meta name="keywords" content="[!--pagekey--]" />
+<meta name="description" content="[!--pagedes--]" />
+<link href="/templates/yujiaolong/css/master.css" type="text/css" rel="stylesheet" />
+<link href="/templates/yujiaolong/css/base.css" type="text/css" rel="stylesheet" />
+<script type="text/javascript" src="/templates/yujiaolong/js/jquery.js"></script>
+<script type="text/javascript" src="/templates/yujiaolong/js/SuperSlide.js?v2.1"></script>
+<script type="text/javascript" src="/templates/yujiaolong/js/jquery.jclock.js"></script>
+</head>
+
+
+<body>
+<!--------------------------------------------头部开始-------------------------------------------->
+<div class="head block">
+    <div class="top">
+        <span class="fl">欢迎访问本站!!</span>
+        <span class="fr pr20"><a onclick="SetHome(window.location)" href="javascript:void(0)">设为首页</a> | <a onclick="AddFavorite(window.location,document.title)" href="javascript:void(0)">加入收藏</a></span></div>
+    <div class="logo">
+        {Dz:banlist field="photo" where="id=61" limit="1" }
+        <a href="/"><img src="/public/Uploads/{$v.photo}" width="1000" height="260"></a>
+        {/Dz:banlist}
+    </div>
+
+    <div class="navBar">
+        <ul class="nav clearfix">
+            <li class="s">|</li>
+            {Dz:navlist field="id,catename,url" top="0" limit="6"}
+            <li class="m">
+                <h3><a href="{$v.url}">{$v.title}</a></h3>
+                <ul class="subNav border radius4 erji">
+                    <li>
+                        {Dz:navlist field="id,catename,url" top="$v[id]"}
+                        <a href="{$v.url}">{$v.title}</a>
+                        {/Dz:navlist}
+                    </li>
+                </ul>
+            </li>
+            <li class="s">|</li>
+            {/Dz:navlist}
+        </ul>
+
+        <ul class="subNav border radius4">
+                你好，欢迎来到大智国际检验集团官网！</li>
+
+        </ul>
+
+
+    </div>
+
+</div>
+<!--------------------------------------------头部结束-------------------------------------------->

@@ -1,0 +1,190 @@
+[ 2017-12-19T09:04:40+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] www.ttt.com/ [运行时间：1.266589s][吞吐率：0.79req/s] [内存消耗：2,850.30kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\phpStudy\WWW\new\dzcms\application\home\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] templates/lf/index.html [ array (
+  0 => 'pages',
+  1 => 'cateid',
+) ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001336s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_basics` [ RunTime:0.074564s ]
+[ sql ] [ SQL ] SELECT `styles` FROM `dz_basics` LIMIT 1 [ RunTime:0.000583s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001313s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_category` [ RunTime:0.051126s ]
+[ sql ] [ SQL ] SELECT catename as title,`url`,`id`,`letter`,`inputtime`,`parentid`,`image`,`description` FROM `dz_category` WHERE  (  1=1 and ismenu=2 and isdel=0 and parentid=0 ) ORDER BY id asc [ RunTime:0.000805s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001416s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_news` [ RunTime:0.115760s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_news` WHERE  (  1=1 and cateid in (5) ) ORDER BY id asc LIMIT 0,3 [ RunTime:0.002203s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001789s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_category` WHERE  (  id=5 ) LIMIT 1 [ RunTime:0.005092s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003530s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_news` WHERE  (  1=1 and cateid in (3) ) ORDER BY id asc [ RunTime:0.000734s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001557s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_category` WHERE  (  id=3 ) LIMIT 1 [ RunTime:0.000505s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001567s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_category` WHERE  (  id=3 ) LIMIT 1 [ RunTime:0.000555s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004314s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_category` WHERE  (  id=3 ) LIMIT 1 [ RunTime:0.000549s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001214s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_category` WHERE  (  id=3 ) LIMIT 1 [ RunTime:0.000609s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001595s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_category` WHERE  (  id=3 ) LIMIT 1 [ RunTime:0.000696s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001246s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_friendlink` [ RunTime:0.070936s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_friendlink` WHERE  (  photo is not null ) ORDER BY id asc [ RunTime:0.000611s ]
+
+---------------------------------------------------------------
+[ 2017-12-19T09:05:29+08:00 ] 127.0.0.1 127.0.0.1 GET /
+[ log ] www.ttt.com/ [运行时间：0.197207s][吞吐率：5.07req/s] [内存消耗：2,850.31kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'accept' => '*/*',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\phpStudy\WWW\new\dzcms\application\home\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] templates/lf/index.html [ array (
+  0 => 'pages',
+  1 => 'cateid',
+) ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001671s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_basics` [ RunTime:0.021769s ]
+[ sql ] [ SQL ] SELECT `styles` FROM `dz_basics` LIMIT 1 [ RunTime:0.000676s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001518s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_category` [ RunTime:0.019613s ]
+[ sql ] [ SQL ] SELECT catename as title,`url`,`id`,`letter`,`inputtime`,`parentid`,`image`,`description` FROM `dz_category` WHERE  (  1=1 and ismenu=2 and isdel=0 and parentid=0 ) ORDER BY id asc [ RunTime:0.000724s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001472s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_news` [ RunTime:0.022769s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_news` WHERE  (  1=1 and cateid in (5) ) ORDER BY id asc LIMIT 0,3 [ RunTime:0.000901s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001460s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_category` WHERE  (  id=5 ) LIMIT 1 [ RunTime:0.000852s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001082s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_news` WHERE  (  1=1 and cateid in (3) ) ORDER BY id asc [ RunTime:0.000740s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001087s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_category` WHERE  (  id=3 ) LIMIT 1 [ RunTime:0.000720s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001187s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_category` WHERE  (  id=3 ) LIMIT 1 [ RunTime:0.000638s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001085s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_category` WHERE  (  id=3 ) LIMIT 1 [ RunTime:0.000679s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001454s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_category` WHERE  (  id=3 ) LIMIT 1 [ RunTime:0.000563s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001487s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_category` WHERE  (  id=3 ) LIMIT 1 [ RunTime:0.000717s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001288s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_friendlink` [ RunTime:0.020200s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_friendlink` WHERE  (  photo is not null ) ORDER BY id asc [ RunTime:0.000756s ]
+
+---------------------------------------------------------------
+[ 2017-12-19T09:05:55+08:00 ] 127.0.0.1 127.0.0.1 GET HTTP://www.ttt.com/
+[ log ] www.ttt.comHTTP://www.ttt.com/ [运行时间：0.217851s][吞吐率：4.59req/s] [内存消耗：2,850.52kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => '',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'accept' => '*/*',
+  'proxy-connection' => 'Keep-Alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\home\controller\Index->index[ D:\phpStudy\WWW\new\dzcms\application\home\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] templates/lf/index.html [ array (
+  0 => 'pages',
+  1 => 'cateid',
+) ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001511s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_basics` [ RunTime:0.020506s ]
+[ sql ] [ SQL ] SELECT `styles` FROM `dz_basics` LIMIT 1 [ RunTime:0.000630s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001236s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_category` [ RunTime:0.026640s ]
+[ sql ] [ SQL ] SELECT catename as title,`url`,`id`,`letter`,`inputtime`,`parentid`,`image`,`description` FROM `dz_category` WHERE  (  1=1 and ismenu=2 and isdel=0 and parentid=0 ) ORDER BY id asc [ RunTime:0.000547s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001431s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_news` [ RunTime:0.023103s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_news` WHERE  (  1=1 and cateid in (5) ) ORDER BY id asc LIMIT 0,3 [ RunTime:0.000704s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001346s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_category` WHERE  (  id=5 ) LIMIT 1 [ RunTime:0.000656s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001372s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_news` WHERE  (  1=1 and cateid in (3) ) ORDER BY id asc [ RunTime:0.000980s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011520s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_category` WHERE  (  id=3 ) LIMIT 1 [ RunTime:0.001099s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002014s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_category` WHERE  (  id=3 ) LIMIT 1 [ RunTime:0.001036s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001484s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_category` WHERE  (  id=3 ) LIMIT 1 [ RunTime:0.000836s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001748s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_category` WHERE  (  id=3 ) LIMIT 1 [ RunTime:0.000678s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001330s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT * FROM `dz_category` WHERE  (  id=3 ) LIMIT 1 [ RunTime:0.000692s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001353s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_friendlink` [ RunTime:0.019844s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_friendlink` WHERE  (  photo is not null ) ORDER BY id asc [ RunTime:0.000548s ]
+
+---------------------------------------------------------------

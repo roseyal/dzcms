@@ -1,0 +1,26 @@
+{include file="./templates/liudong/header.html"}
+<main>
+    <ul class="pro-body">
+    {Dz:nlist name="vo" limit="5"}
+        <li>
+            <a href="{$vo.url}">
+            <img src="/public/Uploads/{$vo.smallimage}" alt="">
+            <div class="pro-rightarea">
+                <p>{$vo.shorttitle}</p>
+                <span>{$vo.title}</span>
+            </div>
+            </a>
+        </li>
+        {/Dz:nlist}
+    </ul>
+    <div class="article_list_more_pages">
+        <ul>
+            <li><a>上一页</a></li>
+            <li class="article-current"><a>1</a></li>
+            <li><a>2</a></li>
+            <li><a>3</a></li>
+            <li><a>下一页</a></li>
+        </ul>
+    </div>
+</main>
+{include file="./templates/liudong/footer.html"}

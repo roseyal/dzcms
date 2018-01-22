@@ -1,0 +1,74 @@
+{include file="./templates/lvse/header.html"}
+
+<div class="am-slider am-slider-default" data-am-flexslider="{playAfterPaused: 8000, controlNav: false, directionNav: false  }">
+    <a class="prevbtn" href="#" onClick="javascript :history.back(-1);"></a>
+    <div class="search-box">
+        <div><input type="text" name="" placeholder="      请输入您需要的环保类别"></div>
+        <div class="search-box-btn"></div>
+    </div>
+    <ul class="am-slides">
+        <li><img src="/templates/lvse/images/banner.jpg" alt="" ></li>
+        <li><img src="/templates/lvse/images/banner.jpg" alt="" ></li>
+        <li><img src="/templates/lvse/images/banner.jpg" alt="" ></li>
+        <li><img src="/templates/lvse/images/banner.jpg" alt="" ></li>
+    </ul>
+</div>
+<div>
+    <section class="article-content">
+        <div class="article-protect-tab">
+            <span>公司新闻</span>
+            <span>行业新闻</span>
+            <span>环保知识</span>
+        </div>
+        <div class="article-protect-body">
+            <img src="/templates/lvse/images/pro1.jpg">
+            <ul>
+             {Dz:nlist  limit="3" order='id desc' name='vo'}
+                <li>
+                    <a href="{$vo.url}">
+                    <h3>{$vo.title}</h3>
+                    <span>>{$vo.inputtime|date='Y-m',###}</span>
+                    </a>
+                    <p>{$vo.abstract}</p>
+                </li>
+             {/Dz:nlist}
+            </ul>
+        </div>
+    </section>
+    <section class="article-content">
+        <ul>
+         {Dz:nlist  limit="5" order='id desc' name='vo'}
+            <li>
+                <div class="article-date">
+                    <strong>{$vo.inputtime|date='d',###}</strong>
+                    <p>{$vo.inputtime|date='Y-m',###}</p>
+                    
+                </div>
+                <div class="article-info">
+                    <a href="{$vo.url}">
+                        <h3>{$vo.title}</h3>
+                        <i class="font">&#xe6aa;</i>
+                        <p>{$vo.abstract}</p>
+                        <span></span>
+                    </a>
+                </div>
+            </li>
+             {/Dz:nlist}
+
+        
+        </ul>
+    </section>
+    <div class="article_list_more_pages">
+        <!-- <ul>
+            <li><a>上一页</a></li>
+            <li class="article-current"><a>1</a></li>
+            <li><a>2</a></li>
+            <li><a>3</a></li>
+            <li><a>下一页</a></li>
+        </ul> -->
+    </div>
+    <div class="feature">
+        <img class="sm" src="/templates/lvse/images/main5.jpg">
+    </div>
+</div>
+{include file="./templates/lvse/footer.html"}

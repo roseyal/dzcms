@@ -1,0 +1,38 @@
+{include file="./templates/liudong/header.html"}
+   
+<div>
+    <header class="article_list_more_header">
+     <div> <a>首页</a>&#62;<a>新闻资讯</a>&#62;<a>更多</a></div>
+    </header>
+
+    <section class="article-content">
+        <ul>
+        {Dz:nlist name="vo"}
+            <li>
+                <div class="article-date">
+                    <strong>{$vo.id}</strong>
+                   <p>{$vo.inputtime|date="Y-m-d" ,###})</p>
+                </div>
+                <div class="article-info">
+                    <a href="{$vo.url}">
+                        <h3>{$vo.shorttitle}</h3>
+                        <p>{$vo.title}...</p>
+                    </a>
+                </div>
+            </li>
+        {/Dz:nlist}
+            
+        </ul>
+
+    </section>
+    <div class="article_list_more_pages">
+        <ul>
+            <li><a>上一页</a></li>
+            <li class="article-current"><a>1</a></li>
+            <li><a>2</a></li>
+            <li><a>3</a></li>
+            <li><a>下一页</a></li>
+        </ul>
+    </div>
+</div>
+{include file="./templates/liudong/footer.html"}

@@ -1,0 +1,50 @@
+
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  
+  <link rel="alternate icon" type="/templates/copy/img/hengwang-1.png" href="/templates/copy/img/hengwang-1.png">
+  <link rel="stylesheet" href="/templates/copy/css/amazeui.css"/>
+  <link rel="stylesheet" href="/templates/copy/css/style.css"/>
+</head>
+
+
+
+
+
+
+
+<body>
+<header class="am-topbar header">
+	<div class="am-container-1">
+		<div class="left hw-logo">
+		  <img class=" logo" src="/templates/copy/img/HENGWANG.png"></img>
+		  <img class="word" src="/templates/copy/img/hw-word.png"></img>
+    </div>
+  <button class="am-topbar-btn am-topbar-toggle am-btn am-btn-sm am-btn-success am-show-sm-only"
+          data-am-collapse="{target: '#doc-topbar-collapse'}"><span class="am-sr-only">导航切换</span> <span
+      class="am-icon-bars"></span></button>
+
+  <div class="am-collapse am-topbar-collapse right" id="doc-topbar-collapse">
+    
+
+    <div class=" am-topbar-left am-form-inline am-topbar-right" role="search">
+      <ul class="am-nav am-nav-pills am-topbar-nav hw-menu">
+      <li class="hw-menu-active"><a href="/home/index/index">首页</a></li>
+
+	  {Dz:navlist order="id desc" name='vo'}
+      <li ><a href="{$vo.url}">{$vo.title}</a></li>
+{/Dz:navlist}
+      
+    </ul>
+    </div>
+
+  </div>
+  </div>
+</header>

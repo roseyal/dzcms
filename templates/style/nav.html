@@ -1,0 +1,12 @@
+<div class="nav-contain">
+    <div class="nav-inner">
+        <ul class="am-nav am-nav-pills am-nav-justify">
+
+                        <li class=""><a href="../../">首页</a></li>
+                        {Dz:navlist field="Id,title,url" order="id asc" name='vo' limit="6"}
+                        <li><a href="{$vo.url}">{$vo.title}</a></li>
+                        {/Dz:navlist}
+
+        </ul>
+    </div>
+</div>

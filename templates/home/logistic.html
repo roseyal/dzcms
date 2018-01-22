@@ -1,0 +1,97 @@
+{include file="./templates/home/public/header.html"}
+<!--头部-->
+<div class="banner banner_s"><img src="/templates/home/Assets/upload/banner_a.jpg" alt=""/></div>
+<div class="space_hx">&nbsp;</div>
+<div class="scd clearfix">
+	<div class="scd_l">
+    	<div class="name">物流行业</div>
+        <ul class="s_nav">
+        	<li>
+            	<a href="">快递</a>
+            </li>
+            <li class="now">
+            	<a href="">快运</a>
+            </li>
+            <li>
+            	<a href="">配送</a>
+            </li>
+            <li>
+            	<a href="">零担</a>
+            </li>
+            <li>
+            	<a href="">专线</a>
+            </li>
+            <li>
+            	<a href="">电商</a>
+            </li>
+            <li>
+            	<a href="">港口物流</a>
+            </li>
+        </ul>
+    </div>
+    <div class="scd_r">
+    	<div class="dq">
+        	<span class="name">物流快运</span>
+            <div class="pst">
+            	<span>您的位置：</span>
+                <a href="">首页</a>
+                <span>></span>
+                <a href="">物流快运</a>
+            </div>
+        </div>
+        <div class="scd_m">
+        	<div class="log">
+             {Dz:nlist field="id,title,source,shorttitle,cateid,url,content"    limit="1"    name='vo'  cateid="2" id="13" }
+               
+                    <h6>{$vo.title}</h6>
+                    <p>{$vo.content}</p>
+                
+
+            	
+               
+                <p class="black">{$vo.shorttitle}</p>
+                <p></p>
+                <p>{$vo.content}
+         </p>{/Dz:nlist}
+                {Dz:nlist field="id,title,source,shorttitle,cateid,url,content"    limit="1"    name='vo'  cateid="2" id="13" }
+               
+                    <h6>{$vo.title}</h6>
+                    <p>{$vo.content}</p>
+                
+
+                
+               
+                <p class="black">{$vo.shorttitle}</p>
+                <p></p>
+                <p>{$vo.content}
+         </p>{/Dz:nlist}
+                 <h6>奥普思凯快递运单解决方案</h6>
+                 <p class="black">1.奥普思凯快递运单采集系统的组成及业务流程：</p>
+                 <img src="/templates/home/Assets/upload/pic14.jpg" alt=""/>
+                 <p class="/public/black">2.奥普思凯快递运单采集系统的功能特点:</p>
+                 <img src="/templates/home/Assets/upload/pic15.jpg" alt=""/>
+                 <p class="hui">物流单据的扫描与识别 </p>
+                 <p>奥普思凯运单采集系统可以在扫描的同时识别快递运单的一维条形码，并将识别的条形码值作为图像文件名存储。</p>
+                 <img src="/templates/home/Assets/upload/pic16.jpg" alt=""/>
+                 <p class="hui">图像及条码校验 </p>
+                 <p>图像扫描与条码识别完成后，用户可根据右侧的图像对条码进行人工质检，输入正确的条码值；如果扫描的图像过大，用户也可对图像进行压缩，使其符合要求。</p>
+                 <img src="/templates/home/Assets/upload/pic17.jpg" alt=""/>
+                 <p class="hui">将快递运单图像上传至FTP服务器 </p>
+                 <p>可以通过FTP服务器参数设置将扫描识别成功的运单图像上传至后台FTP服务器中存储及共享。</p>
+                 <img src="/templates/home/Assets/upload/pic18.jpg" alt=""/>
+                 <p class="hui">更多其他功能</p>
+                 <p>1.快递运单图像的自动旋转</p>
+                 <p>2.可扩充的条码识别引擎</p>
+                 <p>3.OCR 快递运单号识别，无需手动校验条码值</p>
+                 <p>4.快递运单图像自动压缩</p>
+                 <p>5.快递运单图像的本地查询</p>
+                 <p>6.扫描工作日志的查询统计</p>
+                 <p>7.同时支持B/S 和C/S 架构</p>
+                 <p>该系统的使用改变了过去查询完全靠人工翻单、稽核现场翻单、与客户结账人工送单的传统方式，实现详情单图片网上
+在线查询、大客户网上对账、网上资费稽核管控等多种功能完全实现了档案电子化管理和网上处理，提高了运单查询效
+率与质量，加强了对资费的稽核管控。</p>
+            </div>
+        </div>
+    </div>
+</div>
+{include file="./templates/home/public/border.html"}

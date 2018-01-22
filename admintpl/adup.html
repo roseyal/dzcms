@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/public/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui.admin/css/style.css" />
+<!--[if lt IE 9]>
+<link href="static/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<style type="text/css">
+.ui-sortable .panel-header{ cursor:move}
+</style>
+<title>广告添加</title>
+<meta name="keywords" content="关键词,5个左右,单个8汉字以内">
+<meta name="description" content="网站描述，字数尽量空制在80个汉字，160个字符以内！">
+</head>
+<body>
+<div class="containBox"> 
+   
+  <div class="wap-container">
+    <div class="container ui-sortable">
+      <h1>广告修改</h1> 
+      <div class="panel panel-default">
+        <div class="panel-header clearfix">
+          <span class="f-l">  </span>
+        </div>
+        <div class="panel-body">
+        <form action="" method="post" id="form-admin-add" class="form form-horizontal" enctype="multipart/form-data">
+		<input type="hidden" name="id" value="{$list.id}">
+        <table class="table table-border table-bordered table-bg">
+          <tbody>
+		  <!--广告题材-->
+          <tr>
+            <th width="100" class="text-r"><span class="c-red"></span> 广告题材：</th>
+			<td>
+				<select class="input-text" name="theme" id="level">
+					<option value="请选择">全部类型</option>
+					{foreach item="info" name="info"}
+					<option value="{$info.id}" {if condition="$info.id eq $list.theme"} selected="selected" {/if}>{$info.name}</option>
+					{/foreach}
+				</select>
+			</td>
+          </tr>
+		  
+		  <!--广告标题-->
+          <tr>
+            <th width="100" class="text-r"><span class="c-red">*</span> 广告标题：</th>
+            <td>
+              <input type="text" style="width:200px" class="input-text"  name="title" required="true" placeholder="" value="{$list.title}" id="name" datatype="*2-16" nullmsg="用户名不能为空">
+            </td>
+          </tr>
+		 <tr>
+            <th width="100" class="text-r"><span class="c-red">*</span> 广告品牌：</th>
+            <td>
+              <input type="text" style="width:200px" class="input-text" value="{$list.brand}" placeholder="" id="pinpai" required="true" name="brand" datatype="*2-16">
+            </td>
+         </tr>
+		<tr>
+            <th width="100" class="text-r"><span class="c-red">*</span> 广告简介：</th>
+            <td>
+              <textarea name="synopsis" cols="" id="neirong" required="true" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,10)">{$list.synopsis}</textarea>
+			<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+            </td>
+        </tr>
+		<!--图片-->
+		
+		<tr>
+			  <th class="text-r">头像：</th>
+			  <td>
+			  <div class="formControls col-xs-8">
+                   <div style=" height: 200px; width: auto;">
+                       <img src="/public/Uploads/{$list.photo}" style="max-height: 200px; width: auto;" id="fileimg" />
+                    </div>
+                    <span class="btn-upload form-group" style="margin: 10px 0 0 70px;">
+                <a href="javascript:void();" class="btn btn-primary upload-btn"><i class="Hui-iconfont">&#xe642;</i> 浏览文件</a>
+                <input type="file" id="file" multiple name="photo" class="input-file" onchange="preview(this)" >
+                </span>
+</div>
+
+			  </td>
+		  </tr>
+	   <!--广告内容-->
+		<tr id="top1">
+            <th width="100" class="text-r"><span class="c-red">*</span> 广告内容：</th>
+            <td>
+              <textarea name="content" cols="" id="neirong" required="true" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,10)">{$list.content}</textarea>
+			<p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+            </td>
+       </tr>
+		<!--提交-->
+          <tr>
+            <th></th>
+            <td>
+				<div class="row cl">
+                   <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+						<input class="btn btn-secondary radius" type="button" id="subbut" value="提交" />
+						<button onClick="article_save();" class="btn btn-secondary radius" type="button"><i class="Hui-iconfont">&#xe632;</i> 保存草稿</button>
+						<button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+					</div>
+				</div>
+			</td>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+        </div>
+      </div>
+             
+       
+    </div>
+    {include file="public/foot"}
+  </div>
+</div>
+ 
+
+<script type="text/javascript" src="/public/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/public/lib/jquery-ui/1.9.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/public/static/h-ui/js/H-ui.js"></script>
+<script type="text/javascript" src="/public/lib/jquery.SuperSlide/2.1.1/jquery.SuperSlide.min.js"></script>
+<script type="text/javascript" src="/public/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="/public/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="/public/lib/jquery.validation/1.14.0/messages_zh.min.js"></script>
+<script type="text/javascript" src="/public/lib/layer/2.4/layer.js"></script>
+
+<script type="text/javascript">
+$(function() {
+	$("#doc-form-file").change(function() {
+		var $file = $(this);
+		var fileObj = $file[0];
+		var windowURL = window.URL || window.webkitURL;
+		var dataURL;
+		var $img = $("#preview");
+
+		if(fileObj && fileObj.files && fileObj.files[0]){
+			dataURL = windowURL.createObjectURL(fileObj.files[0]);
+			$img.attr('src',dataURL);
+		}else{
+			dataURL = $file.val();
+			var imgObj = document.getElementById("preview");
+// 两个坑:
+// 1、在设置filter属性时，元素必须已经存在在DOM树中，动态创建的Node，也需要在设置属性前加入到DOM中，先设置属性在加入，无效；
+// 2、src属性需要像下面的方式添加，上面的两种方式添加，无效；
+			imgObj.style.filter = "progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale)";
+			imgObj.filters.item("DXImageTransform.Microsoft.AlphaImageLoader").src = dataURL;
+		}
+	});
+});
+</script>
+
+<script type="text/javascript">
+
+$(function(){
+
+  $('.skin-minimal input').iCheck({
+    checkboxClass: 'icheckbox-blue',
+    radioClass: 'iradio-blue',
+    increaseArea: '20%'
+  });
+
+  $("#form-article-add").validate({
+    rules:{
+       title:{
+        required:true,
+        // minlength:4,
+        // maxlength:16
+      },
+      shorttitle:{
+        required:true,
+      },
+      pinpai:{
+        required:true,
+      },
+      neirong:{
+        required:true,
+      },
+    },
+  });
+});
+function preview(file){
+  
+        if (file.files && file.files[0]){  
+            var reader = new FileReader();  
+            reader.onload = function(evt){  
+            // prevDiv.innerHTML = '<img width="100%" height="100%" id="qw_img" src="' + evt.target.result + '" />';
+            $('#fileimg').attr('src' , evt.target.result);
+        }    
+             reader.readAsDataURL(file.files[0]);  
+        }else{  
+            // prevDiv.innerHTML = '<div class="img" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src=\'' + file.value + '\'"></div>';  
+          $('#fileimg').attr('src' , file.value);
+        }  
+    }
+$('#subbut').click(function(){
+			var formData = new FormData(document.getElementById("form-admin-add"));
+		$.ajax({
+			url: "{:url('Ad/do_adup')}",
+			type:'POST',
+			data:formData,
+			contentType: false,
+            processData: false,
+			success:function(data){
+				switch(data.status){
+					case 1 :
+						layer.msg(data.msg,{
+							//offset: 't',
+							anim: 6,
+							time: 2000
+						},function () {
+                          location.href="{:url('Ad/adlist')}";
+                                }); 
+						
+						 break;
+					case 2 :layer.msg(data.msg,{
+						//offset: 't',
+						anlm: 6
+					});
+						break;
+				}
+			},
+			error:function(data){
+				alert('未知错误');
+			}
+		});
+	});	
+</script>
+
+</body>
+</html>
+<!--H-ui前端框架提供前端技术支持 h-ui.net @2017-01-01 -->

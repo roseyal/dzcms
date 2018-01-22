@@ -1,0 +1,56 @@
+{include file="./templates/dome/header.html"}
+
+{include file="./templates/dome/nav.html"}
+
+    
+    <div class="news_banner_big zoomIn wow" data-wow-duration="1s">
+	
+		{Dz:banlist where="id=9" name="vo"}
+			<img src="/public/Uploads/{$vo.photo}"/>
+		{/Dz:banlist}
+	
+    	
+    </div>
+    <!-------------------news_banner_big end-------------------------->
+	
+    <div class="news_sub_big mb30">
+    	<div class="news_sub">
+        	<p><a href="{$info.url}">首页 </a>> <a href="{$info.url}">新闻中心</a></p>
+        </div>
+    </div>
+    <!------------------------------news_sub_big end-------------------------------------------->
+ 
+ 	<div class="newssub_big">
+    	<div class="newssub_content">
+        	<div class="newssub_content_top">
+        	<h1>{$info.title}!!!!【置顶】</h1>
+            <div class="newssub_title mt10 mb10">
+            	<span>发布日期:{$info.inputtime|date="Y-m-d",###}</span>
+                
+				<div class="clear"></div>
+            </div>
+			</div>
+            <div class="news_news mt20 pb30">
+            	<p>{$info.content}</p>
+                
+                <p class="mt30">上海拓东软件有限公司</p>
+                <p>总经理：{$info.author}</p>
+                
+            </div>
+        </div>
+    </div><!------------------newssub_big end------------------------------------>
+ 
+ 	<div class="column_big mb10 mt10">
+    	<div class="column">
+        	<p><a href="{$info.url}" class="column_left">下一篇：广东逸华交通工程检测有限公司</a><a href="#" class="column_right">>>返回新闻首页</a>
+            <div class="clear"></div>
+            </p>
+        </div>
+    </div>
+ 	<!------------column_big end----------------------->
+ 
+ 	
+{include file="./templates/dome/footer.html"}
+    
+</body>
+</html>

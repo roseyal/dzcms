@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>制造工业</title>
+    ﻿<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="alternate icon" type="image/png" href="images/favicon.png">
+<link rel='icon' href='favicon.ico' type='image/x-ico' />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+    {include file='./templates/new_temp/head.html'}
+</head>
+<body>
+{include file='./templates/new_temp/header.html'}
+    <div class="com-container">
+        <div class="cms-g">
+            <div class="am-hide-sm-only am-u-md-3 am-u-lg-3">
+                <div class="com-nav-left">
+                    <h1><em>新闻中心</em><i>NEWS</i></h1>
+                    <ul>
+                        {Dz:navlist limit="5" name='vo' top='3'}
+                        <li><a href="{$vo.url}">{$vo.title}</a></li>
+                        {/Dz:navlist}
+                    </ul>
+                </div>
+            </div>
+            <div class="am-u-sm-12 am-u-md-9 am-u-lg-9">
+                <div class="com-nav-title">
+                    <a href="#doc-oc-demo1" class="font am-show-sm-only" data-am-offcanvas>&#xe68b;</a>
+                    <span>公司新闻</span>
+                    <ol class="com-position am-show-md-up">
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">新闻动态</a></li>
+                        <li><a href="#">公司新闻</a></li>
+                    </ol>
+                </div>
+                <div class="com-nav-content">
+                    <p align="center">{$info.title}</p>
+                    <p align="center" style="font-size: 12px;">来源：{$info.source}&nbsp;&nbsp;作者：<span>{$info.author}</span>&nbsp;&nbsp;时间：<span>{$info.inputtime|date='Y-m-d H:i:s',###}</span></p>
+                    <span>{$info.content}</span>
+                </div>
+                <div class="com-info-page">
+                    <a href="#" class="no">上一篇</a><a href="#">下一篇</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="doc-oc-demo1" class="am-offcanvas">
+        <div class="am-offcanvas-bar">
+            <div class="am-offcanvas-content com-nav-left com-nav-left1">
+                <ul>
+                    <li class="on"><a href="#">公司新闻</a></li>
+                    <li><a href="#">产品资讯</a></li>
+                    <li><a href="#">营销动态</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{include file='./templates/new_temp/footer.html'}
+</body>
+</html>

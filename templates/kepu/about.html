@@ -1,0 +1,161 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+{include file="./templates/kepu/head.html"}
+<!-- 
+<script type="text/javascript">
+	var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cspan id='cnzz_stat_icon_1000167842'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000167842' type='text/javascript'%3E%3C/script%3E"));
+</script>
+-->
+<script>
+$("#cnzz_stat_icon_1000167842").hide();
+$("#cnzz_stat_icon_1000167842 a").text("click");
+$("#cnzz_stat_icon_1000167842 a").attr("title","click");
+$(function(){
+	$(".menux li").mouseover(function(){
+		  $(this).children(".submenux").addClass("shh");
+		  $(this).children(".navmenux").addClass("shx");
+		});
+	$(".menux li").mouseout(function(){
+		  $(this).children(".submenux").removeClass("shh");
+		  $(this).children(".navmenux").removeClass("shx");
+		});
+	//产品技术导航
+	$(".hassub").click(function(){
+		var subs =  $(this).next();
+		var hide = subs.is(":hidden");
+		
+		$(".sub:not(.zhankai)").hide();
+		//子产品线显示
+		//菜单导航div 正常高度
+		var mpx = 280;
+		if(hide){//现在为隐藏
+    		var len = subs.find('dl').eq(0).children().size();
+    		var px = len *20;
+    		subs.show().height(px);
+			//计算外面div高度，随着子产品线展开收缩调整;
+    		mpx = (len - 1) *20 + mpx;
+		}
+		$(".submenux2").height(mpx);
+	});
+
+	var zhankais = $(".zhankai");
+	for(var i = 0 ; i <zhankais.length; i ++ ){
+		var len = $(zhankais[i]).find('dd').size();
+		var px = len * 24;
+		$(zhankais[i]).height(px).parent().show().height(px);
+	}
+	//处于产品维保服务链接到其他独立页面
+		$("a[href='products.php?info/69']").attr('href','services.php');
+	
+	//百度推送代码 start
+  var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';       
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+    //百度推送代码 end
+
+	//优酷视频播放
+	var vid = $("#youkuplayer").attr('vid');
+	if(vid != undefined){
+		var player = new YKU.Player('youkuplayer',{
+			styleid: '0',
+			client_id: 'dd1fc4444cd920df',
+			vid: vid,
+			newPlayer: true,
+			show_related: false,
+			autoplay: false
+		});
+	}	
+    
+});
+</script>	<div class="bodyer" style="padding-top:2px">
+		<div class="insideCon">
+			<div class="title"><p><a href="welcome.php">首页</a> > <a href="about.php">关于我们</a></p></div>
+			<div class="productsTop">
+				<div class="productsTopL">
+				<img src="../../templates/kepu/img/about_us.jpg" width="938" height="195" /></div>
+			</div>
+			<div class="aboutT">
+				<div class="aboutTL">
+					<div class="titles"><h2><a href="about_intro.php">公司简介</a></h2></div>
+					<img src="../../templates/kepu/img/img12.jpg" width="313" height="95" />
+					<div class="aboutTLD">
+						杭州大智科技股份有限公司（简称“大智科技”）是在网络安全及应用交付领域集研发、生产、销售于一体的高科技企业。大智科技以“让网络更简单、智能、安全”为使命，持续创新，为客户提供领先的产品与解决方案。大智科技总部位于杭州，在北京和杭州设有研发中心，具有一支业界领先的研发团队。公司拥有一系列具有自主知识产…					
+					</div>
+					
+				</div>
+				<div class="aboutTR">
+					<div class="titles"><h2>
+					<a href="">加入大智</a></h2></div>
+					
+					<div class="newsTop">
+						<img src="../../templates/kepu/img/img15.jpg" width="131px;" height="115px;" />
+						<div style="width: 4000x;position: relative;top: 26px;">
+							我们是一个富有经验、创业激情和顶尖科技创新能力的团队，这里有广阔的发展空间，这里有澎湃的事业激情。期待您加入我们，一路向前！
+							
+							<br/>						
+						</div>
+
+	
+					</div>									
+				</div>
+			</div>
+			<div class="aboutB">
+				<div class="aboutBox">
+					<div class="titles">
+					<h2><a href="">公司刊物</a></h2></div>
+					<div class="aboutImg"><img src="../../templates/kepu/img/5.png" width="91" height="109" /></div>
+					<h2><a href="#1"><b>大智人 第三期</b></a></h2>
+					<p>岁月流逝，风雨兼程，大智科技走过了不平常的九年发展道路。九年里，肩负着让网络更简单、智能、安全的使命……</p>
+						
+				</div>
+				<div class="aboutBox" style="float:right">
+					<div class="titles"><h2><a href="">联系我们</a></h2></div>
+
+					<ul style="height:150px;">
+						<li style="height:50px;margin-top: auto;">
+							<!-- 
+							<p style="width:190px; margin:-38px 0px 10px 10px;position: relative;top: 26px;padding-bottom:10px; border-bottom:1px solid #e0e0e0">
+							<span style="color:#045b9d;cursor:pointer"  onclick="javascript:contact()">公司总部及各分支机构联系方式>></span>
+							</p>
+							 -->
+							<img src="../../templates/kepu/img/comment.png" alt="" onclick="javascript:contact()"  style="cursor:pointer"/>							
+						</li>
+						<li>
+							<p style="line-height:24px; text-align:left; padding:0 10px;margin:-20px 0px 0px 0px;">
+								<img src="../../templates/kepu/img/400.png" alt="" style="width: 186px;height: 64px;margin: 0px;"/>
+							</p>
+						</li>
+					</ul>
+					<div style="width: 112px; float: left;">
+						<div style="width: 112px;">
+							<img src="../../templates/kepu/img/订阅号_03.gif" alt="" style="width: 97px;height: 95px;margin: 0px;"/>
+						</div>
+						<div style="float: left;" >
+							&nbsp;大智微信订阅号
+						</div>
+					</div>
+					<div style="width: 112px;float: right;top: 20px;">
+						<div style="width: 112px;">
+						 <img src="../../templates/kepu/img/服务号_05.gif" alt="" style="width: 97px;height: 95px;margin: 0px;"/>
+						</div>
+						<div style="float: left;">
+							&nbsp;大智微信服务号
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="footer insideFoot">
+	{include file="./templates/kepu/foot.html"}
+</div></body>
+</html>

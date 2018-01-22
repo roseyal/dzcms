@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>制造工业</title>
+    ﻿<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="alternate icon" type="image/png" href="/templates/new_temp/images/favicon.png">
+<link rel='icon' href='favicon.ico' type='image/x-ico' />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+{include file='./templates/new_temp/head.html'}
+</head>
+<body>
+    {include file='./templates/new_temp/header.html'}
+
+    <div class="index-content">
+        <div class="cms-g">
+            <div class="am-u-sm-12 am-u-md-12 am-u-lg-4">
+                <div class="index-content-left">
+                        <h1>产品中心</h1>
+                        <div class="am-slider am-slider-default" data-am-flexslider id="demo-slider-0">
+                            <ul class="am-slides">
+                                {Dz:nlist limit="5" name='vo' cateid='2' }
+                                <li><img src="/templates/new_temp/uploads/{$vo.smallimage}" height="170" /></li>
+                                {/Dz:nlist}
+                                <!--<li><img src="/templates/new_temp/images/index-content-left-01.png" /></li>-->
+                                <!--<li><img src="/templates/new_temp/images/index-content-left-01.png" /></li>-->
+                                <!--<li><img src="/templates/new_temp/images/index-content-left-01.png" /></li>-->
+                                <!--<li><img src="/templates/new_temp/images/index-content-left-01.png" /></li>-->
+                                <!--<li><img src="/templates/new_temp/images/index-content-left-01.png" /></li>-->
+                            </ul>
+                        </div>
+                    
+                </div>
+            </div>
+            <div class="am-u-sm-12 am-u-md-12 am-u-lg-4">
+                <div class="index-content-center">
+                    <h1>新闻动态<a href="#">MORE<i class="font">&#xe78d;</i></a></h1>
+                    <ul>
+                        {Dz:nlist limit="6" name='vo' cateid='3'}
+                        <li><a href="{$vo.url}"><span>{$vo.title}</span><em>{$vo.inputtime|date='Y-m-d H:i:s',###}</em></a></li>
+                        {/Dz:nlist}
+                        <!--<li><a href="#"><span>热看LED产业，组建光电技术公司激流扬帆 </span><em>2017-4-6</em></a></li>-->
+                        <!--<li><a href="#"><span>LED灯具国内业务市场研讨会 LED灯具国内业务</span><em>2017-4-6</em></a></li>-->
+                        <!--<li><a href="#"><span>LED灯具国内业务市场研讨会 LED灯具国内业务</span><em>2017-4-6</em></a></li>-->
+                        <!--<li><a href="#"><span>LED灯具国内业务市场研讨会 LED灯具国内业务</span><em>2017-4-6</em></a></li>-->
+                        <!--<li><a href="#"><span>LED灯具国内业务市场研讨会 LED灯具国内业务</span><em>2017-4-6</em></a></li>-->
+                        <!--<li><a href="#"><span>LED灯具国内业务市场研讨会 LED灯具国内业务</span><em>2017-4-6</em></a></li>-->
+                    </ul>
+                </div>
+            </div>
+            <div class="am-u-sm-12 am-u-md-12 am-u-lg-4">
+                <div class="index-content-right">
+                    <h1>产品应用<a href="#">MORE<i class="font">&#xe78d;</i></a></h1>
+                    <img src="/templates/new_temp/uploads/{$vo.smallimage}"/>
+                    <ul>
+                        {Dz:nlist limit="6" name='vo' cateid='4' }
+                        <li><a href="{$vo.url}">▲&nbsp;{$vo.title}</a></li>
+                        {/Dz:nlist}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    {include file='./templates/new_temp/footer.html'}
+</body>
+</html>

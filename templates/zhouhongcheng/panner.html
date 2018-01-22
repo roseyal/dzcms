@@ -1,0 +1,56 @@
+{include file="./templates/zhouhongcheng/head.html"}
+<!--头部-->
+<div class="banner banner_s"><img src="/templates/zhouhongcheng/Assets/upload/banner_a.jpg" alt=""/></div>
+<div class="space_hx">&nbsp;</div>
+<div class="scd clearfix">
+	<div class="scd_l">
+    	<div class="name">合作伙伴</div>
+        <ul class="s_nav">
+        	<li>
+            	<a href="">营销伙伴</a>
+            </li>
+            <li>
+            	<a href="">产品伙伴</a>
+            </li>
+            <li>
+            	<a href="">伙伴体系</a>
+            </li>
+            <li>
+            	<a href="">合作加盟</a>
+            </li>
+            <li class="now">
+            	<a href="">伙伴支持</a>
+            </li>
+            <li>
+            	<a href="">发展前景</a>
+            </li>
+            <li>
+            	<a href="">支持策略</a>
+            </li>
+        </ul>
+    </div>
+    <div class="scd_r">
+    {Dz:nlist name='vo' cateid='3'}
+    <div class="dq">
+            <span class="name">{$vo.title}</span>
+            <div class="pst">
+                <span>您的位置：</span>
+                <a href="">首页</a>
+                <span>></span>
+                <a href="">{$vo.title}</a>
+                <span>></span>
+                <a href="">{$vo.title}</a>
+            </div>
+        </div>
+        <div class="scd_m">
+            <div class="log">
+                <h6>{$vo.content}
+                 <img src="/templates/zhouhongcheng/Assets/upload/pic22.jpg" alt=""/>
+                }
+            </div>
+        </div>
+    </div>
+    {/Dz:nlist}
+    	
+</div>
+{include file="./templates/zhouhongcheng/footer.html"}

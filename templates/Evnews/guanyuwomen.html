@@ -1,0 +1,50 @@
+﻿	{include file="templates\Evnews\head.html"}
+
+	<div class="pageContainer_w w100">
+		<div class="pageContainer mar1200 clearfix">
+			<div class="left fl">
+				<div class="position">当前位置：<span>
+									<a href="http://www.ev361.com/">首页</a> - <a href="/gengduo.html">更多</a> - <a href="/guanyuwomen.html">关于我们</a>								</span></div>
+									{Dz:banlist   sql="SELECT * FROM dz_banner WHERE id = 61" }
+				<div class="banner"><img src="../../public/Uploads/{$v.photo}" width="770" height="190" alt=""/></div>
+				{/Dz:banlist}
+				<div class="page_content">
+					<div class="pageDetail_content" style="padding-top:24px;">
+						<p style="white-space:normal;text-align:center;">
+	<span style="font-size:20px;line-height:1.5;"><b>广州EV观察新闻有限公司</b></span> 
+</p>
+<br />
+
+	<p style="white-space:normal;">
+	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="font-family:Microsoft YaHei;">&nbsp;</span><span style="line-height:2;font-family:&quot;">{$info.content}</span> 
+</p>
+
+					</div>
+				</div>
+			</div>
+			<div class="right fr">
+				
+		{Dz:adlist   sql="SELECT * FROM dz_ad WHERE id = 46" }		
+	<div class="page_banner_s"><a href=""><img src="../../public/Uploads/{$v.photo}"/></a></div>
+	{/Dz:adlist}
+	<div class="pagePanel_1_container">
+		<div class="pagePanel_1_title">深度观察</div>
+		<div class="pagePanel_1_list">
+			<ul>
+			{Dz:nlist sql="select * from dz_news where cateid='25' limit 6 "}
+				<li>
+					<a href="{$v.url}">{$v.title}</a>
+				</li>		
+					{/Dz:nlist}
+					</ul>
+		</div>
+	</div>
+	{Dz:adlist   sql="SELECT * FROM dz_ad WHERE id = 47" }
+	<div class="page_banner_s2"><a href=""><img src="/../../public/Uploads/{$v.photo}"/></a></div>
+		{/Dz:adlist}
+
+
+			</div>
+		</div>
+	</div>
+			{include file="templates\Evnews\foot.html"}

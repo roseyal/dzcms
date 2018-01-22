@@ -1,0 +1,38 @@
+{include file="./templates/liudong/header.html"}
+<div>
+    <section class="article-content">
+        <div class="article-protect-tab">
+            <span>公司新闻</span>
+            <span>行业新闻</span>
+            <span>环保知识</span>
+        </div>
+        <div class="article-protect-body">
+            <img src="/public/__STATIC__/huanbao/images/pro1.jpg">
+            <ul>
+{Dz:newslist limit="6"}
+   <li>
+                    <a href="{$v.url}">
+                    <h3>{$v.id}</h3>
+                    <span>{$v.inputtime}</span>
+                    </a>
+                    <p>{$v.id}..</p>
+                </li>
+{/Dz:newslist}  
+            </ul>
+        </div>
+    </section>
+    
+    <div class="article_list_more_pages">
+        <ul>
+            <li><a>上一页</a></li>
+            <li class="article-current"><a>1</a></li>
+            <li><a>2</a></li>
+            <li><a>3</a></li>
+            <li><a>下一页</a></li>
+        </ul>
+    </div>
+    <div class="feature">
+        <img class="sm" src="images/main5.jpg">
+    </div>
+</div>
+{include file="./templates/liudong/footer.html"}

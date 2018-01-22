@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{include file="./templates/dianzi/head.html"}
+</head>
+<body>
+<!--头部-->
+<div class="header">
+    {include file="./templates/dianzi/header.html"}
+
+</div>
+<!--头部-->
+<!--幻灯片-->
+<div class="banner_s"><img src="../../templates/dianzi/Assets/upload/banner_a.jpg" alt=""/></div>
+<div class="pst_bg">
+	<div class="pst">
+    	您当前的位置：
+        <a href="">人力资源</a>>
+        <a href="">人才招聘</a>
+    </div>
+</div>
+<div class="scd clearfix">
+	<div class="scd_l">
+    	<div class="s_name">
+        	<img src="../../templates/dianzi/Assets/images/t5.png" width="147" height="48" alt=""/>
+            <i>&nbsp;</i>
+        </div>
+        <ul class="s_nav">
+        	<li class="now"><a href="">人才招聘</a></li>
+        </ul>
+    </div>
+    <div class="scd_r">
+        {Dz:nlist field="title,shorttitle,keywords,abstract,author,content,cateid,smallimage" order="id desc" limit="1"  name='vo' status="true" cateid="4"}
+    	<div class="r_name"><span>{$vo.title}</span></div>
+        <div class="join">
+        	<div class="j_a">人才是公司发展的重要因素，人才是公司最大的财富，大智电子有限公司公司秉承以人为本，公平、公正、公开的经营管理原则, 为员工创造一个施展才华的舞台，通过丰裕的工作内容、优越的工作环境以及和谐的工作氛围，实现企业与个人的良性互动。公司提供具有竞争力的薪酬、福利及晋升机会, 诚邀各方英才加入xxx电子有限公司电子有限公司工作团队。<br/>
+我们真诚期待你的加入！</div>
+			<div class="j_b">
+            	<b>人事部门联络资料</b>
+                <p>请有意者将个人简历、照片及学历证明复印件等相关资料发送至</p>
+                <p>邮箱:<a href="mailto:wangjiang@xxxxx-well.com">{$vo.keywords}</a></p>
+                <p>电话: <a href="tel:075583479663">{$vo.abstract}</a>&nbsp;&nbsp;&nbsp;&nbsp;联络人：<span>{$vo.author}</span></p>
+                <b>公司目前招聘岗位如下:</b>
+            </div>
+            <div class="space_hx">&nbsp;</div>
+            {$vo.content}
+        </div>
+        {/Dz:nlist}
+    </div>
+</div>
+{include file="./templates/dianzi/footer.html"}
+</body>
+</html>

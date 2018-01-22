@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+{include file="./templates/xynews/header.html"}
+	<!--头部广告图-->
+	<div class="com-banner-box">
+	{Dz:banlist page="true" name="vo" where="type='关于我们'"}
+		<img src="/public/Uploads/{$vo.photo}" alt="产品banner" />
+	{/Dz:banlist}
+	</div>
+	<div class="main-wrap" style="background: url(/templates/xynews/img/employ-bg.jpg) no-repeat top;">
+		<div class="ab-wrap">
+			<div class="wrapper">
+				<div class="com-title-box">
+					<div class="common-title common-title-small clearfix">
+						<h1>企业介绍</h1>
+						<p>INTRODUCTION</p>
+					</div>
+				</div>
+				<div class="ab-produce-con clearfix">
+					<div class="ab-produce-txt">
+						{$info.content}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<!--页脚-->
+{include file="./templates/xynews/footer.html"}
+	<!--页脚结束-->
+	
+	
+<script type="text/javascript" src="/templates/xynews/js/jquery-1.11.0.js"></script>
+<script type="text/javascript">
+	//导航当前效果
+		$(".main-nav .main-nav-item").click(
+			function(){
+				$(this).addClass("nav-active").siblings().removeClass("nav-active");
+			});
+	//导航二级菜单显示效果
+		$(".main-nav .main-nav-item").hover(
+		function(){
+			$(this).children(".sub-nav").stop().fadeIn();
+			$(this).siblings().children(".sub-nav").stop().hide();
+		},function(){
+			$(this).children(".sub-nav").stop().fadeOut();
+		});
+	//
+	
+	//返回顶部
+		$(".back-top").click(function () {
+	        var speed=200;//滑动的速度
+	        $('body,html').animate({ scrollTop: 0 }, speed);
+	        return false;
+	 	});
+</script>
+</body>
+</html>
+
+

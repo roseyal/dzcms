@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+{include file="./templates/xynews/header.html"}
+	<!--头部广告图-->
+	<div class="com-banner-box">
+		<img src="/templates/xynews/img/contact-bn-1.jpg" alt="产品banner" />
+	</div>
+	<div class="main-wrap" style="background: url(/templates/xynews/img/employ-bg.jpg) no-repeat center;">
+		<div class="ab-wrap" style="background: url(/templates/xynews/img/com-fix-bg.png) no-repeat bottom;">
+		<div class="contact-part1">
+			<div class="wrapper">
+				<div class="com-title-box">
+					<div class="common-title common-title-small clearfix">
+						<h1>联系我们</h1>
+						<p>CONTACT US</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+			<div class="contact-part2">
+				<div class="map" style="" id="map"></div>
+				<div class="map-con wrapper">
+					<div class="map-txt">
+						{$info.content}
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<!--页脚-->
+	{include file="./templates/xynews/footer.html"}
+	<!--页脚结束-->
+	
+<script type="text/javascript" src="/templates/xynews/js/jquery-1.11.0.js"></script>
+<!--引用百度地图API-->
+<script src="http://api.map.baidu.com/api?v=1.4" type="text/javascript"></script>
+<script type="text/javascript">
+	//导航当前效果
+		$(".main-nav .main-nav-item").click(
+			function(){
+				$(this).addClass("nav-active").siblings().removeClass("nav-active");
+			});
+	$(".main-nav .main-nav-item").hover(
+		function(){
+			$(this).children(".sub-nav").stop().fadeIn();
+			$(this).siblings().children(".sub-nav").stop().hide();
+		},function(){
+			$(this).children(".sub-nav").stop().fadeOut();
+		});
+	//返回顶部
+		$(".back-top").click(function () {
+	        var speed=200;//滑动的速度
+	        $('body,html').animate({ scrollTop: 0 }, speed);
+	        return false;
+	 	});
+</script>
+
+<!--地图-->
+<script type="text/javascript">
+	//创建和初始化地图函数：
+	    function initMap(){
+	      createMap();//创建地图
+	      setMapEvent();//设置地图事件
+	      addMapControl();//向地图添加控件
+	      addMapOverlay();//向地图添加覆盖物
+	    }
+	    function createMap(){ 
+	      map = new BMap.Map("map"); 
+	      map.centerAndZoom(new BMap.Point(118.446742,34.978375),15);
+	    }
+	    function setMapEvent(){
+	      map.enableScrollWheelZoom();
+	      map.enableKeyboard();
+	      map.enableDragging();
+	      map.enableDoubleClickZoom()
+	    }
+	    function addClickHandler(target,window){
+	      target.addEventListener("click",function(){
+	        target.openInfoWindow(window);
+	      });
+	    }
+	    function addMapOverlay(){
+	      var markers = [
+	        {content:"",title:"",imageOffset: {width:0,height:0},position:{lat:34.972918,lng:118.456102}}
+	      ];
+	      for(var index = 0; index < markers.length; index++ ){
+	        var point = new BMap.Point(markers[index].position.lng,markers[index].position.lat);
+	        var marker = new BMap.Marker(point,{icon:new BMap.Icon("img/map-icon.png",new BMap.Size(30,30),{
+	          imageOffset: new BMap.Size(markers[index].imageOffset.width,markers[index].imageOffset.height)
+	        })});
+	        var label = new BMap.Label(markers[index].title,{offset: new BMap.Size(25,5)});
+	        var opts = {
+	          width: 200,
+	          title: markers[index].title,
+	          enableMessage: false
+	        };
+	        var infoWindow = new BMap.InfoWindow(markers[index].content,opts);
+	        marker.setLabel(label);
+	        addClickHandler(marker,infoWindow);
+	        map.addOverlay(marker);
+	      };
+	    }
+	//向地图添加控件
+	    function addMapControl(){
+	      var scaleControl = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
+	      scaleControl.setUnit(BMAP_UNIT_IMPERIAL);
+	      map.addControl(scaleControl);
+	      var navControl = new BMap.NavigationControl({anchor:BMAP_ANCHOR_TOP_LEFT,type:BMAP_NAVIGATION_CONTROL_LARGE});
+	      map.addControl(navControl);
+	      var overviewControl = new BMap.OverviewMapControl({anchor:BMAP_ANCHOR_BOTTOM_RIGHT,isOpen:false});
+	      map.addControl(overviewControl);
+	    }
+	    var map;
+	      initMap();
+</script>
+</body>
+</html>
+
+

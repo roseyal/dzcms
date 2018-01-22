@@ -1,0 +1,17 @@
+
+<header>
+	<div class="beijing">
+	<h2 style="font-size: 40px;"><a href="" ><span class="Dzcms">Dzcms</span></a></h2>
+          <ul>	<li>
+				<a class="menu_1 hover"  href="\" >首页</a>
+			</li>
+		  {Dz:navlist field="id,name,url" order="id desc" name='vo' limit="6"}
+	         <li>
+			<a class="menu_1" href="{$vo.url}">{$vo.title}</a>
+			</li>
+				{/Dz:navlist}					
+		</ul>
+		<div class="clear"></div>		
+	</div>
+	<div class="clear"></div>
+</header>

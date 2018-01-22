@@ -1,0 +1,133 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+{include file="./templates/kepu/head.html"}
+<!-- 
+<script type="text/javascript">
+	var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cspan id='cnzz_stat_icon_1000167842'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000167842' type='text/javascript'%3E%3C/script%3E"));
+</script>
+-->
+<script>
+$("#cnzz_stat_icon_1000167842").hide();
+$("#cnzz_stat_icon_1000167842 a").text("click");
+$("#cnzz_stat_icon_1000167842 a").attr("title","click");
+$(function(){
+	$(".menux li").mouseover(function(){
+		  $(this).children(".submenux").addClass("shh");
+		  $(this).children(".navmenux").addClass("shx");
+		});
+	$(".menux li").mouseout(function(){
+		  $(this).children(".submenux").removeClass("shh");
+		  $(this).children(".navmenux").removeClass("shx");
+		});
+	//产品技术导航
+	$(".hassub").click(function(){
+		var subs =  $(this).next();
+		var hide = subs.is(":hidden");
+		
+		$(".sub:not(.zhankai)").hide();
+		//子产品线显示
+		//菜单导航div 正常高度
+		var mpx = 280;
+		if(hide){//现在为隐藏
+    		var len = subs.find('dl').eq(0).children().size();
+    		var px = len *20;
+    		subs.show().height(px);
+			//计算外面div高度，随着子产品线展开收缩调整;
+    		mpx = (len - 1) *20 + mpx;
+		}
+		$(".submenux2").height(mpx);
+	});
+
+	var zhankais = $(".zhankai");
+	for(var i = 0 ; i <zhankais.length; i ++ ){
+		var len = $(zhankais[i]).find('dd').size();
+		var px = len * 24;
+		$(zhankais[i]).height(px).parent().show().height(px);
+	}
+	//处于产品维保服务链接到其他独立页面
+		$("a[href='products.php?info/69']").attr('href','services.php');
+	
+	//百度推送代码 start
+  var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';       
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+    //百度推送代码 end
+
+	//优酷视频播放
+	var vid = $("#youkuplayer").attr('vid');
+	if(vid != undefined){
+		var player = new YKU.Player('youkuplayer',{
+			styleid: '0',
+			client_id: 'dd1fc4444cd920df',
+			vid: vid,
+			newPlayer: true,
+			show_related: false,
+			autoplay: false
+		});
+	}	
+    
+});
+</script>	<div class="bodyer" style="padding-top:2px">
+		<div class="insideCon">
+			<div class="title"><p><a href="welcome.php">首页</a> > <a href="service.php">支持与服务</a></p></div>
+			<div class="planTop"><img src="../../templates/kepu/img/support_service.jpg" width="935" height="195" /></div>
+			<div class="service">
+				<div class="serviceBox">
+					<div class="titles"><h2><a href="services.php">服务</a></h2></div>
+					<div class="serviceBoxCon">
+						<img src="../../templates/kepu/img/img24.jpg" width="270" height="71" />
+						<ul>
+			{Dz:newslist page="true" limit="3" cateid="3" name="vo"}
+		   <li><a href="{$vo.url}">{$vo.catename}</a>
+		      			
+						{/Dz:newslist}		
+						</ul>
+					</div>
+				</div>
+				<div class="serviceBox">
+					<div class="titles"><h2><a href="down.php?1">下载中心</a></h2></div>
+					<div class="serviceBoxCon">
+						<img src="../../templates/kepu/img/img23.jpg" width="270" height="71" />
+						<ul>
+			{Dz:newslist page="true" limit="3" cateid="3" name="vo"}
+		   <li><a href="{$vo.url}">{$vo.title}</a>			
+						{/Dz:newslist}		
+						</ul>
+					</div>
+				</div>
+				<div class="serviceBox" style="margin-right:0">
+					<div class="titles"><h2><a href="train.php">培训中心</a></h2></div>
+					<div class="serviceBoxCon">
+						<img src="../../templates/kepu/img/img22.jpg" width="270" height="71" />
+						<ul>
+					{Dz:newslist page="true" limit="3" cateid="3" name="vo"}
+		            <li><a href="{$vo.url}">{$vo.title}</a>
+		       		
+						{/Dz:newslist}		
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="ksdh" style="display: none;">
+			<div class="ksdh1">快速导航</div>
+			<div class="ksdh2">
+				<ul class="ksdh3">
+	  	</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer insideFoot">
+	{include file="./templates/kepu/foot.html"}
+</div>
+</body>
+</html>

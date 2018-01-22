@@ -1,0 +1,41 @@
+{include file="templates/zhangwenxue/head.html"}
+<div class="wrapper">
+  <div class="container content">
+               <div class="page_right">
+      <div class="sub_title">
+        <h2>新闻中心</h2>
+        <h4>NEWS</h4>
+      </div>
+       <div class="sub_nav">
+        <ul>
+        <li  ><a href="/home/Article/newslist?cateid=2" title="集团新闻">集团新闻</a></li>
+      <li  class="on" ><a href="/home/Article/newslist?cateid=3" title="行业新闻">行业新闻</a></li>
+              </ul>
+      </div>
+    </div>    <div class="page_left">
+        <div class="page_title"><a href="/">首页</a> > <a href="">新闻中心</a> > <a href="/home/Article/newslist?cateid=3">行业新闻</a></div>
+  
+      <div class="page_content">
+        <ul class="culture_ul clearfix">
+        {Dz:newslist order="id desc" limit="6" page="true"}
+		            <li> 
+                  <a href="{$v.url}">
+                  <div class="pic"> <img src="../../public/Uploads/{$v.smallimage}" alt="{$v.title}" class="vcenter" /> 
+                    <i></i> 
+                  </div>
+                  <p>{$v.title}</p>
+                  </a> 
+                </li>
+	        {/Dz:newslist}
+	        </ul>
+        	    <div class="pageing">
+                 {$page}
+               </div>
+      </div>
+    </div>
+  </div>
+</div>
+{include file="templates/zhangwenxue/foot.html"}
+<!--footer end-->
+</body>
+</html>

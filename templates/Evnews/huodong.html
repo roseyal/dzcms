@@ -1,0 +1,42 @@
+﻿	{include file="templates\Evnews\head.html"}
+
+	<div class="pageContainer_w w100 page_activity">
+		<div class="pageContainer mar1200 clearfix">
+			<div class="left fl">
+				<div class="position">当前位置：<span>
+									<a href="http://www.ev361.com/">首页</a> - <a href="/huodong.html">活动</a>								</span></div>
+				<div class="classify">
+					<div class="caseCategory_list">
+						<ul class="clearbox clearfix">
+							
+									</ul>
+					</div>
+				</div>
+				<div class="list">
+					<ul class="clearfix">
+					{Dz:newslist  order="id asc" page="true" limit="3" }
+						<li>
+							<div class="img"><a href="{$v.url}" title="测试活动" target="_blank"><img src="../../public/Uploads/{$v.smallimage}" alt=""/></a></div>
+					<div class="info">
+								<div class="top clearfix">
+									<div class="name fl"><a href="{$v.url}" title="测试活动" target="_blank">{$v.title}</a></div>
+																		<div class="button fr end">进行中</div>
+																	</div>
+								
+								<div class="bottom clearfix">
+									<div class="add fl">临沂市</div>
+									<div class="time fr">开始日 {$v.inputtime|date="Y-m-d",###}</div>
+								</div>
+							</div>
+						</li>	
+						{/Dz:newslist}					
+					</ul>
+				</div>
+				<div class="page">
+				{$page}
+									</div>
+			</div>
+		</div>
+	</div>
+		
+	{include file="templates\Evnews\foot.html"}

@@ -1,0 +1,110 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Author" contect="http://www.webqin.net">
+<title>大智科技</title>
+<link type="text/css" href="./templates/zhengjiwei/css/css.css" rel="stylesheet" />
+<script type="text/javascript" src="./templates/zhengjiwei/js/jquery.js"></script>
+<script type="text/javascript" src="./templates/zhengjiwei/js/js.js"></script>
+<script type="text/javascript" src="./templates/zhengjiwei/js/jquery.jslides.js"></script>
+<script type="text/javascript">
+ $(function(){
+	 //导航定位
+	 $(".nav li:eq(0) a:first").addClass("navCur");
+	 })
+</script>
+</head>
+
+<body>
+ <div class="header width1003">
+  <a href="javascript:;" onclick="AddFavorite(window.location,document.title)" class="jr">加入收藏</a> | 
+  <a href="javascript:;" onclick="SetHome(this,window.location)" class="sw">设为首页</a> | 
+  <a href="contact.html">联系我们</a>
+ </div><!--header/-->
+ <div class="width1003">
+  <h1 class="logo fl"><a href="index.html"><img src="./templates/zhengjiwei/images/logo.png" width="214" height="83" /></a></h1>
+  <div class="sea-phone fr">
+   <form action="#" method="get" class="search">
+    <input type="submit" value="" class="seaSub" />
+    <input type="text" class="seaText" />
+   </form><!--search /-->
+   <div class="phone"><img src="./templates/zhengjiwei/images/phone.png" width="244" height="20" /></div>
+  </div><!--sea-phone/-->
+  <div class="clears"></div>
+ </div><!--width1003/-->
+{include file="./templates/zhengjiwei/head.html"}
+<!--nav/-->
+ <div id="ban">
+	<ul id="slides">
+		<li style="background:url('./templates/zhengjiwei/images/banner1.jpg') no-repeat center top"><a href="javascript:"></a></li>
+        <li style="background:url('./templates/zhengjiwei/images/banner1.jpg') no-repeat center top"><a href="javascript:"></a></li>
+        <li style="background:url('./templates/zhengjiwei/images/banner1.jpg') no-repeat center top"><a href="javascript:"></a></li>
+        <li style="background:url('./templates/zhengjiwei/images/banner1.jpg') no-repeat center top"><a href="javascript:"></a></li>
+	</ul>
+ </div><!--ban/-->
+ <div class="mainCont">
+  <img src="./templates/zhengjiwei/images/footbg.jpg" class="mainBg" />
+  <div class="cont1 width1003">
+   <div class="inBrand fl">
+    <h2 class="title"><img src="./templates/zhengjiwei/images/title-pinpai.png" width="309" height="59" /><a href="brand.html">更多</a></h2>
+    <div class="inBrandimg"><img src="./templates/zhengjiwei/images/aboutimg.jpg" width="305" height="83" /></div>
+    <div class="inbrandText">
+    &nbsp;&nbsp;&nbsp;&nbsp;品牌介绍 品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍品牌介绍…….
+    </div><!--inbrandText/-->
+   </div><!--inBrand/-->
+   <div class="inNew fl">
+    <h2 class="title"><img src="./templates/zhengjiwei/images/title-new.png" width="309" height="59" /><a href="new.html">更多</a></h2>
+    <dl>
+     <dt><a href="newinfo.htl"><img src="./templates/zhengjiwei/images/aboutimg2.jpg" width="131" height="84" /></a></dt>
+     <dd>
+      <strong><a href="newinfo.htl">康汉生技老师在南京上课</a></strong><br />
+      9月20日，康汉生技老师6月18日在南京上课……
+     </dd>
+     <div class="clears"></div>
+    </dl>
+    <ul>
+     {Dz:nlist order="id desc"  limit="5" name='vo'}
+         <li><a href="{$vo.url}">{$vo.title}</a><span>{$vo.inputtime}</span></li>
+     {/Dz:nlist}
+    </ul>
+   </div><!--inNew/-->
+   <div class="invideo fr">
+    <embed src="http://player.youku.com/player.php/sid/XMTI3ODA5NTY0NA==/v.swf" allowFullScreen="true" quality="high" width="314" height="209" align="middle" allowScriptAccess="always" type="application/x-shockwave-flash"></embed>
+   </div><!--invideo/-->
+   <div class="clears"></div>
+  </div><!--cont1/-->
+  <div class="cont2 width1003">
+   <div class="inabout fl">
+    <h2 class="title2"><img src="./templates/zhengjiwei/images/title-gongs.png" width="412" height="65" /><a href="about.html">更多</a></h2>
+    <ul class="inAboutList" style="background:url(./templates/zhengjiwei/images/about3.jpg) 5px top no-repeat;">
+     <li>经营理念：诚信 创新 合作 共赢</li>
+     <li>服务理念：耐心 细致 周到 感动</li>
+     <li>工作理念：认真 协作 高效 责任</li>
+     <li>生活理念：健康 快乐 和谐 感恩</li>
+    </ul><!--inAboutList/-->
+   </div><!--inabout/-->
+   <div class="inPro fr">
+    <h2 class="title2"><img src="./templates/zhengjiwei/images/title-pro.png" width="412" height="65" /><a href="product.html">更多</a></h2>
+    <ul>
+     {Dz:nlist order="id desc"  limit="4" name='vo'}
+     <li><a href="{$vo.url}"><img src="{$vo.smallimage}" width="122" height="90" /></a></li>
+     {/Dz:nlist}
+     <div class="clears"></div>
+    </ul>
+   </div><!--inPro/-->
+   <div class="clears"></div>
+  </div><!--cont2/-->
+{include file="./templates/zhengjiwei/foot.html"}<!--footer/-->
+ </div><!--mainCont/-->
+ 
+ <div class="QQzixun">
+  <a href="http://wpa.qq.com/msgrd?v=3&uin=2468084741&site=qq&menu=yes" target="_blank"><img src="./templates/zhengjiwei/images/qqzx.jpg" width="93" height="151" /></a>
+ </div><!--QQzixun/-->
+ <ul class="rightPiao">
+  <li><img src="./templates/zhengjiwei/images/weixin.gif" width="47" height="50" /><div class="weixin"><img src="./templates/zhengjiwei/images/erweima.jpg" /></div></li>
+  <li><a href="Mailto:test@163.com" title="点击发送邮件"><img src="./templates/zhengjiwei/images/email.gif" width="47" height="50" /></a></li>
+  <li class="backTop" title="点击返回顶部"><img src="./templates/zhengjiwei/images/backtop.gif" width="47" height="50" /></li>
+ </ul><!--rightPiao/-->
+</body>
+</html>

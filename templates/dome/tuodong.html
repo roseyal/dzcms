@@ -1,0 +1,65 @@
+{include file="./templates/dome/header.html"}
+
+{include file="./templates/dome/nav.html"}
+
+
+  <div class="td_banner zoomIn wow" data-wow-duration="1.5s">
+  {Dz:banlist where="id=7" name="vo"}
+  	<img src="/public/Uploads/{$vo.photo}"/>
+  {/Dz:banlist} 
+  </div>
+	<!----------------td_banner end ---------------------->
+    
+  <div class="our_point_big mt20 mb30">
+  	<div class="our_point">
+    	<h1 class="slideInDown wow" data-wow-duration="2s">our point</h1>
+       <div class="point_line mb20 slideInDown wow" data-wow-duration="2.2s"><h2>我们的观点</h2></div>
+       <div class="point_content mt30">
+       		<ul id="animationSandbox">
+			{Dz:nlist name="vo"  limit="3" where="id>=11"}
+            	<li class=" slideInDown wow" data-wow-duration="1.2s">
+                	<div class="point_top">
+                    	<p><a href="{$vo.url}" style="color:#fff">FOCUS<br/>{$vo.title}</a></p>
+                    </div>
+                    <div class="point_bottom mt20">
+                    	<p>{$vo.abstract}</p>
+                    </div>
+                </li>
+			{/Dz:nlist}
+               <div class="clear"></div>
+			   
+            </ul>
+       </div>
+    </div>
+  </div><!-------------our_point_big end------------------------>
+    
+ 
+    <!------------td_course_big end--------------------------------->
+    
+    
+    <div class="td_aboutus mb50">
+    	<div class="td_aboutus_content">
+        	<div class="td_aboutus_left fadeInLeft wow" data-wow-delay="1.3s">
+			{Dz:banlist where="id=8" name="vo"}
+					<img src="/public/Uploads/{$vo.photo}"/>
+			{/Dz:banlist}
+            </div>
+            <div class="td_aboutus_right  wow fadeInRight" data-wow-delay="1.6s">
+                {Dz:nlist limit="1" where="id=4" name="vo"}
+                <span>{$vo.shorttitle}</span><br/>
+                <h4>{$vo.title}</h4><br/>
+            	<<p>{$vo.content}</p>
+				<div><a href="{$vo.url}" style="color:#63b8ff;font-size:15px;font-weight:bolder">查看全文</a></div>
+			{/Dz:nlist}
+			
+			
+            </div><div class="clear"></div>
+        </div>
+    </div><!--------------td_aboutus end----------------------------->
+ 
+ 
+ 
+{include file="./templates/dome/footer.html"}
+    
+</body>
+</html>

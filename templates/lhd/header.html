@@ -1,0 +1,116 @@
+<div id="box_header">
+        <div class="header_nv" id="box_header_nv"> 
+          <div class="header_nv_logo" id="box_header_nv_logo"> 
+            <div xmlns="" class="columnSpace" id="elem-FrontSpecifies_show01-1467337321942" name="说明页">  
+              <div id="FrontSpecifies_show01-1467337321942" class="FrontSpecifies_show01-d3_c1"><div class="describe htmledit">
+       <p>
+	<a href="/index.html"><img alt="" src="/templates/lhd/imageRepository/dazhi.png" style="margin-top:25px" /></a></p></div>
+</div> 
+            </div>
+          </div>  
+          <div class="header_nv_dh" id="box_header_nv_dh"> 
+            <div xmlns="" class="columnSpace" id="elem-FrontColumns_navigation01-1467337351397" name="栏目导航">  
+              <script type="text/javascript">
+	//<![CDATA[
+	FrontColumns_navigation01['FrontColumns_navigation01-1467337351397_init'] = function (){
+		FrontColumns_navigation01.d2ddlevelsmenu.init("d2menubar_FrontColumns_navigation01-1467337351397", "topbar");
+	}
+	$(FrontColumns_navigation01['FrontColumns_navigation01-1467337351397_init']);
+	// ]]>
+</script>
+<div id="FrontColumns_navigation01-1467337351397" class="FrontColumns_navigation01-d2_c1"><div id="d2menubar_FrontColumns_navigation01-1467337351397" class="mattblackmenu">
+		<ul class="nav-first">
+            <li class="first">
+					<a href="{:url('Index/index')}" title="首页">首页</a>
+			</li>
+			{Dz:navlist name="vo"}
+				<li class="first">
+					<a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a>
+				</li>
+			{/Dz:navlist}
+			<!--<li >
+				<a href="aboutus.html" title="关于我们">关于我们</a>
+			</li>
+			<li >
+				<a href="products.html" title="产品展示">产品展示</a>
+			</li>
+			<li >
+				<a href="news.html" title="新闻资讯">新闻资讯</a>
+			</li>
+			<li >
+				<a href="technical.html" title="技术工艺">技术工艺</a>
+			</li>
+			<li >
+				<a href="contactus.html" title="联系我们">联系我们</a>
+			</li>-->
+		</ul>
+	</div>
+	</div> 
+            </div>
+          </div>  
+          <div class="clearBoth"></div> 
+        </div> 
+      </div>  
+      <div id="box_banner"> 
+        <div class="banner_b" id="box_banner_b"> 
+          <div xmlns="" class="columnSpace" id="elem-FrontPublic_slideShow01-1467342312285" name="公用幻灯">  
+            <script language="javascript">
+	//<![CDATA[
+		FrontPublic_slideShow01['FrontPublic_slideShow01-1467342312285_init'] = function (){
+		 FrontPublic_slideShow01['FrontPublic_slideShow01-1467342312285_init'] = new FrontPublic_slideShow01();
+		 FrontPublic_slideShow01['FrontPublic_slideShow01-1467342312285_init'].d5_slide("960","");
+		}
+		$( FrontPublic_slideShow01['FrontPublic_slideShow01-1467342312285_init']);
+	// ]]>
+</script>  
+<script type="text/javascript" src="/publicScripts/common/superslide.2.1.js"></script>
+<div id="FrontPublic_slideShow01-1467342312285" class="FrontPublic_slideShow01-d6_c1"><div class="fullSlide">
+	<div class="bd">
+		<ul>
+       <li>
+        			<a href="javascript:void(0)" class="f_pic" >
+		       	  			<img src="/templates/lhd/imageRepository/79a5615b-2e83-4c55-b3e5-8a3757689464.jpg" />
+		       	  			</a>
+		       	  			<a href="javascript:void(0)" class="f_title" >
+		       	  			</a>
+						</li>     
+	   <li>
+        			<a href="javascript:void(0)" class="f_pic" >
+		       	  			<img src="/templates/lhd/imageRepository/532b29cb-407b-4761-a904-6941f7052b49.jpg" />
+		       	  			</a>
+		       	  			<a href="javascript:void(0)" class="f_title" >
+		       	  			</a>
+						</li>     
+	   </ul>
+	</div>
+	<div class="hd"><ul></ul></div>
+	<span class="prev"></span>
+	<span class="next"></span>
+</div>
+	<script type="text/javascript">
+$(".fullSlide").hover(function(){
+    $(this).find(".prev,.next").stop(true, true).fadeTo("show", 0.5)
+},
+function(){
+    $(this).find(".prev,.next").fadeOut()
+});
+$(".fullSlide").slide({
+    titCell: ".hd ul",
+    mainCell: ".bd ul",
+    effect: "fold",
+    autoPlay: true,
+    autoPage: true,
+    trigger: "click",
+	interTime:"5"*1000,
+    startFun: function(i) {
+        var curLi = jQuery(".fullSlide .bd li").eq(i);
+        if ( !! curLi.attr("_src")) {
+            curLi.css("background-image", curLi.attr("_src")).removeAttr("_src")
+        }
+    }
+});
+</script>   
+</div> 
+          </div>
+        </div> 
+      </div>  

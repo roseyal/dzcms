@@ -1,0 +1,62 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>大智网站模板</title>
+    <link rel="stylesheet" href="/templates/xialonghao/css/amazeui.css" />
+    <link rel="stylesheet" href="/templates/xialonghao/css/common.min.css" />
+    <link rel="stylesheet" href="/templates/xialonghao/css/index.min.css" />
+    <link rel="stylesheet" href="/templates/xialonghao/css/about.min.css" />
+    <link rel="stylesheet" href="/templates/xialonghao/css/news.min.css" />
+    <link rel="stylesheet" href="/templates/xialonghao/css/solution.min.css" />
+    <link rel="stylesheet" href="/templates/xialonghao/css/default.min.css" />
+    <link rel="stylesheet" href="/templates/xialonghao/css/other.min.css" />
+    <link rel="stylesheet" href="/templates/xialonghao/css/contact.min.css" />
+    <link rel="stylesheet" href="/templates/xialonghao/css/example.min.css" />
+    <link rel="stylesheet" href="/templates/xialonghao/css/join.min.css" />
+    <link rel="stylesheet" href="/templates/xialonghao/css/product.min.css" />
+    <link rel="stylesheet" href="/templates/xialonghao/css/other.min.css" />
+
+<body>
+<div class="layout">
+    <!--===========layout-header================-->
+    <div class="layout-header am-hide-sm-only">
+        <!--topbar start-->
+        <div class="topbar">
+            <div class="container">
+                <div class="am-g">
+                    <div class="am-u-md-3">
+                        {Dz:Logo id="63" width="150" height="47" /}
+                    </div>
+                    <div class="am-u-md-9">
+                        <div class="topbar-right am-text-right am-fr">
+                            <i class="am-icon-facebook"></i>
+                            <i class="am-icon-twitter"></i>
+                            <i class="am-icon-google-plus"></i>
+                            <i class="am-icon-pinterest"></i>
+                            <i class="am-icon-instagram"></i>
+                            <i class="am-icon-linkedin"></i>
+                            <i class="am-icon-youtube-play"></i>
+                            <i class="am-icon-rss"></i>
+                            <a href="{:url('Index/login')}">登录</a>
+                            <a href="{:url('Index/register')}">注册</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--topbar end-->
+        <!--nav start-->
+        <div class="nav-contain">
+            <div class="nav-inner">
+                <ul class="am-nav am-nav-pills am-nav-justify">
+                    {Dz:navlist order="id asc" limit="6" name="vo"}
+                    <li class=""><a href="{$vo.url}">{$vo.title}</a></li>
+                    {/Dz:navlist}
+                </ul>
+            </div>
+        </div>
+        <!--nav end-->
+    </div>
+</div>

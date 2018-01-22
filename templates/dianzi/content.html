@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{include file="./templates/dianzi/head.html"}
+</head>
+<body>
+<!--头部-->
+<div class="header">
+    {include file="./templates/dianzi/header.html"}
+
+</div>
+<!--头部-->
+<!--幻灯片-->
+<div class="banner_s"><img src="/templates/dianzi/Assets/upload/banner_a.jpg" alt=""/></div>
+<div class="pst_bg">
+
+</div>
+<div class="scd clearfix">
+	<div class="scd_l">
+    	<div class="s_name">
+            <i>&nbsp;</i>
+        </div>
+        <ul class="s_nav">
+        	<li class="now"><a href="">{$info.shorttitle}</a></li>
+        </ul>
+    </div>
+    <div class="scd_r">
+    	<div class="r_name"><span>{$info.title}</span></div>
+        <div class="about">
+        	<img src="/../../public/Uploads/{$info.smallimage}"  alt=""/>
+            <br/><br/>
+            <p style="text-indent:2em;">{$info.abstract}</p>
+
+        </div>
+    </div>
+</div>
+{include file="./templates/dianzi/footer.html"}
+</body>
+</html>

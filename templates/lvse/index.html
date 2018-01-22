@@ -1,0 +1,99 @@
+
+{include file="./templates/lvse/header.html"}
+<div class="am-slider am-slider-default" data-am-flexslider="{playAfterPaused: 8000 , controlNav: false, directionNav: false    }">
+    <div class="search-box">
+        <div><input type="text" name="" placeholder="      请输入您需要的环保类别"></div>
+        <div class="search-box-btn"></div>
+    </div>
+    <ul class="am-slides">
+        <li><img src="/templates/lvse/images/banner.jpg" alt="" ></li>
+        <li><img src="/templates/lvse/images/banner.jpg" alt="" ></li>
+        <li><img src="/templates/lvse/images/banner.jpg" alt="" ></li>
+        <li><img src="/templates/lvse/images/banner.jpg" alt="" ></li>
+    </ul>
+</div><div class="copyrights"></div>
+<main>
+    <div class="index-only-small">
+         <!--  <li><a href="about.html"><span></span><p>关于我们</p></a></li>
+            <li><a href="productlist.html"><span></span><p>工程案例</p></a></li>
+            <li><a href="article_list.html"><span></span><p>新闻资讯</p></a></li>
+            <li><a href="contact.html"><span></span><p>联系我们</p></a></li> -->
+        </ul>
+    </div>
+    <div class="index-main-title">
+        <p>关于我们</p>
+        <span>为各大重型工业工厂所制造的环境问题提供相关处理净化设备</span>
+    </div>
+    {Dz:nlist limit='3' name='vo' cateid='1'}
+    <div class="index-main-body">
+            <ul>
+
+                 <li><img src="/templates/lvse/images/main1.jpg"><p>{$vo.title}</p></li>
+                <li><img src="/templates/lvse/images/main2.jpg"><p>{$vo.shorttitle}</p></li>
+                <li><img src="/templates/lvse/images/main3.jpg"><p>{$vo.title}</p></li>
+            </ul>
+        <p>{$vo.abstract}</p>
+        <a href="{$vo.url}">了解更多</a>
+    </div>
+    {/Dz:nlist}
+
+
+    <div class="index-main-bottom">
+        <p>工程案例</p>
+        <span>为各大重型工业工厂所制造的环境问题提供相关处理净化设备</span>
+    </div>
+
+    <div class="project-case">
+     {Dz:nlist limit='1' name='vo' cateid='4'}
+    <div>
+        <a href="{$vo.url}">
+        <img src="/templates/lvse/images/smcase1.jpg">
+        <div class="projec-case-right">
+        <h6>{$vo.title}</h6>
+        <p>{$vo.abstract}</p>
+        </div>
+        </a>
+         {/Dz:nlist}
+    </div>
+      
+       
+    </div>
+</main>
+<div class="feature">
+    <img class="big" src="/templates/lvse/images/main4.jpg">
+    <img class="sm" src="/templates/lvse/images/main5.jpg">
+</div>
+
+<main>
+<div class="index-main-hg-title">
+    <p>工程案例</p>
+    <span>为各大重型工业工厂所制造的环境问题提供相关处理净化设备</span>
+</div>
+<div class="index-main-body">
+    <ul>
+     {Dz:nlist  limit="3"   name='vo'}
+        <li><img src="/templates/lvse/images/smcase1.jpg"><p>{$vo.title}</p><span>{$vo.shorttitle}</span><a href="{$vo.url}">MORE</a></li>
+         {/Dz:nlist}
+    </ul>
+</div>
+
+<div class="news-info">
+    <h2>新闻资讯</h2>
+    <div>
+        <ul>
+          {Dz:nlist  limit="1"   name='vo'}
+            <li class="news-left"><img src="/templates/lvse/images/smcase4.jpg"><div><p>{$vo.title}</p><span>{$vo.abstract}</span><a href="{$vo.url}">MORE</a></div></li>
+          {/Dz:nlist}
+
+            <li>
+                 {Dz:nlist  limit="3"   name='vo'}
+            <img src="/templates/lvse/images/smcase5.jpg"><div><p>{$vo.title}</p><span>{$vo.abstract}</span><a href="{$vo.url}">MORE</a></div>
+                {/Dz:nlist}
+            </li>
+        </ul>
+    </div>
+</div>
+<div style="clear:both"></div>
+
+</main>
+{include file="./templates/lvse/footer.html"}

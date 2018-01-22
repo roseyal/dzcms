@@ -1,0 +1,22 @@
+
+{include file="./templates/yujiaolong/public/header.html"}
+
+<div class="index-main clearfix">
+
+	<div class="newsnav yh"><a href="/index.html">首页</a> > <a href="{$msg.url}">{$msg.catename}</a> > 内容</div>
+
+    <div class="content clearfix">
+        <div class="biaoti">{$info['title']}</div>
+        <div class="date"><span>{$info.inputtime|date="Y-m-d h:i:s",###}</span><span>来源：{$info.source}</span><span>作者：{$info.author}</span><span>点击：{$info.looknum}</span></div>
+        <div class="nr">
+            <p><img src="/public/Uploads/{$info.smallimage}" style=" float:left; margin-right:20px;" width="207" height="276">
+                {$info.content}
+            </p></div>
+
+
+    
+</div>
+
+{include file="./templates/yujiaolong/public/footer.html"}
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=1024" />
+<meta name="baidu-site-verification" content="3ztG4oI0ku" />
+<title>我的网站</title>
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" href="/templates/blackdemo/css/style.css"  type="text/css" media="all" />
+<!--[if lt IE 9]><script type="text/javascript" src="public/static/js/html5.js"></script><![endif]-->
+</head>
+<body id="ruifoxHome">
+<header>
+	<div id="navbg"></div>
+	<div class="wrapper">
+		<h1 class="logo">
+			<a href="{:url('index/index')}"  title="">
+				<img src="/templates/blackdemo/images/logo.png" width="213" height="36" alt="" />
+			</a>
+		</h1>
+		<nav>
+			<ul>
+
+				{Dz:navlist  name="vo" limit='5'}
+    			<li class="home"><a href="{$vo.url}">{$vo.title}<span>{$vo.description}</span></a></li>
+    			{/Dz:navlist}
+
+				
+			</ul>
+		</nav>
+        	</div>
+</header>

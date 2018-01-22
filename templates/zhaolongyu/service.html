@@ -1,0 +1,49 @@
+{include file='./templates/zhaolongyu/common/header.html'/}
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="1000" height="190" valign="middle"><img src="/templates/zhaolongyu/images/service_03.jpg" width="1000" height="150" /></td>
+  </tr>
+</table>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="212" valign="top"><table border="0" cellpadding="0" cellspacing="10" bgcolor="#FFFFFF" class="bk_e4e4e4">
+      <tr>
+        <td width="190"><table border="0" cellspacing="10" cellpadding="0">
+          <tr>
+            <td align="right"><span  class="font_18 fotn_999">客户服务</span><br />
+                <span class="font_0A8BC4  font_24">Services</span></td>
+          </tr>
+          <tr>
+            <td height="27" align="left" background="/templates/zhaolongyu/images/left_07.jpg" class="font_fff" style=" padding-left:10px;">客户服务</td>
+          </tr>
+          <tr>
+            {include file='./templates/zhaolongyu/common/menu.html'/}
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+    <td width="20" valign="top">&nbsp;</td>
+    <td width="768" valign="top" bgcolor="#FFFFFF" class="bk_e4e4e4"><table width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tr>
+        <td><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="30" align="left" class="font_14"><strong class="font_16">客户服务</strong></td>
+          </tr>
+          <tr>
+            <td height="3" background="/templates/zhaolongyu/images/about_49.jpg"></td>
+          </tr>
+          <tr>
+            {Dz:nlist where="id=14" name="ser" }
+            <td valign="top"><p>
+              {$ser.content}
+              </p>
+            </td>
+            {/Dz:nlist}
+          </tr>
+          
+        </table></td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+{include file='./templates/zhaolongyu/common/footer.html'/}

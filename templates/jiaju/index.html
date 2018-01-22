@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+{include file="./templates/jiaju/header.html"}
+<div class="am-slider am-slider-default" data-am-flexslider="{playAfterPaused: 8000}">
+    <ul class="am-slides">
+        <li><img src="images/banner.jpg" alt="" ></li>
+        <li><img src="images/banner.jpg" alt="" ></li>
+        <li><img src="images/banner.jpg" alt="" ></li>
+        <li><img src="images/banner.jpg" alt="" ></li>
+    </ul>
+</div>
+
+<section class="index-section">
+    <div>
+        <span></span>
+        <span></span>
+    </div>
+    <div class="index-content">
+        <section class="index-content-section-first"><div><img src="images/sectionbanner.png" alt=""></div> </section>
+        <section class="index-content-section-second">
+            <div>
+                <div class="index-auto">
+            <article>公司介绍</article>
+            <h6>COMPANY INTRODUCTION</h6>
+            {Dz:newsinfo nid="24"}
+            <main>
+            {$info.content}
+            </main>
+            <a class="index-button" href="{$info.url}">查看详情</a>
+            {/Dz:newsinfo}
+                </div>
+            
+            </div>
+        </section>
+    </div>
+</section>
+
+<section class="index-product">
+    <main>
+        <ul>
+            <li class="index-active"><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+            <li><a href="#"></a></li>
+        </ul>
+    </main>
+    <main></main>
+    <main></main>
+</section>
+<div class="copyrights">Collect from <a href="http://www.cssmoban.com/" >网页模板</a></div>
+<section class="index-margin-bottom">
+    <div class="index-morecase">
+        <span></span>
+        <a href="#">MORE &#62; &#62;</a>
+    </div>
+    <div class="index-content">
+        <div class="product-list">
+            <div class="am-u-sm-6 am-u-md-6 am-u-lg-4">
+                <a href="product_info.html">
+                    <img src="images/product1.png" />
+                </a>
+            </div>
+            <div class="am-u-sm-6 am-u-md-6 am-u-lg-4">
+                <a href="product_info.html">
+                    <img src="images/product2.png" />
+                </a>
+            </div>
+            <div class="am-u-sm-6 am-u-md-6 am-u-lg-4">
+                <a href="product_info.html">
+                    <img src="images/product3.png" />
+                </a>
+            </div>
+            <div class="am-u-sm-6 am-u-md-6 am-u-lg-4">
+                <a href="product_info.html">
+                    <img src="images/product1.png" />
+                </a>
+            </div>
+            <div class="am-u-sm-6 am-u-md-6 am-u-lg-4">
+                <a href="product_info.html">
+                    <img src="images/product2.png" />
+                </a>
+            </div>
+            <div class="am-u-sm-6 am-u-md-6 am-u-lg-4">
+                <a href="product_info.html">
+                    <img src="images/product3.png" />
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="index-margin-bottom">
+    <div class="index-morecase">
+        <span></span>
+        <a href="#">MORE &#62; &#62;</a>
+    </div>
+    <div class="index-content">
+
+
+        <div class="new-index">
+            <ul>
+
+                {Dz:nlist   limit="3"    name='vo' status='true' cateid='3' }
+                <li><a href="{$vo.url}"><h3>{$vo.title}</h3>
+                    <article>{$vo.abstract}
+                    </article>
+                </a></li>
+            {/Dz:nlist}
+                          
+
+                 
+                </ul>
+            <ul>
+                <li><a href="article_list_content.html"><h3>卧室如何选择合适的衣橱家具色彩</h3>
+                    <article>要选择合适的家具色彩，首先要符合个人爱好，又要
+                        注意与房间的大小、室内光线的明暗相结合，并且要
+                    </article></a>
+                </li>
+                <li><a href="article_list_content.html"><h3>韩派办公家具制作工艺过程</h3>
+                    <article>苏州韩派办公家具制作工艺过程，品牌办公家具厂家
+                        都具有一整套生产流程，通过对工艺流程的规范以及
+                    </article></a>
+                </li>
+                <li><a href="article_list_content.html"><h3>韩派办公家具制作工艺过程</h3>
+                    <article>苏州韩派办公家具制作工艺过程，品牌办公家具厂家
+                        都具有一整套生产流程，通过对工艺流程的规范以及
+                    </article></a>
+                </li>
+                <li><a href="article_list_content.html"><h3>韩派办公家具制作工艺过程</h3>
+                    <article>苏州韩派办公家具制作工艺过程，品牌办公家具厂家
+                        都具有一整套生产流程，通过对工艺流程的规范以及
+                    </article></a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</section>
+{include file="./templates/jiaju/footer.html"}
+</body>
+</html>

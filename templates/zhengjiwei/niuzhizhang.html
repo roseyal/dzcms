@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="Author" contect="http://www.webqin.net">
+<title>大智科技</title>
+<link type="text/css" href="/templates/zhengjiwei/css/css.css" rel="stylesheet" />
+<script type="text/javascript" src="/templates/zhengjiwei/js/jquery.js"></script>
+<script type="text/javascript" src="/templates/zhengjiwei/js/js.js"></script>
+<script type="text/javascript">
+ $(function(){
+	 //导航定位
+	 $(".nav li:eq(3) a:first").addClass("navCur");
+	 })
+</script>
+</head>
+
+<body>
+ <div class="header width1003">
+  <a href="javascript:;" onclick="AddFavorite(window.location,document.title)" class="jr">加入收藏</a> | 
+  <a href="javascript:;" onclick="SetHome(this,window.location)" class="sw">设为首页</a> | 
+  <a href="contact.html">联系我们</a>
+ </div><!--header/-->
+ <div class="width1003">
+  <h1 class="logo fl"><a href="index.html"><img src="/templates/zhengjiwei/images/logo.png" width="214" height="83" /></a></h1>
+  <div class="sea-phone fr">
+   <form action="#" method="get" class="search">
+    <input type="submit" value="" class="seaSub" />
+    <input type="text" class="seaText" />
+   </form><!--search /-->
+   <div class="phone"><img src="/templates/zhengjiwei/images/phone.png" width="244" height="20" /></div>
+  </div><!--sea-phone/-->
+  <div class="clears"></div>
+ </div><!--width1003/-->
+{include file="./templates/zhengjiwei/head.html"}<!--nav/-->
+ <div id="ban">
+	<ul id="slides">
+		<li style="background:url('/templates/zhengjiwei/images/banner1.jpg') no-repeat center top"><a href="javascript:"></a></li>
+	</ul>
+ </div><!--ban/-->
+ <div class="mainCont">
+  <img src="/templates/zhengjiwei/images/footbg.jpg" class="mainBg" />
+  <div class="width1003">
+   <div class="positions">
+    当前位置：<a href="index.html">网站主页</a> &gt; 人才介绍
+   </div><!--positions/-->
+   <div class="contLeft fl">
+    <div class="leftNav">
+     <ul>
+      <li class="leftNavCur"><a href="about.html">人才介绍</a></li>
+      <li><a href="syz.html">使用者见证</a></li>
+     </ul>
+    </div><!--leftNav/-->
+   </div><!--contLeft/-->
+   <div class="contRight fr">
+    <div class="nzz">
+        {Dz:nlist order="id desc" limit="5" name='vo'}
+        <dl>
+            <dt><a href="{$vo.url}"><img src="{$vo.smallimage}" width="142" height="80" /></a></dt>
+            <dd>
+                <h3><a href="{$vo.url}">{$vo.title}</a><span>[ {$vo.inputtime} ]</span></h3>
+                <div class="nzzText">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{$vo.abstract}
+                </div><!--nzzText/-->
+            </dd>
+            <div class="clears"></div>
+        </dl>
+        {/Dz:nlist}
+    </div><!--nzz/-->
+    <div class="yellow"><span class="disabled"> < </span><span class="current">1</span><a href="#?page=2">2</a><a href="#?page=3">3</a><a href="#?page=4">4</a><a href="#?page=5">5</a><a href="#?page=6">6</a><a href="#?page=7">7</a><a href="#?page=2"> > </a></div>
+   </div><!--contRight/-->
+   <div class="clears"></div>
+  </div><!--width1003/-->
+  <div class="footNav width1003">
+   <a href="http://www.dzwz.com">首页</a>
+   <a href="brand.html">品牌介绍</a>
+   <a href="product.html">产品介绍</a>
+   <a href="niuzhizhang.html">人才介绍</a>
+   <a href="about.html">公司介绍</a>
+   <a href="contact.html">联系我们</a>
+  </div><!--footNav/-->
+  <div class="footer width1003">
+   康瀚（上海）生物科技有限公司   版权所有信息沪ICP备14049077号<br />
+   服务热线：400-003-9795   公司电话：021-60679669   公司传真：021-60679689   邮编：200002<br />
+   公司地址：上海市黄浦区河南南路16号5楼（中汇大厦）技术支持：<a href="http://www.sucaihuo.com/" target="_blank">素材火</a>
+  </div><!--footer/-->
+ </div><!--mainCont/-->
+</body>
+</html>

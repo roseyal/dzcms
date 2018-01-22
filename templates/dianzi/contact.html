@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{include file="./templates/dianzi/head.html"}
+</head>
+<body>
+<!--头部-->
+<div class="header">
+    {include file="./templates/dianzi/header.html"}
+</div>
+<!--头部-->
+<!--幻灯片-->
+<div class="banner_s"><img src="../../templates/dianzi/Assets/upload/banner_a.jpg" alt=""/></div>
+<div class="pst_bg">
+	<div class="pst">
+    	您当前的位置：
+        <a href="">联系我们</a>
+    </div>
+</div>
+<div class="scd clearfix">
+	<div class="scd_l">
+    	<div class="s_name">
+        	<img src="../../templates/dianzi/Assets/images/t4.png" width="150" height="48" alt=""/>
+            <i>&nbsp;</i>
+        </div>
+        <ul class="s_nav">
+        	<li class="now"><a href="contact.html">联系我们</a></li>
+        </ul>
+    </div>
+    <div class="scd_r">
+    	<div class="r_name"><span>联系我们</span></div>
+        <div class="cotnact">
+            {Dz:nlist field="title,shorttitle,smallimage,content,cateid,url" limit="1" order="id desc" hot="true"  name='vo' status=""true"" cateid="6" }
+        	<h1>{$vo.title}</h1>
+            <dl class="clearfix">
+            	<dt><img src="../../public/Uploads/{$vo.smallimage}" alt=""/></dt>
+                <dd>
+                	<b>{$vo.shorttitle}</b>
+                    <p>{$vo.content}</p>
+                </dd>
+            </dl>
+            {/Dz:nlist}
+            <div class="space_hx">&nbsp;</div>
+            <ul class="clearfix">
+                {Dz:nlist field="title,shorttitle,smallimage,content,cateid,url" limit="4" order="id desc" hot="true"  name='vo' status=""true"" cateid="11" }
+            	<li>
+                	<b>{$vo.shorttitle}</b>
+                    <p>{$vo.content}</p>
+                </li>
+                {/Dz:nlist}
+
+            </ul>
+        </div>
+    </div>
+</div>
+{include file="./templates/dianzi/footer.html"}
+</body>
+</html>

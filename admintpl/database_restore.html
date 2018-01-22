@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/public/lib/html5shiv.js"></script>
+<script type="text/javascript" src="/public/lib/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/public/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui.admin/css/style.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="/public/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<title>数据库管理</title>
+</head>
+<body>
+<nav class="breadcrumb">
+			<div class="container">
+				<i class="Hui-iconfont">&#xe67f;</i>
+				<a href="/" class="c-primary">首页</a>
+				<span class="c-gray en">&gt;</span>
+				<a href="#">数据库管理</a>
+				<span class="c-gray en">&gt;</span>
+				<span class="c-gray">数据库还原</span>
+			</div>
+		</nav>
+		
+		<div class="container ui-sortable">
+		
+			<h1>数据库备份列表</h1>
+			
+			<div class="panel panel-default">
+				<div class="panel-header clearfix">
+					<span class="l"><a href="javascript:;" onclick="datadel()" class="btn  btn-primary radius"><i class="icon-trash"></i> 一键还原</a>
+					</span><span class="r">共有数据：<strong>54</strong> 条</span>
+					<!-- <span class="r">共有数据：<strong>88<> 条</span> -->
+					<span class="r">
+					</span>
+				 </div>
+				<!-- <div class="panel-header clearfix">
+					<span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="icon-trash"></i> 批量删除</a></span>
+					<span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="icon-trash"></i> 添加管理员</a></span>
+					<span class="r">共有数据：<strong>54</strong> 条</span>
+				</div> -->
+				<div class="panel-body">
+					
+   <table class="table table-border table-bordered table-hover table-bg table-sort">
+					<thead>
+						<!-- <tr> -->
+					        <!-- <th scope="col" colspan="8">导航列表</th> -->
+					    <!-- </tr> -->
+						<tr class="text-c">
+							<th width="150"><input type="checkbox" name="" value=""></th>
+							<th width="150">ID</th>
+							<th width="200">备份名称</th>
+							<th width="200">备份时间</th>
+							<th width="200">备份大小</th>
+			
+							<th width="200">操作</th>
+						</tr>
+					</thead>
+					<tbody>
+					{foreach name="info" item="vo"}
+						<tr class="text-c">
+							<td><input type="checkbox" class="check" value="{$vo.id}" name=""></td>
+							<td>{$vo.id}</td>
+							<td><u style="cursor:pointer" class="text-primary" data-val="{$vo.name}" onclick="member_show('张三','member-show.html','10001','360','400')">{$vo.name}</u></td>
+							<td>{$vo.puttime|date="Y-m-d",###}</td>
+							<td>{$vo.dbsize}kb</td>
+						
+							
+				<td class="f-14 picture-manage">
+								<span>
+									<a href="download?filename={$vo.name}"  title="下载"><input class="btn btn-success radius size-MINI"  type="button" value="下载"></a>
+								</span>
+								<span>
+									<a href="javascript:;" onclick="restore('{$vo.name}','one')" title="还原"><input class="btn  btn-primary radius size-MINI" type="button" value="还原"></a>
+								</span>
+								<span>
+									<a href="javascript:;" onclick="del('{$vo.id}','{$vo.name}','one')" title="删除"><input class="btn btn-danger radius size-MINI" type="button" value="删除"></a>
+								</span>
+			        		</td>
+						</tr>
+					{/foreach}
+						
+					</tbody>
+						<tr>
+							<td scope="col" colspan="8">		
+					<span>
+						
+						<input class="btn btn-success radius" onclick="downloads()"  type="button" value="下载">
+						<input class="btn btn-danger radius" onclick="del('','','select')" type="button" value="删除">
+					</span>
+				</td>
+						</tr>
+				</table>
+				
+<div id="pageNav" class="pageNav"> 
+</div>
+				</div>
+			</div>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="/public/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/public/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="/public/static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="/public/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="/public/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="/public/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/public/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript">
+$('.table-sort').dataTable({
+    "aaSorting": [[ 1, "desc" ]],//默认第几个排序
+    "bStateSave": true,//状态保存
+    "pading":false,
+    "aoColumnDefs": [
+//        {"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+        {"orderable":false,"aTargets":[0,5]}// 不参与排序的列
+    ]
+});
+
+/*还原数据库*/
+function restore(name,type) {
+
+    layer.confirm('还原要清空现有数据库 要确定吗？', {
+        btn: ['确定','取消'] //按钮
+    },function(){
+
+
+            $.ajax({
+                url:'db_restore',
+                type:'POST',
+                data:{
+                    filename:name,
+                },
+                success:function (data) {
+
+                    if(data=='succ'){
+                        layer.msg('还原成功',{icon:1})
+					}
+                },
+                error:function (data) {
+
+                }
+            })
+    }
+    );
+}
+
+
+/*删除数据库*/
+function del(id,name,type) {
+    layer.confirm('删除不可恢复 要确定吗？', {
+        btn: ['确定','取消'] //按钮
+    },function () {
+        if(type=='select'){
+            var index=0;
+            name=[];
+            id='';
+            $('.check').each(function () {
+                if($(this).is(':checked')){
+                    name[index]=$(this).parent('td').next().next().find('u').attr('data-val');
+                    id+=$(this).val()+',';
+                    index++;
+                }
+            });
+            id=id.substr(0,id.length-1);
+        }
+        if(name == ''){
+            layer.msg('选择要删除的备份',{icon:2});
+            return;
+        }
+
+        $.ajax({
+            url:'db_restore_del',
+            type:'POST',
+            data:{
+                name:name,
+                id:id,
+            },
+            success:function (data) {
+                if(data=='succ'){
+                    layer.msg('删除成功',{icon:1},function () {
+                        history.go(0);
+                    })
+                }
+            },
+            error:function (data) {
+
+            }
+        })
+    });
+}
+
+function downloads() {
+    var name='';
+    $('.check').each(function () {
+        if($(this).is(':checked')){
+            name+=$(this).parent('td').next().next().find('u').attr('data-val')+',';
+        }
+    });
+    if(name==''){
+        layer.msg('选择要下载的备份',{icon:2});
+        return;
+    }
+    name=name.substr(0,name.length-1);
+    location.href='download?filename='+name;
+}
+
+
+</script> 
+</body>
+</html>

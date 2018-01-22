@@ -1,0 +1,292 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="/public/lib/html5shiv.js"></script>
+<script type="text/javascript" src="/public/lib/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/public/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui.admin/css/style.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="/public/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+
+<![endif]-->
+<title>数据库管理</title>
+</head>
+<body>
+<nav class="breadcrumb">
+			<div class="container">
+				<i class="Hui-iconfont">&#xe67f;</i>
+				<a href="/" class="c-primary">首页</a>
+				<span class="c-gray en">&gt;</span>
+				<a href="#">数据库管理</a>
+				<span class="c-gray en">&gt;</span>
+				<span class="c-gray">数据库备份</span>
+			</div>
+		</nav>
+		
+		<div class="container ui-sortable">
+		
+			<h1>数据库列表</h1>
+			
+			<div class="panel panel-default">
+				<div class="panel-header clearfix">
+					<span class="l"><a href="javascript:;" onclick="copy('all')" class="btn  btn-primary radius copy"><i class="icon-trash"></i> 一键备份</a>
+					</span><span class="r">共有数据：<strong>54</strong> 条</span>
+					<!-- <span class="r">共有数据：<strong>88<> 条</span> -->
+					<span class="r"></span>
+				 </div>
+				<!-- <div class="panel-header clearfix">
+					<span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="icon-trash"></i> 批量删除</a></span>
+					<span class="l"><a href="javascript:;" onclick="datadel()" class="btn btn-danger radius"><i class="icon-trash"></i> 添加管理员</a></span>
+					<span class="r">共有数据：<strong>54</strong> 条</span>
+				</div> -->
+				<div class="panel-body">
+					
+   <table class="table table-border table-bordered table-hover table-bg table-sort">
+					<thead>
+						<!-- <tr> -->
+					        <!-- <th scope="col" colspan="8">导航列表</th> -->
+					    <!-- </tr> -->
+						<tr class="text-c">
+							<th width="150"><input type="checkbox" name="" value=""></th>
+							<th width="200">表名称</th>
+							<th width="200">记录数</th>
+							<th width="200">表类型</th>
+							<th width="180">编码类型</th>
+							<th width="150">占用大小</th>
+							<th width="200">操作</th>
+						</tr>
+					</thead>
+					<tbody>
+
+						{foreach name="tablesinfo" item="vo"}
+						<tr class="text-c">
+							<td><input type="checkbox" class="check" value="3" name=""></td>
+							<td><u style="cursor:pointer" class="text-primary" data-val="{$vo.Name}">{$vo.Name}</u></td>
+							<td>{$vo.Rows}</td>
+							<td>{$vo.Engine}</td>
+							<td>{$vo.Collation}</td>
+							<td >{$vo.totalsize}</td>
+						<td class="f-14 picture-manage">
+								<span>
+									<a href="javascript:;" onclick="potimize('{$vo.Name}')" title="优化"><input class="btn btn-success radius size-MINI" type="button" value="优化"></a>
+								</span>
+								<span>
+									<a href="javascript:;"   onclick="repair('{$vo.Name}')" title="修复"><input class="btn  btn-primary radius size-MINI" type="button" value="修复"></a>
+								</span>
+								<span>
+									<a href="javascript:;" onclick="create('{$vo.Name}')"  title="结构"><input class="btn btn-warning radius size-MINI" type="button" value="结构"></a>
+								</span>
+			        		</td>
+						</tr>
+						{/foreach}
+					</tbody>
+						<tr>
+							<td scope="col" colspan="8">		
+					<span>
+						<input class="btn btn-success radius" onclick="potimize('')" type="button" value="优化">
+						<input class="btn btn-primary radius" onclick="repair('')" type="button" value="修复">
+						<input class="btn btn-warning radius copy" onclick="copy('select')"  type="button" value="备份">
+					</span>
+				</td>
+						</tr>
+				</table>
+				
+<div id="pageNav" class="pageNav"> 
+</div>
+				</div>
+			</div>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="/public/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/public/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="/public/static/h-ui/js/H-ui.min.js"></script>
+<script type="text/javascript" src="/public/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="/public/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="/public/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/public/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript">
+$('.table-sort').dataTable({
+	"aaSorting": [[ 1, "desc" ]],//默认第几个排序
+	"bStateSave": true,//状态保存
+	"pading":false,
+	"aoColumnDefs": [
+	  //{"bVisible": false, "aTargets": [ 3 ]} //控制列的隐藏显示
+	  {"orderable":false,"aTargets":[0,6]}// 不参与排序的列
+	]
+});
+
+/*优化表*/
+function potimize(name) {
+    if(name==''){
+        var name=[];
+		$('.check').each(function () {
+			if($(this).is(':checked')){
+				name=$(this).parent('td').next().find('u').attr('data-val');
+			}
+        });
+		if(name==''){
+            layer.msg('请勾选要优化的表',{icon:2,time:1000});
+            return;
+		}
+	}
+    $.ajax({
+		url: "{:url('Database/db_optimize')}",
+		type:'POST',
+		dataType:'JSON',
+        traditional:true,
+        data:{
+		    table:name,
+		},
+		success:function (data) {
+            if(data=='succ'){
+                layer.msg('已优化',{icon:1,time:1000},function () {
+                    //history.go(0);
+                });
+            }else{
+                layer.msg('优化失败',{icon:2,time:1000},function () {
+                    //history.go(0);
+                });
+            }
+
+        },
+		error:function () {
+
+        }
+	})
+}
+
+
+/*修复表*/
+function repair(name) {
+    if(name==''){
+        var name='';
+        $('.check').each(function () {
+            if($(this).is(':checked')){
+                name=$(this).parent('td').next().find('u').attr('data-val');
+            }
+        });
+        if(name==''){
+            layer.msg('请勾选要修复的表',{icon:2,time:1000});
+            return;
+        }
+    }
+    $.ajax({
+        url: "{:url('Database/db_repair')}",
+        type:'POST',
+        traditional:true,
+        dataType:'JSON',
+        data:{
+            table:name,
+        },
+        success:function (data) {
+            if(data=='succ'){
+                layer.msg('已修复',{icon:1,time:1000},function () {
+                    //history.go(0);
+                });
+            }else{
+                layer.msg('修复失败',{icon:2,time:1000},function () {
+                    //history.go(0);
+                });
+			}
+
+        },
+        error:function () {
+
+        }
+    })
+}
+
+/*查看表结构*/
+function create(name) {
+
+    $.ajax({
+        url: "{:url('Database/db_create')}",
+        type:'POST',
+        dataType:'JSON',
+        data:{
+            table:name,
+        },
+        success:function (data) {
+            layer.open({
+                type: 1,
+                title: name+'表的结构',
+                closeBtn: 1,
+				padding:10,
+                shadeClose: true,
+                skin: 'layui-layer-lan',
+                content: data,
+            });
+        },
+        error:function () {
+        }
+    })
+}
+
+
+/*备份表*/
+function copy(name) {
+    $('.copy').attr('onclick',null);
+
+    var index=0;
+    if(name=='select'){
+        var name=[];
+        $('.check').each(function () {
+            if($(this).is(':checked')){
+                name[index]=$(this).parent('td').next().find('u').attr('data-val');
+                index++;
+            }
+        });
+    }
+    if(name=='all'){
+        var name=[];
+        $('.check').each(function () {
+                name[index]=$(this).parent('td').next().find('u').attr('data-val');
+                index++;
+        });
+    }
+    if(name==''){
+        layer.msg('请勾选要备份的表',{icon:2,time:1000});
+        return;
+    }
+
+    $.ajax({
+        url: "{:url('Database/db_copy')}",
+        type:'POST',
+        dataType:'JSON',
+        data:{
+            table:name,
+        },
+        success:function (data) {
+            if(data=='succ'){
+                layer.msg('OK!',{icon:1,time:1000},function () {
+                   // history.go(0);
+                });
+            }else{
+                layer.msg('Error!',{icon:2,time:1000},function () {
+                   // history.go(0);
+                });
+            }
+        },
+        error:function () {
+		 layer.msg('未知错误!',{icon:2,time:1000});
+        }
+    })
+}
+
+
+
+</script> 
+</body>
+</html>

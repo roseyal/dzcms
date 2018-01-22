@@ -1,0 +1,26 @@
+{include file="./templates/liudong/header.html"}
+<div>
+    <div class="contact-header">
+    {Dz:nlist where="id=18" limit="1"}
+        <h1>{$v.shorttitle}</h1>
+    {/Dz:nlist}
+
+
+{Dz:nlist where="id=18" limit="1"}
+        <span>{$v.title}</span>
+        
+
+
+        <span>{$v.abstract}</span>
+        {/Dz:nlist}
+    </div>
+    <ul class="contact-icon">
+        <li><span></span><span>邮件:</span><span>1479803579@qq.com</span></li>
+        <li><span></span><span>电话:</span><span>15269915585</span></li>
+        <li><span></span><span>公司地址:</span><span>山东交通技师学院</span></li>
+    </ul>
+    <main class="contact">
+        <iframe class="concact-iframe" src="map.html"  frameborder="0" scrolling="no"></iframe>
+    </main>
+</div>
+{include file="./templates/liudong/footer.html"}

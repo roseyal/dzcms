@@ -1,0 +1,422 @@
+body, div, dl, dt, dd, ul, li, form, input, textarea, select, p, h1, h2,
+	h3, h4, h5, h6 {
+	font: 12px "微软雅黑";
+	padding: 0;
+	margin: 0;
+	color: #424242;
+}
+body, div, dl, dt, dd,form, input, textarea, select, p, h1, h2,
+	h3, h4, h5, h6 {
+	font: 12px/24px "微软雅黑";
+
+}
+body{
+	background-color: white;
+}
+
+body,html{width:100%;height:100%;-webkit-text-size-adjust:none}
+/*定义首页样式*/
+.header {
+	min-width: 960px;
+	height: 61px;
+	background: url(../../../templates/kepu/img/headerBg.jpg) repeat-x;
+}
+
+.headerCon {
+	width: 960px;
+	height: 61px;
+	margin: 0 auto;
+}
+
+.logo {
+	float: left;
+}
+
+.headerLink {
+	width: 410px;
+	float: right;
+	font: 12px/61px "微软雅黑";
+	color: #424242;
+	text-align: right;
+}
+
+.nav {
+	min-width: 960px;
+	height: 36px;
+	background: url(../../../templates/kepu/img/navBg.jpg) repeat-x;
+}
+
+.navCon {
+	width: 960px;
+	height: 36px;
+	margin: 0 auto;
+}
+
+.navCon ul {
+	padding-left: 2px;
+	list-style: none;
+	float: left;
+}
+
+.navCon ul li{
+	float: left;
+}
+
+.navCon li .on{
+	color: red;
+}
+.navCon li a {
+    font: 14px "微软雅黑";
+    color: #045b9d;
+    padding: 0 32px;
+    font-weight: bold;
+}
+.navCon li a:HOVER {
+	color: red;
+}
+
+a:link, a:visited, a:hover {
+    text-decoration: none;
+    /* transition: text-shadow 500ms ease-in 0ms, color 500ms ease-in 0ms; */
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+    blr: expression(this.onFocus=this.blur());
+}
+
+
+
+.bodyer {
+	width: 100%;
+	min-height: 620px;
+}
+.insideCon {
+    width: 938px;
+    margin: 0 auto;
+    border: 0px solid #ddd;
+    border-bottom: none;
+    border-radius: 5px 5px 0 0;
+    padding: 0 15px 55px;
+    background: #fff;
+}
+.insideCon .title {
+    width: 100%;
+    height: 31px;
+    border-bottom: 1px solid #e5e5e5;
+    margin: 0 0 10px 0;
+    padding-top: 5px;
+}
+.insideCon .title a {
+    color: #656565;
+    padding: 0 5px;
+}
+
+.insideCon .title p {
+    font: 12px/31px "微软雅黑";
+    color: #656565;
+}
+.content_left .titles h2 ,.content-footer .titles h2 {
+    font: bold 12px/31px "微软雅黑";
+    color: #3E3E3E;
+    float: left;
+    padding-left: 10px;
+}
+.content_left {
+    border: 1px solid #E2E2E2;
+    width: 639px;
+    float: left;
+    height: 584px;
+}
+.content_left .titles,.serviceBox .titles,.content-footer .titles {
+    width: 100%;
+    height: 31px;
+    background: url(../../images/bg12.jpg) repeat-x;
+}
+.serviceBox .titles h2, .serviceBox .titles h2 a {
+    font: bold 12px/31px "微软雅黑";
+    color: #3e3e3e;
+    float: left;
+    padding-left: 10px;
+}
+
+img {
+    border: 0;
+}
+.serviceBox {
+    width: 295px;
+    height: 335px;
+    border: 1px solid #e2e2e2;
+    float: left;
+    /* margin-right: 23px; */
+    margin-bottom: 5px;
+}
+
+.serviceBoxCon {
+
+    padding: 0px 13px 0 12px;
+}
+
+.clear {
+    clear: both;
+}
+
+.login-box, .register-box {
+    width: 260px;
+    margin: 6px auto;
+}
+.login-logo, .register-logo {
+    text-align: left;
+    font-weight: 300;
+}
+
+.login-box-body, .register-box-body {
+    background: #fff;
+    border-top: 0;
+    color: #666;
+}
+.login-box-msg, .register-box-msg {
+    margin: 0;
+    text-align: center;
+    padding: 0 20px 20px 20px;
+}
+.has-feedback {
+    position: relative;
+}
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-control:not(select) {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.form-control {
+    border-radius: 0;
+    box-shadow: none;
+    border-color: #d2d6de;
+}
+
+.form-control {
+    display: block;
+    width: 88%;
+    height: 26px;
+    padding:0px 10px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+button, input, select, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+button, input, optgroup, select, textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.col-xs-8{
+	width: 66.66666667%;
+}
+
+.col-xs-1, .col-xs-10, .col-xs-11, .col-xs-12, .col-xs-2, .col-xs-3, .col-xs-4, .col-xs-5, .col-xs-6, .col-xs-7, .col-xs-8, .col-xs-9 {
+    float: left;
+    position: relative;
+    min-height: 1px;
+}
+.col-xs-12{
+	width:100%;
+}
+
+
+.col-xs-4 {
+    width: 33.33333333%;
+}
+
+.checkbox, .radio {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.icheck>label {
+    padding-left: 0;
+}
+
+
+.checkbox label, .radio label {
+    min-height: 20px;
+    padding-left: 20px;
+    margin-bottom: 0;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+}
+
+.btn.btn-flat {
+    border-radius: 0;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border-width: 1px;
+}
+.btn-primary {
+    background-color: #3c8dbc;
+    border-color: #367fa9;
+        color: #fff;
+        
+}
+.btn {
+    border-radius: 3px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: 1px solid transparent;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-image: none;
+}
+.btn-block {
+    display: block;
+    width: 100%;
+}
+.btn-default {
+    color: #333;
+    background-color: #fff;
+    border-color: #ccc;
+}
+.btn-default :HOVER{
+	 background-color: gray;
+}
+button, select {
+    text-transform: none;
+    overflow: visible;
+}
+
+.col-xs-9{
+	padding-top: 7px;
+	margin-left: 5px;
+}
+#captcha{
+	width:60px;
+	display: inline;
+	
+}
+.footer {
+	min-width: 960px;
+	height: 55px;
+	width: 100%;
+	margin: 0 auto;
+	background: url(../../images/footerBg.jpg) repeat-x;
+}
+
+.footerCon {
+    width: 960px;
+    height: 45px;
+    margin: 0 auto;
+}
+.footerCon p {
+    float: left;
+    font: 12px/45px "微软雅黑";
+    color: #626262;
+}
+.footerCon em {
+    float: right;
+    font: 12px/45px "微软雅黑";
+    color: #9e9e9e;
+}
+.footerCon p a {
+    font: 12px/45px "微软雅黑";
+    color: #626262;
+    padding: 0 12px;
+}
+
+/*注册*/
+.content_main fieldset {
+    border: 1px solid #E6E6E6;
+    padding: 35px 50px;
+}
+.col-xs-5{
+	width: 51%;
+}
+.col-xs-6{
+	width: 40%;
+}
+
+.error{
+	color: red;
+}
+.asterisk-color{
+	color: red;
+    font-weight: bold;
+    font-style: normal;
+}
+.content-footer{
+	height: 100px;	
+}
+.train-video{
+	list-style: none;
+    float: left;
+}
+
+.train-video li:last-child{
+	float: left;
+	margin-left: 2px;
+	margin-right: 0px;
+}
+.train-video li {
+	float: left;
+	margin-right: 36px;
+}
+.train-video li img{
+	cursor: pointer;
+	width: 207px;
+}
+
+.video-title{
+	float: left;margin-left: -208px;
+	margin-top: 84px;
+	background-image: url('../../images/button.png');
+	width: 178px;
+    height: 35px;
+    font-weight: bold;
+    font-size: 12px;
+    color: aliceblue;
+    line-height: 35px;
+    padding-left: 30px;
+    display:none;
+}

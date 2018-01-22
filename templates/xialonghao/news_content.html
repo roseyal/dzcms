@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+{include file="./templates/xialonghao/header.html"}
+
+
+    <!--===========layout-container================-->
+    <div class="layout-container">
+      <div class="page-header">
+        <div class="am-container">
+          <h1 class="page-header-title">News Content</h1>
+        </div>
+      </div>
+
+      <div class="breadcrumb-box">
+        <div class="am-container">
+          <ol class="am-breadcrumb">
+            <li><a href="../index.html">首页</a></li>
+            <li class="am-active">News Content</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="section news-section">
+      <div class="container">
+        <!--news-section left start-->
+        <div class="am-u-md-9">
+          <div class="article">
+            <header class="article--header">
+              <h2 class="article--title"><a href="#" rel="">{$info.title}</a></h2>
+              <ul class="article--meta">
+                <li class="article--meta_item"><i class="am-icon-calendar"></i>{$info.inputtime|date="Y-m-d h:i:s",###}</li>
+                <li class="article--meta_item"><i class="am-icon-user"></i>{$info.author}</li>
+              </ul>
+            </header>
+            <div class="article--content">
+              <p>
+                    {$info.content}
+              </p>
+                <img src="/public/Uploads/{$info.smallimage}"/>
+            </div>
+          </div>
+          <div class="comments">
+            <div class="comments">
+                <h2 class="comments--title">Comments (2)</h2>
+                <ul class="comments_list">
+                    <li class="comment">
+                        <header class="comment--header">
+                            <figure class="comment--userpic"><img src="/templates/xialonghao/images/news/av01.jpg" alt=""></figure>
+                            <strong class="comment--username"><a href="#">Brad Bukovsky</a></strong>
+                            <time datetime="2001-05-15T19:00" class="comment--date">30th of January, 2016</time>
+                        </header>
+                        <div class="comment--content">
+                            <p>
+                                可以很强势
+                            </p>
+                            <a href="#" class="comment--reply">回复</a>
+                        </div>
+                        <ul class="comments_list">
+                            <li class="comment">
+                                <header class="comment--header">
+                                    <figure class="comment--userpic"><img src="/templates/xialonghao/images/news/av02.jpg" alt=""></figure>
+                                    <strong class="comment--username"><a href="#">Brad Bukovsky</a></strong>
+                                    <time datetime="2001-05-15T19:00" class="comment--date">30th of January, 2016</time>
+                                </header>
+                                <div class="comment--content">
+                                    <p>
+                                        必须的
+                                    </p>
+                                    <a href="#" class="comment--reply">回复</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="comment">
+                        <header class="comment--header">
+                            <figure class="comment--userpic"><img src="/templates/xialonghao/images/news/av01.jpg" alt=""></figure>
+                            <strong class="comment--username"><a href="#">Brad Bukovsky</a></strong>
+                            <time datetime="2001-05-15T19:00" class="comment--date">30th of January, 2016</time>
+                        </header>
+                        <div class="comment--content">
+                            <p>
+                                哈哈哈哈哈
+                            </p>
+                            <a href="#" class="comment--reply">回复</a>
+                        </div>
+                    </li>
+                </ul>
+                <div class="comment_form">
+                    <h2 class="comment_form--title">Leave Comment</h2>
+                <form class="am-form am-form-horizontal">
+                  <div class="am-form-group">
+                    <div class="am-g">
+                      <div class="am-u-md-4">
+                        <input type="text"   placeholder="Full Name">
+                      </div>
+                      <div class="am-u-md-4">
+                        <input type="Email"  placeholder="Email" >
+                      </div>
+                      <div class="am-u-md-4">
+                        <input type="url" placeholder="Website URL">
+                      </div>
+                    </div>
+                    <div class="am-g">
+                      <textarea name="comment" cols="30" rows="10" placeholder="Type in here..."></textarea>
+                    </div>
+                    <div class="comment-form-footer">
+                      <button type="button" class="am-btn am-btn-secondary">确认提交</button>
+                    </div>
+                  </div>
+                </form>
+
+                </div>
+            </div>
+          </div>
+        </div>
+        <!--news-section left end-->
+        <!--news-section right start-->
+        <div class="am-u-md-3">
+          <div class="blog_sidebar">
+            <div class="widget">
+              <h2 class="widget--title"><i class="am-icon-file-text-o"></i>最新资讯</h2>
+              <ul>
+                  {Dz:nlist limit="3" name="vo" order="id desc"}
+                  <li><a href="{$vo.url}">{$vo.title}</a></li>
+                  {/Dz:nlist}
+
+              </ul>
+            </div>
+
+          </div>
+        </div>
+        <!--news-section right end-->
+      </div>
+    </div>
+  </div>
+  <!--===========layout-container================-->
+
+  <script src="/js/jquery-2.1.0.js" charset="utf-8"></script>
+  <script src="xialonghao/js/amazeui.js" charset="utf-8"></script>
+</body>
+
+</html>

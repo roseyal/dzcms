@@ -1,0 +1,48 @@
+
+  <header> 
+   <div class="header">
+    <div class="top">
+     <div class="top_con">
+      <div class="weixin" id="weixin" onMouseOver="show_weixin()" onMouseOut="hide_weixin()">
+       <img alt="微信" src="/templates/wangzhan/images/weixin.png" align="absmiddle" /> 
+       <div class="weixin_con" id="weixin_con" style="display:none">
+        <img src="/templates/wangzhan/images/contact_weixin.gif" alt="微信二维码" />
+       </div> 
+      </div> 
+      <div class="weibo">
+       <a href="http://weibo.com/szfangwei" rel="noFollow" target="_blank"><img alt="微博" src="/templates/wangzhan/images/xinlang.png" align="absmiddle" /></a>
+      </div>
+      <div class="tel">
+       咨询热线：400 800 9385
+      </div>
+      <div class="mail">
+       咨询邮箱：sales@123.cn
+      </div>
+      <div class="clear"></div> 
+     </div>
+    </div>
+    <div class="head_bg"> 
+     <div class="head">
+      <div class="logo fl">
+       <h1><a href="index.html"><img alt="深圳网站建设" src="images/logo.gif" width="151px" height="39px" /></a></h1>
+      </div> 
+      <div class="menu fr"> 
+       <nav>
+        <ul>
+
+<li><a id="menu1" href="{:url('/home/Article/newslist/cateid/32')}">首页</a></li> 
+
+ {Dz:navlist order="id asc" limit="7"}
+
+  <li><a id="{menu1}" href="{$v['url']}">{$v.title}</a></li> 
+
+{/Dz:navlist}
+
+        </ul>
+        <div class="clear"></div>
+       </nav>
+      </div>
+     </div>
+    </div>
+   </div>
+  </header> 

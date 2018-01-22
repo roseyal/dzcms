@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>制造工业</title>
+    ﻿<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="alternate icon" type="image/png" href="/templates/new_temp/images/favicon.png">
+<link rel='icon' href='favicon.ico' type='image/x-ico' />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+    {include file='./templates/new_temp/head.html'}
+</head>
+<body>
+{include file='./templates/new_temp/header.html'}
+
+    <div class="com-container">
+        <div class="cms-g">
+             <div class="am-hide-sm-only am-u-md-3 am-u-lg-3">
+                 <div class="com-nav-left">
+                     <h1><em>关于我们</em><i>ABOUT US</i></h1>
+                        <ul >
+                            {Dz:navlist limit="5" name='vo' top='1'}
+                            <li class="on"><a href="{$vo.url}">{$vo.title}</a></li>
+                            {/Dz:navlist}
+                        </ul>
+                     </div>
+             </div>
+            <div class="am-u-sm-12 am-u-md-9 am-u-lg-9">
+                <div class="com-nav-title">
+                    <a href="#doc-oc-demo1" class="font am-show-sm-only" data-am-offcanvas>&#xe68b;</a>
+                    <span>公司简介</span>
+                    <ol class="com-position am-show-md-up">
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">公司简介</a></li>
+                    </ol>
+                </div>
+                {Dz:newsinfo nid='46'}
+                <div class="com-nav-content">
+                    <p style="font-size: 24px;" align="center">{$vo.title}</p>
+                    <span>{$vo.content}</span>
+                </div>
+                {/Dz:newsinfo}
+            </div>
+        </div>
+    </div>
+    <div id="doc-oc-demo1" class="am-offcanvas">
+        <div class="am-offcanvas-bar">
+            <div class="am-offcanvas-content com-nav-left com-nav-left1">
+                <ul>
+                    <li class="on"><a href="#">公司简介</a></li>
+                    <li><a href="#">企业文化</a></li>
+                    <li><a href="#">经营理念</a></li>
+                    <li><a href="#">发展历程</a></li>
+                    <li><a href="#">资质荣誉</a></li>
+                    <li><a href="#">厂房设置</a></li>
+                    <li><a href="#">社会责任</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{include file='./templates/new_temp/footer.html'}
+</body>
+</html>

@@ -1,0 +1,71 @@
+{include file="templates/zhangwenxue/head.html"}
+<div class="wrapper">
+  <div class="container content">
+                <div class="page_right">
+      <div class="sub_title">
+        <h2>联系我们</h2>
+        <h4>CONTACT US</h4>
+      </div>
+      <div class="sub_nav">
+        <ul>
+		  <li  ><a href="/home/Article/catecontent?cateid=15" title="联系方式">联系方式</a></li>
+		    <li  class="on"><a href="/home/Article/catecontent?cateid=17" title="在线留言">在线留言</a></li>
+		          </ul>
+      </div>
+    </div>   <div class="page_left">
+ <div class="page_title"><a href="/">首页</a> > <a href="/home/Article/catecontent?cateid=15">联系我们</a> > <a href="/home/Article/catecontent?cateid=17">在线留言</a></div>
+  
+      <div class="page_content">
+	  	 <form role="form" action="/index.php?c=form&a=post&modelid=22&cid=" method="post" class="form_div">
+				<ul class="feed_ul clearfix">
+					<li>
+						<div class="div_biao"><img src="images/ct_tu1.jpg" alt="" />姓名<i>*</i></div>
+						<input type="text" name="data[lianxiren]" value="" required  placeholder="请填写您的姓名" />
+						
+					</li>
+					<li>
+						<div class="div_biao"><img src="images/ct_tu2.jpg" alt="" />电话<i>*</i></div>
+						<input type="text" name="data[dianhua]" value="" required  placeholder="请填写您的电话"/>
+					
+					</li>
+					<li>
+						<div class="div_biao"><img src="images/ct_tu3.jpg" alt="" />公司</div>
+						<input type="text" name="data[danwei]" value=""  placeholder="请填写您的公司名称"/>
+						
+					
+					</li>
+					<li>
+						<div class="div_biao"><img src="images/ct_tu4.jpg" alt="" />邮 箱</div>
+						<input type="text"  name="data[youxiang]" value=""   placeholder="请填写您的邮箱"/>
+						
+					</li>
+				</ul>
+				<div class="nei_c">
+					<div class="div_biao"><img src="images/ct_tu5.jpg" alt="" />在线留言<i>*</i></div>
+					<textarea type="text" name="data[neirong]"  placeholder="请填写留言内容"   required></textarea>
+				</div>
+				<div class="yan_div clearfix">
+					<div class="div_biao"><img src="images/ct_tu6.jpg" alt="" />验证码<i>*</i></div>
+					<input type="text" name="code"    placeholder="请输入右侧验证码"/>
+				<img src="other/index.php"  id="getcode" align="absmiddle">
+					<a href="javascript:getimgcode()">看不清，换一张</a>
+				</div>
+				  <input type="submit" class="btn_th" name="submit" value="提交">
+			</form>
+      </div>
+    </div>
+  </div>
+</div>
+						<script type="text/javascript"> 
+function getimgcode() 
+{ 
+ var randomnum = Math.random(); 
+ var getimagecode = document.getElementById("getcode"); 
+  getimagecode.src = "other/index.php&"+ randomnum; 
+} 
+</script>
+<!--footer start-->
+{include file="templates/zhangwenxue/foot.html"}
+<!--footer end-->
+</body>
+</html>

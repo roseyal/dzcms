@@ -1,0 +1,31 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>DZcms</title>
+	<meta name="keywords" content="新闻网" />
+	<meta name="description" content="bangju网站管理系统,是一款完全开源免费的PHP+MYSQL系统.核心采用了Thinkphp框架等众多开源软件,同时核心功能也作为开源软件发布" />
+	<link rel="stylesheet" type="text/css" href="/templates/Evnews/css/idangerous.swiper2.7.6_4.css"/>
+	<link rel="stylesheet" type="text/css" href="/templates/Evnews/css/styles_4.css"/>
+	<script src="/templates/Evnews/js/jquery-1.11.1.min_4.js" type="text/javascript" charset="utf-8"></script>
+</head>
+<body>
+	<!--头部 开始-->
+	<header class="header_w w100">
+		<div class="header mar1200 clearfix">
+			<h1 class="logo fl"><a href="{:url('/home/Index/ceshi')}"><img src="/templates/Evnews/picture/58ca53bc195b8_4.png" /></a></h1>
+			<div class="nav fl">
+				<ul class="clearfix">
+					<li ><a href="{:url('./home/Index/index')}" title="首页">首页</a></li>
+					
+					{Dz:navlist  order="id asc" limit="8" name="vo"}
+					<li ><a href="{$vo.url}" title="{$vo.title}">{$vo.title}</a></li>
+					{/Dz:navlist}
+					
+			</div>
+			
+				</div>
+			</div>
+		</div>
+	</header>

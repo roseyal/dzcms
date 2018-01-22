@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{include file="./templates/dianzi/head.html"}
+</head>
+<body>
+<!--头部-->
+<div class="header">
+    {include file="./templates/dianzi/header.html"}
+
+</div>
+<!--头部-->
+<!--幻灯片-->
+<div class="banner_s"><img src="../../templates/dianzi/Assets/upload/banner_a.jpg" alt=""/></div>
+<div class="pst_bg">
+	<div class="pst">
+    	您当前的位置：
+        <a href="">新闻活动</a>>
+        <a href="">公司活动</a>
+    </div>
+</div>
+<div class="scd clearfix">
+	<div class="scd_l">
+    	<div class="s_name">
+        	<img src="../../templates/dianzi/Assets/images/t6.png" width="138" height="48" alt=""/>
+            <i>&nbsp;</i>
+        </div>
+        <ul class="s_nav">
+        	<li class="now"><a href="">公司活动</a></li>
+            <!--<li><a href="">行业新闻</a></li>-->
+        </ul>
+    </div>
+    <div class="scd_r">
+    	<div class="r_name"><span>公司活动</span></div>
+        <div class="news">
+            {Dz:newslist order="id desc" limit="5" name='vo' page="true"}
+        	<dl class="clearfix">
+                <dt><a href="{$vo.url}"><img src="/../../public/Uploads/{$vo.smallimage}" alt=""/></a></dt>
+                <dd>
+                    <div class="title">
+                        <a href="{$vo.url}">
+                            <p>{$vo.title}</p>
+                            <em>{$vo.inputtime|date="Y-m-d",###}</em>
+                        </a>
+                    </div>
+                    <div class="des">{$vo.abstract}</div>
+                    <a href="{$vo.url}" class="more">+ 查看详情</a>
+                </dd>
+            </dl>
+            {/Dz:newslist}
+            <div class="space_hx">&nbsp;</div>
+            <div class="pages">
+                {$page}
+            </div>
+        </div>
+    </div>
+</div>
+{include file="./templates/dianzi/footer.html"}
+</body>
+</html>

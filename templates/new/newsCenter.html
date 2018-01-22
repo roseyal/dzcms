@@ -1,0 +1,60 @@
+{include file="./templates/new/header.html"}
+<!-- ##########页首（end）########## -->
+
+<!-- ##########主体########## -->
+<div class="container">
+	<!-- 固定图片广告 -->
+	<div class="row">
+		<img class="img-responsive model-img" src="/templates/new/images/newsCenter.jpg" alt="新闻中心">
+	</div>
+	
+	<!-- 内容 -->
+	<div class="row row-3">
+		<div class="col-md-3">
+			<div class="model-title theme">
+				新闻中心
+			</div>
+			<div class="model-list">
+				<ul class="list-group">
+                    <li class="list-group-item">
+						<a href="#">公司要闻</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#">行业新闻</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#">展会与活动</a>
+					</li>
+					
+				</ul>
+      
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="model-details-title">
+				公司要闻
+			</div>
+			<div class="model-details">
+				{Dz:nlist limit="8"  name='vo'}
+					<div class="news-model">
+					<a href="{$vo.url}"><b>{$vo.title}</b></a><span>【{$vo['inputtime']|date="Y-m-d",###} 】</span>
+					<p>
+					{$vo.abstract}
+					</p>
+				</div>
+					
+				{/Dz:nlist}
+				
+				
+				</div>
+
+				
+
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ##########主体（end）########## -->
+
+<!-- ##########页脚########## -->
+{include file="./templates/new/footer.html"}

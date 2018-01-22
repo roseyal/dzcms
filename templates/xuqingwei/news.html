@@ -1,0 +1,70 @@
+ {include file="./templates/xuqingwei/header.html"}
+<!--子页-->
+<div class="ziye_bj">
+	{Dz:banlist order="id desc" like="title like '%动态%'"  limit="1" name='vo'}
+	<div class="ziye_tu">
+		<img src="/public/uploads/{$vo.photo}">
+	</div>
+{/Dz:banlist}
+</div>
+<!--关于我们-->
+<div class="zy_gywm">
+	<div class="ejdh" style="height: 1050px;">
+		<div class="shang_g"></div>
+		<div class="women">
+			<div class="btmc">
+				<h1>N</h1>
+				<p>公司动态<span>ews</span></p>
+			</div>
+			<ul class="skb">
+				<li style="background: #005bac; width: 25%;"></li>
+				<li style="background: #ff8400; width: 20%;"></li>
+				<li style="background: #d3d3d3; width: 55%;"></li>
+			</ul>
+		</div>
+		<div class="zy_dh_lb">
+			<ul>
+				<li id="women"><img src="/templates/xuqingwei/images/zy1_08.png"><a id="wenzidangq" href="#">公司新闻</a></li>
+			</ul>
+		</div>
+	</div>
+	<div class="touyin"></div>
+	<div class="zynr_db" style="height: 1000px;">
+		<div class="lujing">
+			<h2>公司新闻</h2>
+			<p>您的位置：首页 > 公司新闻</p>
+		</div>
+		<ul class="skb" style="margin-bottom: 20px;">
+			<li style="background: #005bac; width: 12%;"></li>
+			<li style="background: #ff8400; width: 15%;"></li>
+			<li style="background: #d3d3d3; width: 73%;"></li>
+		</ul>
+
+		<!--内容-->
+		<div class="gsjj_nr">
+			<ul class="xwlb_bj">
+
+				{Dz:newslist  name='vo' limit="2" page="true" cateid	="1"}
+					
+				<li>
+					<h1><a href="{$vo.url}"><img src="/public/uploads/{$vo.smallimage}"></a></h1>
+					<dl>
+						<dt><a href="{$vo.url}">{$vo.title}</a></dt>
+						<dd>{$vo.shorttitle}</dd>
+						<span>来源：{$vo.author}</span>
+						<span>日期：{$vo.inputtime|date='Y-m-d',###} </span>
+						<span>阅读（{$vo.looknum}）</span>
+					</dl>
+				</li>
+				{/Dz:newslist}
+			</ul>
+			<div class="webdiyerCss">
+				{$page}
+	        </div>
+		</div>
+	</div>
+</div>
+
+
+<!--底部-->
+{include file="./templates/xuqingwei/footer.html"}

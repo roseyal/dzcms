@@ -1,0 +1,84 @@
+﻿	{include file="templates\Evnews\head.html"}
+
+
+	<div class="pageContainer_w w100">
+		<div class="pageContainer mar1200 clearfix">
+			<div class="left fl">
+				<div class="position">当前位置：<span>
+									<a href="http://www.ev361.com/">首页</a> - <a href="/gengduo.html">更多</a> - <a href="/lianxiwomen.html">联系我们</a>								</span></div>
+				{Dz:banlist   sql="SELECT * FROM dz_banner WHERE id = 61" }
+				<div class="banner"><img src="../../public/Uploads/{$v.photo}" alt=""/></div>
+				{/Dz:banlist}
+				<div class="menu">
+				<ul class="clearfix">
+												
+												<li ><a href="{:url('./home/Index/lianxiwomen')}" title="联系我们">联系我们</a></li>
+												
+												</ul>
+						</div>
+				<div class="page_content">
+					<div class="pageDetail_content" style="padding-top:24px;">
+						<div class="contact_map">
+							<div style="width:100%; height:350px;" id="map"></div>
+							<script type="text/javascript" src="/templates/Evnews/js/c3b4e1d3a58c44e2bd747d6971d622bb.js"></script> 
+							<script type="text/javascript">
+								var map = new BMap.Map("map");  // 创建地图实例 
+								map.centerAndZoom(new BMap.Point(118.41017,34.978992), 15);  // 创建点坐标  
+								map.enableScrollWheelZoom();  // 初始化地图，设置中心点坐标和地图级别  
+								var marker=new BMap.Marker(new BMap.Point(118.41017,34.978992));  
+								map.addOverlay(marker);  
+								var licontent="<b>EV观察</b><br/><br/>";  
+								licontent+="<span><strong>地址：</strong>临沂市罗庄区</span><br>";  
+								licontent+="<span><strong>电话：</strong>020-888888</span><br>"; 
+								var content1 ="<form action=\"http://api.map.baidu.com/direction\" target=\"_blank\" method=\"get\">" + licontent +"</form>";  
+								var opts1 = { width: 300 };
+								var  infoWindow = new BMap.InfoWindow(content1, opts1); 
+								marker.openInfoWindow(infoWindow);
+								marker.addEventListener('click',function(){ marker.openInfoWindow(infoWindow);});  
+							</script>
+						</div>
+						<p>
+	<br />
+</p>
+<p>
+	<strong><span style="font-size:16px;">DZ新闻</span></strong>
+</p>
+<p>
+	<br />
+</p>
+<p>
+	<span style="font-family:&quot;font-size:14px;">电话：020-88888888</span> 
+</p>
+<p>
+	<span style="font-family:&quot;font-size:14px;">地址：临沂市</span> 
+</p>					</div>
+				</div>
+			</div>
+			<div class="right fr">
+				
+		{Dz:adlist   sql="SELECT * FROM dz_ad WHERE id = 46" }		
+	<div class="page_banner_s"><a href=""><img src="../../public/Uploads/{$v.photo}"/></a></div>
+	{/Dz:adlist}
+	<div class="pagePanel_1_container">
+		<div class="pagePanel_1_title">深度观察</div>
+		<div class="pagePanel_1_list">
+			<ul>
+			{Dz:nlist sql="select * from dz_news where cateid='25' limit 6 "}
+				<li>
+					<a href="{$v.url}">{$v.title}</a>
+				</li>		
+					{/Dz:nlist}
+					</ul>
+		</div>
+	</div>
+	
+	{Dz:adlist   sql="SELECT * FROM dz_ad WHERE id = 47" }
+	<div class="page_banner_s2"><a href=""><img src="/../../public/Uploads/{$v.photo}"/></a></div>
+		{/Dz:adlist}
+
+
+			</div>
+		</div>
+	</div>
+		
+	{include file="templates\Evnews\foot.html"}

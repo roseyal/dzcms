@@ -1,0 +1,59 @@
+{include file="./templates/dome/header.html"}
+
+{include file="./templates/dome/nav.html"}
+    
+    <div class="news_banner_big zoomIn wow" data-wow-duration="1s">
+    	{Dz:banlist where="id=9" name="vo"}
+					<img src="/public/Uploads/{$vo.photo}"/>
+		{/Dz:banlist}
+    </div>
+    <!-------------------news_banner_big end-------------------------->
+   
+    
+    
+ <!---------------news_contact_big  begin----------------------------->
+ 
+ 	<div class="news_contact_big mb40 mt40">
+           <div class="news_img mb40">
+           			<ul>
+					{Dz:nlist name="vo" limit="3" where="id>=5"}
+                    	<li>
+                        	<div class="news_li_img"><img src="/public/Uploads/{$vo.smallimage}"/></div>
+                            <div class="news_p"><p><span>61332</span>{$vo.title}</p></div>
+                        </li>
+					{/Dz:nlist}
+                        
+						<div class="clear"></div>
+                    </ul>
+           	
+           </div>
+  
+    	<div class="news_contact">
+        	<ul>
+			{Dz:nlist name="vo" where="id=8"}
+                <li>
+                	<p><a href="{$vo.url}">{$vo.title}</a><span>{$vo.inputtime|date="Y-m-d",###}</span></p>
+                </li>
+			{/Dz:nlist}
+            	
+                <div class="clear"></div>
+            </ul>
+        </div><!-------------------------->
+        
+        <div class="page mt40">
+            <ul>
+                <li><a href="">上一页</a></li>
+                <li class="page_first"><a href="">1</a></li>
+                <li><a href="">2</a></li>
+                <li class="page_last"><a href="">下一页</a></li>
+				<div class="clear"></div>
+            </ul>
+        </div>
+        <div class="clear"></div>        
+    </div>           <!----------------news_contact_big end----------------------------->
+ 
+
+{include file="./templates/dome/footer.html"}
+    
+</body>
+</html>

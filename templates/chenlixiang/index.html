@@ -1,0 +1,100 @@
+{include file="./templates/chenlixiang/head.html"}
+    <div class="customer">
+        <div class="news">
+            <span><a href="javascript:">公司新闻</a></span>
+            <span class="cur"><a href="javascript:">公司理念</a></span>            
+            <ul>
+            {Dz:nlist name="vo" limit="5"}
+                <li><a href="{$vo.url}">{$vo.abstract}</a></li>
+            {/Dz:nlist}
+                
+                
+            </ul>
+            <ul>
+                <p><a href="companyIdea.html">2014年12月20日，现代中草药个人护理专家——化妆品首家体验型专卖店于上海正大广场全新揭幕。店内一系列特有的增值服务和贴心的体验环境，从空间打造到功能布局，完美诠释养美新体验。</a></p>
+            </ul>
+        </div>
+        <div class="product">
+            <ul>
+                <li>
+                    <a href="newsxq.html"><img src="/templates/chenlixiang/style/images/004.png"></a>
+                    
+                    <big></big><p><a href="productxq.html">现代中草药中高档个人护理品01</a></p>
+                </li>
+                <li>
+                    <a href="newsxq.html"><img src="/templates/chenlixiang/style/images/005.png"></a>
+                    
+                    <big></big><p><a href="productxq.html">现代中草药中高档个人护理品02</a></p>
+                </li>
+                <li>
+                    <a href="newsxq.html"><img src="/templates/chenlixiang/style/images/008.png"></a>
+                    
+                    <big></big><p><a href="productxq.html">现代中草药中高档个人护理品03</a></p>
+                </li>
+            </ul>
+            <a href="javascript:"><i><span class="curr"><b></b></span><span><b></b></span><span><b></b></span></i></a>
+        </div>
+        <div class="consult">
+            <span>HOTLINE</span><p>全国免费专线</p><big>400-821-6188</big>
+            <div class="web">
+                <div class="qq">
+                    <a href="#"><img src="/templates/chenlixiang/style/images/01.png"></a>
+                    <a href="#"><img src="/templates/chenlixiang/style/images/02.png"></a>
+                    <a href="#"><img src="/templates/chenlixiang/style/images/03.png"></a>
+                    <a href="#"><img src="/templates/chenlixiang/style/images/04.png"></a>
+                    <a href="#"><img src="/templates/chenlixiang/style/images/05.png"></a>
+                    <p><a href="#">售后服务</a><a href="#">售后服务</a></p>
+                    <span><a href="#">在线咨询</a><a href="#">在线咨询</a></span>
+                </div>
+                <a href="#" class="two"><img src="/templates/chenlixiang/style/images/07.png"></a>
+            </div>
+            <b><img src="/templates/chenlixiang/style/images/MM.png"></b>
+        </div>
+    </div>
+
+    <div class="main01">
+        <h2>
+            <span></span>
+            <div class="right">
+                <b class="curr01"></b><b></b><b></b>
+                <a href="javascript:"><p><i></i></p><p><big></big></p></a>
+            </div>
+        </h2>
+        
+        <div class="goods">
+            <ul>
+            {Dz:nlist  name='vo' limit="5"}
+                    <li><a href="#"><img src="/templates/chenlixiang/style/images/index01.png" /><p>{$vo.title}</p></a></li>
+            {/Dz:nlist}
+                
+                
+            </ul>
+        </div>
+    </div>
+    
+    <div class="main02">
+        <h2>
+            <span></span>
+            <!--<div class="right">
+                <b></b><b></b><b class="curr01"></b>
+                <p class="curr02"></p><p></p>
+            </div>-->
+        </h2>
+        <div class="company01">
+        {Dz:nlist  name='vo' limit="4"}
+        <span>{$vo.title}</span>  <p></p>
+            
+        {/Dz:nlist}
+        <a href="#">了解更多>></a></div>
+        <div class="company02">
+            <img src="/templates/chenlixiang/style/images/002.png">
+            <p>公司大楼</p><span>公司座落于:上海市浦东新区陆家嘴西路168号正大广场1层</span>
+        </div>
+        <div class="company03">
+            <img src="/templates/chenlixiang/style/images/003.png">
+            <p>首家海外店铺成立</p><span>化妆品家海外旗舰店于法国巴黎的歌剧院大道38号盛
+大揭幕。旗舰店空间设计流露浓浓东方韵味,</span>
+        </div>
+    </div>
+    
+{include file="./templates/chenlixiang/footer.html"}

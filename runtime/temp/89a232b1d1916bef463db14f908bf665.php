@@ -1,0 +1,267 @@
+<?php if (!defined('THINK_PATH')) exit(); /*a:2:{s:23:"./admintpl/newsadd.html";i:1513221140;s:65:"D:\phpStudy\WWW\new\dzcms/application/admin\view\public\foot.html";i:1508459970;}*/ ?>
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<![endif]-->
+<link rel="Bookmark" href="/favicon.ico" >
+<link rel="Shortcut Icon" href="/favicon.ico" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/public/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui.admin/css/style.css" />
+	<style type="text/css">
+.ui-sortable .panel-header{ cursor:move}
+</style>
+<title>资讯添加</title>
+<meta name="keywords" content="关键词,5个左右,单个8汉字以内">
+<meta name="description" content="网站描述，字数尽量空制在80个汉字，160个字符以内！">
+</head>
+<body>
+ <nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 资讯管理 <span class="c-gray en">&gt;</span> 资讯添加 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+		 
+		<div class="container ui-sortable">
+			<h1>资讯添加</h1>
+			<div class="panel panel-default">
+				<div class="panel-body">
+		<form action="" method="post" id="form-admin-add" enctype="multipart/form-data">
+		<table class="table table-border table-bordered">
+      		<tbody class="skin-minimal">
+      		
+			  <tr>
+				<th width="100" class="text-r"><span class="c-red">*</span> 文章标题：</th>
+
+				<td>
+					<div class="formControls col-xs-3 col-sm-4">
+					<input type="text" class="input-text" name="title" required />
+					</div>
+				</td>
+			  </tr>
+			  <tr>
+				<th width="100" class="text-r"><span class="c-red">*</span>简略标题：</th>
+
+				<td>
+					<div class="formControls col-xs-3 col-sm-4">
+					<input type="text" class="input-text" name="shorttitle" required/>
+					</div>
+				</td>
+			  </tr>
+			   <tr>
+		        <th class="text-r"><span class="c-red"></span> 所属分类：</th>
+		        <td>   
+		        <span class="select-box"  style="width: 200px; margin-left: 15px">
+		      		<select class="select" size="1" name="cateid">
+					 
+						<?php if(is_array($cate) || $cate instanceof \think\Collection || $cate instanceof \think\Paginator): if( count($cate)==0 ) : echo "" ;else: foreach($cate as $key=>$vo): ?>
+						<option value="<?php echo $vo['id']; ?>"><?php echo $vo['catename']; ?>
+						</option>
+						<?php if(is_array($vo['second']) || $vo['second'] instanceof \think\Collection || $vo['second'] instanceof \think\Paginator): if( count($vo['second'])==0 ) : echo "" ;else: foreach($vo['second'] as $key=>$sec): ?>
+						<option style="color:blue" value="<?php echo $sec['id']; ?>"> &nbsp;&nbsp;├─ <?php echo $sec['catename']; ?>
+						</option>
+						<?php if(is_array($sec['there']) || $sec['there'] instanceof \think\Collection || $sec['there'] instanceof \think\Paginator): if( count($sec['there'])==0 ) : echo "" ;else: foreach($sec['there'] as $key=>$vo): ?>
+						<option style="color:blue" value="<?php echo $vo['id']; ?>">&nbsp;&nbsp;&nbsp;└─ <?php echo $vo['catename']; ?>
+						</option>
+						<?php endforeach; endif; else: echo "" ;endif; endforeach; endif; else: echo "" ;endif; endforeach; endif; else: echo "" ;endif; ?>
+					
+					
+						
+		      		</select>
+		    	</span>
+		    </td>
+          </tr>
+            <tr>
+				<th class="text-r"> 关键词：</th>
+				<td>
+					<div class="formControls col-xs-3 col-sm-5">
+					<input type="text" class="input-text" value="" placeholder="" id="description" name="keywords">
+					</div>
+				</td>
+			  </tr>
+			 	<tr>
+				<th class="text-r"> 文章摘要：</th>
+				<td>
+					<div class="formControls col-xs-3 col-sm-5">
+					<textarea name="abstract" cols="" rows="" class="textarea"  placeholder="说点什么...最少输入10个字符" datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,200)" required></textarea>
+					</div>
+				</td>
+			  </tr>
+			  	  <tr>
+				<th class="text-r"> 文章作者：</th>
+				<td>
+					<div class="formControls col-xs-3 col-sm-5">
+					<input type="text" style="width:300px" class="input-text" value="" placeholder="" id="description" name="author">
+					</div>
+				</td>
+			  </tr>
+				 <tr>
+				  <th width="100" class="text-r"><span class="c-red">*</span> 文章来源：</th>
+				  <td>
+					  <div class="formControls col-xs-3 col-sm-4">
+					  <input type="text" class="input-text" value="" placeholder="" id="source" name="source" datatype="*2-16" nullmsg="来源不能为空" required>
+					  </div>
+				  </td>
+			  </tr>
+				<tr>
+				  <th width="100" class="text-r">允许评论：</th>
+				  <td>
+					 <div class="row cl">
+			<div class="formControls col-xs-8 col-sm-9 skin-minimal">
+				<div class="check-box">
+					<input type="radio" name="category" value="1"><small>允许</small>
+                    <input type="radio" name="category" value="0"><small>禁用</small>
+                                        
+        
+					<label for="checkbox-pinglun">&nbsp;</label>
+				</div>
+			</div>
+		</div>
+				  </td>
+			  </tr>
+				
+			  <tr>
+				<th class="text-r">缩略图：</th>
+				<td>
+					<div class="formControls col-xs-3 col-sm-5">
+						<span class="btn-upload form-group">
+	  <input class="input-text upload-url radius" type="text" name="smallimage" id="uploadfile-1" readonly><a class="btn btn-primary radius"><i class="Hui-iconfont">&#xe642;</i> 浏览文件</a>
+	  <input type="file" multiple name="smallimage" class="input-file">
+	</span>
+					</div>
+				</td>
+			  </tr>
+			  <tr>
+				<th class="text-r">主要内容：</th>
+				<td>
+						<script id="editor" name="content" type="text/plain" style="width:98%;height:300px;padding-left: 15px;"></script>
+
+				</td>
+			  </tr>
+			  <tr>
+				<th></th>
+				<td>
+	                <input class="btn btn-primary radius" style="margin-left: 50px;" id="sub" value="&nbsp;&nbsp;提交&nbsp;&nbsp;" type="button">
+	                <input class="btn btn-success radius" style="margin-left: 50px;" type="button" value="存草稿">
+				</td>
+			  </tr>
+        	</tbody>
+
+		</table>
+	</form>
+				</div>
+			</div>
+			       
+			 
+		</div>
+		<footer class="footer mt-20">
+			<div class="container">
+				<nav class="footer-nav">
+					<a target="_blank" href="http://www.linyiit.cn/index.php?m=index">关于DZ</a>
+					<span class="pipe">|</span>
+					<a target="_blank" href="http://www.linyiit.cn/index.php?m=list&a=index&id=9">新闻中心</a>
+					<span class="pipe">|</span>
+					<a target="_blank" href="http://www.linyiit.cn/index.php?m=page&a=index&id=4">联系我们</a>
+				</nav>
+				<p>Copyright © 2002-2016 www.linyiit.cn 山东交通技师学院软件开发专业 <br>
+					<a rel="nofollow" target="_blank" href="http://www.miitbeian.gov.cn/">京ICP备15015336号-1</a>
+					<br>
+					未经允许，禁止转载、抄袭、镜像<br>
+					用心做站，做不一样的站</p>
+			</div>
+		</footer>
+<script type="text/javascript" src="/public/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/public/lib/layer/2.4/layer.js"></script> 
+<script type="text/javascript" src="/public/static/h-ui/js/H-ui.js"></script> 
+<script type="text/javascript" src="/public/static/h-ui.admin/js/H-ui.admin.js"></script>
+<script type="text/javascript" charset="utf-8" src="/public/UEditor/ueditor.config.js"></script>
+<script type="text/javascript" charset="utf-8" src="/public/UEditor/ueditor.all.min.js"> </script>
+<script type="text/javascript" src="/public/lib/My97DatePicker/4.8/WdatePicker.js"></script>
+<script type="text/javascript" src="/public/lib/datatables/1.10.0/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="/public/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript" src="/public/lib/jquery.validation/1.14.0/jquery.validate.min.js"></script>
+<script type="text/javascript" src="/public/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="/public/lib/jquery.validation/1.14.0/messages_zh.min.js"></script>
+<script type="text/javascript">
+	var ue = UE.getEditor('editor'); 
+</script>
+<script type="text/javascript">
+$(function(){
+	$('.skin-minimal input').iCheck({
+		checkboxClass: 'icheckbox-blue',
+		radioClass: 'iradio-blue',
+		increaseArea: '20%'
+	});
+	
+	$("#form-admin-add").validate({
+		rules:{
+			title:{
+				minlength:2,
+				maxlength:6,
+				required:true,
+			},
+			name:{
+				minlength:3,
+				maxlength:30,
+				required:true,
+			},
+		},
+		onkeyup:false,
+		focusCleanup:true,
+		success:"valid",
+		submitHandler:function(form){
+			$(form).ajaxSubmit();
+			var index = parent.layer.getFrameIndex(window.name);
+			parent.$('.btn-refresh').click();
+			parent.layer.close(index);
+		}
+	});
+});
+</script>
+<script type="text/javascript">
+$('#sub').click(function(){
+		var formData = new FormData(document.getElementById("form-admin-add"));
+		$.ajax({
+			  url:"<?php echo url('News/do_newsadd'); ?>",
+              type:'POST',
+             data:formData,
+			  contentType: false,
+				processData: false,
+				success:function(result){
+                switch(result.status){
+                   case 1:
+                   layer.msg(result.msg, {
+						  //icon: 1,
+						  time: 2000 
+						});
+					setInterval(function () {
+			location.href="<?php echo url('News/newslist'); ?>";
+                                },1000);						
+                break;
+                    case 2 :layer.msg(result.msg, {
+                        //offset: 't',
+                        anim: 6
+                    });
+                break;
+                }
+            },
+				error:function(result){
+					alert('未知错误');
+				}
+			
+		});
+	});
+</script>
+</body>
+</html>
+<!--H-ui前端框架提供前端技术支持 h-ui.net @2017-01-01 -->

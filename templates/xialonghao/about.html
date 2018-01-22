@@ -1,0 +1,37 @@
+{include file="./templates/xialonghao/header.html"}
+
+    <!--===========layout-container================-->
+    <div class="layout-container">
+      <div class="page-header">
+        <div class="am-container">
+          <h1 class="page-header-title">关于我们</h1>
+        </div>
+      </div>
+
+      <div class="breadcrumb-box">
+        <div class="am-container">
+          <ol class="am-breadcrumb">
+            <li><a href="../index.html">首页</a></li>
+            <li class="am-active">关于我们</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="section">
+      <div class="container">
+
+          {Dz:nlist cateid="3"}
+        <div class="section--header">
+					<h2 class="section--title">{$v.title}</h2>
+					<p class="section--description">
+                        {$v.content}</p>
+				</div>
+          {/Dz:nlist}
+        <!--about-container start-->
+    <hr class="section_divider -narrow">
+       </div>
+        </div>
+  <!--===========layout-footer================-->
+  {include file="./templates/xialonghao/footer.html"}

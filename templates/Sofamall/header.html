@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>dzcms企业模板模型</title>
+    ﻿<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="alternate icon" type="image/png" href="images/favicon.png">
+<link rel='icon' href='favicon.ico' type='image/x-ico' />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+<link rel="stylesheet" href="/templates/Sofamall/css/default.min.css?t=227" />
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script type="text/javascript" src="/templates/Sofamall/lib/jquery/jquery.min.js"></script>
+<!--<![endif]-->
+<!--[if lte IE 8 ]>
+<script src="http://libs.baidu.com/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="lib/amazeui/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+<script type="text/javascript" src="/templates/Sofamall/lib/handlebars/handlebars.min.js"></script>
+<script type="text/javascript" src="/templates/Sofamall/lib/iscroll/iscroll-probe.js"></script>
+<script type="text/javascript" src="/templates/Sofamall/lib/amazeui/amazeui.min.js"></script>
+<script type="text/javascript" src="/templates/Sofamall/lib/raty/jquery.raty.js"></script>
+<script type="text/javascript" src="/templates/Sofamall/js/main.min.js?t=1"></script>
+</head>
+<body>
+
+<header>
+    <div class="header-top">
+        <div class="width-center">
+            <div class="header-logo "><img src="/templates/Sofamall/images/logo.png" alt=""></div>
+            <div class="header-title div-inline">
+                <strong>大智家具设计公司</strong>
+                <span>www.linyiit.cn</span>
+            </div>
+
+            <div class="search-box div-inline">
+                <div class="input-box"><input type="text" name="" placeholder="             请输入关键字"></div>
+                <div class="search-botton"></div>
+            </div>
+        </div>
+    </div>
+    <div class="header-nav">
+        <button class="am-show-sm-only am-collapsed font f-btn" data-am-collapse="{target: '.header-nav'}">Menu <i
+                class="am-icon-bars"></i></button>
+        <nav>
+        <ul class="header-nav-ul am-collapse am-in">
+      
+        {Dz:navlist name="vo" top="0"  limit="7"}
+              <li><a href="{$vo.url}" name="index">{$vo.title}</a></li> 
+        {/Dz:navlist}
+           <!--  <li>
+            <a href="/templates/Sofamall/contact.html" name="message">联系我们</a>
+                <div class="secondary-menu">
+            <li><a href="/templates/Sofamall/about.html" name="about">关于我们</a></li>
+            <li><a href="/templates/Sofamall/productlist.html" name="show">案例展示</a></li>
+            <li><a href="/templates/Sofamall/article_list.html" name="new">
+                    <ul><li><a href="message.html" class="message"></a></li></ul>
+                </div>
+            </li> -->
+        </ul>
+
+
+
+
+        </nav>
+    </div>
+
+</header>

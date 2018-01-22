@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+<title>仁懋</title>
+<link rel="stylesheet" type="text/css" href="/templates/newstyle/Assets/css/reset.css"/>
+<script type="text/javascript" src="/templates/newstyle/Assets/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/templates/newstyle/Assets/js/js_z.js"></script>
+<link rel="stylesheet" type="text/css" href="/templates/newstyle/Assets/css/thems.css">
+<link rel="stylesheet" type="text/css" href="/templates/newstyle/Assets/css/responsive.css">
+</head>
+
+<body>
+<div class="h_bg">
+	<div class="h_top">
+    	<a href="#">www.dz.com</a>
+        <a href="tel:0258412340" class="tel">025-84912340</a>
+    </div>
+</div>
+{include file="./templates/newstyle/head.html"}
+<div class="banner_s"><img src="/templates/newstyle/Assets/upload/banner_a.jpg" alt=""/></div>
+<div class="scd_bg">
+	<div class="wrap scd clearfix">
+    	<div class="scd_l">
+        	<div class="s_top"><span>新闻中心</span></div>
+            <ul class="s_nav">
+             {Dz:navlist name="vo" top="2"}
+                <li class="now"><a href="{$vo.url}">{$vo.title}</a></li>
+             {/Dz:navlist}
+            	
+            </ul>
+            <div class="space_hx">&nbsp;</div>
+            <div class="s_search">
+            	<input name="" type="text" value="请您输入搜索内容" onfocus="if (this.value == '请您输入搜索内容') {this.value = '';this.style.color='#333'}" onblur="if (this.value == '') {this.value = '请您输入搜索内容';this.style.color='#999'}">
+                <input name="" type="submit" class="btn" value="">
+            </div>
+        </div>
+        <div class="scd_r">
+        	<div class="r_top">
+            	<i>&nbsp;</i>
+                <span>新闻中心<em>News</em></span>
+                <div class="pst">
+                	当前位置：
+                    <a href="">首页</a>-
+                    <a href="">新闻中心</a>
+                </div>
+            </div>
+            <div class="scd_m news">
+            {Dz:newslist name="vo" limit="3" catid="1" page="true"}
+            	<dl class="clearfix">
+                	<dt><a href="{$vo.url}"><img src="/public/Uploads/{$vo.smallimage}" alt=""/></a></dt>
+                    <dd>
+                    	<div class="title"><a href="{$vo.url}">{$vo.title}</a></div>
+                        <div class="ctn">{$vo.abstract}</div>
+                        <div class="time">
+                        	{$vo.cateid}
+                            <span>{$vo.inputtime}</span>
+                        </div>
+                    </dd>
+                </dl>
+            {/Dz:newslist}
+                {$page}
+                <div class="space_hx">&nbsp;</div>
+                <div class="pages">
+                	<a href="">首页</a>
+                    <a href="">上一页</a>
+                    <a href="" class="on">[1]</a>
+                    <a href="">[2]</a>
+                    <a href="">[3]</a>
+                    <a href="">[4]</a>
+                    <a href="">[5]</a>
+                    <a href="">[6]</a>
+                    <a href="">[7]</a>
+                    <a href="">[8]</a>
+                    <a href="">[9]</a>
+                    <a href="">[10]</a>
+                    <a href="">下一页</a>
+                    <a href="">尾页</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="bg_c">
+{include file="./templates/newstyle/footer.html"}
+</div>
+</body>
+</html>

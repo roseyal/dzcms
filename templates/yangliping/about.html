@@ -1,0 +1,25 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+{include file="./templates/yangliping/header.html"}
+
+{include file="./templates/yangliping/menu.html"}
+    
+     <div class="right">
+        <div class="right_title">
+            <span class="right_name">当前位置：<a href="index.html">首页</a>>关于我们</span>
+        </div>
+        {Dz:newslist name="vo" cateid="11"}
+        <div class="contit">{$vo.title}</div>
+        <div class="time">发布者：{$vo.author} 发布日期：{$vo.inputtime|date='Y-m-d H:i',###}</div>
+        <div class="conpic"><img src="/public/Uploads/{$vo.smallimage}" width="359" height="284" id="imgs" /></div>
+        <div class="right_con">{$vo.content}</div>
+        {/Dz:newslist}
+    </div>
+</div>
+
+
+{include file="./templates/yangliping/footer.html"}
+<script type="text/javascript" src="/templates/yangliping/js/picmain.js"></script>
+
+</body>
+</html>

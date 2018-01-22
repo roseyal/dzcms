@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <title>制造工业</title>
+    ﻿<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="format-detection" content="telephone=no">
+<meta name="renderer" content="webkit">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="alternate icon" type="image/png" href="/templates/new_temp/images/favicon.png">
+<link rel='icon' href='favicon.ico' type='image/x-ico' />
+<meta name="description" content="" />
+<meta name="keywords" content="" />
+    {include file='./templates/new_temp/head.html'}
+</head>
+<body>
+{include file='./templates/new_temp/header.html'}
+    <div class="com-container">
+        <div class="cms-g">
+            <div class="am-hide-sm-only am-u-md-3 am-u-lg-3">
+                <div class="com-nav-left">
+                    <h1><em>产品中心</em><i>PRODUCT</i></h1>
+                    <ul>
+                        {Dz:navlist limit="5" name='vo' top='2' }
+                        <li class="on"><a href="{$vo.url}">{$vo.title}</a></li>
+                        {/Dz:navlist}
+                    </ul>
+                </div>
+            </div>
+            <div class="am-u-sm-12 am-u-md-9 am-u-lg-9">
+                <div class="com-nav-title">
+                    <a href="#doc-oc-demo1" class="font am-show-sm-only" data-am-offcanvas>&#xe68b;</a>
+                    <span>LED灯具</span>
+                    <ol class="com-position am-show-md-up">
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">产品中心</a></li>
+                        <li><a href="#">LED灯具</a></li>
+                    </ol>
+                </div>
+                <div class="product-list">
+                    {Dz:newslist cateid='2' limit="4" name='vo' page='true'}
+                    <div class="am-u-sm-6 am-u-md-4 am-u-lg-3">
+                        <div class="product-list-item">
+                            <div class="product-list-item-bj">
+                                <a href="{$vo.url}"><img src="/templates/new_temp/uploads/{$vo.smallimage}" height="100" /></a>
+                            </div>
+                            <div class="product-list-item-title">
+                                <a href="{$vo.url}" class="f-toe">{$vo.title}</a>
+                            </div>
+                        </div>
+                    </div>
+                    {/Dz:newslist}
+                </div>
+                <div class="page-list">
+                    {$page}
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="doc-oc-demo1" class="am-offcanvas">
+        <div class="am-offcanvas-bar">
+            <div class="am-offcanvas-content com-nav-left com-nav-left1">
+                <ul>
+                    <li class="on"><span><a href="#">LED T8灯管</a></span></li>
+                    <li><span><a href="#">LED射灯</a></span></li>
+                    <li><span><a href="#">LED软光灯</a></span></li>
+                    <li><span><a href="#">LED泛光灯</a></span></li>
+                    <li><span><a href="#">LED洗墙灯</a></span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+{include file='./templates/new_temp/footer.html'}
+</body>
+</html>

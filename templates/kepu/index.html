@@ -1,0 +1,227 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+{include file="./templates/kepu/head.html"}
+<!-- 
+<script type="text/javascript">
+  var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+  document.write(unescape("%3Cspan id='cnzz_stat_icon_1000167842'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000167842' type='text/javascript'%3E%3C/script%3E"));
+</script>
+-->
+<script>
+$("#cnzz_stat_icon_1000167842").hide();
+$("#cnzz_stat_icon_1000167842 a").text("click");
+$("#cnzz_stat_icon_1000167842 a").attr("title","click");
+$(function(){
+  $(".menux li").mouseover(function(){
+      $(this).children(".submenux").addClass("shh");
+      $(this).children(".navmenux").addClass("shx");
+    });
+  $(".menux li").mouseout(function(){
+      $(this).children(".submenux").removeClass("shh");
+      $(this).children(".navmenux").removeClass("shx");
+    });
+  //产品技术导航
+  $(".hassub").click(function(){
+    var subs =  $(this).next();
+    var hide = subs.is(":hidden");
+    
+    $(".sub:not(.zhankai)").hide();
+    //子产品线显示
+    //菜单导航div 正常高度
+    var mpx = 280;
+    if(hide){//现在为隐藏
+        var len = subs.find('dl').eq(0).children().size();
+        var px = len *20;
+        subs.show().height(px);
+      //计算外面div高度，随着子产品线展开收缩调整;
+        mpx = (len - 1) *20 + mpx;
+    }
+    $(".submenux2").height(mpx);
+  });
+
+  var zhankais = $(".zhankai");
+  for(var i = 0 ; i <zhankais.length; i ++ ){
+    var len = $(zhankais[i]).find('dd').size();
+    var px = len * 24;
+    $(zhankais[i]).height(px).parent().show().height(px);
+  }
+  //处于产品维保服务链接到其他独立页面
+    $("a[href='products.php?info/69']").attr('href','services.php');
+  
+  //百度推送代码 start
+  var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';       
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+    //百度推送代码 end
+
+  //优酷视频播放
+  var vid = $("#youkuplayer").attr('vid');
+  if(vid != undefined){
+    var player = new YKU.Player('youkuplayer',{
+      styleid: '0',
+      client_id: 'dd1fc4444cd920df',
+      vid: vid,
+      newPlayer: true,
+      show_related: false,
+      autoplay: false
+    });
+  } 
+    
+});
+</script> 
+ <div class="banner">
+    <div id="mainContainer">
+      <div id="topSection">
+        <div class="slideshow">
+                  <ul class="buttons">
+               <li class="active" id="button1">
+                  <a href="#" title="website named desire"></a>
+                </li>
+                  <li id="button2">
+				  <a href="#" title="大智科技自安全园区网解决方案"></a></li>
+                         <li id="button3"><a href="#" title="DAC"></a></li>
+                 <li id="button4"><a href="#" title="大智科技DPX17000系列新品发布"></a></li>
+                          <li id="button5">
+						  <a href="#" title="云安全，硬实力"></a>
+						  </li></ul> 
+       
+               <ul class="slides">
+
+    <!-- {Dz:banlist field="Id,photo"  where="id in(61,62,63,64,65)" name="vo"}
+    <li class="slide" id="image2" style="width: 100%;height: 100%" id="image1">
+	      <a  style="width: 100%;height: 100%" href="/inac/" target="_blank" >
+	      <img style="width: 100%;height: 100%" alt="大智科技自安全园区网解决方案" src="../../public/Uploads/{$vo.photo}" />
+                  </a>
+	                </li>
+             {/Dz:banlist}
+			 -->
+
+ 
+	
+          <li style="visibility:visible;width: 100%;height: 100%" class="slide" id="image1">
+	                  <a href="" style="width: 100%;height: 100%" target="_blank" >
+	                    <img style="width: 100%;height: 100%" alt="2018校园招聘" src="../../templates/kepu/img/banner-0916.png" /></a>
+	                               </li>
+	                           
+	                            <li class="slide" id="image2" style="width: 100%;height: 100%" id="image1">
+	                              <a  style="width: 100%;height: 100%" href="" target="_blank" >
+	                          <img style="width: 100%;height: 100%" alt="大智科技自安全园区网解决方案" src="../../templates/kepu/img/banner2.png" /></a>
+	                                  </li>
+	                           
+	                               <li class="slide" id="image3" style="width: 100%;height: 100%" id="image2">
+	                                 <a  style="width: 100%;height: 100%" href="" >
+	                             <img style="width: 100%;height: 100%" alt="DAC" src="../../templates/kepu/img/banner2.jpg" /></a>
+	                                           </li>
+	                           
+	                           <li class="slide" id="image4" style="width: 100%;height: 100%" id="image3">
+	                           <a  style="width: 100%;height: 100%" href="" >
+	                         <img style="width: 100%;height: 100%" alt="大智科技DPX17000系列新品发布" src="../../templates/kepu/img/DPX17000 .jpg" /></a>
+	                          </li>
+	                           
+	                  <li class="slide" id="image5" style="width: 100%;height: 100%" id="image4">
+	                 <a  style="width: 100%;height: 100%" href="" target="_blank" >
+	              <img style="width: 100%;height: 100%" alt="云安全，硬实力" src="../../templates/kepu/img/Cloud-K.png" /></a> 
+	                                
+          </ul>
+        </div>      
+      </div>
+    </div>
+  </div>
+  <div class="bodyer">
+    <div class="newsTips">
+      <div class="newsTipsCon" style="width:990px;">
+        <h2>新闻动态：</h2>
+        <div class="inner" style="width:430px;">
+          <div style="width:430px" class="marquee" pause="3000" step="1" speed="30" direction="up">
+            <ul>
+
+               {Dz:nlist limit="4" cateid="1"  name="vo"}
+		      <li><a href="{$vo.url}">{$vo.title}</a>
+		        <span>[2017-09-22]</span></li>			
+						{/Dz:nlist}		
+		   
+		         
+            </ul>
+          </div>
+        </div>
+        <a href="{$vo.url}" style="float:left" class="tipsMore png">更多</a>
+        <div class="inner" style="width:430px;">
+            <div id="scroll_div" style="width:430px;" class="marquee" pause="3000" step="1" speed="30" direction="up"> 
+                         <ul>
+                           {Dz:nlist limit="2" cateid="1"  name="vo"}
+		              <li><a href="{$vo.url}">{$vo.title}</a>
+		               </li>			
+						{/Dz:nlist}		
+                         </ul> 
+                    </div> 
+                </div>
+        <!-- 
+            <a style="font: 12px/46px 微软雅黑;color:grey;margin-left: 20px;" href="/news_gs_info.php?363">关于未授权任何公司或个人以网络渠道销售本公司产品的声明</a>
+         -->
+      </div>
+    </div>
+    <div class="bodyerCon"> 
+      <div class="indexL">
+        <div class="indexBox">
+          <div class="title"><h2>解决方案</h2><h3>
+		  <img src="../../templates/kepu/img/sign01.jpg" /></h3></div>
+                    <ul>
+
+                    {Dz:nlist limit="3" cateid="1"  name="vo"}
+		              <li><a href="{$vo.url}">{$vo.title}</a>
+		               </li>				
+						{/Dz:nlist}	
+						</ul>                  
+             <a href="{$vo.url}" class="more">更多>></a>
+        </div>
+      </div>
+      <div class="indexM">
+        <div class="indexBox" style="margin-right:0">
+          <div class="title"><h2>最佳实践</h2><h3><img src="../../templates/kepu/img/sign02.jpg" /></h3></div>
+                  <ul>    {Dz:nlist limit="3" cateid="1"  name="vo"}
+		              <li><a href="{$vo.url}">{$vo.title}</a>
+		               </li>			
+						{/Dz:nlist}
+						</ul>
+                <a href="{$vo.url}" class="more">更多>></a>
+        </div>
+      </div>
+      <!--  <div class="indexR">
+        <div class="indexBox" style="margin-right:0">
+          <div class="title"><h2>关于大智科技</h2><h3><img src="img/sign03.jpg" /></h3></div>
+          <div class="indexAbout">
+            <p>大智科技有限公司是在网络安全及应用交付领域集研发、生产、销售于一体的...</p>
+          </div>
+          <a href="about_intro.php" class="more">更多</a>
+        </div>
+      </div>-->
+      <div class="indexR" style="background: url(../../templates/kepu/img/bg21.jpg) no-repeat">
+        <div class="indexBox" style="margin-right:0">
+          <div class="title"><h2><!-- <a href="joinus.html"> -->
+		  <a href="201506/a.html " style="color:#01599e;"><!-- <img src="join/joint.jpg" /> -->专业服务  深度安全</a></h2><h3></h3></div>
+          <div>
+            <ul>
+                {Dz:nlist limit="2" cateid="1"  name="vo"}
+		              <li><a href="{$vo.url}">{$vo.title}</a>
+		               </li>			
+						{/Dz:nlist}		
+            </ul>
+            <a href="{$vo.url}" class="more">更多>></a>
+          </div>
+          
+        </div>
+      </div>
+      <div class="clear"></div>
+    </div>
+  </div>
+ {include file="./templates/kepu/foot.html"}
+  </div>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!--头部-->
+<div class="head clearfix">
+    <div class="logo">
+        <a href=""><img src="/templates/newstyle/Assets/images/logo.jpg" alt="仁懋"/></a>
+        <div class="h_code">
+            <img src="/templates/newstyle/Assets/images/code.jpg" alt=""/>
+            <div class="c_m">
+                <img src="/templates/newstyle/Assets/images/code_d.png" alt=""/>
+                <p>手机查看<br/>一键打电话给商家</p>
+            </div>
+        </div>
+    </div>
+    <div class="nav_m">
+            <div class="n_icon">导航栏</div>
+            <ul class="nav clearfix">
+            {Dz:navlist name="vo"}
+                <li class="now"><a href="{$vo.url}">{$vo.title}</a></li>
+             {/Dz:navlist}
+            </ul>
+        </div>
+</div>
+<!--头部-->

@@ -1,0 +1,157 @@
+{include file="./templates/zhouhongcheng/head.html"}
+<!--幻灯片-->
+<div class="banner">
+	<div class="slider">
+        <div class="flexslider">
+          <ul class="slides">
+          {Dz:banlist order="id desc" limit="3" name='vo' page="true"}
+                <li><a href=""><img src="/public/Uploads/{$vo.photo}" alt="" /></a></li>
+          {/Dz:banlist}
+
+        </div>
+    </div>
+</div>
+<!--幻灯片-->
+<div class="i_ma">
+	<div class="tabBox_t">
+        <div class="tabBox">
+          <ul class="tabNav">
+            <li class="now">企业应用软件</li>
+            <li>IT互联网产品系统</li>
+            <li>手机软件</li>
+          </ul>
+          <div class="tabCont" style="display:block;">
+            <!--企业应用软件-->
+            <ul class="ip_l clearfix">
+            	   {Dz:nlist order="id desc" limit="6" name='vo' cateid="5"}
+                <li>
+                    <div class="tu">
+                        <a href=""><img src="/templates/zhouhongcheng/Assets/upload/pic11.jpg" alt=""/>
+                        <div class="title">{$vo.title}</div></a>
+                    </div>
+                    <div class="des">
+                        <h6><a href="">{$vo.shorttitle}</a></h6>
+                        <p>S3为每一位客户提供即时、可靠、专业的技术支持；完善、快速的售后服务；帮助客户建立持续的 IT 运营体系，支持企业快速发展......</p>
+                        <a href="" class="more">+ 查看详情</a>
+                    </div>
+                </li>
+            {/Dz:nlist}
+            </ul>
+            <!--企业应用软件-->
+          </div>
+          <div class="tabCont">
+            <!--IT互联网产品系统-->
+            <ul class="ip_l clearfix">
+               {Dz:nlist order="id asc" limit="6" name='vo' cateid="6"}
+                <li>
+                    <div class="tu">
+                        <a href=""><img src="/templates/zhouhongcheng/Assets/upload/pic11.jpg" alt=""/>
+                        <div class="title">{$vo.title}</div></a>
+                    </div>
+                    <div class="des">
+                        <h6><a href="">{$vo.shorttitle}</a></h6>
+                        <p>S3为每一位客户提供即时、可靠、专业的技术支持；完善、快速的售后服务；帮助客户建立持续的 IT 运营体系，支持企业快速发展......</p>
+                        <a href="" class="more">+ 查看详情</a>
+                    </div>
+                </li>
+            {/Dz:nlist}
+            </ul>
+            <!--IT互联网产品系统-->
+          </div>
+          <div class="tabCont">
+            <!--手机软件-->
+            <ul class="ip_l clearfix">
+            {Dz:nlist order="id desc" limit="6" name='vo' cateid="5"}
+                <li>
+                    <div class="tu">
+                        <a href=""><img src="/templates/zhouhongcheng/Assets/upload/pic11.jpg" alt=""/>
+                        <div class="title">{$vo.title}</div></a>
+                    </div>
+                    <div class="des">
+                        <h6><a href="">{$vo.shorttitle}</a></h6>
+                        <p>S3为每一位客户提供即时、可靠、专业的技术支持；完善、快速的售后服务；帮助客户建立持续的 IT 运营体系，支持企业快速发展......</p>
+                        <a href="" class="more">+ 查看详情</a>
+                    </div>
+                </li>
+            {/Dz:nlist}
+            	
+            </ul>
+            <!--手机软件-->
+          </div>
+        </div>
+    </div>
+</div>
+<div class="bg_a">
+	<div class="i_mb clearfix">
+    {Dz:nlist order="id desc" limit="5" name='vo' cateid="5" }
+                <dl class="clearfix">
+            <a href="{$vo.url}">
+                <dt><img src="/templates/zhouhongcheng/Assets/upload/pic1.jpg" alt=""/></dt>
+                <dd>
+                    <div class="name">{$vo.title}</div>
+                    <p>{$vo.shorttitle}</p>
+                </dd>
+            </a>
+        </dl>
+            {/Dz:nlist}
+    
+    </div>
+</div>
+<div class="space_hx">&nbsp;</div>
+<div class="i_mc clearfix">
+	<div class="i_mcl">
+    	<div class="box_h">
+        	<span>
+            	<em>公司新闻</em>
+                <i>&nbsp;</i>
+            </span>
+            <a href="">+ MORE</a>
+        </div>
+        <div class="box_m">
+        	 {Dz:nlist order="id asc" limit="1" name='vo' cateid="5" }
+               <dl class="clearfix">
+
+                <dt><a href="{$vo.url}"><img src="/templates/zhouhongcheng/Assets/upload/pic12.jpg" alt=""/></a></dt>
+                <dd>
+                    <div class="title"><a href="{$vo.url}">{$vo.title}</a></div>
+                    <p>      <a href="{$vo.url}">{查看详情}</a></p>
+                </dd>
+            </dl>
+            {/Dz:nlist}
+            <ul class="clearfix">
+            {Dz:nlist order="id desc" limit="5" name='vo' cateid="6"}
+                <li>
+                    <a href="{$vo.url}">
+                        <p>{$vo.title}</p>
+                        <em>{$vo.inputtime}</em>
+                    </a>
+                </li>
+            {/Dz:nlist}
+            	
+            </ul>
+        </div>
+    </div>
+    <div class="i_mcr">
+    	<div class="box_h">
+        	<span>
+            	<em>最新活动</em>
+                <i>&nbsp;</i>
+            </span>
+            <a href="">+ MORE</a>
+        </div>
+        <div class="box_m">
+         {Dz:nlist order="id desc" limit="3" name='vo' cateid="6"}
+               <dl class="clearfix">
+
+                <dt><a href="{$vo.url}"><img src="/templates/zhouhongcheng/Assets/upload/pic12.jpg" alt=""/></a></dt>
+                <dd>
+                    <div class="title"><a href="{$vo.url}">{$vo.title}</a></div>
+                    <p>      <a href="{$vo.url}">{查看详情}</a></p>
+                </dd>
+            </dl>
+            {/Dz:nlist}
+        	
+        </div>
+    </div>
+</div>
+{include file="./templates/zhouhongcheng/footer.html"}

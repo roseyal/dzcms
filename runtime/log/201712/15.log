@@ -1,0 +1,2974 @@
+[ 2017-12-15T07:54:08+08:00 ] 127.0.0.1 127.0.0.1 GET /admin
+[ log ] www.ttt.com/admin [运行时间：0.056148s][吞吐率：17.81req/s] [内存消耗：1,887.20kb] [文件加载：48]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T07:54:09+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/login/login.html
+[ log ] www.ttt.com/admin/login/login.html [运行时间：0.137423s][吞吐率：7.28req/s] [内存消耗：1,862.55kb] [文件加载：46]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ RUN ] app\admin\controller\Login->login[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\Login.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ VIEW ] ./admintpl/login.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T07:54:09+08:00 ] 127.0.0.1 127.0.0.1 GET /captcha.html
+[ log ] www.ttt.com/captcha.html [运行时间：0.177617s][吞吐率：5.63req/s] [内存消耗：1,574.89kb] [文件加载：39]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'method',
+  'method' => 
+  array (
+    0 => '\\think\\captcha\\CaptchaController',
+    1 => 'index',
+  ),
+  'var' => 
+  array (
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin/login/login.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'id' => NULL,
+)
+[ info ] [ RUN ] think\captcha\CaptchaController->index[ D:\phpStudy\WWW\new\dzcms\vendor\topthink\think-captcha\src\CaptchaController.php ]
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T07:54:26+08:00 ] 127.0.0.1 127.0.0.1 POST /admin/login/do_login.html
+[ log ] www.ttt.com/admin/login/do_login.html [运行时间：0.171033s][吞吐率：5.85req/s] [内存消耗：2,598.58kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'login',
+    2 => 'do_login',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin/login/login.html',
+  'content-type' => 'application/x-www-form-urlencoded; charset=UTF-8',
+  'x-requested-with' => 'XMLHttpRequest',
+  'content-length' => '38',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+  'username' => '123',
+  'password' => '123',
+  'captcha' => 'jepk',
+)
+[ info ] [ RUN ] app\admin\controller\Login->do_login[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\Login.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001402s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_basics` [ RunTime:0.008194s ]
+[ sql ] [ SQL ] SELECT `iplist` FROM `dz_basics` LIMIT 1 [ RunTime:0.000382s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000892s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_admin` [ RunTime:0.006621s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_admin` WHERE  `username` = '123'  AND `password` = '202cb962ac59075b964b07152d234b70' LIMIT 1 [ RunTime:0.000592s ]
+
+---------------------------------------------------------------
+[ 2017-12-15T07:54:27+08:00 ] 127.0.0.1 127.0.0.1 GET /admin.php
+[ log ] www.ttt.com/admin.php [运行时间：0.088837s][吞吐率：11.26req/s] [内存消耗：2,598.22kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin/login/login.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Index->index[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\Index.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./admintpl/index.html [ array (
+  0 => 'vo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008348s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_admin` [ RunTime:0.007367s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_admin` WHERE  (  id=76 ) LIMIT 1 [ RunTime:0.000563s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004362s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_auth_group` [ RunTime:0.007794s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000536s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000254s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000250s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000254s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000253s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000251s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000275s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000257s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000252s ]
+
+---------------------------------------------------------------
+[ 2017-12-15T07:54:27+08:00 ] 127.0.0.1 127.0.0.1 GET /welcome.html
+[ log ] www.ttt.com/welcome.html [运行时间：0.133200s][吞吐率：7.51req/s] [内存消耗：2,673.37kb] [文件加载：53]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'aduser',
+    2 => 'welcome',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Aduser->welcome[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\Aduser.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./admintpl/welcome.html [ array (
+  0 => 'vo',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003428s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_admin` [ RunTime:0.007145s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_admin` WHERE  (  id=76 ) LIMIT 1 [ RunTime:0.001587s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002651s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_news` [ RunTime:0.023247s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `dz_news` LIMIT 1 [ RunTime:0.000421s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000841s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_auth_group` [ RunTime:0.011407s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000252s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000086s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000093s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000104s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000091s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000090s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000093s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000076s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000075s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000076s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000089s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000077s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000075s ]
+[ sql ] [ SQL ] SELECT `title` FROM `dz_auth_group` WHERE  (  id=23 ) LIMIT 1 [ RunTime:0.000103s ]
+
+---------------------------------------------------------------
+[ 2017-12-15T07:54:27+08:00 ] 127.0.0.1 127.0.0.1 POST /url
+[ log ] www.ttt.com/url [运行时间：0.045722s][吞吐率：21.87req/s] [内存消耗：1,553.15kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'url',
+    1 => NULL,
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'x-requested-with' => 'XMLHttpRequest',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'content-length' => '0',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T07:57:18+08:00 ] 127.0.0.1 127.0.0.1 GET /caterecover.html
+[ log ] www.ttt.com/caterecover.html [运行时间：0.034405s][吞吐率：29.07req/s] [内存消耗：1,479.16kb] [文件加载：37]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'redirect',
+  'url' => '/admin/news/caterecover',
+  'status' => 301,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T07:57:18+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/news/caterecover
+[ log ] www.ttt.com/admin/news/caterecover [运行时间：0.077403s][吞吐率：12.92req/s] [内存消耗：2,818.45kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'caterecover',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\News->caterecover[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\News.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./admintpl/caterecover.html [ array (
+  0 => 'page',
+  1 => 'list',
+  2 => 'list1',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007876s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_category` [ RunTime:0.007524s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `dz_category` WHERE  (  isdel=1 ) LIMIT 1 [ RunTime:0.000450s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_category` WHERE  (  isdel=1 ) LIMIT 0,10 [ RunTime:0.000679s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003986s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `dz_category` WHERE  (  isdel=1 ) LIMIT 1 [ RunTime:0.000474s ]
+
+---------------------------------------------------------------
+[ 2017-12-15T07:58:13+08:00 ] 127.0.0.1 127.0.0.1 GET /404.html
+[ log ] www.ttt.com/404.html [运行时间：0.046870s][吞吐率：21.34req/s] [内存消耗：1,925.08kb] [文件加载：46]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'img',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\News->_empty[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\News.php ]
+[ info ] [ VIEW ] ./admintpl/empty.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T07:59:21+08:00 ] 127.0.0.1 127.0.0.1 GET /listnav.html
+[ log ] www.ttt.com/listnav.html [运行时间：0.032777s][吞吐率：30.51req/s] [内存消耗：1,479.00kb] [文件加载：37]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'redirect',
+  'url' => '/admin/nav/listnav',
+  'status' => 301,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T07:59:21+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/nav/listnav
+[ log ] www.ttt.com/admin/nav/listnav [运行时间：0.103483s][吞吐率：9.66req/s] [内存消耗：2,606.95kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'nav',
+    2 => 'listnav',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Nav->listnav[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\Nav.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./admintpl/listnav.html [ array (
+  0 => 'data',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.010682s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_nav` [ RunTime:0.037824s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_nav` WHERE  `static` = 0  AND `top` = 0 [ RunTime:0.000670s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_nav` WHERE  `static` = 0  AND `top` = 1 [ RunTime:0.000312s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_nav` WHERE  `static` = 0  AND `top` = 2 [ RunTime:0.000345s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_nav` WHERE  `static` = 0  AND `top` = 3 [ RunTime:0.000315s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_nav` WHERE  `static` = 0  AND `top` = 4 [ RunTime:0.000318s ]
+
+---------------------------------------------------------------
+[ 2017-12-15T07:59:29+08:00 ] 127.0.0.1 127.0.0.1 GET /404.html
+[ log ] www.ttt.com/404.html [运行时间：0.043321s][吞吐率：23.08req/s] [内存消耗：1,925.08kb] [文件加载：46]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'news',
+    2 => 'img',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\News->_empty[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\News.php ]
+[ info ] [ VIEW ] ./admintpl/empty.html [ array (
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T07:59:31+08:00 ] 127.0.0.1 127.0.0.1 GET /templet_page.html
+[ log ] www.ttt.com/templet_page.html [运行时间：0.043005s][吞吐率：23.25req/s] [内存消耗：1,883.77kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'templet',
+    2 => 'templet',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Templet->templet[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\Templet.php ]
+[ info ] [ VIEW ] ./admintpl/templet_page.html [ array (
+  0 => 'xueze',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T07:59:31+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.034910s][吞吐率：28.64req/s] [内存消耗：1,553.18kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/templet_page.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T07:59:33+08:00 ] 127.0.0.1 127.0.0.1 GET /statichtml.html
+[ log ] www.ttt.com/statichtml.html [运行时间：0.030188s][吞吐率：33.13req/s] [内存消耗：1,479.12kb] [文件加载：37]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'redirect',
+  'url' => '/admin/templet/statichtml',
+  'status' => 301,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T07:59:33+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/templet/statichtml
+[ log ] www.ttt.com/admin/templet/statichtml [运行时间：0.155837s][吞吐率：6.42req/s] [内存消耗：2,582.33kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'templet',
+    2 => 'statichtml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Templet->statichtml[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\Templet.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./admintpl/statichtml.html [ array (
+  0 => 'name',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.013122s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_nav` [ RunTime:0.089172s ]
+[ sql ] [ SQL ] SELECT `name`,`id` FROM `dz_nav` ORDER BY id asc [ RunTime:0.000493s ]
+
+---------------------------------------------------------------
+[ 2017-12-15T07:59:33+08:00 ] 127.0.0.1 127.0.0.1 GET /public/static/h-ui.admin/js/H-ui.admin.page.js
+[ log ] www.ttt.com/public/static/h-ui.admin/js/H-ui.admin.page.js [运行时间：0.036441s][吞吐率：27.44req/s] [内存消耗：1,553.16kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'h-ui.admin',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin/templet/statichtml',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T07:59:36+08:00 ] 127.0.0.1 127.0.0.1 GET /templet_page.html
+[ log ] www.ttt.com/templet_page.html [运行时间：0.041732s][吞吐率：23.96req/s] [内存消耗：1,883.77kb] [文件加载：47]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'templet',
+    2 => 'templet',
+  ),
+  'convert' => false,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Templet->templet[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\Templet.php ]
+[ info ] [ VIEW ] ./admintpl/templet_page.html [ array (
+  0 => 'xueze',
+) ]
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T07:59:36+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.032521s][吞吐率：30.75req/s] [内存消耗：1,553.18kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/templet_page.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T07:59:37+08:00 ] 127.0.0.1 127.0.0.1 GET /statichtml.html
+[ log ] www.ttt.com/statichtml.html [运行时间：0.031359s][吞吐率：31.89req/s] [内存消耗：1,479.12kb] [文件加载：37]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'redirect',
+  'url' => '/admin/templet/statichtml',
+  'status' => 301,
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T07:59:37+08:00 ] 127.0.0.1 127.0.0.1 GET /admin/templet/statichtml
+[ log ] www.ttt.com/admin/templet/statichtml [运行时间：0.060612s][吞吐率：16.50req/s] [内存消耗：2,582.33kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'templet',
+    2 => 'statichtml',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Templet->statichtml[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\Templet.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./admintpl/statichtml.html [ array (
+  0 => 'name',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007203s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_nav` [ RunTime:0.007043s ]
+[ sql ] [ SQL ] SELECT `name`,`id` FROM `dz_nav` ORDER BY id asc [ RunTime:0.000466s ]
+
+---------------------------------------------------------------
+[ 2017-12-15T07:59:37+08:00 ] 127.0.0.1 127.0.0.1 GET /public/static/h-ui.admin/js/H-ui.admin.page.js
+[ log ] www.ttt.com/public/static/h-ui.admin/js/H-ui.admin.page.js [运行时间：0.036470s][吞吐率：27.42req/s] [内存消耗：1,553.16kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'static',
+    1 => 'h-ui.admin',
+    2 => 'js',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin/templet/statichtml',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:01:06+08:00 ] 127.0.0.1 127.0.0.1 GET /admin.php/ad/adlist.html
+[ log ] www.ttt.com/admin.php/ad/adlist.html [运行时间：0.099338s][吞吐率：10.07req/s] [内存消耗：2,692.59kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ad',
+    2 => 'adlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ad->adlist[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\Ad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./admintpl/adlist.html [ array (
+  0 => 'num',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007507s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_ad` [ RunTime:0.014984s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_ad` WHERE  (  recovery=0 ) ORDER BY id asc [ RunTime:0.000706s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_ad` WHERE  (  recovery=0 ) ORDER BY id asc [ RunTime:0.000326s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.012155s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_adcate` [ RunTime:0.007381s ]
+[ sql ] [ SQL ] SELECT `name` FROM `dz_adcate` WHERE  (  id=0 ) LIMIT 1 [ RunTime:0.000668s ]
+[ sql ] [ SQL ] SELECT `name` FROM `dz_adcate` WHERE  (  id=18 ) LIMIT 1 [ RunTime:0.000389s ]
+[ sql ] [ SQL ] SELECT `name` FROM `dz_adcate` WHERE  (  id=0 ) LIMIT 1 [ RunTime:0.000391s ]
+
+---------------------------------------------------------------
+[ 2017-12-15T08:01:06+08:00 ] 127.0.0.1 127.0.0.1 GET /public/js/pagenav.cn.js
+[ log ] www.ttt.com/public/js/pagenav.cn.js [运行时间：0.041124s][吞吐率：24.32req/s] [内存消耗：1,552.90kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'pagenav.cn.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:01:06+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/jquery.validate.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/jquery.validate.min.js [运行时间：0.047290s][吞吐率：21.15req/s] [内存消耗：1,553.23kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:01:06+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery-ui/1.9.1/jquery-ui.min.js
+[ log ] www.ttt.com/public/lib/jquery-ui/1.9.1/jquery-ui.min.js [运行时间：0.052980s][吞吐率：18.88req/s] [内存消耗：1,553.21kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery-ui',
+    2 => '1.9.1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:01:06+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.037035s][吞吐率：27.00req/s] [内存消耗：1,553.25kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:01:06+08:00 ] 127.0.0.1 127.0.0.1 GET /public/js/pagenav.cn.js
+[ log ] www.ttt.com/public/js/pagenav.cn.js [运行时间：0.040837s][吞吐率：24.49req/s] [内存消耗：1,552.90kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'pagenav.cn.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:01:06+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/jquery.validate.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/jquery.validate.min.js [运行时间：0.032342s][吞吐率：30.92req/s] [内存消耗：1,553.23kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:01:06+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.034461s][吞吐率：29.02req/s] [内存消耗：1,553.25kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:02:28+08:00 ] 127.0.0.1 127.0.0.1 GET /admin.php/ad/adlist.html
+[ log ] www.ttt.com/admin.php/ad/adlist.html [运行时间：0.183717s][吞吐率：5.44req/s] [内存消耗：2,920.38kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ad',
+    2 => 'adlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ad->adlist[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\Ad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./admintpl/adlist.html [ array (
+  0 => 'num',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.005782s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_ad` [ RunTime:0.007870s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_ad` WHERE  (  recovery=0 ) ORDER BY id asc [ RunTime:0.000486s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_ad` WHERE  (  recovery=0 ) ORDER BY id asc [ RunTime:0.000238s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004372s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_adcate` [ RunTime:0.087909s ]
+[ sql ] [ SQL ] SELECT `name` FROM `dz_adcate` WHERE  (  id=0 ) LIMIT 1 [ RunTime:0.000977s ]
+[ sql ] [ SQL ] SELECT `name` FROM `dz_adcate` WHERE  (  id=18 ) LIMIT 1 [ RunTime:0.000886s ]
+[ sql ] [ SQL ] SELECT `name` FROM `dz_adcate` WHERE  (  id=0 ) LIMIT 1 [ RunTime:0.000890s ]
+
+---------------------------------------------------------------
+[ 2017-12-15T08:02:28+08:00 ] 127.0.0.1 127.0.0.1 GET /public/js/pagenav.cn.js
+[ log ] www.ttt.com/public/js/pagenav.cn.js [运行时间：0.035940s][吞吐率：27.82req/s] [内存消耗：1,552.90kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'pagenav.cn.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:02:28+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/jquery.validate.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/jquery.validate.min.js [运行时间：0.031684s][吞吐率：31.56req/s] [内存消耗：1,553.23kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:02:28+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery-ui/1.9.1/jquery-ui.min.js
+[ log ] www.ttt.com/public/lib/jquery-ui/1.9.1/jquery-ui.min.js [运行时间：0.050675s][吞吐率：19.73req/s] [内存消耗：1,553.21kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery-ui',
+    2 => '1.9.1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:02:28+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.043247s][吞吐率：23.12req/s] [内存消耗：1,553.25kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:02:28+08:00 ] 127.0.0.1 127.0.0.1 GET /public/js/pagenav.cn.js
+[ log ] www.ttt.com/public/js/pagenav.cn.js [运行时间：0.029088s][吞吐率：34.38req/s] [内存消耗：1,552.90kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'pagenav.cn.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:02:28+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/jquery.validate.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/jquery.validate.min.js [运行时间：0.031203s][吞吐率：32.05req/s] [内存消耗：1,553.23kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:02:28+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.031738s][吞吐率：31.51req/s] [内存消耗：1,553.25kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:02:32+08:00 ] 127.0.0.1 127.0.0.1 GET /admin.php/ad/adlist.html
+[ log ] www.ttt.com/admin.php/ad/adlist.html [运行时间：0.082602s][吞吐率：12.11req/s] [内存消耗：2,692.58kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ad',
+    2 => 'adlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ad->adlist[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\Ad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./admintpl/adlist.html [ array (
+  0 => 'num',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.006750s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_ad` [ RunTime:0.007759s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_ad` WHERE  (  recovery=0 ) ORDER BY id asc [ RunTime:0.000617s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_ad` WHERE  (  recovery=0 ) ORDER BY id asc [ RunTime:0.000311s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003802s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_adcate` [ RunTime:0.007881s ]
+[ sql ] [ SQL ] SELECT `name` FROM `dz_adcate` WHERE  (  id=0 ) LIMIT 1 [ RunTime:0.000468s ]
+[ sql ] [ SQL ] SELECT `name` FROM `dz_adcate` WHERE  (  id=18 ) LIMIT 1 [ RunTime:0.000351s ]
+[ sql ] [ SQL ] SELECT `name` FROM `dz_adcate` WHERE  (  id=0 ) LIMIT 1 [ RunTime:0.000352s ]
+
+---------------------------------------------------------------
+[ 2017-12-15T08:02:32+08:00 ] 127.0.0.1 127.0.0.1 GET /public/js/pagenav.cn.js
+[ log ] www.ttt.com/public/js/pagenav.cn.js [运行时间：0.034920s][吞吐率：28.64req/s] [内存消耗：1,552.90kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'pagenav.cn.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:02:32+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery-ui/1.9.1/jquery-ui.min.js
+[ log ] www.ttt.com/public/lib/jquery-ui/1.9.1/jquery-ui.min.js [运行时间：0.051689s][吞吐率：19.35req/s] [内存消耗：1,553.21kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery-ui',
+    2 => '1.9.1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:02:32+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/jquery.validate.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/jquery.validate.min.js [运行时间：0.046130s][吞吐率：21.68req/s] [内存消耗：1,553.23kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:02:32+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.046742s][吞吐率：21.39req/s] [内存消耗：1,553.25kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:02:32+08:00 ] 127.0.0.1 127.0.0.1 GET /public/js/pagenav.cn.js
+[ log ] www.ttt.com/public/js/pagenav.cn.js [运行时间：0.038388s][吞吐率：26.05req/s] [内存消耗：1,552.90kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'pagenav.cn.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:02:32+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/jquery.validate.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/jquery.validate.min.js [运行时间：0.038089s][吞吐率：26.25req/s] [内存消耗：1,553.23kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:02:32+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.031127s][吞吐率：32.13req/s] [内存消耗：1,553.25kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:03:47+08:00 ] 127.0.0.1 127.0.0.1 GET /admin.php/ad/adlist.html
+[ log ] www.ttt.com/admin.php/ad/adlist.html [运行时间：0.084612s][吞吐率：11.82req/s] [内存消耗：2,920.95kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ad',
+    2 => 'adlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ad->adlist[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\Ad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./admintpl/adlist.html [ array (
+  0 => 'num',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.003169s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_ad` [ RunTime:0.007938s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_ad` WHERE  (  recovery=0 ) ORDER BY id asc [ RunTime:0.000599s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_ad` WHERE  (  recovery=0 ) ORDER BY id asc [ RunTime:0.000298s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.004572s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_adcate` [ RunTime:0.006676s ]
+[ sql ] [ SQL ] SELECT `name` FROM `dz_adcate` WHERE  (  id=0 ) LIMIT 1 [ RunTime:0.000547s ]
+[ sql ] [ SQL ] SELECT `name` FROM `dz_adcate` WHERE  (  id=18 ) LIMIT 1 [ RunTime:0.000394s ]
+[ sql ] [ SQL ] SELECT `name` FROM `dz_adcate` WHERE  (  id=0 ) LIMIT 1 [ RunTime:0.000391s ]
+
+---------------------------------------------------------------
+[ 2017-12-15T08:03:47+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/jquery.validate.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/jquery.validate.min.js [运行时间：0.028544s][吞吐率：35.03req/s] [内存消耗：1,553.23kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:03:47+08:00 ] 127.0.0.1 127.0.0.1 GET /public/js/pagenav.cn.js
+[ log ] www.ttt.com/public/js/pagenav.cn.js [运行时间：0.033913s][吞吐率：29.49req/s] [内存消耗：1,552.90kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'pagenav.cn.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:03:47+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery-ui/1.9.1/jquery-ui.min.js
+[ log ] www.ttt.com/public/lib/jquery-ui/1.9.1/jquery-ui.min.js [运行时间：0.074988s][吞吐率：13.34req/s] [内存消耗：1,553.21kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery-ui',
+    2 => '1.9.1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:03:47+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.041767s][吞吐率：23.94req/s] [内存消耗：1,553.25kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:03:47+08:00 ] 127.0.0.1 127.0.0.1 GET /public/js/pagenav.cn.js
+[ log ] www.ttt.com/public/js/pagenav.cn.js [运行时间：0.027746s][吞吐率：36.04req/s] [内存消耗：1,552.90kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'pagenav.cn.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:03:47+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/jquery.validate.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/jquery.validate.min.js [运行时间：0.028531s][吞吐率：35.05req/s] [内存消耗：1,553.23kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:03:47+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.028385s][吞吐率：35.23req/s] [内存消耗：1,553.25kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:04:58+08:00 ] 127.0.0.1 127.0.0.1 GET /admin.php/ad/adlist.html
+[ log ] www.ttt.com/admin.php/ad/adlist.html [运行时间：0.343373s][吞吐率：2.91req/s] [内存消耗：2,920.37kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ad',
+    2 => 'adlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ad->adlist[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\Ad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./admintpl/adlist.html [ array (
+  0 => 'num',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.011504s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_ad` [ RunTime:0.260459s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_ad` WHERE  (  recovery=0 ) ORDER BY id asc [ RunTime:0.000645s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_ad` WHERE  (  recovery=0 ) ORDER BY id asc [ RunTime:0.000300s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.000859s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_adcate` [ RunTime:0.008673s ]
+[ sql ] [ SQL ] SELECT `name` FROM `dz_adcate` WHERE  (  id=0 ) LIMIT 1 [ RunTime:0.000462s ]
+[ sql ] [ SQL ] SELECT `name` FROM `dz_adcate` WHERE  (  id=18 ) LIMIT 1 [ RunTime:0.000374s ]
+[ sql ] [ SQL ] SELECT `name` FROM `dz_adcate` WHERE  (  id=0 ) LIMIT 1 [ RunTime:0.000435s ]
+
+---------------------------------------------------------------
+[ 2017-12-15T08:04:58+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery-ui/1.9.1/jquery-ui.min.js
+[ log ] www.ttt.com/public/lib/jquery-ui/1.9.1/jquery-ui.min.js [运行时间：0.031754s][吞吐率：31.49req/s] [内存消耗：1,553.21kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery-ui',
+    2 => '1.9.1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:04:59+08:00 ] 127.0.0.1 127.0.0.1 GET /public/js/pagenav.cn.js
+[ log ] www.ttt.com/public/js/pagenav.cn.js [运行时间：0.034411s][吞吐率：29.06req/s] [内存消耗：1,552.90kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'pagenav.cn.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:04:59+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/jquery.validate.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/jquery.validate.min.js [运行时间：0.052159s][吞吐率：19.17req/s] [内存消耗：1,553.23kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:04:59+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.033942s][吞吐率：29.46req/s] [内存消耗：1,553.25kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:04:59+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.033291s][吞吐率：30.04req/s] [内存消耗：1,553.25kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:21+08:00 ] 127.0.0.1 127.0.0.1 GET /admin.php/ad/adcatelist.html
+[ log ] www.ttt.com/admin.php/ad/adcatelist.html [运行时间：0.755785s][吞吐率：1.32req/s] [内存消耗：2,762.91kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ad',
+    2 => 'adcatelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ad->adcatelist[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\Ad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./admintpl/adcatelist.html [ array (
+  0 => 'page',
+  1 => 'num',
+  2 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001139s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_adcate` [ RunTime:0.694288s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `dz_adcate` WHERE  (  recovery=0 ) LIMIT 1 [ RunTime:0.000439s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_adcate` WHERE  (  recovery=0 ) ORDER BY id asc LIMIT 0,2 [ RunTime:0.000354s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_adcate` WHERE  (  recovery=0 ) ORDER BY id asc [ RunTime:0.000440s ]
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:21+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/jquery.validate.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/jquery.validate.min.js [运行时间：0.030230s][吞吐率：33.08req/s] [内存消耗：1,553.24kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adcatelist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:21+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery-ui/1.9.1/jquery-ui.min.js
+[ log ] www.ttt.com/public/lib/jquery-ui/1.9.1/jquery-ui.min.js [运行时间：0.037670s][吞吐率：26.55req/s] [内存消耗：1,553.21kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery-ui',
+    2 => '1.9.1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adcatelist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:21+08:00 ] 127.0.0.1 127.0.0.1 GET /public/js/pagenav.cn.js
+[ log ] www.ttt.com/public/js/pagenav.cn.js [运行时间：0.053982s][吞吐率：18.52req/s] [内存消耗：1,552.89kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'pagenav.cn.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adcatelist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:21+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.031089s][吞吐率：32.17req/s] [内存消耗：1,553.20kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adcatelist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:21+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/jquery.validate.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/jquery.validate.min.js [运行时间：0.031599s][吞吐率：31.65req/s] [内存消耗：1,553.24kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adcatelist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:21+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.028171s][吞吐率：35.50req/s] [内存消耗：1,553.20kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adcatelist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:25+08:00 ] 127.0.0.1 127.0.0.1 GET /admin.php/ad/adrecover.html
+[ log ] www.ttt.com/admin.php/ad/adrecover.html [运行时间：0.272584s][吞吐率：3.67req/s] [内存消耗：2,992.57kb] [文件加载：60]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ad',
+    2 => 'adrecover',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ad->adrecover[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\Ad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./admintpl/adrecover.html [ array (
+  0 => 'page',
+  1 => 'num',
+  2 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.001316s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_ad` [ RunTime:0.008710s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `dz_ad` WHERE  (  recovery=1 ) LIMIT 1 [ RunTime:0.000501s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_ad` WHERE  (  recovery=1 ) ORDER BY id asc LIMIT 0,2 [ RunTime:0.000573s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_ad` WHERE  (  recovery=1 ) ORDER BY id asc [ RunTime:0.000443s ]
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:25+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery-ui/1.9.1/jquery-ui.min.js
+[ log ] www.ttt.com/public/lib/jquery-ui/1.9.1/jquery-ui.min.js [运行时间：0.032509s][吞吐率：30.76req/s] [内存消耗：1,553.21kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery-ui',
+    2 => '1.9.1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adrecover.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:25+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.039956s][吞吐率：25.03req/s] [内存消耗：1,553.25kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adrecover.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:28+08:00 ] 127.0.0.1 127.0.0.1 GET /admin.php/ad/adcaterecover.html
+[ log ] www.ttt.com/admin.php/ad/adcaterecover.html [运行时间：0.264554s][吞吐率：3.78req/s] [内存消耗：2,988.97kb] [文件加载：60]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ad',
+    2 => 'adcaterecover',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ad->adcaterecover[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\Ad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./admintpl/adcaterecover.html [ array (
+  0 => 'page',
+  1 => 'num',
+  2 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008560s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_adcate` [ RunTime:0.008165s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `dz_adcate` WHERE  (  recovery=1 ) LIMIT 1 [ RunTime:0.000518s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_adcate` WHERE  (  recovery=1 ) ORDER BY id asc LIMIT 0,2 [ RunTime:0.000439s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_adcate` WHERE  (  recovery=1 ) ORDER BY id asc [ RunTime:0.000449s ]
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:28+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery-ui/1.9.1/jquery-ui.min.js
+[ log ] www.ttt.com/public/lib/jquery-ui/1.9.1/jquery-ui.min.js [运行时间：0.032070s][吞吐率：31.18req/s] [内存消耗：1,552.99kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery-ui',
+    2 => '1.9.1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adcaterecover.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:28+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.034558s][吞吐率：28.94req/s] [内存消耗：1,553.13kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adcaterecover.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:32+08:00 ] 127.0.0.1 127.0.0.1 GET /admin.php/ad/adrecover.html
+[ log ] www.ttt.com/admin.php/ad/adrecover.html [运行时间：0.181048s][吞吐率：5.52req/s] [内存消耗：2,764.43kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ad',
+    2 => 'adrecover',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ad->adrecover[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\Ad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./admintpl/adrecover.html [ array (
+  0 => 'page',
+  1 => 'num',
+  2 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008884s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_ad` [ RunTime:0.117294s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `dz_ad` WHERE  (  recovery=1 ) LIMIT 1 [ RunTime:0.000546s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_ad` WHERE  (  recovery=1 ) ORDER BY id asc LIMIT 0,2 [ RunTime:0.000513s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_ad` WHERE  (  recovery=1 ) ORDER BY id asc [ RunTime:0.000514s ]
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:32+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery-ui/1.9.1/jquery-ui.min.js
+[ log ] www.ttt.com/public/lib/jquery-ui/1.9.1/jquery-ui.min.js [运行时间：0.038887s][吞吐率：25.72req/s] [内存消耗：1,553.21kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery-ui',
+    2 => '1.9.1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adrecover.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:32+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.037971s][吞吐率：26.34req/s] [内存消耗：1,553.20kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adrecover.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:33+08:00 ] 127.0.0.1 127.0.0.1 GET /admin.php/ad/adcatelist.html
+[ log ] www.ttt.com/admin.php/ad/adcatelist.html [运行时间：0.075750s][吞吐率：13.20req/s] [内存消耗：2,762.91kb] [文件加载：57]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ad',
+    2 => 'adcatelist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ad->adcatelist[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\Ad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./admintpl/adcatelist.html [ array (
+  0 => 'page',
+  1 => 'num',
+  2 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.008769s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_adcate` [ RunTime:0.008553s ]
+[ sql ] [ SQL ] SELECT COUNT(*) AS tp_count FROM `dz_adcate` WHERE  (  recovery=0 ) LIMIT 1 [ RunTime:0.000515s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_adcate` WHERE  (  recovery=0 ) ORDER BY id asc LIMIT 0,2 [ RunTime:0.000442s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_adcate` WHERE  (  recovery=0 ) ORDER BY id asc [ RunTime:0.000464s ]
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:33+08:00 ] 127.0.0.1 127.0.0.1 GET /public/js/pagenav.cn.js
+[ log ] www.ttt.com/public/js/pagenav.cn.js [运行时间：0.033910s][吞吐率：29.49req/s] [内存消耗：1,552.89kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'pagenav.cn.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adcatelist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:33+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/jquery.validate.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/jquery.validate.min.js [运行时间：0.036335s][吞吐率：27.52req/s] [内存消耗：1,553.24kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adcatelist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:33+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery-ui/1.9.1/jquery-ui.min.js
+[ log ] www.ttt.com/public/lib/jquery-ui/1.9.1/jquery-ui.min.js [运行时间：0.055652s][吞吐率：17.97req/s] [内存消耗：1,553.21kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery-ui',
+    2 => '1.9.1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adcatelist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:33+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.039608s][吞吐率：25.25req/s] [内存消耗：1,553.20kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adcatelist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:33+08:00 ] 127.0.0.1 127.0.0.1 GET /public/js/pagenav.cn.js
+[ log ] www.ttt.com/public/js/pagenav.cn.js [运行时间：0.031418s][吞吐率：31.83req/s] [内存消耗：1,552.90kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'pagenav.cn.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adcatelist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:33+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/jquery.validate.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/jquery.validate.min.js [运行时间：0.028873s][吞吐率：34.63req/s] [内存消耗：1,553.24kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adcatelist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:33+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.026784s][吞吐率：37.34req/s] [内存消耗：1,553.20kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adcatelist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:34+08:00 ] 127.0.0.1 127.0.0.1 GET /admin.php/ad/adlist.html
+[ log ] www.ttt.com/admin.php/ad/adlist.html [运行时间：0.161867s][吞吐率：6.18req/s] [内存消耗：2,692.58kb] [文件加载：54]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ BIND ] 'admin'
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'admin',
+    1 => 'ad',
+    2 => 'adlist',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+  'upgrade-insecure-requests' => '1',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ SESSION ] INIT array (
+  'id' => '',
+  'var_session_id' => '',
+  'prefix' => 'think',
+  'type' => '',
+  'auto_start' => true,
+)
+[ info ] [ RUN ] app\admin\controller\Ad->adlist[ D:\phpStudy\WWW\new\dzcms\application\admin\controller\Ad.php ]
+[ info ] [ DB ] INIT mysql
+[ info ] [ DB ] INIT mysql
+[ info ] [ VIEW ] ./admintpl/adlist.html [ array (
+  0 => 'num',
+  1 => 'list',
+) ]
+[ info ] [ LOG ] INIT File
+[ sql ] [ DB ] CONNECT:[ UseTime:0.002453s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_ad` [ RunTime:0.082515s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_ad` WHERE  (  recovery=0 ) ORDER BY id asc [ RunTime:0.000658s ]
+[ sql ] [ SQL ] SELECT * FROM `dz_ad` WHERE  (  recovery=0 ) ORDER BY id asc [ RunTime:0.000312s ]
+[ sql ] [ DB ] CONNECT:[ UseTime:0.007851s ] mysql:dbname=lianxiyi;host=127.0.0.1;port=3306;charset=utf8
+[ sql ] [ SQL ] SHOW COLUMNS FROM `dz_adcate` [ RunTime:0.007992s ]
+[ sql ] [ SQL ] SELECT `name` FROM `dz_adcate` WHERE  (  id=0 ) LIMIT 1 [ RunTime:0.000476s ]
+[ sql ] [ SQL ] SELECT `name` FROM `dz_adcate` WHERE  (  id=18 ) LIMIT 1 [ RunTime:0.000388s ]
+[ sql ] [ SQL ] SELECT `name` FROM `dz_adcate` WHERE  (  id=0 ) LIMIT 1 [ RunTime:0.000385s ]
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:34+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery-ui/1.9.1/jquery-ui.min.js
+[ log ] www.ttt.com/public/lib/jquery-ui/1.9.1/jquery-ui.min.js [运行时间：0.032077s][吞吐率：31.18req/s] [内存消耗：1,553.21kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery-ui',
+    2 => '1.9.1',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:34+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/jquery.validate.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/jquery.validate.min.js [运行时间：0.034779s][吞吐率：28.75req/s] [内存消耗：1,553.23kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:34+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.052610s][吞吐率：19.01req/s] [内存消耗：1,553.25kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:34+08:00 ] 127.0.0.1 127.0.0.1 GET /public/js/pagenav.cn.js
+[ log ] www.ttt.com/public/js/pagenav.cn.js [运行时间：0.070276s][吞吐率：14.23req/s] [内存消耗：1,552.90kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'js',
+    1 => 'pagenav.cn.js',
+    2 => NULL,
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:34+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/jquery.validate.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/jquery.validate.min.js [运行时间：0.031046s][吞吐率：32.21req/s] [内存消耗：1,553.23kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------
+[ 2017-12-15T08:17:34+08:00 ] 127.0.0.1 127.0.0.1 GET /public/lib/jquery.validation/1.14.0/messages_zh.min.js
+[ log ] www.ttt.com/public/lib/jquery.validation/1.14.0/messages_zh.min.js [运行时间：0.029978s][吞吐率：33.36req/s] [内存消耗：1,553.25kb] [文件加载：40]
+[ info ] [ LANG ] D:\phpStudy\WWW\new\dzcms\thinkphp\lang\zh-cn.php
+[ info ] [ ROUTE ] array (
+  'type' => 'module',
+  'module' => 
+  array (
+    0 => 'lib',
+    1 => 'jquery.validation',
+    2 => '1.14.0',
+  ),
+)
+[ info ] [ HEADER ] array (
+  'host' => 'www.ttt.com',
+  'user-agent' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:57.0) Gecko/20100101 Firefox/57.0',
+  'accept' => '*/*',
+  'accept-language' => 'zh-CN,zh;q=0.8,zh-TW;q=0.7,zh-HK;q=0.5,en-US;q=0.3,en;q=0.2',
+  'accept-encoding' => 'gzip, deflate',
+  'referer' => 'http://www.ttt.com/admin.php/ad/adlist.html',
+  'cookie' => 'Hm_lvt_882e83434a44472d71512d53a8218124=1509694550; GUID=fc9490b7-ad29-4f06-a83f-e91ff7d0eab3; vct=4; PHPSESSID=e4k46m20sbldkdvsd46lr4uvv3',
+  'connection' => 'keep-alive',
+)
+[ info ] [ PARAM ] array (
+)
+[ info ] [ LOG ] INIT File
+
+---------------------------------------------------------------

@@ -1,0 +1,49 @@
+{include file="templates/zhangwenxue/head.html"}
+
+
+<div class="wrapper">
+  <div class="container content">
+               <div class="page_right">
+      <div class="sub_title">
+        <h2>集团文化</h2>
+        <h4>CULTURE</h4>
+      </div>
+       <div class="sub_nav">
+        <ul>
+      <li  class="on" ><a href="/home/Article/newslist?cateid=5" title="文化活动">文化活动</a></li>
+              </ul>
+      </div>
+    </div>    <div class="page_left">
+        <div class="page_title"><a href="/">首页</a> > <a href="">集团文化</a> > <a href="/home/Article/newslist?cateid=5">文化活动</a></div>
+
+  
+      <div class="page_content">
+        <div class="news_show">
+          <div class="top_show">
+            <h3>{$info.title}</h3>
+            <p>发表时间： {$info.inputtime|date='Y-m-s H:i:s',###} │ 点击数：<script type="text/javascript" src="/index.php?c=api&a=hits&id=783&hits=72"></script>　</p>
+          </div>
+         <p class="MsoNormal" align="center" style="text-align:left;">
+  <span style="font-size:14px;">&nbsp; &nbsp; &nbsp;&nbsp;
+</p>
+<p style="text-align:left;">
+  <span style="line-height:1;">&nbsp; &nbsp; </span><span style="line-height:1.5;">&nbsp; &nbsp; &nbsp;&nbsp; &nbsp;{$info.content}</p>
+<p>
+  <br />
+</p>
+<p>
+  <br />
+</p>        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <script>
+$("img").removeAttr("height");
+  </script>
+<!--footer start-->
+{include file="templates/zhangwenxue/foot.html"}
+<!--footer end-->
+</body>
+</html>
+

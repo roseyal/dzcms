@@ -1,0 +1,53 @@
+{include file="./templates/new/header.html"}
+<!-- ##########页首（end）########## -->
+
+<!-- ##########主体########## -->
+
+
+<div class="container">
+	<!-- 固定图片广告 -->
+	<div class="row">
+		<img class="img-responsive model-img" src="/templates/new/images/develop.jpg" alt="产业发展">
+	</div>
+	
+	<!-- 内容 -->
+	<div class="row row-3">
+		<div class="col-md-3">
+			<div class="model-title theme">
+				产业发展
+			</div>
+			<div class="model-list">
+				<ul class="list-group">
+                    <li class="list-group-item">
+						<a href="#">产业概况</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#">电子功能材料</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#">新型复合材料</a>
+					</li>
+					<li class="list-group-item">
+						<a href="#">其他产业</a>
+					</li>
+					
+				</ul>
+      
+			</div>
+		</div>
+		<div class="col-md-9">
+			<div class="model-details-title">
+				产业概况
+			</div>
+			<div class="model-details">
+				{Dz:nlist limit="1" name='vo' cateid='4'}
+					{$vo.content}
+					{/DZ:nlist}
+			</div>
+		</div>
+	</div>
+</div>
+<!-- ##########主体（end）########## -->
+
+<!-- ##########页脚########## -->
+{include file="./templates/new/footer.html"}

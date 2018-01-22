@@ -1,0 +1,50 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="pragma" content="no-cache">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Dzcms</title>
+<meta name="keywords" content="Dzcms">
+<meta name="description" content="Dzcms">
+<link href="/templates/zhugeruibing/css/main.css" rel="stylesheet" />
+<link href="/templates/zhugeruibing/css/style.css" rel="stylesheet" />
+
+<script src="/templates/zhugeruibing/js/jquery-1.8.3.min.js"  type="text/javascript"></script>
+<script src="/templates/zhugeruibing/js/jquery.SuperSlide.2.1.1.js" ></script>
+<!--ie9以下调用-->
+<!--[if lt IE 9]>
+<script src="js/html5.js" ></script>
+<script src="js/PIE.js"  type="text/javascript"></script>
+<![endif]-->
+
+</head>
+<body>
+<!--头部-->
+{include file="./templates/zhugeruibing/header.html"}
+<div class="main_banner" style="background-image: url(/templates/zhugeruibing/img/184_s.jpg);">
+	<img src="/templates/zhugeruibing/img/lian.jpg" alt="">
+</div>
+<!--主体-->
+<div class="beijing1">	
+<hr />
+<br />
+	<div class="lian_yi">
+		 {Dz:newsinfo nid="18"}
+		<div class="lian_yi_zuo">	
+			<p style="font-size:14px;font-weight:bold;color:#0066ff;" >{$info.content}</p>
+		{/Dz:newsinfo}
+		</div>
+		<div class="lian_yi_you">
+			<img src="/templates/zhugeruibing/img/di_q.png" alt="">
+		</div>
+	</div>
+
+</div>
+
+{include file="./templates/zhugeruibing/footer.html"}
+<script type="text/javascript" src="/templates/zhugeruibing/js/xmsz_common.js" ></script>
+</body>
+</html>
+
+
+<!--[if IE 6]><script type="text/javascript" src="js/pngfix.js" ></script><![endif]-->

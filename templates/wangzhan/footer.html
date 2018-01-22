@@ -1,0 +1,85 @@
+ <footer> 
+   <div class="footer"> 
+    <div class="footer_con"> 
+     <div class="footer_dl"> 
+      <dl> 
+       <dt>
+        关于
+       </dt> 
+    {Dz:newslist limit="4"}
+       <dd>
+        <a href="{$v.url}">{$v.stylekk}</a>
+       </dd> 
+      {/Dz:newslist}
+            </dl> 
+      <dl> 
+       <dt>
+        经典案例
+       </dt> 
+       {Dz:newslist limit="4"}
+       <dd>
+        <a href="{$v.url}">{$v.title}</a>
+       </dd> 
+      {/Dz:newslist}
+      </dl> 
+      <dl> 
+       <dt>
+        服务范围
+       </dt> 
+       {Dz:newslist limit="4"}
+       <dd>
+        <a href="{$v.url}">{$v.title}</a>
+       </dd> 
+      {/Dz:newslist}
+      </dl> 
+      <dl class="footer_dl2" style="width:340px;"> 
+       <dt>
+        联系我们
+       </dt> 
+
+       {Dz:flink limit='4' thumb="true"}
+       <dd>
+        <img src="{$v.photo}" style="width:20px;height:20px" alt="{$v.webname}" />
+        <a href="{$v.website}" rel="noFollow" target="_blank">{$v.webname}: {$v.website}</a>
+       </dd> 
+        {/Dz:flink}
+      
+      </dl> 
+      <form method="post" action="/Feedback"> 
+       <dl class="footer_dl3"> 
+        <dt>
+         给我们留言
+        </dt> 
+        <dd> 
+         <input name="name" class="input" type="text" value="称呼（必填）" onFocus="if(this.value='称呼（必填）')this.value=''" onBlur="if(this.value=='')this.value=='称呼（必填）'" /> 
+        </dd> 
+        <dd> 
+         <input name="tel" class="input" type="text" value="电话（必填）" onFocus="if(this.value='电话（必填）')this.value=''" onBlur="if(this.value=='')this.value=='电话（必填）'" /> 
+        </dd> 
+        <dd> 
+         <textarea name="content" cols="" rows=""></textarea> 
+        </dd> 
+        <dd>
+         <input type="image" alt="提交留言" src="/templates/wangzhan/images/submit_button.png" />
+        </dd> 
+       </dl> 
+      </form> 
+      <div class="clear"></div> 
+     </div> 
+     <div class="link">
+      友情链接： 
+   {Dz:flink limit="8" thumb='true'}
+      <a href="#" target="_blank">{$v.webname}</a>
+   {/Dz:flink}
+     </div> 
+
+    </div> 
+   </div> 
+   <div class="bottom"> 
+    <div class="bottom_con">
+     @2016 版权所有 深圳网络科技有限公司 地址：深圳市罗湖区春风路桂都大厦
+     <a href="http://www.miitbeian.gov.cn" rel="noFollow" style="color:#666;">粤ICP备16465465456号-2</a>
+    </div> 
+   </div> 
+  </footer> 
+   

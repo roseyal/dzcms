@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+{include file="./templates/mokuai/head.html"}
+<body>
+<!--头部-->
+{include file="./templates/mokuai/header.html"}
+
+<div class="main_banner" style="background-image: url(/templates/mokuai/img/1841_src.jpg);">
+	<img src="/templates/mokuai/img/an.jpg" alt="">
+</div><!--主体-->
+
+<div class="beijing1">
+	<ul class="case">
+	     {Dz:newslist  limit="5" order="id desc" name="vo"}
+             <li>
+			     <em><a href="{$vo.url}" ><img src="/public/Uploads/{$vo.smallimage}" ></a></em>
+			    <div class="case_1">
+				   <h3><a href="{$vo.url}" > {$vo.shorttitle} </a></h3>
+				    <span>发布时间：{$vo['inputtime']|date="Y-m-d",###}</span>
+			    </div>
+		     </li>
+         {/Dz:newslist}
+    		
+        		
+	</ul>
+    <div class="page"> 
+    	{$page}
+    </div>
+</div>
+
+{include file="./templates/mokuai/footer.html"}
+</body>
+</html>
+
+<script type="text/javascript" src="/templates/mokuai/js/xmsz_common.js" ></script>
+<!--[if IE 6]><script type="text/javascript" src="/templates/mokuai/js/pngfix.js" ></script><![endif]-->

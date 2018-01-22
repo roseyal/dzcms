@@ -1,0 +1,183 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<!--[if lt IE 9]>
+<script type="text/javascript" src="lib/html5shiv.js"></script>
+<script type="text/javascript" src="lib/respond.min.js"></script>
+<![endif]-->
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/public/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui.admin/css/style.css" />
+<!--[if lt IE 9]>
+<link href="static/h-ui/css/H-ui.ie.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<!--[if IE 6]>
+<script type="text/javascript" src="lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+<style type="text/css">
+.ui-sortable .panel-header{ cursor:move}
+</style>
+<title>广告添加</title>
+<meta name="keywords" content="关键词,5个左右,单个8汉字以内">
+<meta name="description" content="网站描述，字数尽量空制在80个汉字，160个字符以内！">
+</head>
+<body >
+ 
+<div class="containBox"> 
+   
+  <div class="wap-container">
+    <div class="container ui-sortable">
+      <h1>广告类型修改</h1> 
+      <div class="panel panel-default">
+        <div class="panel-header clearfix">
+          <span class="f-l">  </span>
+        </div>
+        <div class="panel-body">
+        <form action="" method="post" id="form-admin-add" class="form form-horizontal">
+        <table class="table table-border table-bordered table-bg">
+          <tbody>
+          <tr><input type="hidden" name="id" value="{$list.id}"/></tr>
+          <tr>
+            <th width="100" class="text-r"><span class="c-red">*</span> 广告类型：</th>
+            <td>
+              <input type="text" style="width:200px" class="input-text"  name="name" required="true"  id="name" value="{$list.name}" datatype="*2-16" nullmsg="不能为空">
+            </td>
+          </tr>
+          <tr>
+            <th width="100" class="text-r"><span class="c-red">*</span> 广告类型简介：</th>
+            <td>
+              <textarea name="content"  cols="" id="neirong" required="true" rows="" class="textarea"   datatype="*10-100" dragonfly="true" nullmsg="备注不能为空！" onKeyUp="$.Huitextarealength(this,10)">{$list.content}</textarea>
+              <p class="textarea-numberbar"><em class="textarea-length">0</em>/200</p>
+            </td>
+          </tr>
+          <tr>
+            <th></th>
+            <td><div class="row cl">
+            <div class="col-xs-8 col-sm-9 col-xs-offset-4 col-sm-offset-2">
+              <input class="btn btn-secondary radius" type="button" id="subbut" value="提交"/>
+              <button onClick="layer_close();" class="btn btn-default radius" type="button">&nbsp;&nbsp;取消&nbsp;&nbsp;</button>
+            </div>
+          </tr>
+        </tbody>
+      </table>
+    </form>
+        </div>
+      </div>
+             
+       
+    </div>
+		{include file="public/foot"}
+	</div>
+</div>
+ 
+<script type="text/javascript" src="/public/lib/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="/public/lib/jquery-ui/1.9.1/jquery-ui.min.js"></script>
+<script type="text/javascript" src="/public/static/h-ui/js/H-ui.js"></script>
+<script type="text/javascript" src="/public/lib/jquery.SuperSlide/2.1.1/jquery.SuperSlide.min.js"></script>
+<script type="text/javascript" src="/public/lib/jquery.validation/1.14.0/jquery.validate.js"></script>
+<script type="text/javascript" src="/public/lib/jquery.validation/1.14.0/validate-methods.js"></script>
+<script type="text/javascript" src="/public/lib/jquery.validation/1.14.0/messages_zh.min.js"></script>
+<script type="text/javascript" src="/public/lib/layer/2.4/layer.js"></script>
+
+<script type="text/javascript">
+$(function(){
+
+  $('.btn btn-secondary radius').iCheck({
+    checkboxClass: 'icheckbox-blue',
+    radioClass: 'iradio-blue',
+    increaseArea: '20%'
+  });
+
+  $("form-admin-add").validate({
+    rules:{
+       name:{
+        required:true,
+        // minlength:4,
+        // maxlength:16
+      },
+      content:{
+        required:true,
+      },
+      // pinpai:{
+      //   required:true,
+      // },
+      // neirong:{
+      //   required:true,
+      // },
+      // title:{
+      //   required:true,
+      //   equalTo: "#password"
+      // },
+      // title:{
+      //   required:true,
+      // },
+      // title:{
+      //   required:true,
+      //   isPhone:true,
+      // },
+      // title:{
+      //   required:true,
+      //   email:true,
+      // },
+      // title:{
+      //   required:true,
+      // },
+    },
+  });
+});
+function preview(file){
+  
+        if (file.files && file.files[0]){  
+            var reader = new FileReader();  
+            reader.onload = function(evt){  
+            // prevDiv.innerHTML = '<img width="100%" height="100%" id="qw_img" src="' + evt.target.result + '" />';
+            $('#fileimg').attr('src' , evt.target.result);
+        }    
+             reader.readAsDataURL(file.files[0]);  
+        }else{  
+            // prevDiv.innerHTML = '<div class="img" style="filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(sizingMethod=scale,src=\'' + file.value + '\'"></div>';  
+          $('#fileimg').attr('src' , file.value);
+        }  
+    } 
+	$('#subbut').click(function(){
+		$.ajax({
+			url: "{:url('Ad/do_adcateup')}",
+			type:'POST',
+			data:$('#form-admin-add').serialize(),
+			success:function(data){
+				switch(data.status){
+					case 1 :
+						layer.msg(data.msg,{
+							offset: 't',
+							anim: 6,
+							time: 2000,
+						},function () {
+                        parent.location.reload();		//刷新父页面
+                    }); 
+						
+						 break;
+					case 2 :layer.msg(data.msg,{
+						offset: 't',
+						anlm: 6
+					});
+						break;
+				}
+			},
+			error:function(data){
+				alert('未知错误');
+			}
+		});
+	});
+
+</script>
+</body>
+</html>
+<!--H-ui前端框架提供前端技术支持 h-ui.net @2017-01-01 -->

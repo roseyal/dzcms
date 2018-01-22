@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>首页</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  
+  <link rel="alternate icon" type="img/hengwang-1.png" href="/templates/wangyanting/img/hengwang-1.png">
+  <link rel="stylesheet" href="/templates/wangyanting/css/amazeui.css"/>
+  <link rel="stylesheet" href="/templates/wangyanting/css/style.css"/>
+</head>
+
+
+
+
+
+
+
+<body>
+{include file="./templates/wangyanting/header.html"}
+<div class="rollpic">
+	 <div data-am-widget="slider" class="am-slider am-slider-default" data-am-slider='{}' >
+
+	  <ul class="am-slides">
+	      <li><img src="/templates/wangyanting/img/hw_bg1.png"/></li>
+	      <li><img src="/templates/wangyanting/img/hw_bg.png"/></li>  	
+	      <li><img src="/templates/wangyanting/img/hw_bg3.png"/></li>
+	  </ul>
+
+    </div>
+</div>
+
+<div class="am-container-1">
+	<div class="solutions part-all">
+		<div class="part-title">
+			<a href="/home/Index/solutions.html">
+			<i class="am-icon-lightbulb-o part-title-i"></i>
+			<span class="part-title-span">解决方案</span>
+			<p>Solutions</p>
+			</a>
+		</div>		
+		<ul class="am-g part-content solutions-content">
+		{Dz:nlist cateid="9" limit="4"}
+		  <li class="am-u-sm-6 am-u-md-3 am-u-lg-3">
+		  	<i class="am-icon-safari solution-circle"></i>
+		  	<span class="solutions-title">{$v.title}</span>
+		  	<p class="solutions-way">{$v.content}</p>
+		  </li>		  
+		 {/Dz:nlist}
+		</ul>		
+	</div>
+</div>
+
+	<div class="gray-li">
+	<div class="customer-case part-all ">
+		<div class="part-title">
+			<a href="customer_case.html">
+			<i class=" am-icon-briefcase part-title-i"></i>
+			<span class="part-title-span">客户案例</span>
+			<p>Customer Case</p>
+			</a>
+		</div>
+		
+		 <ul data-am-widget="gallery" class=" am-avg-sm-1
+  am-avg-md-4 am-avg-lg-4 am-gallery-bordered customer-case-content" >
+  {Dz:nlist cateid="10" limit="4"}
+      <li class="case-li am-u-sm-6 am-u-md-6 am-u-lg-3">
+        <div class="am-gallery-item case-img1">
+            <a href="{$v.url}" >
+              <img src="/public/Uploads/{$v.smallimage}"  />
+                
+            </a>
+        </div>
+        <div class="case-li-mengban">
+        	<div class=" case-word">
+              <h3 class="am-gallery-title">{$v.title}</h3>
+              <p>{$v['inputtime']|date="Y-m-d",###}</p>
+              <a href="{$v.url}"><span><i class="am-icon-eye"></i>{$v.content}</span></a>
+           </div>
+        </div>
+      </li>  
+ {/Dz:nlist} 
+  </ul>
+		<div class="lan-bott">
+			<div class="left"><span>全方位解决方案,为您轻松解决不同问题</span>
+				<p>A full range of solutions for you to solve different problems</p>
+			</div>
+			<div class="right">
+				<a href="customer_case.html">
+					<span class="see-more">查看更多<i class="am-icon-angle-double-right"></i></span>
+				</a>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<div class="part-title">
+		    	
+		</div>
+		</div>
+</div>	
+		
+<div class=" news-all">
+	<div class="am-container-1">
+<div class="news part-all">
+		<div class="part-title">
+			<a href="news.html">
+			<i class="am-icon-newspaper-o part-title-i"></i>
+			<span class="part-title-span">新闻动态</span>
+			<p>DaZhi News</p>
+			</a>
+		</div>
+		<div class="news-content ">
+				<ul class="news-content-ul">
+				{Dz:nlist limit="2" cateid="11"}
+					<li class="am-u-sm-12 am-u-md-6 am-u-lg-6">
+						<a href="{$v.url}">
+						    <div class=" am-u-sm-12 am-u-md-12 am-u-lg-5">
+						    	<div class="news-img">
+						    	<img src="/public/Uploads/{$v.smallimage}"></img>
+						    	</div>
+						    </div>
+						    <div  class=" am-u-sm-12 am-u-md-12 am-u-lg-7">
+									<span class="news-right-title">{$v.title}</span>
+									<p class="news-right-time">{$v['inputtime']|date="Y-m-d",###}</p>
+									<p class="news-right-words">{$v.content}</p>
+									<a href="#"><span class="see-more2">{$v.abstract}<i class="am-icon-angle-double-right"></i></span></a>
+							</div>	
+						<div class="clear"></div>
+						</a>
+					</li>
+				{/DZ:nlist}
+					<!-- <li class="am-u-sm-12 am-u-md-6 am-u-lg-6">
+						<a href="#">
+						    <div class=" am-u-sm-12 am-u-md-12 am-u-lg-5">
+						    	<div class="news-img">
+						    	<img src="/templates/wangyanting/img/news1.png"></img>
+						    	</div>
+						    </div>
+						    <div  class=" am-u-sm-12 am-u-md-12 am-u-lg-7">
+										<span class="news-right-title">关于召开年会的通知</span>
+										<p class="news-right-time">2015-06-11</p>
+										<p class="news-right-words">互联网，又称网际网路或音译因特网、英特网，是网络与网络之间所串连成的庞大网络网络与网络之...</p>
+										<a><span class="see-more2">查看更多<i class="am-icon-angle-double-right"></i></span></a>
+								 </div>	
+						<div class="clear"></div>
+						</a>
+					</li> -->		
+					<div class="clear"></div>
+				</ul>
+			<div class="clear"></div>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="part-all gray-li">
+<div class="customer  am-container-1">
+		<div class="part-title">
+			<i class="am-icon-users part-title-i"></i>
+			<span class="part-title-span">服务客户</span>
+			<p>Serve Customers</p>
+		</div>
+		
+		<div class="am-slider am-slider-default am-slider-carousel part-all" data-am-flexslider="{itemWidth:150, itemMargin: 5, slideshow: false}" style="  background-color: #f0eeed; box-shadow:none;">
+  <ul class="am-slides">
+{Dz:nlist limit="8" cateid="20"}
+    <li><img src="/public/Uploads/{$v.smallimage}"/></li>
+{/DZ:nlist}
+  </ul>
+</div>
+		<!--<ul class="customer-content">
+			<li class="am-u-sm-6 am-u-md-4 am-u-lg-2"><div><img src="img/ptn4.png"/></div></li>
+			<li class="am-u-sm-6 am-u-md-4 am-u-lg-2"><div><img src="img/ptn5.png"/></div></li>
+			<li class="am-u-sm-6 am-u-md-4 am-u-lg-2"><div><img src="img/ptn6.png"/></div></li>
+			<li class="am-u-sm-6 am-u-md-4 am-u-lg-2"><div><img src="img/ptn7.png"/></div></li>
+			<li class="am-u-sm-6 am-u-md-4 am-u-lg-2"><div><img src="img/ptn8.png"/></div></li>
+			<li class="am-u-sm-6 am-u-md-4 am-u-lg-2"><div><img src="img/ptn4.png"/></div></li>
+			<div class="clear"></div>
+		</ul>-->
+</div>
+</div>
+{include file="./templates/wangyanting/footer.html"}
+</body>
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="/templates/wangyanting/js/jquery.min.js"></script>
+<!--<![endif]-->
+<script src="/templates/wangyanting/js/amazeui.min.js"></script>
+<script src="/templates/wangyanting/js/scroll.js"></script>
+<script type="text/javascript">
+
+</script>
+</html>

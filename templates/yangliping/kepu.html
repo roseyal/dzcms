@@ -1,0 +1,22 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+{include file="public/header"}
+{include file="public/menu"}
+     <div class="right">
+        <div class="right_title">
+            <span class="right_name">当前位置：<a href="index.html">首页</a>>新闻资讯</span>
+        </div>
+        <div class="right_con">
+        	<ul class="news">
+            {Dz:newslist name="vo" limit="2" page="true" catid="2"}
+              <li><span>{$vo.inputtime|date='Y-m-d H:i',###}
+</span><a href="{$vo.url}">{$vo.title}</a></li>    
+        {/Dz:newslist}
+            </ul>    
+            </div>
+             {$page}
+    </div>
+</div>
+{include file="public/footer"}
+</body>
+</html>

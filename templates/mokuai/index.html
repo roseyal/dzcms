@@ -1,0 +1,65 @@
+<!DOCTYPE HTML>
+<html>
+
+{include file="./templates/mokuai/head.html"}
+<body>
+<!--头部-->
+{include file="./templates/mokuai/header.html"}
+<div class="banner">
+    <div class="bd">
+        <ul>
+            <li><a href="#" style="background:url(/templates/mokuai/img/563_src.jpg) no-repeat center 0;background-size:100% 100%;"></a></li>
+            <li><a href="#" style="background:url(/templates/mokuai/img/1962_src.jpg) no-repeat center 0;background-size:100% 100%;"></a></li>
+            <li><a href="#" style="background:url(/templates/mokuai/img/1059_src.jpg) no-repeat center 0;background-size:100% 100%;"></a></li>
+            <li><a href="#" style="background:url(/templates/mokuai/img/2017_src.png) no-repeat center 0;background-size:100% 100%;"></a></li>
+            <li><a href="#" style="background:url(/templates/mokuai/img/1154_src.jpg) no-repeat center 0;background-size:100% 100%;"></a></li>
+            <li><a href="#" style="background:url(/templates/mokuai/img/408_src.jpg) no-repeat center 0;background-size:100% 100%;"></a></li>              
+        </ul>
+    </div>
+    <div class="hd">
+        <ul>
+            <li class="rounded"></li>
+            <li class="rounded"></li>
+            <li class="rounded"></li>
+            <li class="rounded"></li>
+            <li class="rounded"></li>
+            <li class="rounded"></li>
+
+        </ul>
+    </div>
+	
+</div>
+<!--主体-->
+<ul class="beijing index1">
+	<a href="/home/Article/piclist.html?cateid=1" >
+		<li class="index1_bg1" style="background: url(/templates/mokuai/img/802_src.jpg) no-repeat 0 0;">    
+		    <p><img src="/templates/mokuai/img/index_1_tx.png" ></p>
+		</li>
+	</a>
+	<a href="/home/Article/technology.html?cateid=1" >
+		<li class="index1_bg2" style="background: url(/templates/mokuai/img/803_src.jpg) no-repeat 0 0;">
+		    <p><img src="/templates/mokuai/img/index_2_tx.png" ></p>
+		</li>
+	</a>
+	<a href="/home/Article/appcase.html?cateid=1" >
+		<li class="index1_bg3" style="background: url(/templates/mokuai/img/804_src.jpg) no-repeat 0 0;">
+		    <p><img src="/templates/mokuai/img/index_3_tx.png" ></p>
+		</li>
+	</a>
+	<a href="/home/Article/contact.html?cateid=1" >
+		<li class="index1_bg4" style="background: url(/templates/mokuai/img/801_src.jpg) no-repeat 0 0;">
+		    <p><img src="/templates/mokuai/img/index_4_tx.png" ></p>
+		</li>
+	</a>
+</ul>
+
+{include file="./templates/mokuai/footer.html"}
+</body>
+</html>
+
+<script type="text/javascript">
+jQuery(".banner").slide({ mainCell:".bd ul",effect:"fold",autoPlay:true,interTime:5000 });
+jQuery(".index_2").slide({ mainCell:"ul.bd.htm",effect:"topLoop",autoPlay:true,interTime:5000 });
+</script>
+<script type="text/javascript" src="/templates/mokuai/js/xmsz_common.js" ></script>
+<!--[if IE 6]><script type="text/javascript" src="/templates/mokuai/js/pngfix.js" ></script><![endif]-->

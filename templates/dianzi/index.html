@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    {include file="./templates/dianzi/head.html"}
+<script type="text/javascript" src="/templates/dianzi/Assets/js/banner.js"></script>
+<script language="javascript">
+$(function(){
+	$('#owl-demo').owlCarousel({
+		items: 1,
+		navigation: true,
+		navigationText: ["上一个","下一个"],
+		autoPlay: true,
+		stopOnHover: true
+	}).hover(function(){
+		$('.owl-buttons').show();
+	}, function(){
+		$('.owl-buttons').hide();
+	});
+});
+</script>
+</head>
+
+<body>
+<!--头部-->
+<div class="header">
+    {include file="./templates/dianzi/header.html"}
+
+</div>
+<!--头部-->
+<!--幻灯片-->
+<div id="banner" class="banner"> 
+    <div id="owl-demo" class="owl-carousel">
+        {Dz:banlist field="photo" limit="3" name='vo'}
+        <a class="item" target="_blank" href="" style="background-image:url(Assets/upload/banner.jpg)">
+            <img src="../../public/Uploads/{$vo.photo}" alt="">
+        </a>
+        {/Dz:banlist}
+    </div>
+</div>
+<!--幻灯片-->
+<div class="space_hx">&nbsp;</div>
+<div class="i_m">
+	<div class="i_name"><img src="/templates/dianzi/Assets/images/n1.png" width="171" height="59" alt=""/></div>
+<!--应用领域-->
+    <ul class="i_ma clearfix">
+        {Dz:nlist field="title,smallimage,abstract,cateid,url" order="id desc" limit="3"  name='vo' status="true" cateid="8"}
+    	<li>
+        	<div class="title">
+            	<img src="/templates/dianzi/Assets/images/icon3.jpg" alt=""/>
+                <span>{$vo.title}</span>
+            </div>
+            <div class="tu"><a href="{$vo.url}"><img src="../../public/Uploads/{$vo.smallimage}" alt=""/></a></div>
+            <div class="des">{$vo.abstract}</div>
+			<a href="{$vo.url}" class="more">+查看详情</a>
+        </li>
+        {/Dz:nlist}
+    </ul>
+    <!--应用领域-->
+</div>
+<div class="space_hx">&nbsp;</div>
+<div class="hui_bg">
+	<div class="i_m clearfix">
+    	<div class="i_ml">
+            <!--新闻与活动-->
+        	<div class="i_title">
+            	<a href=""><img src="/templates/dianzi/Assets/images/n2.jpg" width="139" height="22" alt=""/></a>
+                <div class="line">&nbsp;</div>
+                <a href="/home/Article/newslist/cateid/5" class="more">+MORE</a>
+            </div>
+            <div class="i_mb">
+                {Dz:nlist field="title,shorttitle,cateid,smallimage,abstract,inputtime,url" order="id desc" limit="3" hot="true" name='vo' status="true"  recovery='true' cateid='7'}
+            	<dl class="clearfix">
+                	<dt><a href="{$vo.url}"><img src="../../public/Uploads/{$vo.smallimage}" alt="大智电子有限公司"/></a></dt>
+                    <dd>
+                    	<div class="title"><a href="{$vo.url}">{$vo.shorttitle}</a></div>
+                        <div class="des">{$vo.abstract}</div>
+                        <div class="time">
+                        	<a href="{$vo.url}">+SEE MORE</a>
+                            {$vo.inputtime|date="Y-m-d",###}
+                        </div>
+                    </dd>
+                </dl>
+                {/Dz:nlist}
+            </div>
+            <!--新闻与活动-->
+        </div>
+        <div class="i_mr">
+            <!--推荐产品-->
+        	<div class="i_title">
+            	<a href=""><img src="/templates/dianzi/Assets/images/n3.jpg" width="168" height="22" alt=""/></a>
+                <div class="line">&nbsp;</div>
+                <a href="/home/Article/newslist/cateid/2" class="more">+MORE</a>
+            </div>
+            <dl class="i_mc clearfix">
+            	<dt><a href=""><img src="/templates/dianzi/Assets/upload/pic5.jpg" alt=""/></a></dt>
+                <dd>
+
+                	<ul>
+                        {Dz:nlist field="title,abstract,cateid,smallimage,url" order="id desc" limit="4"  name='vo' status="true" cateid="10"}
+                    	<li class="on">
+                        	<i>&nbsp;</i>
+                        	<div class="title"><a href="{$vo.url}">{$vo.title}</a></div>
+                            <div class="des">{$vo.abstract}</div>
+                            <img src="../../public/Uploads/{$vo.smallimage}" alt=""/>
+                        </li>
+                        {/Dz:nlist}
+                    </ul>
+                </dd>
+            </dl>
+            <!--推荐产品-->
+            <div class="space_hx">&nbsp;</div>
+            <!--人力资源-->
+            <div class="i_title">
+            	<a href=""><img src="../../templates/dianzi/Assets/images/n4.jpg" width="151" height="22" alt=""/></a>
+                <div class="line">&nbsp;</div>
+                <a href="/home/Article/catecontent/cateid/4" class="more">+MORE</a>
+            </div>
+            <dl class="i_md clearfix">
+                {Dz:nlist field="abstract,cateid,smallimage,url" order="id desc" limit="1"  name='vo' status="true" cateid="9"}
+            	<dt><a href="{$vo.url}"><img src="../../public/Uploads/{$vo.smallimage}" alt=""/></a></dt>
+                <dd>{$vo.abstract}</dd>
+                {/Dz:nlist}
+            </dl>
+            <!--人力资源-->
+        </div>
+    </div>
+</div>
+{include file="./templates/dianzi/footer.html"}
+</body>
+</html>

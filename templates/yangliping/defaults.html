@@ -1,0 +1,83 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+{include file="./templates/yangliping/header.html"}
+<div class="con1_bg">
+    <div class="con1">
+        <div class="con1_title">
+           <span>宠物分类</span>
+        </div>
+        <ul class="con1_list">
+           {Dz:nlist name="vo" catid="1" limit="8"}
+          <li><a href="{$vo.url}"><img src="/public/Uploads/{$vo.smallimage}" width="111" height="111" /><span>{$vo.keywords}</span></a></li>
+          {/Dz:nlist}
+        </ul>
+    </div>
+</div>
+
+<div class="con2_bg">
+    <div class="con2">
+        <div class="notice">
+          <div class="title"><span>最新公告</span></div>
+            
+            {Dz:nlist name="vo" }
+            <span>{$vo.content}</span>
+          {/Dz:nlist}
+          </div>
+        <div class="con2_about">
+            <div class="con2_bigbox">
+                <p class="con2_p4">关于我们</p>
+                <div>
+                {Dz:nlist name="vo" cateid="11"}
+                <a href="">{$vo.abstract}</a>
+                {/Dz:nlist}
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="con3_bg">
+    <div class="con3">
+        <div class="con3_title">
+            <p>宠物展示<span>products</span></p><a href="">更多>></a>
+        </div>
+        <ul class="con3_list">
+         {Dz:nlist name="vo" catid="1" limit="7"}
+              <li>
+                <div>
+                   <a href="{$vo.url}" class="pro_img"><img src="/public/Uploads/{$vo.smallimage}" width="220" height="170"  /></a>
+                    <span class="zoom"></span>
+                    <p><a href="">{$vo.keywords}</a></p>
+                </div>
+            </li>
+                    {/Dz:nlist}
+        </ul>
+    </div>
+</div>
+<div class="con4">
+    <div class="con4_left">
+        <div class="con4_title1">
+            <p>新闻资讯<span>news</span></p><a href="">更多>></a>
+        </div>
+        <ul class="con4_news">
+       {Dz:nlist name="vo" catid="1" limit="3"}
+          <li><a href="{$vo.url}">{$vo.title}</a><span>{$vo.inputtime|date='Y-m-d H:i',###}</span></li>
+        {/Dz:nlist}
+
+        </ul>
+     </div>
+    <div class="con4_right">
+        <div class="con4_title1">
+            <p>科普知识<span>Knowledge</span></p><a href="">更多>></a>
+        </div>
+        <ul class="con4_news">
+            {Dz:nlist name="vo" cateid="2" limit="3"}
+          <li><a href="{$vo.url}">{$vo.title}</a><span>{$vo.inputtime|date='Y-m-d H:i',###}</span></li>
+        {/Dz:nlist}
+        </ul>
+   </div>
+</div>
+{include file="./templates/yangliping/footer.html"}
+</body>
+</html>

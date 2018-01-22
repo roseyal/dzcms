@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+    <meta charset="UTF-8" />
+    <title>大智有限公司</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="keywords" content="" />
+    <meta name="description" content="" />
+    <link href="/templates/xuyang/css/reset.css" rel="stylesheet" />
+    <link href="/templates/xuyang/css/main.css" rel="stylesheet"/>
+    <script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script>
+    <script src="/templates/xuyang/js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+<body style="background:#222">
+<div class="header">
+    <div class="wrap">
+        <a href="#" class="logo"><img src="/templates/xuyang/images/759.jpg"/></a>
+        <div class="nav">
+            <ul>
+                {Dz:navlist field="id,name,url" order="id asc" name='vo' limit="5"}
+                <li ><a href="../../{$vo.url}"><i>&nbsp;</i>{$vo.title}</a></li>
+                {/Dz:navlist}
+            </ul>
+        </div>
+    </div>
+</div>

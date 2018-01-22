@@ -1,0 +1,41 @@
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>宠物狗养殖基地,出售各种宠物狗</title>
+<LINK href="/templates/yangliping/css/master.css" rel=stylesheet>
+<script language="JavaScript" type="text/javascript" src="/templates/yangliping/js/jquery.min.js"></script>
+<script language="JavaScript" type="text/javascript" src="/templates/yangliping/js/banner.js"></script>
+<script language="JavaScript" type="text/javascript" src="/templates/yangliping/js/nav.js"></script>
+<!--[if IE 6]>
+<script type="text/javascript" src="js/png.js"></script>
+<script>DD_belatedPNG.fix('div,img,span,li,a,a:hover,dd,p,input,select')</script>
+<![endif]-->
+</head>
+<body>
+    <div class="topbg">
+        <div class="top">
+            <div class="logo"><a href=""><img src="/templates/yangliping/images/logo(1).png" width="300"  height="55"/></a></div>
+            <div class="tel">
+             <div class="telenum">热线电话：<span>15012345678</span></div>
+             <div class="telephone"><img src="/templates/yangliping/images/tel.png"  width="54" height="53"/></div>
+            </div>
+        </div>
+    </div>  
+    <div class="banner">
+       <ul class="banner_pic">
+       {Dz:banlist name="vo"}
+            <li><img src="/public/Uploads/{$vo.photo}"  /></li>
+            <li><img src="/public/Uploads/{$vo.photo}"  /></li>
+        {/Dz:banlist}
+       </ul>
+      <div class="num">
+       <ul></ul>
+      </div>
+</div>
+<div class="navbg">
+    <ul class="nav">
+    {Dz:navlist field="id,name,url" order="id desc" name='vo'}
+     <li><a href="{$vo.url}">{$vo.title}</a></li>
+    {/Dz:navlist}
+
+     </ul>
+</div>

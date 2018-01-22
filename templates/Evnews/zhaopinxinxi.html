@@ -1,0 +1,66 @@
+	{include file="templates\Evnews\head.html"}
+	<div class="pageContainer_w w100">
+		<div class="pageContainer mar1200 clearfix">
+			<div class="left fl">
+				<div class="position">当前位置：<span>
+									<a href="http://www.ev361.com/">首页</a> - <a href="/gengduo.html">更多</a> - <a href="/zhaopinxinxi.html">招聘信息</a>								</span></div>
+				{Dz:banlist   sql="SELECT * FROM dz_banner WHERE id = 61" }
+				<div class="banner"><img src="../../public/Uploads/{$v.photo}" width="770" height="190" alt=""/></div>
+				{/Dz:banlist}
+				<div class="menu">
+					<ul class="clearfix">
+												
+												<li ><a href="{:url('./home/Index/zhaopinxinxi')}" title="招聘信息">招聘信息</a></li>
+												
+												</ul>
+				</div>
+				<div class="list">
+					<ul>
+					{Dz:newslist  order="id desc" limit="1" page="true"}
+						<li class="clearfix">
+							<div class="img fl">
+								<img src="../../public/Uploads/{$v.smallimage}" alt=""/>
+							</div>
+							<div class="content fr">
+								<div class="title"><a href="{$v.url}" title="{$v.title}">{$v.title}</a></div>
+								<div class="info">学历要求：{$v.shorttitle}</div>
+								<div class="info">薪资：{$v.keywords}</div>
+								<div class="info">工作经验：{$v.abstract}</div>
+								<div class="date">{$v.inputtime|date="Y-m-d",###}</div>
+							</div>
+						</li>	
+						{/Dz:newslist}
+										</ul>
+				</div>
+				<div class="page">
+				{$page}
+									</div>
+			</div> 	
+			<div class="right fr">
+				
+	{Dz:adlist   sql="SELECT * FROM dz_ad WHERE id = 46" }		
+	<div class="page_banner_s"><a href=""><img src="../../public/Uploads/{$v.photo}"/></a></div>
+	{/Dz:adlist}
+	<div class="pagePanel_1_container">
+		<div class="pagePanel_1_title">深度观察</div>
+		<div class="pagePanel_1_list">
+			<ul>
+			{Dz:nlist sql="select * from dz_news where cateid='25' limit 6 "}
+				<li>
+					<a href="{$v.url}">{$v.title}</a>
+				</li>		
+					{/Dz:nlist}
+					</ul>
+		</div>
+	</div>
+	
+	{Dz:adlist   sql="SELECT * FROM dz_ad WHERE id = 47" }
+	<div class="page_banner_s2"><a href=""><img src="/../../public/Uploads/{$v.photo}"/></a></div>
+		{/Dz:adlist}
+
+
+			</div>
+		</div>
+	</div>
+		
+		{include file="templates\Evnews\foot.html"}

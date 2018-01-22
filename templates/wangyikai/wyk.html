@@ -1,0 +1,147 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="/templates/wangyikai/style/css.css" rel="stylesheet" type="text/css" />
+<script type="javascript" src="/templates/wangyikai/js/jquery-1.10.2.min.js"></script>
+<script type="text/javascript" src="/templates/wangyikai/js/jquery.easing.min.js"></script>
+<link href="/templates/wangyikai/style/index.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<div class="content">
+<div class="head">
+<div class="logo"><img src="/templates/wangyikai/images/Logo.png"/></div>
+<div class="nav">
+<ul>
+<ul>
+          {Dz:navlist  limit="6"}
+        <li><a href="{$v.url}">{$v.catename}</a></li>
+        {/Dz:navlist}
+</ul>
+</div>
+<div class="banner" id="banner">
+        <a id="prevbt"></a>
+        <a id="nextbt"></a>
+        <ul>
+        {Dz:banlist order="id desc" limit="5" name='vo' page="true"}
+    <li>
+                <a href="#">
+                    <img src="/public/Uploads/{$vo.photo}" />
+            </a>
+        </li>
+{/Dz:banlist}
+
+             
+        </ul>
+        
+        <script>
+var li_Width=1024;
+var banner_Li_Num=$('#banner li').length;
+$('#banner ul').css({'width':li_Width*banner_Li_Num,'marginLeft':-li_Width});
+
+function prevbt(){
+        $('#prevbt').unbind('click');
+        $('#banner li:last').detach().insertBefore('#banner li:first').parents('ul').css('marginLeft',-li_Width*2).stop(true).animate({marginLeft:-li_Width},800,'easeInOutBack',function(){
+                $('#prevbt').bind('click',prevbt);
+                });
+        }
+function nextbt(){
+        $('#nextbt').unbind();
+        $('#banner ul').stop(true).animate({marginLeft:-li_Width*2},800,'easeInOutBack',function(){
+                $('#banner ul').css('marginLeft',-li_Width).find('li:first').insertAfter('#banner li:last');
+                $('#nextbt').bind('click',nextbt);
+                })
+        }
+
+$('#prevbt').click(function(){
+        prevbt();
+        })
+$('#nextbt').click(function(){
+        nextbt();
+        })
+
+banner_T=setInterval(banner_Auto,5000)
+        function banner_Auto(){
+                nextbt();
+                }
+$('#banner').hover(function(){
+        clearInterval(banner_T);
+        },function(){
+                banner_T=setInterval(banner_Auto,5000);
+                })
+</script>
+</div>
+
+
+</div>
+<div class="main">
+<div class="cp">
+<div class="cp_1">
+<div  class="cp_title"></div>
+<div class="cp_list">
+{Dz:nlist order="id desc" limit="2" name="ne"}
+<div class="cp_list1">
+<a href="{$ne.url}"><img src="/public/Uploads/{$ne.smallimage}"></a>
+<p><a href="{$ne.url}">
+        {$ne.title}
+        </a></p>
+<span>
+    <h1>{$ne.abstract}</h1>
+</div>
+{/Dz:nlist}
+</div>
+</div>
+<div class="cp_1">
+<div  class="cp_title"></div>
+<div class="cp_list">
+{Dz:nlist limit="2" name="ne"}
+<div class="cp_list1">
+<a href="{$ne.url}"><img src="/public/Uploads/{$ne.smallimage}"></a>
+<p><a href="{$ne.url}">
+        {$ne.title}
+        </a></p>
+<span>
+    <h1>{$ne.abstract}</h1>
+</div>
+{/Dz:nlist}
+</div>
+</div>
+</span>
+</div>
+
+<div class="aut">
+<div class="aut_title"></div>
+<div class="aut_list">
+<ul>
+{Dz:nlist limit="4" name="ne"}
+<li><a href="{$ne.url}"><img src="/public/Uploads/{$ne.smallimage}"></a></li>
+{/Dz:nlist}
+</ul>
+</div>
+</div>
+</div>
+<div class="foot">
+<div class="foot_1">
+<div class="a"><img src="/templates/wangyikai/images/Logo.png" /></div>
+<div class="b">
+<ul>
+
+</ul>
+</div>
+<div class="c">
+<a href="#"><img src="/templates/wangyikai/images/weix.jpg" /></a>
+<a href="#"><img src="/templates/wangyikai/images/xinl.jpg" /></a>
+</div>
+
+</div>
+<div class="foot_2">
+
+</div>
+
+</div>
+</div>
+</div>
+</body>
+</html>

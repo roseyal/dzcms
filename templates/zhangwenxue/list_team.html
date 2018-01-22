@@ -1,0 +1,38 @@
+{include file="templates/zhangwenxue/head.html"}
+<div class="wrapper">
+  <div class="container content">
+               <div class="page_right">
+      <div class="sub_title">
+        <h2>合作与交流</h2>
+        <h4>COOPERATION</h4>
+      </div>
+      <div class="sub_nav">
+        <ul>
+		        </ul>
+      </div>
+    </div>    <div class="page_left">
+        <div class="page_title"><a href="/">首页</a> > <a href="">合作与交流</a> > <a href="/home/index/list_team?cateid=6">合作与交流</a></div>
+
+  
+      <div class="page_content">
+        <ul class="culture_ul clearfix">
+		           
+	         {Dz:newslist order="id desc" limit="9" page="true"}
+              <li> 
+                <a href="{$v.url}" title="{$v.title}">
+                  <div class="pic"> <img src="../../public/Uploads/{$v.smallimage}" alt="{$v.title}" class="vcenter" /> <i></i> 
+                  </div>
+                  <p>{$v.title}</p>
+                </a> 
+              </li>
+          {/Dz:newslist}
+	        </ul>
+        	    <div class="pageing">{$page}</div>
+      </div>
+    </div>
+  </div>
+</div>
+{include file="templates/zhangwenxue/foot.html"}
+<!--footer end-->
+</body>
+</html>

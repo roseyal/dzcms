@@ -1,0 +1,38 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>大智科技信息有限公司</title>
+<link rel="stylesheet" type="text/css" href="/templates/lf/css/reset.css"/>
+<script type="text/javascript" src="/templates/lf/js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="/templates/lf/plugins/FlexSlider/jquery.flexslider.js"></script>
+<link rel="stylesheet" type="text/css" href="/templates/lf/plugins/FlexSlider/flexslider.css">
+<script type="text/javascript" src="/templates/lf/js/js_z.js"></script>
+
+<link rel="stylesheet" type="text/css" href="/templates/lf/css/thems.css">
+<script language="javascript">
+$(function() {
+  $('.flexslider').flexslider({
+	animation: "slide"
+  });
+});
+</script>
+</head>
+
+<body>
+<div class="h_bg">
+	<div class="head clearfix">
+    	<div class="logo">
+        	<div class="bg_a">&nbsp;</div>
+            <a href="index.html"><img src="/templates/lf/images/logo.png" alt=""/></a>
+        </div>
+        <div class="head_r">
+        	<div class="tel">0539-7256931</div>
+            <div class="nav clearfix">
+                {Dz:navlist name="vo" top=2}
+            	<a href="{$vo.url}" class="now">{$vo.title}</a>
+                {/Dz:navlist}
+            </div>
+        </div>
+    </div>
+</div>

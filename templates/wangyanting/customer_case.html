@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title>客户案例</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1,maximum-scale=1.0, user-scalable=0,user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="Cache-Control" content="no-siteapp"/>
+  
+  <link rel="alternate icon" type="img/HENGWANG.png" href="/templates/wangyanting/img/HENGWANG.png">
+  <link rel="stylesheet" href="/templates/wangyanting/css/amazeui.css"/>
+  <link rel="stylesheet" href="/templates/wangyanting/css/style.css"/>
+</head>
+<body>
+{include file="./templates/wangyanting/header.html"}
+<div class="toppic">
+	<div class="am-container-1">
+	 <div class="toppic-title left">
+			<i class="am-icon-briefcase toppic-title-i"></i>
+			<span class="toppic-title-span">客户案例</span>
+			<p>Customer Case</p>
+		</div>
+		<div class="right toppic-progress">
+			<span><a href="index.html" class="w-white">首页</a></span>
+			<i class=" am-icon-arrow-circle-right w-white"></i>
+			<span><a href="customer-case.html" class="w-white">客户案例</a></span>
+		</div>
+	</div>
+</div>
+
+<div class="am-container-1">
+	 <ul data-am-widget="gallery" class="am-gallery am-avg-sm-1
+  am-avg-md-3 am-avg-lg-4 am-gallery-bordered customer-case-ul" data-am-gallery="{  }" >
+    {Dz:nlist cateid="4" limit="6"}
+      <li>
+        <div class="am-gallery-item">
+            <a href="{$v.url}" class="">
+            	<div class="customer-case-img">
+              <img  src="/public/Uploads/{$v.smallimage}" />
+             </div>
+                <h3 class="am-gallery-title">{$v.title}</h3>
+                <div class="am-gallery-desc gallery-words">{$v.content}</div>
+            </a>
+        </div>
+      </li>
+ {/Dz:nlist} 
+
+  </ul>
+	
+</div>
+<div class="part-all gray-li">
+<div class="customer  am-container-1">
+		<div class="part-title">
+			<i class="am-icon-users part-title-i"></i>
+			<span class="part-title-span">服务客户</span>
+			<p>Serve Customers</p>
+		</div>
+		
+		<div class="am-slider am-slider-default am-slider-carousel part-all" data-am-flexslider="{itemWidth:150, itemMargin: 5, slideshow: false}" style="  background-color: #f0eeed; box-shadow:none;">
+		  <ul class="am-slides">
+		    <li><img  src="/templates/wangyanting/img/ptn4.png"/></li>
+		    <li><img  src="/templates/wangyanting/img/ptn5.png"/></li>
+		    <li><img  src="/templates/wangyanting/img/ptn6.png"/></li>
+		    <li><img  src="/templates/wangyanting/img/ptn7.png"/></li>
+		    <li><img  src="/templates/wangyanting/img/ptn8.png"/></li>
+		    <li><img  src="/templates/wangyanting/img/ptn4.png"/></li>
+		    <li><img  src="/templates/wangyanting/img/ptn5.png"/></li>
+		    <li><img  src="/templates/wangyanting/img/ptn6.png"/></li>
+		    <li><img  src="/templates/wangyanting/img/ptn7.png"/></li>
+		    <li><img  src="/templates/wangyanting/img/ptn8.png"/></li>
+		  </ul>
+		</div>
+</div>
+</div>
+
+
+
+{include file="./templates/wangyanting/footer.html"}
+
+
+</body>
+<!--[if lt IE 9]>
+<script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
+<script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
+<script src="assets/js/amazeui.ie8polyfill.min.js"></script>
+<![endif]-->
+
+<!--[if (gte IE 9)|!(IE)]><!-->
+<script src="/templates/wangyanting/js/jquery.min.js"></script>
+<script src="/templates/wangyanting/js/amazeui.min.js"></script>
+
+</html>

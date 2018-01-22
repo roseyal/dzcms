@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html>
+{include file="./templates/mokuai/head.html"}<body>
+<!--头部-->
+{include file="./templates/mokuai/header.html"}
+<div class="main_banner" style="background-image: url(/templates/mokuai/img/1843_src.jpg);">
+	<img src="/templates/mokuai/img/lie.jpg" alt="">
+</div>
+<!--主体-->
+<div class="beijing1">
+	<div class="qi_feng_yi">
+	
+		<h1>{$info.title}</h1>
+		<p>{$info['inputtime']|date="Y-m-d H:i:s",###} 责任编辑：{$info.source}</p>
+	</div>
+	<div class="qi_feng_er">
+		<h4 style="text-indent: 2em;">{$info.abstract}</h4>
+		<p style="text-indent: 2em;">{$info.content}</p>
+		<p style="text-indent: 2em;">{$info.content}</p>
+		<p style="text-indent: 2em;">{$info.content}</p>
+		<em ><img src="/public/Uploads/{$info.smallimage}" style="height: 500px; width: 1050px"></em>
+	</div>
+
+</div>
+
+{include file="./templates/mokuai/footer.html"}
+
+</body>
+</html>
+
+<script type="text/javascript" src="/templates/mokuai/js/xmsz_common.js" ></script>
+<!--[if IE 6]><script type="text/javascript" src="/templates/mokuai/js/pngfix.js" ></script><![endif]-->

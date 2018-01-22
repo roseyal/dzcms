@@ -1,0 +1,84 @@
+{include file='./templates/newstyle/common/header.html'/}
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="1000" height="380" valign="middle">
+        <img src="/templates/newstyle/images/banner.jpg" width="1000" height="340" />
+      <!--banner-->
+      </td>
+  </tr>
+</table>
+<table width="1000" border="0" align="center" cellpadding="15" cellspacing="0" class="bk_e4e4e4">
+  <tr>
+</table>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="1000" height="20" valign="middle"></td>
+  </tr>
+</table>
+<table width="1000" border="0" align="center" cellpadding="15" cellspacing="0" class="bk_e4e4e4">
+  <tr>
+
+    <td width="290" valign="top" bgcolor="#FFFFFF" align="left"><table width="100%" cellspacing="0" cellpadding="5" border="0">
+      <tbody><tr>
+        <td class="font_14" align="left"><strong>新闻资讯</strong></td>
+        <td class="font_14" align="right"><img src="/templates/newstyle/images/about_38.jpg" width="35" height="11"></td>
+      </tr>
+      <tr>
+        {Dz:nlist field="id,title,url,cateid,smallimage,abstract" hot="true" limit="1" name='vo'}
+        <td colspan="2"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tbody><tr>
+            <td rowspan="2" width="22%" align="left"><img src="/templates/newstyle/images/about_42.jpg" width="60" height="60"></td>
+            <td width="78%" align="left"><a href="{$vo.url}" class="new">{$vo.title}</a></td>
+          </tr>
+          <tr>
+            <td align="left">{$vo.abstract}……<a href="{$vo.url}" class="new02">[详情]</a></td>
+
+          </tr>
+          {/Dz:nlist}
+          </tbody></table></td>
+      </tr>
+      <tr>
+        <td colspan="2"><img src="/templates/newstyle/images/about_49.jpg" width="321" height="3"></td>
+      </tr>
+      <tr>
+        <td colspan="2" align="left">
+        {Dz:nlist field="id,title,url,cateid,smallimage" hot="true" start="1" limit="4"  name='vo'}
+          <a href="{$vo.url}">{$vo.title}</a><br>
+        {/Dz:nlist}
+      </tr>
+      </tbody></table></td>
+    <td width="2" valign="middle" bgcolor="#FFFFFF" align="left"><img src="/templates/newstyle/images/about_39.jpg" width="3" height="230"></td>
+    <td width="616" valign="top" bgcolor="#FFFFFF" align="left"><table width="100%" cellspacing="0" cellpadding="5" border="0">
+      <tbody>
+        <tr>
+        <td class="font_14" align="left"><strong>关于大智</strong></td>
+        <td class="font_14" align="right">
+            <img src="/templates/newstyle/images/about_38.jpg" width="35" height="11"></td>
+      </tr>
+      {Dz:nlist where="id=1"}
+      <tr>
+        <td colspan="2" align="left"><table width="100%" cellspacing="0" cellpadding="0" border="0">
+          <tbody>
+          <tr>
+            <td width="27%" align="left">
+                <img src="/../../public/Uploads/{$v.smallimage}" width="135" height="181"></td>
+            <td width="73%" align="left">{$v.abstract}</td>
+          </tr>
+      {/Dz:nlist}
+          </tbody></table>
+        </td>
+      </tr>
+      </tbody></table></td>
+  </tr>
+          </table>
+          </td>
+      </tr>
+    </table></td>
+  </tr>
+</table>
+{include file='./templates/newstyle/common/footer.html'/}
+
+
+
+
+

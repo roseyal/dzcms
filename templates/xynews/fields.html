@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+{include file="./templates/xynews/header.html"}
+	<div class="com-banner-box">
+	{Dz:banlist page="true" name="vo" where="type='应用领域'"}
+		<img src="/public/Uploads/{$vo.photo}" alt="应用领域banner" />
+	{/Dz:banlist}
+	</div>
+	<div class="main">
+		<div class="ab-wrap" style="background: url(/templates/xynews/img/com-fix-bg.png) no-repeat bottom;">
+		<div class="wrapper">
+			<div class="com-title-box">
+				<div class="common-title common-title-small clearfix">
+					<h1>应用领域</h1>
+					<p>FIELDS</p>
+				</div>
+			</div>
+			
+			<div class="com-main-box">
+				<div class="concept1 fields">
+					<ul class="concept-wrap1 clearfix">
+						<li class="con-item2 con-item3">
+							<div class="com-jz jz-bg-2">
+								应用领域
+							</div>
+							<div class="con-box2 com-cont con-box3">
+								<div class="kj-yy-content clearfix">
+								{Dz:newslist name="vo" page="true" limit="3"}
+									<ul class="kj-yy-lists clearfix">
+										<li class="float-l">
+											<div class="kj-yy-pic">
+												<a href="javascript:;"><img src="/templates/xynews/img/fields-pic01.jpg" alt="新闻图片" /></a>
+											</div>
+										</li>
+										<li class="float-r left-line kj-yy-text-box clearfix">
+											<h3 class="com-list-title"><a href="{$vo.url}">{$vo.title}</a></h3>
+											<p class="kj-yy-list-text"><a href="{$vo.url}">{$vo.abstract}</a></p>
+											<a href="{$vo.url}" class="float-r jz-more">详情&raquo;</a>
+										</li>
+									</ul>
+								{/Dz:newslist}
+								</div>
+							</div>
+							<div class="com-jz jz-bg-3"></div>
+						</li>
+				</ul>
+			</div>
+				<ul class="page-select clearfix float-r">
+					{$pages}
+				</ul>
+			</div>
+		</div>
+		</div>
+	</div>
+	<!--页脚-->
+{include file="./templates/xynews/footer.html"}
+	<!--页脚结束-->
+	
+<script type="text/javascript" src="/templates/xynews/js/jquery-1.11.0.js"></script>
+<script type="text/javascript">
+	//导航当前效果
+	$(".main-nav .main-nav-item").click(
+		function(){
+			$(this).addClass("nav-active").siblings().removeClass("nav-active");
+		}
+	)
+	//导航二级菜单显示效果
+	$(".main-nav .main-nav-item").hover(
+		function(){
+			$(this).children(".sub-nav").stop().fadeIn();
+			$(this).siblings().children(".sub-nav").stop().hide();
+		},function(){
+			$(this).children(".sub-nav").stop().fadeOut();
+	});
+	//卷轴动效
+	$(".concept-wrap1 .con-item2").eq(0).stop(false,true).animate({width:"1020px"},1000).siblings().stop(false,true).animate({width:"47px"},1000);
+	$(".concept-wrap1 .con-item2").mouseenter(function(){
+		$(this).stop(false,true).animate({width:"1020px"},500).siblings().stop(false,true).animate({width:"47px"},500);
+	});
+	//返回顶部
+		$(".back-top").click(function () {
+	        var speed=200;//滑动的速度
+	        $('body,html').animate({ scrollTop: 0 }, speed);
+	        return false;
+	 	});
+</script>
+</body>
+</html>

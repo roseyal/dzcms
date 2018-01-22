@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+{include file="./templates/style/header.html"}
+
+<body>
+  <div class="layout">
+    <!--===========layout-header================-->
+    <div class="layout-header am-hide-sm-only">
+      <!--topbar start-->
+      <div class="topbar">
+        <div class="container">
+          <div class="am-g">
+            <div class="am-u-md-3">
+              <div class="topbar-left">
+                <i class="am-icon-globe"></i>
+                <div class="am-dropdown" data-am-dropdown>
+                  <button class="am-btn am-btn-primary am-dropdown-toggle" data-am-dropdown-toggle>Language <span class="am-icon-caret-down"></span></button>
+                  <ul class="am-dropdown-content">
+                    <li><a href="#">English</a></li>
+                    <li class="am-divider"></li>
+                    <li><a href="#">Chinese</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="am-u-md-9">
+              <div class="topbar-right am-text-right am-fr">
+                Follow us
+                <i class="am-icon-facebook"></i>
+                <i class="am-icon-twitter"></i>
+                <i class="am-icon-google-plus"></i>
+                <i class="am-icon-pinterest"></i>
+                <i class="am-icon-instagram"></i>
+                <i class="am-icon-linkedin"></i>
+                <i class="am-icon-youtube-play"></i>
+                <i class="am-icon-rss"></i>
+                <a href="login.html">登录</a>
+                <a href="register.html">注册</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--topbar end-->
+
+
+      <div class="header-box" data-am-sticky>
+        <!--header start-->
+          <div class="container">
+            <div class="header">
+              <div class="am-g">
+                <div class="am-u-lg-2 am-u-sm-12">
+                  <div class="logo">
+                    <a href=""><img src="/templates/style/images/logo.png" width="445" height="38" alt="" /></a>
+                  </div>
+                </div>
+                <div class="am-u-md-10">
+                  <div class="header-right am-fr">
+                    <div class="header-contact">
+                      <div class="header_contacts--item">
+  											<div class="contact_mini">
+  												<i style="color:#7c6aa6" class="contact-icon am-icon-phone"></i>
+  												<strong>0 (855) 233-5385</strong>
+  												<span>周一~周五, 8:00 - 20:00</span>
+  											</div>
+  										</div>
+                      <div class="header_contacts--item">
+  											<div class="contact_mini">
+  												<i style="color:#7c6aa6" class="contact-icon am-icon-envelope-o"></i>
+  												<strong>cn@yunshipei.com</strong>
+  												<span>随时欢迎您的来信！</span>
+  											</div>
+  										</div>
+                      <div class="header_contacts--item">
+  											<div class="contact_mini">
+  												<i style="color:#7c6aa6" class="contact-icon am-icon-map-marker"></i>
+  												<strong>天使大厦,</strong>
+  												<span>海淀区海淀大街27</span>
+  											</div>
+  										</div>
+                    </div>
+                    <a href="contact.html" class="contact-btn">
+                      <button type="button" class="am-btn am-btn-secondary am-radius">联系我们</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!--header end-->
+
+
+        <!--nav start-->
+        <div class="nav-contain">
+          <div class="nav-inner">
+            <ul class="am-nav am-nav-pills am-nav-justify">
+              
+            {Dz:navlist field="Id,title,url" order="id asc" name='vo' limit="5"}
+                <li>
+                    <a href="{$vo.url}">{$vo.title}</a>
+                </li>
+            {/Dz:navlist}
+            </ul>
+          </div>
+        </div>
+        <!--nav end-->
+      </div>
+    </div>
+
+    <!--mobile header start-->
+    <div class="m-header">
+      <div class="am-g am-show-sm-only">
+        <div class="am-u-sm-2">
+          <div class="menu-bars">
+            <a href="#doc-oc-demo1" data-am-offcanvas="{effect: 'push'}"><i class="am-menu-toggle-icon am-icon-bars"></i></a>
+            <!-- 侧边栏内容 -->
+            <nav data-am-widget="menu" class="am-menu  am-menu-offcanvas1" data-am-menu-offcanvas >
+              <a href="javascript: void(0)" class="am-menu-toggle"></a>
+
+            </nav>
+
+          </div>
+        </div>
+        <div class="am-u-sm-5 am-u-end">
+          <div class="m-logo">
+            <a href=""><img src="./templates/style/images/logo.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+    <!--mobile header end-->
+    </div>
+
+
+
+
+    <!--===========layout-container================-->
+    <div class="layout-container">
+      <div class="index-page">
+        <div data-am-widget="tabs" class="am-tabs am-tabs-default">
+          <div class="am-tabs-bd">
+            <div data-tab-panel-0 class="am-tab-panel am-active">
+              <div class="index-banner">
+                <div class="index-mask">
+                  <div class="container">
+                    <div class="am-g">
+                      <div class="am-u-md-10 am-u-sm-centered">
+                      {Dz:nlist field="id,smallimage,title,keywords,looknum,author,cateid,url,abstract" limit="1" order="id desc" name='vo' cateid='7'}
+                        <h1 class="slide_simple--title">{$vo.title}</h1>
+                        <p class="slide_simple--text am-text-left">
+												  {$vo.keywords}
+											  </p>
+                        <div class="slide_simple--buttons">
+  												<a href="{$vo.url}" class="am-btn am-btn-danger">了解更多</a>
+											  </div>
+                        {/Dz:nlist}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div data-tab-panel-1 class="am-tab-panel ">
+              <div class="index-banner">
+                <div class="index-mask">
+                  <div class="container">
+                    <div class="am-g">
+                      <div class="am-u-md-10 am-u-sm-centered">
+                        {Dz:nlist field="id,smallimage,title,keywords,looknum,author,cateid,url,abstract" limit="1" order="id desc" name='vo' cateid='6'}
+                        <h1 class="slide_simple--title">{$vo.title}</h1>
+                        <p class="slide_simple--text am-text-left">
+                          {$vo.keywords}
+                        </p>
+                        <div class="slide_simple--buttons">
+                          <a href="{$vo.url}" class="am-btn am-btn-danger">了解更多</a>
+                        </div>
+                        {/Dz:nlist}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <div data-tab-panel-2 class="am-tab-panel ">
+              <div class="index-banner">
+                <div class="index-mask">
+                  <div class="container">
+                    <div class="am-g">
+                      <div class="am-u-md-10 am-u-sm-centered">
+                        {Dz:nlist field="id,smallimage,title,keywords,looknum,author,cateid,url,abstract" limit="1" order="id desc" name='vo' cateid='5'}
+                        <h1 class="slide_simple--title">{$vo.title}</h1>
+                        <p class="slide_simple--text am-text-left">
+                          {$vo.keywords}
+                        </p>
+                        <div class="slide_simple--buttons">
+                          <a href="{$vo.url}" class="am-btn am-btn-danger">了解更多</a>
+                        </div>
+                        {/Dz:nlist}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div data-tab-panel-3 class="am-tab-panel ">
+              <div class="index-banner">
+                <div class="index-mask">
+                  <div class="container">
+                    <div class="am-g">
+                      <div class="am-u-md-10 am-u-sm-centered">
+                       {Dz:nlist field="id,smallimage,title,keywords,looknum,author,cateid,url,abstract" limit="1" order="id desc" name='vo' cateid='4'}
+                        <h1 class="slide_simple--title">{$vo.title}</h1>
+                        <p class="slide_simple--text am-text-left">
+                          {$vo.abstract}
+                        </p>
+                        <div class="slide_simple--buttons">
+                          <a href="{$vo.url}" class="am-btn am-btn-danger">了解更多</a>
+                        </div>
+                        {/Dz:nlist}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <ul class="am-tabs-nav am-cf index-tab">
+          
+            <li class="am-active">
+            {Dz:nlist field="id,smallimage,shorttitle,title,keywords,looknum,author,cateid,url,abstract" limit="1" order="id desc" name='vo' cateid='7'}
+              <a href="[data-tab-panel-0] am-g">
+                <div class="am-u-md-3 am-u-sm-3 am-padding-right-0">
+                  <i class="am-icon-cog"></i>
+                </div>
+                <div class="school-item-right am-u-md-9 am-u-sm-9 am-text-left">
+                  <strong class="promo_slider_nav--item_title">{$vo.shorttitle}</strong>
+                  <p class="promo_slider_nav--item_description">{$vo.title}</p>
+                </div>
+              </a>
+              {/Dz:nlist}
+            </li>
+            <li class="a">
+            {Dz:nlist field="id,smallimage,shorttitle,title,keywords,looknum,author,cateid,url,abstract" limit="1" order="id desc" name='vo' cateid='6'}
+              <a href="[data-tab-panel-1] am-g">
+                <div class="am-u-md-3 am-u-sm-3 am-padding-right-0">
+                  <i class="am-icon-lightbulb-o"></i>
+                </div>
+                <div class="school-item-right am-u-md-9 am-u-sm-9 am-text-left">
+                  <strong class="promo_slider_nav--item_title">{$vo.shorttitle}</strong>
+                  <p class="promo_slider_nav--item_description">{$vo.title}</p>
+                </div>
+              </a>
+              {/Dz:nlist}
+            </li>
+            <li class="">
+            {Dz:nlist field="id,smallimage,shorttitle,title,keywords,looknum,author,cateid,url,abstract" limit="1" order="id desc" name='vo' cateid='5'}
+              <a href="[data-tab-panel-2] am-g">
+                <div class="am-u-md-3 am-u-sm-3 am-padding-right-0">
+                  <i class="am-icon-line-chart"></i>
+                </div>
+                <div class="school-item-right am-u-md-9 am-u-sm-9 am-text-left">
+                  <strong class="promo_slider_nav--item_title">{$vo.shorttitle}</strong>
+                  <p class="promo_slider_nav--item_description">{$vo.title}</p>
+                </div>
+              </a>
+              {/Dz:nlist}
+            </li>
+            <li class="">
+            {Dz:nlist field="id,smallimage,shorttitle,title,keywords,looknum,author,cateid,url,abstract" limit="1" order="id desc" name='vo' cateid='4'}
+              <a href="[data-tab-panel-3] am-g">
+                <div class="am-u-md-3 am-u-sm-3 am-padding-right-0">
+                  <i class="am-icon-hourglass-end"></i>
+                </div>
+                <div class="school-item-right am-u-md-9 am-u-sm-9 am-text-left">
+                  <strong class="promo_slider_nav--item_title">{$vo.shorttitle}</strong>
+                  <p class="promo_slider_nav--item_description">{$vo.title}</p>
+                </div>
+              </a>
+              {/Dz:nlist}
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div class="section">
+      <div class="container">
+        {Dz:nlist field="id,smallimage,shorttitle,title,keywords,looknum,author,cateid,url,abstract" limit="1" order="id desc" name='vo' cateid='5'}
+        <div class="section--header">
+
+					<h2 class="section--title">{$vo.title}</h2>
+					<p class="section--description">
+						{$vo.abstract}
+					</p>
+				</div>
+       {/Dz:nlist}
+        <!--index-container start-->
+        <div class="index-container">
+          <div class="am-g">
+            {Dz:nlist field="id,smallimage,shorttitle,title,keywords,looknum,author,cateid,url,abstract" limit="4" order="id desc" name='vo' cateid='6'}
+            <div class="am-u-md-3">
+              <div class="features_item">
+								<img src="{$vo.smallimage}" alt="">
+								<h3 class="features_item--title">{$vo.title}</h3>
+								<p class="features_item--text">
+									{$vo.keywords}
+								</p>
+							</div>
+            </div>
+            {/Dz:nlist}
+          </div>
+
+          <div class="index-more">
+            <button type="button" class="am-btn am-btn-secondary">MORE&nbsp;&nbsp;>></button>
+          </div>
+        </div>
+        <!--index-container end-->
+      </div>
+    </div>
+
+  </div>
+
+  <!--promo_detailed start-->
+  <div class="promo_detailed">
+    <div class="promo_detailed-container" >
+      <div class="container">
+        <div class="am-g">
+          <div class="am-u-md-6">
+            <ul class="promo_detailed--list">
+            {Dz:nlist limit="1" cateid='8'}
+              <li class="promo_detailed--list_item">
+                <span class="promo_detailed--list_item_icon">
+                  <i class="am-icon-diamond"></i>
+                </span>
+                <dl>
+                  <dt>{$v.title}</dt>
+                  <dd>
+                    {$v.keywords}
+                  </dd>
+                </dl>
+              </li>
+              {/Dz:nlist}
+              {Dz:nlist limit="1" cateid='7'}
+              <li class="promo_detailed--list_item">
+                <span class="promo_detailed--list_item_icon">
+                  <i class="am-icon-dollar" style="margin-left: 15px;"></i>
+                </span>
+                <dl>
+                  <dt>{$v.title}</dt>
+                  <dd>
+                    {$v.keywords}
+                  </dd>
+                </dl>
+              </li>
+              {/Dz:nlist}
+              {Dz:nlist limit="1" cateid='6'}
+              <li class="promo_detailed--list_item">
+                <span class="promo_detailed--list_item_icon">
+                  <i class="am-icon-bank" style="margin-left: 10px;"></i>
+                </span>
+                <dl>
+                  <dt>{$v.title}</dt>
+                  <dd>
+                    {$v.keywords}
+                  </dd>
+                </dl>
+              </li>
+              {/Dz:nlist}
+            </ul>
+          </div>
+
+          <div class="am-u-md-6">
+            <div class="promo_detailed--cta">
+            {Dz:nlist limit="1" cateid='6'}
+              <div class="promo_detailed--cta_wrap">
+                <div class="promo_detailed--cta_text">
+									{$v.content}
+								</div>
+                <div class="promo_detailed--cta_footer">
+                  <a href="{$v.url}" class="am-btn am-btn-danger">MORE&nbsp;&nbsp;>></a>
+                </div>
+              </div>
+              <div class="promo_detailed-img am-show-sm-only" style="background-image: url('assets/images/index/promo_detailed_bg.jpg');"></div>
+              {/Dz:nlist}
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    <div class="promo_detailed-img am-hide-sm-only" style="background-image: url('assets/images/index/promo_detailed_bg.jpg');"></div>
+  </div>
+  <!--promo_detailed end-->
+
+  <div class="section"  style="border-bottom: 1px solid #e9e9e9;">
+    <div class="container">
+{Dz:nlist limit="1" cateid='6'}
+      <div class="section--header">
+        <h2 class="section--title">{$v.title}</h2>
+        <p class="section--description">
+          {$v.content}
+        </p>
+      </div>
+  {/Dz:nlist}
+      <!--index-container start-->
+      <div class="index-container">
+        <div class="am-g">
+          <div class="am-u-md-3">
+          {Dz:nlist limit="1" cateid='6'}
+            <div class="service_item">
+              <i class="service_item--icon am-icon-diamond"></i>
+              <h3 class="service_item--title">{$v.title}</h3>
+              <div class="service_item--text">
+								<p>{$v.keywords}</p>
+							</div>
+              <footer class="service_item--footer"><a href="#" class="link -blue_light">Learn More>></a></footer>
+            </div>
+             {/Dz:nlist}
+          </div>
+
+          <div class="am-u-md-3">
+            {Dz:nlist limit="1" cateid='7'}
+            <div class="service_item">
+
+              <i class="service_item--icon am-icon-user"></i>
+              <h3 class="service_item--title">{$v.title}</h3>
+              <div class="service_item--text">
+								<p>{$v.keywords}</p>
+							</div>
+              <footer class="service_item--footer"><a href="#" class="link -blue_light">Learn More>></a></footer>
+            </div>
+            {/Dz:nlist}
+          </div>
+
+          <div class="am-u-md-3">
+           {Dz:nlist limit="1" cateid='4'}
+            <div class="service_item">
+              <i class="service_item--icon am-icon-umbrella"></i>
+              <h3 class="service_item--title">{$v.title}</h3>
+              <div class="service_item--text">
+								<p>{$v.keywords}</p>
+							</div>
+              <footer class="service_item--footer"><a href="#" class="link -blue_light">Learn More>></a></footer>
+            </div>
+            {/Dz:nlist}
+          </div>
+
+          <div class="am-u-md-3">
+          {Dz:nlist limit="1" cateid='5'}
+            <div class="service_item">
+              <i class="service_item--icon am-icon-briefcase"></i>
+              <h3 class="service_item--title">{$v.title}</h3>
+              <div class="service_item--text">
+								<p>{$v.keywords}</p>
+							</div>
+              <footer class="service_item--footer"><a href="#" class="link -blue_light">Learn More>></a></footer>
+            </div>
+            {/Dz:nlist}
+          </div>
+        </div>
+      </div>
+      <!--index-container end-->
+    </div>
+  </div>
+
+
+ 
+
+
+  <div class="section promo_banner-container">
+    <!--index-container start-->
+    <div class="promo_banner-box">
+    {Dz:nlist limit="1" cateid='5'}
+      <div class="container">
+      
+        <h2 class="promo_banner--title">{$v.title}</h2>
+        <p class="promo_banner--text">
+					{$v.content}
+        <footer class="promo_banner--footer">
+					<a href="{$v.url}" class="am-btn am-btn-secondary">MORE>></a>
+				</footer>
+
+      </div>
+      {/Dz:nlist}
+    </div>
+    <!--index-container end-->
+  </div>
+
+
+
+  <!--customer-logo start-->
+    <div class="customer-logo">
+      <div class="container">
+        <div class="am-g">
+         
+          {Dz:flink field="photo,webname" page="true" limit="6" name="vo" thumb="flase"}
+          <div class="am-u-md-2 am-u-sm-4 customer-box">
+            <a href="#">
+              {$vo.webname}
+            </a>
+          </div>
+          {/Dz:flink}
+        </div>
+      </div>
+    </div>
+  <!--customer-logo end-->
+
+
+  <div class="section" style="margin-top:0px;background-image: url('assets/images/pattern-light.png');">
+    <div class="container">
+      <!--index-container start-->
+      <div class="index-container">
+        <div class="am-g">
+          <div class="am-u-md-4">
+            <div class="contact_card">
+							<i style="color:#59bcdb" class="contact_card--icon am-icon-phone"></i>
+							<strong class="contact_card--title">Contact Us</strong>
+							<p class="contact_card--text">Feel free to call us on <br> <strong>0 (855) 233-5385</strong> <br> Monday - Friday, 8am - 7pm</p>
+              <a type="button" class="am-btn am-btn-secondary">Order a Call Back</a>
+						</div>
+          </div>
+          <div class="am-u-md-4">
+            <div class="contact_card">
+							<i style="color:#59bcdb" class="contact_card--icon am-icon-envelope-o"></i>
+							<strong class="contact_card--title">Our Email</strong>
+							<p class="contact_card--text">Drop us a line anytime at <br> <strong><a href="mailto:info@financed.com">info@financed.com</a>,</strong> <br> and we’ll get back soon.</p>
+              <button type="button" class="am-btn am-btn-secondary">Start Writing</button>
+						</div>
+          </div>
+          <div class="am-u-md-4">
+            <div class="contact_card">
+							<i style="color:#59bcdb" class="contact_card--icon am-icon-map-marker"></i>
+							<strong class="contact_card--title">Our Address</strong>
+							<p class="contact_card--text">Come visit us at <br> <strong>Stock Building, New York,</strong> <br> NY 93459</p>
+              <button type="button" class="am-btn am-btn-secondary">See the Map</button>
+						</div>
+          </div>
+        </div>
+      </div>
+      <!--index-container end-->
+    </div>
+  </div>
+
+
+
+
+  <!--===========layout-footer================-->
+  {include file="./templates/style/footer.html"}
+
+ 
+</body>
+
+</html>

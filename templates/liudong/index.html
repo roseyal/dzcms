@@ -1,0 +1,109 @@
+{include file="templates/liudong/header.html"}
+<main>
+
+    <div class="index-main-title">
+    {Dz:nlist where="id=1" limit="1"}
+        <p>{$v.shorttitle}</p>
+        <span>{$v.title}</span>
+        {/Dz:nlist}
+    </div>
+    <div class="index-main-body">
+             <ul>
+            {Dz:nlist name="vo" limit="3"}
+                <li><img src="/public/Uploads/{$vo.smallimage}"><p>{$vo.shorttitle}</p></li>
+            {/Dz:nlist}
+            </ul>
+        {Dz:nlist name="vo" limit="1"}
+        <p>{$vo.title}...</p>
+        <a>了解更多</a>
+       
+    </div>
+     <div class="index-sm-banner">
+         <img src="/templates/view/huanbao/images/smbanner.jpg">
+         <p>
+             {$vo.content}
+         </p>
+         <span></span>
+     </div>
+      {/Dz:nlist}
+
+
+    <div class="index-main-bottom">
+        {Dz:nlist id="2" limit="1"}
+        <p>{$v.shorttitle}</p>
+        <span>{$v.title}</span>
+        {/Dz:nlist}
+    </div>
+
+    <div class="project-case">
+    <div>
+     {Dz:nlist name="vo" }
+        <a href="{$vo.url}">
+        <img src="{$vo.smallimage}">
+        <div class="projec-case-right">
+        <h6>{$vo.shorttitle}</h6>
+        <p>{$vo.content} </p>
+        </div>
+        </a>
+        {/Dz:nlist}
+    </div>
+
+    </div>
+</main>
+<div class="feature">
+{Dz:banlist limit="1"}
+    <img class="big" src="/public/Uploads/{$v.photo}" style="width: 1520px;height: 262px"/>
+{/Dz:banlist}
+</div>
+
+<main>
+<div class="index-main-hg-title">
+    {Dz:nlist where="id=3" limit="1"}
+        <p>{$v.shorttitle}</p>
+        <span>{$v.title}</span>
+        {/Dz:nlist}
+</div>
+<div class="index-main-body">
+    <ul>
+     {Dz:nlist name="vo" limit="3"}
+        <li><img src="{$vo.smallimage}"><p>{$vo.shorttitle}</p><span>{$vo.title}</span><a href="{$vo.url}">MORE</a></li>
+        {/Dz:nlist}
+    </ul>
+</div>
+
+<div class="news-info">
+{Dz:nlist where="id=3" limit="1"}
+    <h2>{$v.shorttitle}</h2>
+{/Dz:nlist}
+    <div style="margin:0 auto;">
+        <ul>
+        {Dz:nlist where="id=1"}
+            <li class="news-left"><img src="/public/Uploads/{$v.smallimage}"><div><p>{$v.title}</p><span>{$v.shorttitle}</span><a href="article_list.html">MORE</a></div></li>
+            {/Dz:nlist}
+
+           {Dz:nlist where="id>2" limit="3"}
+            <li>
+          <div style="height: 100px; width: 600px;">
+      <div style="height: 100px; width: 160px; float: left;"><img src="/public/Uploads/{$v.smallimage}" style="height: 160px;"></div>
+
+
+      <div style="height: 400px; width: 300px; float: left; ">
+<div style=" height: 30px; width: 300px; float: left; margin-left:5px; "><p>{$v.title}</p></div>
+<div style=" height: 300px; width: 300px; margin-left:5px; clear: both; " >
+<div style=" height: 400px; width: 200px; float: left;">{$v.shorttitle}</div>
+<div style=" height: 400px; width: 100px; float: left; padding-top:40px;"><a href="article_list.html">MORE</a></div>
+
+</div>
+
+      </div>
+
+          </div>
+
+
+            </li>
+            {/Dz:nlist}
+        </ul>
+    </div>
+</div>
+</main>
+{include file="./templates/liudong/footer.html"}

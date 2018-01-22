@@ -1,0 +1,209 @@
+{include file="templates/sheying/Public/header.html"}
+
+<div id="met_global_nav_content">
+    <div class="lg-container" >
+
+        <div class="met_menu_section" data-section="metmm0">
+            <div class="row">
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+
+<div class="met-banner" style="margin-bottom: 1.5%;">
+    <div class="carousel slide" id="met-banner-slide" data-ride="carousel">
+
+        <ol class="carousel-indicators carousel-indicators-fall">
+
+            <li class="active" data-slide-to="0" data-target="#met-banner-slide">
+            </li>
+
+            <li class="" data-slide-to="1" data-target="#met-banner-slide">
+            </li>
+
+        </ol>
+
+        <div class="carousel-inner carousel-height" role="listbox">
+
+            <div class="item active">
+
+                <a href="http://10.10.10.187/M1601005" title="" target='_self'>
+
+                    <picture>
+                        <source srcset="/templates/sheying/img/tupian1.png" media="(min-width: 768px)" />
+                        <img
+                                class="cover-image overlay-scale"
+                                srcset="include/thumb.php?dir=upload/201704/1491961662.png&x=600"
+                                alt=""
+                        />
+                    </picture>
+                    <div class="carousel-caption p-2">
+                        <h3 class="animation-slide-top animation-delay-300" style="color:"></h3>
+                        <p class="animation-slide-bottom animation-delay-600" style="color:"></p>
+                    </div>
+
+                </a>
+
+            </div>
+
+            <div class="item ">
+
+                <picture>
+                    <source srcset="/templates/sheying/img/tupian2.png" media="(min-width: 768px)" />
+                    <img
+                            class="cover-image overlay-scale"
+                            srcset="include/thumb.php?dir=upload/201704/1491961989.png&x=600"
+                            alt=""
+                    />
+                </picture>
+                <div class="carousel-caption p-">
+                    <h3 class="animation-slide-top animation-delay-300" style="color:"></h3>
+                    <p class="animation-slide-bottom animation-delay-600" style="color:"></p>
+                </div>
+
+            </div>
+
+        </div>
+
+        <a class="left carousel-control" href="#met-banner-slide" role="button" data-slide="prev">
+            <span class="icon wb-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#met-banner-slide" role="button"
+           data-slide="next">
+            <span class="icon wb-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+
+    </div>
+</div>
+
+
+<div id="met_card_list" class="lg-container met-index-product">
+
+    <div class="row">
+
+        {Dz:nlist order="id asc" limit="5"}
+        <div class="col-sm-6">
+            <div class="met_multi_img animate-item">
+                <div class="met_img">
+                    <a href="{$v.url}" title="KIDS&LOOK" target='_self'>
+                        <img src="public/Uploads/{$v.smallimage}" alt="" width="840" height="550" />
+                    </a>
+                </div>
+
+                <div class="met_img_subinfo">
+                    <a href="{$v.url}" title="KIDS&LOOK" target='_self'>
+                        <div class="met_img_wrap">
+                            <h3>{$v.title}</h3>
+                            <p>{$v.shorttitle}</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        {/Dz:nlist}
+
+    </div>
+
+
+</div>
+
+</div>
+
+<div class="row">
+
+
+</div>
+
+</div>
+
+<div class="lt-img-rt-tx index-video">
+    <div class="lg-container">
+        <div class="index-video-box video_box" data-original="/templates/sheying/img/tupian8.png">
+
+            <div class="title">
+                <!--<h2>视频</h2>-->
+                <h3></h3>
+                <a href="javascript:void(0)" class="close"></a>
+            </div>
+
+            <a href="#" id="video-click" class="js_video_player" data-toggle="modal" data-target="#mymodal-data"></a>
+        </div>
+    </div>
+</div>
+
+<div id="videoId" style="display:none;"><p style="text-align:center"><video class="metvideobox" data-metvideo="1194|598||false|http://show.metinfo.cn/muban/M1601005/364/upload/video/201704/1491359691189985.mp4" style="width:1194px; height:598px; background:#000 url() no-repeat 50% 50%; background-size:contain;" /></video></p></div>
+
+<div class="modal modal-tanchuang" id="mymodal-data" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg videoId-width">
+        <div class="modal-content">
+            <div class="modal-body video-modal-body">
+                <div class="modal-body-close" data-dismiss="modal"></div>
+                <div id="modal-body-id">
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+<div class="met_common_box gray_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-4">
+                <h2>
+                    <a href="product/" title="主题拍摄" target='_self'> 主题拍摄 </a>
+                </h2>
+                <ul>
+                    {Dz:nlist order="id desc" limit="5"}
+                    <li class="clearfix">
+                        <a href="{$v.url}" title="{$v.title}" target='_self'> {$v.title} </a>
+                        <span class="date">  </span>
+                    </li>
+
+                    {/Dz:nlist}
+
+                </ul>
+            </div>
+            <div class="col-sm-8 met-index-product">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <h2>
+                            <a href="" title="店铺信息" target='_self'> 店铺信息 </a>
+                        </h2>
+                    </div>
+
+                    {Dz:nlist order="id desc" limit="2" name="vo" page="true"}
+                    <div class="col-sm-6">
+                        <div class="tit-margin">
+                            <a href="{$vo.url}" title="岳麓店" target='_self'>
+                                <img class="img-responsive" srcset="public/Uploads/{$vo.smallimage}" data-original="include/thumb.php?dir=upload/201704/1491016898136755.jpg&x=696&y=392" alt="岳麓店" width="" height="" />
+                            </a>
+                            <h3> <a href="{$vo.url}" title="岳麓店" target='_self'>{$vo.title}</a> </h3>
+                            <p>
+                                STUDIO <br>{$vo.inputtime|date='Y-m-d',###}
+                            </p>
+                        </div>
+                    </div>
+                    {/Dz:nlist}
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</div>
+
+{include file="templates/sheying/Public/footer.html"}

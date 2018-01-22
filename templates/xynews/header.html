@@ -1,0 +1,57 @@
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>首页</title>
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" type="text/css" href="/templates/xynews/css/reset.css"/>
+	<link rel="stylesheet" type="text/css" href="/templates/xynews/css/common.css"/>
+	<link rel="stylesheet" type="text/css" href="/templates/xynews/css/page.css"/>
+</head>
+<body>
+	<!--右侧固定客服-->
+	<div class="right-fixed-bar">
+		<ul class="contact">
+			<li class="aside-tel">
+				<div>
+					<img src="/templates/xynews/img/aside-qq.png" alt="联系客服" />
+				</div>
+				<p class="ser-num">0539-666666</p>
+			</li>
+			<li class="aside-chat">
+				<div class="aside-pic-chat"></div>
+				<div class="aside-rwm-box">
+					<img src="/templates/xynews/img/rwm.png" alt="二维码" />
+				</div>
+			</li>
+		</ul>
+	</div>
+	<!--页眉   开始-->
+	<div class="header">
+		<div class="hd-container">
+ 			<div class="hd-nav wrapper">
+ 				<ul class="main-nav clearfix" style="margin-left: 35%">
+ 				<li class="main-nav-item li-1">
+ 						<a href="/">首页</a>
+ 				</li>
+ 				{Dz:navlist name="vo"}
+ 					<li class="main-nav-item li-4">
+ 						<a href="{$vo.url}">{$vo.title}</a>
+ 						
+ 						<div class="sub-nav">
+ 						{Dz:navlist name="to" top="$vo[id]"}
+ 							<span><a href="{$to.url}">{$to.title}</a></span>	
+						{/Dz:navlist}
+ 						</div>
+ 					
+ 					</li>
+ 				{/Dz:navlist}
+ 				</ul>
+ 			</div>
+ 		</div>
+ 		<div class="head-logo" style="margin-top: 66px; ">
+ 			<img src="/templates/xynews/img/logo.png" alt="大智" />
+ 		</div>
+	</div>
+	<!--页眉   结束-->
+	

@@ -1,0 +1,186 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+{include file="./templates/kepu/head.html"}
+<!-- 
+<script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1000167842'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000167842' type='text/javascript'%3E%3C/script%3E"));
+</script>
+-->
+<script>
+$("#cnzz_stat_icon_1000167842").hide();
+$("#cnzz_stat_icon_1000167842 a").text("click");
+$("#cnzz_stat_icon_1000167842 a").attr("title","click");
+$(function(){
+    $(".menux li").mouseover(function(){
+          $(this).children(".submenux").addClass("shh");
+          $(this).children(".navmenux").addClass("shx");
+        });
+    $(".menux li").mouseout(function(){
+          $(this).children(".submenux").removeClass("shh");
+          $(this).children(".navmenux").removeClass("shx");
+        });
+    //产品技术导航
+    $(".hassub").click(function(){
+        var subs =  $(this).next();
+        var hide = subs.is(":hidden");
+        
+        $(".sub:not(.zhankai)").hide();
+        //子产品线显示
+        //菜单导航div 正常高度
+        var mpx = 280;
+        if(hide){//现在为隐藏
+            var len = subs.find('dl').eq(0).children().size();
+            var px = len *20;
+            subs.show().height(px);
+            //计算外面div高度，随着子产品线展开收缩调整;
+            mpx = (len - 1) *20 + mpx;
+        }
+        $(".submenux2").height(mpx);
+    });
+
+    var zhankais = $(".zhankai");
+    for(var i = 0 ; i <zhankais.length; i ++ ){
+        var len = $(zhankais[i]).find('dd').size();
+        var px = len * 24;
+        $(zhankais[i]).height(px).parent().show().height(px);
+    }
+    //处于产品维保服务链接到其他独立页面
+        $("a[href='products.php?info/69']").attr('href','services.php');
+    
+    //百度推送代码 start
+  var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';       
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+    //百度推送代码 end
+
+    //优酷视频播放
+    var vid = $("#youkuplayer").attr('vid');
+    if(vid != undefined){
+        var player = new YKU.Player('youkuplayer',{
+            styleid: '0',
+            client_id: 'dd1fc4444cd920df',
+            vid: vid,
+            newPlayer: true,
+            show_related: false,
+            autoplay: false
+        });
+    }   
+    
+});
+</script>   <div class="bodyer" style="padding-top:2px">
+        <div class="insideCon">
+            <div class="title"><p><a href="welcome.php">首页</a> > 
+            <a href="products.php">产品技术</a></p></div>
+            <div class="productsTop">
+                <div class="productsTopL" style="width:938px">
+				<img src="../../../../templates/kepu/img/technology.jpg" width="938" height="195" /></div>
+            </div>
+            <div class="productsCon">
+                <div class="tips"><h2>产品技术</h2></div>
+                <div class="proList">
+                    <ul>
+
+                 {Dz:newslist page="true" cateid="2" name="vo"}
+                         <li>
+                        <div class="proSort">
+                            <div class="pbutton"><a href="#1" class="proA" style="display: none;"><img src="/upload/201706/服务.jpg" width="153" height="81" /></a><a href="#1" class="proB">
+							<img src="../../templates/kepu/img/2988f08e43dded234dd891dc4becbbea.png" width="153" height="81" /></a></div>
+                            <div class="tbutton"><a href="#1" class="proA" style="display: none;"><h2>服务类业务</h2></a><a href="#1" class="proB"><h2>服务类业务</h2></a></div>
+                             <div style="width:710px; float:right">
+                                <p><p>{$vo.title}</p></p>
+                            </div>
+                            <div class="button"><a href="#1" class="proA">更多产品</a><a href="#1" class="proB">更多产品</a></div>
+                        </div>
+						<div class="proDetial">
+                            <dl>
+                             <dd>
+          <div class="proImg">
+		  <img src="../../templates/kepu/img/2988f08e43dded234dd891dc4becbbea.png" width="157" height="105"/></div>
+                              <div class="proD">
+                              <h2><a href="products.php?info/15">上网行为管理及流控</a></h2>
+                       <a href="{$vo.url}" class="reedMore">阅读更多</a>
+                                {$vo.title}      
+				                </div>
+                                <div class="clear"></div>
+                                </dd>
+                                  <dd>
+              <div class="proImg">
+			  <img src="../../templates/kepu/img/2988f08e43dded234dd891dc4becbbea.png" width="157" height="105"/></div>
+                                    <div class="proD">
+                                        <h2><a href="products.php?info/16">应用交付平台</a></h2>
+                                 <a href="products.php?info/16" class="reedMore">阅读更多</a>{$vo.title}<br />                                  </div>
+                                    <div class="clear"></div>
+                                </dd>
+                                                                <dd>
+                                    <div class="proImg">
+									<img src="../../templates/kepu/img/2988f08e43dded234dd891dc4becbbea.png" width="157" height="105"/></div>
+                                    <div class="proD">
+                                     <h2><a href="products.php?info/50">高速缓存加速系统</a></h2>
+                                        <a href="{$vo.url}" class="reedMore">阅读更多</a>
+                                             </div>
+										{$vo.title}
+										<br />        
+                                    <div class="clear"></div>
+                                </dd>  <dd>
+                                    <div class="proImg">
+									<img src="../../templates/kepu/img/2988f08e43dded234dd891dc4becbbea.png" width="157" height="105"/></div>
+                                    <div class="proD">
+                                       <h2><a href="products.php?info/20">UMC统一管理中心</a></h2>
+                                        <a href="{$vo.url}" class="reedMore">阅读更多</a>
+                                       {$vo.title}<br />  </div>
+                       
+                            <div class="clear"></div>
+                                </dd>
+                            <div class="clear"></div>
+                        </div>
+                        </li>
+                     {/Dz:newslist}
+                
+                       </ul>
+                    <div class="clear"></div>
+                    <script type="text/javascript">
+                    $(".button a.proB").click(function(){
+                        $(this).hide().siblings(".proA").show()
+                        $(this).parent().parent().siblings(".proDetial").slideDown()
+                        $(this).parent().parent().parent().siblings().children(".proDetial").slideUp().siblings().children().children(".proB").show().siblings(".proA").hide()
+                    })
+                    $(".button a.proA").click(function(){
+                        $(this).hide().siblings(".proB").show()
+                        $(this).parent().parent().siblings(".proDetial").slideUp()                                            
+                    })
+                    $(".tbutton a.proB").click(function(){
+                        $(this).hide().siblings(".proA").show()
+                        $(this).parent().parent().siblings(".proDetial").slideDown()
+                        $(this).parent().parent().parent().siblings().children(".proDetial").slideUp().siblings().children().children(".proB").show().siblings(".proA").hide()
+                    })
+                    $(".tbutton a.proA").click(function(){
+                        $(this).hide().siblings(".proB").show()
+                        $(this).parent().parent().siblings(".proDetial").slideUp()                                            
+                    })
+                    $(".pbutton a.proB").click(function(){
+                        $(this).hide().siblings(".proA").show()
+                        $(this).parent().parent().siblings(".proDetial").slideDown()
+                        $(this).parent().parent().parent().siblings().children(".proDetial").slideUp().siblings().children().children(".proB").show().siblings(".proA").hide()
+                    })
+                    $(".pbutton a.proA").click(function(){
+                        $(this).hide().siblings(".proB").show()
+                        $(this).parent().parent().siblings(".proDetial").slideUp()                                            
+                    })
+                    </script>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+    <div class="footer insideFoot">
+    {include file="./templates/kepu/foot.html"}
+</div></body>
+</html>

@@ -1,0 +1,33 @@
+{include file="./templates/liudong/header.html"}
+<div>
+
+    <div class="article-protect-tab">
+    {Dz:nlist limit="3"}
+        <span>{$v.source}</span>
+        {/Dz:nlist}
+    </div>
+    
+    <section class="article-contents">
+    
+            <h4>{$info.shorttitle}</h4>
+
+        <main>
+            {$info.content}
+        </main>
+         
+    </section>
+    
+   
+    <footer class="header-article-list">
+        <a class="prev-btn" href="article_list_content.html">
+            <span>上一篇</span>
+        </a>
+        <a class="next-btn" href="article_list_content.html">
+            <span>下一篇</span>
+        </a>
+    </footer>
+    <div class="feature">
+        <img class="sm" src="/public/__STATIC__/huanbao/images/main5.jpg">
+    </div>
+</div>
+{include file="./templates/liudong/footer.html"}

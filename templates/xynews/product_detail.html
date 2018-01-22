@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+	{include file="./templates/xynews/header.html"}
+		<div class="com-banner-box">
+			<img src="/templates/xynews/img/pro-banner.jpg" alt="产品banner" />
+		</div>
+		<div class="main">
+			<div class="ab-wrap" style="background: url(/templates/xynews/img/com-fix-bg.png) no-repeat bottom;">
+			<div class="wrapper">
+				<!--产品详情-面包屑导航-->
+				<ul class="breadcrumb-box clearfix">
+					<li class="bc-title-box float-l">
+						<span>产品中心</span>
+						<span>/</span>
+						<i>product</i>
+					</li>
+					<li class="bc-tip float-r">
+						<a href="index.html" class="bc">首页</a>
+						<a href="news.html" class="bc">产品中心</a>
+						<span class="bc bc-current">全球首创竹缠绕复合管道将亮相山东城博会</span>
+					</li>
+				</ul>
+				<!--产品详情-面包屑导航----结束------>
+				<div class="com-content-box clearfix">
+					<div class="com-aside-nav aside-height-1 float-l">
+						<a href="">管道</a>
+						<a href="">管廊</a>
+						<a href="">管件</a>
+					</div>
+					<div class="com-content float-r">
+						<h3>{$info.title}</h3>
+						 <!--字体  大小-js-->
+						<script type="text/javascript">
+			              function doZoom(size) {
+			                  var www_zzjs_net = document.all ? document.all['www_zzjs_net'] : document.getElementById('www_zzjs_net');
+			                  www_zzjs_net.style.fontSize = size + 'px';
+			              }
+			            </script>
+			            <!--字体  大小-结束-->
+			            <div class="New_title2">
+			            	[字体大小:
+			            	<a href="javascript:doZoom(12)">小</a>
+			            	<a href="javascript:doZoom(16)">中</a> 
+			            	<a href="javascript:doZoom(24)">大</a>
+			            	]
+			            	<span>{$info.inputtime|date="Y-m-d",###}</span>
+			            	<span>阅读次数：{$info.looknum}</span>
+			            </div>
+			            <div id="www_zzjs_net">
+			            	<br />
+							{$info.content}
+							<div class="content-line"></div>
+							<a href="javascript:;" class="prev-page">上一篇：XXX</a>
+							<a href="javascript:;" class="next-page">下一篇：XXXXX</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		</div>
+		<!--页脚-->
+{include file="./templates/xynews/footer.html"}
+		<!--页脚结束-->
+		
+	</body>
+</html>
+<script type="text/javascript" src="/templates/xynews/js/jquery-1.11.0.js"></script>
+<script type="text/javascript">
+	//导航当前效果
+	$(".main-nav .main-nav-item").click(
+		function(){
+			$(this).addClass("nav-active").siblings().removeClass("nav-active");
+		}
+	);
+	//导航二级菜单显示效果
+	$(".main-nav .main-nav-item").hover(
+		function(){
+			$(this).children(".sub-nav").stop().fadeIn();
+			$(this).siblings().children(".sub-nav").stop().hide();
+		},function(){
+			$(this).children(".sub-nav").stop().fadeOut();
+	});
+	//返回顶部
+		$(".back-top").click(function () {
+	        var speed=200;//滑动的速度
+	        $('body,html').animate({ scrollTop: 0 }, speed);
+	        return false;
+	 	});
+</script>

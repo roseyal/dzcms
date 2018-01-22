@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+<meta charset="UTF-8" />
+<title>大智有限公司</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="/templates/xuyang/css/reset.css" rel="stylesheet" />
+<link href="/templates/xuyang/css/main.css" rel="stylesheet"/>
+<script src="http://libs.baidu.com/jquery/1.9.0/jquery.js"></script> 
+<script src="/templates/xuyang/js/jquery.SuperSlide.2.1.1.js"></script>
+</head>
+<body>
+<div class="header">
+	<div class="wrap">
+		<a href="#" class="logo"><img src="/templates/xuyang/images/75.jpg"/></a>
+				<div class="nav">
+					<ul>
+						{Dz:navlist field="id,name,url" order="id asc" name='vo' limit="6"}
+						<li ><a href="{$vo.url}"><i>&nbsp;</i>{$vo.title}</a></li>
+						{/Dz:navlist}
+					</ul>
+				</div>
+	</div>
+</div>
+<div class="about_con">
+	<div class="wrap">
+		<div class="left">
+			<div class="tit">新闻列表</div>
+		</div>
+
+		<div class="right">
+			{Dz:nlist field="id,smallimage,title,looknum,author,cateid,url,abstract" limit="5" order="id asc" name='vo'}
+			<div class="jj_list">
+				<div class="l_time">2015/06/08</div>
+				<div class="r_text">
+					<h2><a href="{$vo.url}" rel="">{$vo.title}</a></h2>
+					<ul class="article--meta">
+						<li>{$vo.author}</li>
+					</ul>
+				</div>
+				<div class="manager">
+					<a href="#" class="link">Read More</a>
+				</div>
+			</div>
+			{/Dz:nlist}
+			<!--<div class="jj_list">-->
+				<!--<div class="l_time">2015/06/08</div>-->
+				<!--<div class="r_text">-->
+					<!--<h2><a href="jj_detail.html">三个农夫1号基金</a></h2>-->
+					<!--三个农夫－富华新三板投资基金的介绍三个农夫－富华新三板投资基金的介绍-->
+				<!--</div>-->
+			<!--</div>-->
+			<!--<div class="jj_list">-->
+				<!--<div class="l_time">2015/06/08</div>-->
+				<!--<div class="r_text">-->
+					<!--<h2><a href="jj_detail.html">三个农夫2号基金</a></h2>-->
+					<!--三个农夫－富华新三板投资基金的介绍三个农夫－富华新三板投资基金的介绍-->
+				<!--</div>-->
+			<!--</div>-->
+			<!--<div class="jj_list">-->
+				<!--<div class="l_time">2015/06/08</div>-->
+				<!--<div class="r_text">-->
+					<!--<h2><a href="jj_detail.html">三个农夫3号基金</a></h2>-->
+					<!--三个农夫－富华新三板投资基金的介绍三个农夫－富华新三板投资基金的介绍-->
+				<!--</div>-->
+			<!--</div>-->
+		</div>
+		<div class="clear"></div>
+	</div>
+</div>
+<div class="footer">
+	<div class="wrap">
+		<div class="f_pad">
+			<div class="fl">
+				北京市昌平区回龙观龙城花园别墅s90B　电话：010-80773319　E-mail:<a href="mailto:hr@threefarmar.cn">hr@threefarmar.cn</a><br/> 
+				copyright © 2002-2015 北京三个农夫投资管理有限公司 版权所有 联系电话：010-80773319
+			</div>
+			<div class="fr">来源:<a href="http://www.mycodes.net/" target="_blank">源码之家</a></div>
+		</div>
+	</div>
+</div>
+<!-- The Scripts -->
+<script type="text/javascript">
+jQuery(".focusBox").hover(function(){ jQuery(this).find(".prev,.next").stop(true,true).fadeTo("show",0.2) },function(){ jQuery(this).find(".prev,.next").fadeOut() });
+jQuery(".focusBox").slide({ mainCell:".pic",effect:"fold", autoPlay:true, delayTime:600, trigger:"click"});//banner图
+jQuery(".nav").slide({ type:"menu",  titCell:".m", targetCell:".sub", effect:"slideDown", delayTime:300, triggerTime:100,returnDefault:true  });//导航
+</script>
+</body>
+</html>

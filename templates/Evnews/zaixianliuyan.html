@@ -1,0 +1,122 @@
+﻿	{include file="templates\Evnews\head.html"}
+
+	<div class="pageContainer_w w100">
+		<div class="pageContainer mar1200 clearfix">
+			<div class="left fl">
+				<div class="position">当前位置：<span>
+									<a href="http://www.ev361.com/">首页</a> - <a href="/gengduo.html">更多</a> - <a href="/zaixianliuyan.html">在线留言</a>								</span></div>
+				{Dz:banlist   sql="SELECT * FROM dz_banner WHERE id = 61" }
+				<div class="banner"><img src="../../public/Uploads/{$v.photo}" width="770" height="190" width="770" height="190" alt=""/></div>
+				{/Dz:banlist}
+				<div class="menu">
+					<ul class="clearfix">
+												
+												<li ><a href="{:url('./home/Index/zaixianliuyan')}" title="在线留言">在线留言</a></li>
+												
+												</ul>
+												
+																						
+				</div>
+				<div class="page_content page_message">
+					<div class="pageDetail_content" style="padding-top:24px;">
+						<form action="index.php?a=message" method="post" id="myform">
+							<div class="mes_form">
+								<div class="message clearfix">
+									<p><span>*您的姓名：</span><input type="text" name="name"/></p>
+									<p><span>*您的电话：</span><input type="text" name="tel"/></p>
+									<p><span>*发送邮箱：</span><input type="text" name="email"/></p>
+									<p><span>*来自哪里：</span><input type="text" name="address"/></p>
+									<p><span>Q Q：</span><input type="text" name="qq"/></p>
+									<p><span>*留言内容：</span><textarea name="message"></textarea></p>
+									<p><span>*验 证 码：</span><input type="text" name="verifyCode"/>
+										<img src="picture/verify.html" onclick="javascript:resetVerifyCode();" class="checkcode" align="absmiddle"  title="点击更换验证码" id="verifyImage"/>
+									</p>
+								</div>
+								<p class="sub_btns"><input type="submit" value="我要留言"/> <input type="reset" value="清除重来"/></p>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<div class="right fr">
+				
+		{Dz:adlist   sql="SELECT * FROM dz_ad WHERE id = 46" }		
+	<div class="page_banner_s"><a href=""><img src="../../public/Uploads/{$v.photo}"/></a></div>
+	{/Dz:adlist}
+	<div class="pagePanel_1_container">
+		<div class="pagePanel_1_title">深度观察</div>
+		<div class="pagePanel_1_list">
+			<ul>
+			{Dz:nlist sql="select * from dz_news where cateid='25' limit 6 "}
+				<li>
+					<a href="{$v.url}">{$v.title}</a>
+				</li>		
+					{/Dz:nlist}
+					</ul>
+		</div>
+	</div>
+	
+	{Dz:adlist   sql="SELECT * FROM dz_ad WHERE id = 47" }
+	<div class="page_banner_s2"><a href=""><img src="/../../public/Uploads/{$v.photo}"/></a></div>
+		{/Dz:adlist}
+
+
+			</div>
+		</div>
+	</div>
+		{include file="templates\Evnews\foot.html"}
+	<script src="/public/home/js/validate.js" type="text/javascript"></script>
+<script type="text/javascript" src="/public/home/js/my.js"></script>
+<script>
+	$().ready(function() {
+	  $("#myform").validate({
+			rules: {
+			  name: {
+				required: true
+			  },
+			  tel: {
+				required: true,
+				minlength: 8,
+				number: true
+			  },
+			  email: {
+				required: true,
+				email: true
+			  },
+			  address: {
+				required: true
+			  },
+			  qq: {
+				number: true
+			  },
+			  message: {
+				required: true
+			  }
+			},
+			messages: {
+			  name: {
+				required: "请输入您的姓名"
+			  },
+			  tel: {
+				required: "请输入您的联系电话",
+				minlength: "请输入正确的联系电话",
+				number: "联系电话的格式为纯数字"
+			  },
+			  address: {
+				required: "请输入您的联系地址"
+			  },
+			  qq: {
+				number: "QQ号码的格式为纯数字"
+			  },
+			  email:{
+				required: "请输入您的邮箱",
+				email: "邮箱格式不正确"
+			  },
+			  message: {
+				required: "请填写您的留言内容"
+			  }
+			}
+		});
+	});
+</script>
+	

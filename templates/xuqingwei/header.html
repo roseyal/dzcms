@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,user-scalable=no, initial-scale=1">
+	<title>DZCMS天能物业管理模块</title>
+	<link rel="stylesheet" type="text/css" href="/templates/xuqingwei/css/index.css">
+	<link rel="stylesheet" href="/templates/xuqingwei/css/zym.css" type="text/css">
+	
+	<script type="text/javascript" src="/templates/xuqingwei/js/jquery.js"></script>
+	<script type="text/javascript" src="/templates/xuqingwei/js/global.js"></script>
+	<script type="text/javascript" src="/templates/xuqingwei/js/hm.js"></script>
+	<script type="text/javascript" src="/templates/xuqingwei/js/script.js"></script>
+
+
+</head>
+<body>
+<!--头部-->
+<div class="top_bg" id="top_bg">
+	<div class="top_gang">
+		<div class="tou_zj">
+			<div class="hy">
+				<img src="/templates/xuqingwei/images/tou_tb_03.png">
+				<span>欢迎来到DZCMS天能物业管理模块</span>
+			</div>
+			<div class="soucang">
+				<a href="javascript:">设为首页&nbsp;</a>｜ 
+				<a href="javascript:">&nbsp;加入收藏</a>
+			</div>
+		</div>
+	</div>
+	<div class="top_main">
+		<div class="top_logo">
+			<a href='./'><img src="/templates/xuqingwei/images/logo.png"></a>
+		</div>
+		<!--导航-->
+		<div class="daohang">
+			<div class="header_nav">
+				<div class="main clearBoth">
+					<ul class="nav right">
+
+					{Dz:navlist field="id,name,url" order="id asc" name='vo'}
+						<li class="narrow_wrap">
+							<a class="nav_btn" href="{$vo.url}">
+								{$vo.title}
+								<b></b>
+							</a>
+						</li>
+					{/Dz:navlist}
+						
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,49 @@
+{include file="./templates/lvse/header.html"}
+
+
+<div class="am-slider am-slider-default" data-am-flexslider="{playAfterPaused: 8000 , controlNav: false, directionNav: false    }">
+    <a class="prevbtn" href="#" onClick="javascript :history.back(-1);"></a>
+    <div class="search-box">
+        <div><input type="text" name="" placeholder="      请输入您需要的环保类别"></div>
+        <div class="search-box-btn"></div>
+    </div>
+    <ul class="am-slides">
+        <li><img src="/templates/lvse/images/banner.jpg" alt=""></li>
+        <li><img src="/templates/lvse/images/banner.jpg" alt=""></li>
+        <li><img src="/templates/lvse/images/banner.jpg" alt=""></li>
+        <li><img src="/templates/lvse/images/banner.jpg" alt=""></li>
+    </ul>
+</div>
+
+<main>
+    <div class="index-main-title">
+        <p>关于我们</p>
+        <span>为各大重型工业工厂所制造的环境问题提供相关处理净化设备</span>
+    </div>
+    <div class="index-main-md">
+        <div class="left-area">
+
+        </div>
+        <div class="right-area">
+        {Dz:nlist limit='1' name='vo' cateid='1'}
+            <p>{$vo.title}</p>
+            <span>{$vo.abstract}</span>
+            <div><img src="/templates/lvse/images/slogan1.png" alt=""></div>
+        </div>
+        {/Dz:nlist}
+    </div>
+    <div class="index-main-title">
+        <p>团队成员</p>
+        <span>为各大重型工业工厂所制造的环境问题提供相关处理净化设备</span>
+    </div>
+    <!--  -->
+
+    <div class="about-main-footer">
+        <span></span>
+    </div>
+
+    <div class="feature">
+        <img class="sm" src="/templates/lvse/images/main5.jpg">
+    </div>
+</main>
+{include file="./templates/lvse/footer.html"}

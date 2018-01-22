@@ -1,0 +1,27 @@
+{include file="./templates/lf/header.html"}
+<div class="banner banner_s"><img src="/templates/lf/upload/banner_b.jpg" alt=""/></div>
+<div class="scd_bg">
+	<div class="scd clearfix">
+  	<div class="s_head clearfix">
+		<a class="pcate " href="" title="新闻动态">新闻动态</a>
+    <div class="pst">
+    	<a href="http://www.xuyunhongsm.com/" title="北京旭云鸿商贸有限公司">首页</a> - <a href="http://www.xuyunhongsm.com/index.php?id=news" title="资讯中心">资讯中心</a> - <a href="" title=""></a>    
+    </div>
+    </div>
+    <div class="scd_m clearfix">
+<div class="mainer">
+{DZ:nlist limit="9" name="vo" page="true" cateid="1"}
+
+							<div class="mainer_header_left">
+						<div class="mainer_img">
+							<a href="{$vo.url}"><img src="/public/Uploads/{$vo.smallimage}" /> </a>
+						</div>
+						<p class="mainer_header_left_p1"><a href="{$vo.url}" class="mainer_header_left_p1_a1">{$vo.title}</a><a href="#" class="mainer_header_left_p1_a2">{$vo.inputtime|date="Y-m-d",###}</a></p>
+						
+					</div>
+{/DZ:nlist}					
+			</div>
+	</div>
+  </div>
+</div>
+{include file="./templates/lf/footer.html"}

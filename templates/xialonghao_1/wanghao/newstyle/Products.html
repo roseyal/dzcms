@@ -1,0 +1,150 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>产品信息</title>
+<link href="/templates/wanghao/css/Products.css" rel="stylesheet" type="text/css" />
+<link href="/templates/wanghao/css/base.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<!--顶部-->
+<div class="top">
+    <b><img src="/templates/wanghao/images/logo.gif" /></b> 
+    <ul>
+          <li>
+              <a href="#">设为首页</a>
+              <div class="line2"></div>
+              <a href="#">收藏网站</a>
+              <div class="line2"></div>
+              <a href="#">联系我们</a>
+          </li>
+          
+           <div class="text2">
+            <input type="text" class="text" />
+            <input type="image" src="/templates/wanghao/images/Button.gif" class="imag"/>
+          </div>
+       </ul>    
+        
+         
+         
+</div>
+
+<!--导航-->
+<div class="nav">
+    <ul>
+      <{Dz:navlist name="vo"}
+
+        
+            <li>
+           <a href="{$vo.url}" class="English">{$vo.title}</a>
+           <a href="{$vo.url}">SIXSIXSI</a> 
+        </li>
+        {/Dz:navlist}
+    </ul>
+</div>
+
+<!--banner-->
+<div class="banner">
+    <img src="/templates/wanghao/images/banner.gif" />
+
+</div>
+
+<!--当前位置-->
+<div class="Position">
+   <b><img src="/templates/wanghao/images/icon4.gif" /></b>
+   <span>首页>></span>
+   <p>产品信息>></p>
+   <li>电子地磅</li>
+      
+</div>
+
+<!--容器-->
+<div class="Container">
+
+     <div class="Container_left">
+<!--产品信息左-->
+           <div class="Products_left">
+              <ul>
+                   <p>产品信息</p>
+                   <li>
+                      <b></b>
+                      <a href="#">玻璃电子秤</a>
+                   </li>
+                   <li>
+                       <b></b>
+                       <a href="">电子天平</a>
+                   </li>
+                   <li>
+                      <b></b>
+                      <a href="">钢瓶秤</a></li>
+                   <li>
+                     <b></b>
+                     <a href="">便携式手提秤</a></li>
+              </ul>      
+           </div>
+<!--联络我们左-->
+           <div class="Contact_left">
+               <div class="news_title">     
+                         <b><img src="/templates/wanghao/images/icon2.gif" /></b>   
+                         <span>联络我们</span>
+                         <a>CONTACT US</a>        
+                 </div> 
+                 <div class="Contact_text"> 
+                         <p><img src="/templates/wanghao/images/phone_03.gif" /></p>
+                         <li>地址：广州市天河路365号天俊阁1202 </li>
+                         <li>电话：0731-84821487  84824049</li>
+                         <li>传真：020 38812035</li>
+                         <li>手机：186xxxxxxxx</li>
+                         <li>邮箱：hncbjy@126.com </li>    
+                         <ul><input type="image" src="/templates/wanghao/images/Button2.gif" /><a>在线咨询</a></ul>
+                 </div>
+            </div>
+     </div>
+<!--产品信息右-->
+     <div class="Container_right">
+
+      <div class="Container_title">
+                       <b><img src="/templates/wanghao/images/icon.gif" /></b>
+                       <p>玻璃电子秤</p>
+                       <span>GLASS ELECTRONIC SCALE</span>
+               </div>
+
+               {Dz:newslist page="true" limit="1" cateid="3"}
+               <div class="Container_picture">
+                   
+                  <a href="Products_Details.html"><p>{$v.title}</p></a> 
+
+               </div>
+                {/Dz:newslist}
+               <div class="Page">
+
+               </div>
+     </div>
+
+</div>
+<!--底部--> 
+<div class="clear"></div>
+<div class="bottom">
+   <ul>
+       <li><a href="">首页</a></li>
+       <li class="line"></li>
+       <li><a href="">公司简介</a></li>
+       <li class="line"></li>
+       <li><a href="">产品信息</a></li>
+        <li class="line"></li>
+       <li><a href="">最新消息</a></li>
+       <li class="line"></li>
+       <li><a href="">常见问题</a></li>
+       <li class="line"></li>
+       <li><a href="">经销网络</a></li>
+       <li class="line"></li>
+       <li><a href="">联络我们</a></li>
+   </ul>
+        <p class="bottom_text">©2015 可可饮料有限公司  版权所有  地址：广州市天河路365号天俊阁1202  电话：020- 38812035<br />
+                        湘ICP备11005311号  更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
+
+</div>
+
+</body>
+</html>

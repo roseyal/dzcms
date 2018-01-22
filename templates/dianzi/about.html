@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+{include file="./templates/dianzi/head.html"}
+</head>
+<body>
+<!--头部-->
+<div class="header">
+    {include file="./templates/dianzi/header.html"}
+
+</div>
+<!--头部-->
+<!--幻灯片-->
+<div class="banner_s"><img src="../../templates/dianzi/Assets/upload/banner_a.jpg" alt=""/></div>
+<div class="pst_bg">
+	<div class="pst">
+    	您当前的位置：
+        <a href="">关于我们</a>>
+        <a href="">公司简介</a>
+    </div>
+</div>
+<div class="scd clearfix">
+	<div class="scd_l">
+    	<div class="s_name">
+        	<img src="../../templates/dianzi/Assets/images/t2.png" width="138" height="48" alt=""/>
+            <i>&nbsp;</i>
+        </div>
+        <ul class="s_nav">
+        	<li class="now"><a href="">公司简介</a></li>
+        </ul>
+    </div>
+    <div class="scd_r">
+    	<div class="r_name"><span>公司简介</span></div>
+        {Dz:nlist field="content,smallimage,cateid" order="id desc" hot="true"  name='vo' status=""true"" cateid="1" }
+        <div class="about">
+            <img src="../../public/Uploads/{$vo.smallimage}" width="850" height="449" alt=""/>
+            <p style="text-indent:2em;">{$vo.content}</p>
+        </div>
+        {/Dz:nlist}
+    </div>
+</div>
+{include file="./templates/dianzi/footer.html"}
+</body>
+</html>

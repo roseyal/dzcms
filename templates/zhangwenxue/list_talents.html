@@ -1,0 +1,68 @@
+{include file="templates/zhangwenxue/head.html"}
+<div class="wrapper">
+  <div class="container content">
+    
+        <div class="page_right">
+      <div class="sub_title">
+        <h2>集团招聘</h2>
+        <h4>GROUP RECRUITMENT</h4>
+      </div>
+      <div class="sub_nav">
+        <ul>
+		    <li  class="on"><a href="" title="社会招聘">社会招聘</a></li>
+		          </ul>
+      </div>
+    </div>        <div class="page_left">
+<div class="page_title"><a href="/">首页</a> > <a href="">集团招聘</a> > <a href="/home/Article/catecontent?cateid=8">社会招聘</a></div>
+
+  
+      <div class="page_content">
+      <div class="zhaopin">
+        <table width="100%" border="0" cellpadding="0" cellspacing="0">
+          <tbody>
+            <tr>
+              <th>职位名称</th>
+              <th>工作地点</th>
+              <th>招聘人数</th>
+              <th>发布时间</th>
+              <th>职位详细</th>
+            </tr>
+            {Dz:nlist order="id desc" cateid="8"}
+            <tr class="detailed">
+              <td>{$v.title}</td>
+              <td>{$v.keywords}</td>
+              <td>{$v.shorttitle}</td>
+              <td >{$v.inputtime|date="Y-m-d",###}</td>
+              <td>查看详细</td>
+            </tr>
+            <tr style="display: none;" class="detailBox">
+              <td colspan="6">
+                <br style="margin:0px;padding:0px;box-sizing:border-box;color:#333333;font-size:14px;white-space:normal;font-family:微软雅黑, &quot;" />
+               {$v.content}
+              </td>
+            </tr>
+          {/Dz:nlist} 
+   
+			                </tbody>
+        </table>
+		  <div class="pageing"></div>
+      </div>
+      <script type="text/javascript">
+    jQuery(document).ready(function() {
+        $(".detailed").click(function() {
+            $(".detailBox").hide().eq($(".detailed").index($(this))).fadeIn();
+			 $(this).siblings('.detailed').removeClass('yanse');
+        $(this).addClass('yanse'); 
+            return false;
+        });
+    });
+</script> 
+      </div>
+    </div>
+  </div>
+</div>
+<!--footer start-->
+{include file="templates/zhangwenxue/foot.html"}
+<!--footer end-->
+</body>
+</html>

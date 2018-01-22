@@ -1,0 +1,31 @@
+
+{include file="./templates/yujiaolong/public/header.html"}
+
+<div class="index-main clearfix">
+
+<div class="sidebar fl">
+    <a href="" class="ad center mt10"><img src="yujiaolong/images/khly.jpg" width="230" height="81"></a>
+    <a href="" class="ad center mt10"><img src="yujiaolong/images/lxwm.jpg" width="230" height="81"></a>
+    <a href="" class="ad center mt10"><img src="yujiaolong/images/online.jpg" width="230" height="81"></a>
+</div>
+
+<div class="right fr border">
+	<div class="newsnav yh"><a href="">首页</a> > 新闻</div>
+	<ul class="text-list">
+        {Dz:newslist limit="10"}
+        <li><span class="fr">{$v.inputtime|date="Y-m-d h:i:s",###}</span><a href="{$v.url}">{$v.title}</a></li>
+        {/Dz:newslist}
+
+
+    </ul>
+
+	<!--<div class="page2 clearfix"><a href="" class="on">1</a><a href="">2</a><a href="">3</a><a href="">>></a></div>-->
+    {$page}
+</div>
+
+    
+</div>
+
+{include file="./templates/yujiaolong/public/footer.html"}
+</body>
+</html>

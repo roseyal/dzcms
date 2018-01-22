@@ -1,0 +1,74 @@
+ {include file="./templates/xuqingwei/header.html"}
+<!--子页-->
+<div class="ziye_bj">
+	{Dz:banlist order="id desc" like="title like '%展示%'"  limit="1" name='vo'}
+	<div class="ziye_tu">
+		<img src="/public/uploads/{$vo.photo}">
+	</div>
+{/Dz:banlist}
+</div>
+<!--关于我们-->
+<div class="zy_gywm">
+	<div class="ejdh" style="height: 1050px;">
+		<div class="shang_g"></div>
+		<div class="women">
+			<div class="btmc">
+				<h1>P</h1>
+				<p>项目展示<span>resentation</span></p>
+			</div>
+			<ul class="skb">
+				<li style="background: #005bac; width: 25%;"></li>
+				<li style="background: #ff8400; width: 20%;"></li>
+				<li style="background: #d3d3d3; width: 55%;"></li>
+			</ul>
+		</div>
+		<div class="zy_dh_lb">
+			<ul>
+				<li id="women"><img src="/templates/xuqingwei/images/zy1_08.png"><a id="wenzidangq" href="#">经典案例</a></li>
+				
+			</ul>
+		</div>
+	</div>
+	<div class="touyin"></div>
+	<div class="zynr_db" style="height: 1000px;">
+		<div class="lujing">
+			<h2>经典案例</h2>
+			<p>您的位置：首页 > 经典案例</p>
+		</div>
+		<ul class="skb" style="margin-bottom: 20px;">
+			<li style="background: #005bac; width: 12%;"></li>
+			<li style="background: #ff8400; width: 15%;"></li>
+			<li style="background: #d3d3d3; width: 73%;"></li>
+		</ul>
+
+		<!--内容-->
+		<div class="gsjj_nr">
+			<ul class="anlizs_lb">
+
+				{Dz:newslist  name='vo' limit="9" page="true" cateid="5"}
+				<li>
+					<div class="anlz_tp_z">
+						<div class="anlz_tp"><img src="/public/uploads/{$vo.smallimage}"></div>
+						<div class="anlz_fg">
+							<a href="{$vo.url}" class="fg_xk">
+								<p>查看详情</p>
+								<img src="/templates/xuqingwei/images/womends_06.png">
+							</a>
+						</div>
+					</div>
+					<a class="anlibt" href="{$vo.url}">{$vo.keywords}</a>
+				</li>
+				{/Dz:newslist}
+
+			</ul>
+			<div class="webdiyerCss">
+	            {$page}
+	        </div>
+		</div>
+	</div>
+</div>
+
+
+<!--底部-->
+ {include file="./templates/xuqingwei/footer.html"}
+

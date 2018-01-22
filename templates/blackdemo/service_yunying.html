@@ -1,0 +1,33 @@
+{include file="./templates/blackdemo/public/head.html"}
+<!-- 查找最顶级栏目  -->
+<section id="single">
+	<!-- 查找子栏目  -->
+	<div class="cat_title">
+		<div class="wrapper">
+			<h2><strong>SERVICE</strong>服务</h2>
+			<p>我们能做什么？<br/>What can we do?</p>
+		</div>
+	</div>
+	<div class="category">
+		<div class="wrapper">
+			<h1>网站运营托管</h1>
+            
+            <ul class="catbtn">
+            
+ 			<li><a href="{:url('index/service_web')}">品牌网站建设</a></li>   
+			
+ 			<li><a href="{:url('index/service_seo')}">seo优化推广</a></li>   
+			
+ 			<li><a href="{:url('index/service_yunying')}" class='cur'>网站运营托管</a></li>   
+			
+			</ul>
+		</div>
+	</div>
+	<article class="serv_detailed">
+		<div id="detailed">
+		&nbsp;这里是网站托管运营服务，在后台栏目中修改，修改后更新生成！
+        </div>
+		<div id="case_footer"></div>
+	</article>
+</section>
+{include file="./templates/blackdemo/public/foot.html"}

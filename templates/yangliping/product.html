@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+{include file="./templates/yangliping/header.html"}
+{include file="./templates/yangliping/menu.html"}
+    
+     <div class="right">
+        <div class="right_title">
+            <span class="right_name">当前位置：<a href="">首页</a>>关于我们</span>
+        </div>
+        <div class="right_con">
+        	<ul class="con3_list product">
+            {Dz:newslist name="vo" cateid="1" page="true" limit="3"}
+            <li>
+            <div>
+                <a href="{$vo.url}" class="pro_img"><img src="/public/Uploads/{$vo.smallimage}" width="220" height="170" rel="/public/Uploads/{$vo.smallimage}" /></a>
+
+                <span class="zoom"></span>
+                <p><a href="">西伯利亚雪橇犬</a></p>
+            </div>
+        </li>
+        {/Dz:newslist}
+     </ul>
+
+           <div class="Page clearfix">
+               {$page}
+              </div> 
+                        
+        </div>
+    </div>
+</div>
+{include file="./templates/yangliping/footer.html"}
+
+</body>
+</html>

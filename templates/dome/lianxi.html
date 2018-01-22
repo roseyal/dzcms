@@ -1,0 +1,50 @@
+{include file="./templates/dome/header.html"}
+
+{include file="./templates/dome/nav.html"}
+
+
+  <div class="td_banner zoomIn wow" data-wow-duration="1.5s">
+  {Dz:banlist limit="1" name="vo"}
+  	<img src="/public/Uploads/{$vo.photo}"/>
+  {/Dz:banlist} 
+  </div>
+	<!----------------td_banner end ---------------------->
+    
+  <div class="our_point_big mt20 mb30">
+  	<div class="our_point">
+    	<h1 class="slideInDown wow" data-wow-duration="2s">our point</h1>
+       <div class="point_line mb20 slideInDown wow" data-wow-duration="2.2s"><h2>我们的观点</h2></div>
+       
+    </div>
+  </div><!-------------our_point_big end------------------------>
+    
+ 
+    <!------------td_course_big end--------------------------------->
+    
+    
+    <div class="td_aboutus mb50">
+    	<div class="td_aboutus_content">
+        	<div class="td_aboutus_left fadeInLeft wow" data-wow-delay="1.3s">
+            	{Dz:banlist where="id=8" name="vo"}
+					<img src="/public/Uploads/{$vo.photo}"/>
+				{/Dz:banlist}
+            </div>
+            <div class="td_aboutus_right  wow fadeInRight" data-wow-delay="1.6s">
+			{Dz:nlist limit="1" order="id desc" name="vo"}
+                <span>ABOUT US</span><br/>
+                <h4>{$vo.title}</h4><br/>
+            	<p>{$vo.content}</p>
+			{/Dz:nlist}
+			
+<div class="clear">
+</div>
+            </div><div class="clear"></div>
+        </div>
+    </div><!--------------td_aboutus end----------------------------->
+ 
+ 
+ 
+{include file="./templates/dome/footer.html"}
+    
+</body>
+</html>

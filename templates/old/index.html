@@ -1,0 +1,114 @@
+﻿{include file="./templates/old/header.html"}
+<div class="clear"></div>
+
+
+<div class="wt1002 fwmain">
+	<div class="fwmain_right r">
+    	<div class="right_List">
+        	<div class="label_head"><div class="label_title"><a href="">社会关爱</a></div></div>
+            <ul class="label_pad mTop10">
+                 {DZ:nlist order="id desc" hot="true" limit="5" name="vo"}
+   <li><span></span><a href="{$vo.url}">{$vo.title}</a></li> 
+{/Dz:nlist}
+
+            </ul>
+        </div>
+        <div class="right_List mTop10">
+        	<div class="label_head"><div class="label_title"><a href="">养老养身</a></div></div>
+            <ul class="label_pad mTop10">
+                <li><a href="newsview.html" class="s">关爱老人 关注夕阳</a></li>
+<li><a href="newsview.html" class="s">关爱老人 关注夕阳</a></li>
+<li><a href="newsview.html" class="s">关爱老人 关注夕阳</a></li>
+<li><a href="newsview.html" class="s">关爱老人 关注夕阳</a></li>
+<li><a href="newsview.html" class="s">关爱老人 关注夕阳</a></li>
+<li><a href="newsview.html" class="s">关爱老人 关注夕阳</a></li>
+            </ul>
+        </div>
+        <div class="right_List mTop10">
+        	<div class="label_head"><div class="label_title">联系我们</div></div>
+            <ul class="label_pad mTop10">
+            	<div>地 址：XX市XX路XX号10楼</div>
+<div>电 话：000-000000</div>
+<div>传 真：000-000000 </div>
+<div>邮 箱：123456@XX.com</div>
+            </ul>
+        </div>
+    </div><!--right-->
+	<div class="fwmain_left l">
+    	<div class="www51buycom l">
+            <ul class="51buypic">
+                <li><a href=""><img src="/templates/old/images/001.jpg" /></a></li>
+                <li><a href=""><img src="/templates/old/images/002.jpg" /></a></li>
+                <li><a href=""><img src="/templates/old/images/003.jpg" /></a></li>
+                <li><a href=""><img src="/templates/old/images/004.jpg" /></a></li>
+            </ul>
+            <div class="num"><ul></ul></div>
+        </div>
+        <script>
+        /*鼠标移过某个按钮 高亮显示*/
+        $(".prev,.next").hover(function(){
+            $(this).fadeTo("show",0.7);
+        },function(){
+            $(this).fadeTo("show",0.1);
+        })
+        $(".www51buycom").slide({ titCell:".num ul" , mainCell:".51buypic" , effect:"fold", autoPlay:true, delayTime:1500 , autoPage:true });
+        </script>
+        <div class="index_abouts r label">
+        	<div class="label_head">
+            	<div class="label_title">中心简介</div>
+            </div>
+            <div class="label_content">
+            	<p>中国农村乡镇普遍办了敬老院；城市街道也有兴办敬老院的。敬老院的收养对象主要是五保老人，有条件的敬老院还接收享受退休金待遇的自费老人。坚持入院自愿、出院自由的原则。许多地区还为优抚对象的孤老兴办光荣院，吸收符合条件的对象入院。敬老院贯彻集体事业集体办的原则...<a href="about.html">[ 更多 ]</a>。</p>
+            </div>
+        </div>
+        <div class="clear"></div>
+        <div class="index_pro mTop10 l label">
+        	<div class="label_head">	
+            	<div class="label_title"><a href="contentlist.html" class="more">更多</a>新闻动态</div>
+            </div>
+            <ul class="label_pad">
+  {DZ:nlist order="id desc" hot="true" limit="5" name="vo"}
+   <li><span></span><a href="{$vo.url}">{$vo.title}</a></li> 
+{/DZ:nlist}            
+              
+  
+
+            </ul>
+        </div>
+        <div class="index_pro mTop10 mLeft10 l label">
+        	<div class="label_head">	
+            	<div class="label_title"><a href="contentlist" class="more">更多</a>多彩生活</div>
+            </div>
+             <ul class="label_pad">
+                {DZ:nlist order="id asc" hot="true" limit="5" name="vo"}
+   <li><span></span><a href="{$vo.url}">{$vo.title}</a></li> 
+{/DZ:nlist}
+            </ul>
+        </div>
+        <div class="index_img mTop10 l label">
+        	<div class="label_head">
+            	<div class="label_title"><a href="prolist.html" class="more">更多</a>环境设施</div>
+            </div>
+            <div id="demox">===  
+                  <div id="demoxList">
+                    <div id="demo1x"> 
+            <a href="contentlist.html"><img src="/templates/old/images/001.jpg"/><br/>设施</a><a href=""><img src="/templates/old/images/002.jpg"/><br/>设施</a>
+            <a href="contentlist.html"><img src="/templates/old/images/003.jpg"/><br/>设施</a> <a href=""><img src="/templates/old/images/005.jpg"/><br/>设施</a>
+                       </div>	
+                       <div id="demo2x"></div>
+                       <script type="text/javascript" src="/templates/old/js/rolling.js"></script>
+                   </div>
+             </div>
+        </div>
+		<div class="clear"></div>
+    </div><!--left--> 
+    <div class="clear"></div>
+</div>
+<div class="clear"></div>
+<div class="foot">
+    <span>copyright2015-2018 某某养老院版权所有</span>
+    <a href="" target="_target" title="Sitemap">网站地图</a>
+    <a href="" target="_target" title="后台登录">后台登录</a>
+</div>
+</body>
+</html>

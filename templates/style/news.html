@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+{include file="./templates/style/header.html"}
+<body>
+  <div class="layout">
+    <!--===========layout-header================-->
+    <div class="layout-header am-hide-sm-only">
+      <!--topbar start-->
+      <div class="topbar">
+        <div class="container">
+          <div class="am-g">
+            <div class="am-u-md-3">
+              <div class="topbar-left">
+                <i class="am-icon-globe"></i>
+                <div class="am-dropdown" data-am-dropdown>
+                  <button class="am-btn am-btn-primary am-dropdown-toggle" data-am-dropdown-toggle>Language <span class="am-icon-caret-down"></span></button>
+                  <ul class="am-dropdown-content">
+                    <li><a href="#">English</a></li>
+                    <li class="am-divider"></li>
+                    <li><a href="#">Chinese</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="am-u-md-9">
+              <div class="topbar-right am-text-right am-fr">
+                Follow us
+                <i class="am-icon-facebook"></i>
+                <i class="am-icon-twitter"></i>
+                <i class="am-icon-google-plus"></i>
+                <i class="am-icon-pinterest"></i>
+                <i class="am-icon-instagram"></i>
+                <i class="am-icon-linkedin"></i>
+                <i class="am-icon-youtube-play"></i>
+                <i class="am-icon-rss"></i>
+                <a href="login.html">登录</a>
+                <a href="register.html">注册</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--topbar end-->
+
+      <div class="header-box" data-am-sticky>
+        <!--header start-->
+          <div class="container">
+            <div class="header">
+              <div class="am-g">
+                <div class="am-u-lg-2 am-u-sm-12">
+                  <div class="logo">
+                    <a href=""><img src="../../templates/style/images/logo.png" alt="" /></a>
+                  </div>
+                </div>
+                <div class="am-u-md-10">
+                  <div class="header-right am-fr">
+                    <div class="header-contact">
+                      <div class="header_contacts--item">
+  											<div class="contact_mini">
+  												<i style="color:#7c6aa6" class="contact-icon am-icon-phone"></i>
+  												<strong>0 (855) 233-5385</strong>
+  												<span>周一~周五, 8:00 - 20:00</span>
+  											</div>
+  										</div>
+                      <div class="header_contacts--item">
+  											<div class="contact_mini">
+  												<i style="color:#7c6aa6" class="contact-icon am-icon-envelope-o"></i>
+  												<strong>cn@yunshipei.com</strong>
+  												<span>随时欢迎您的来信！</span>
+  											</div>
+  										</div>
+                      <div class="header_contacts--item">
+  											<div class="contact_mini">
+  												<i style="color:#7c6aa6" class="contact-icon am-icon-map-marker"></i>
+  												<strong>天使大厦,</strong>
+  												<span>海淀区海淀大街27</span>
+  											</div>
+  										</div>
+                    </div>
+                    <a href="html/contact.html" class="contact-btn">
+                      <button type="button" class="am-btn am-btn-secondary am-radius">联系我们</button>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!--header end-->
+
+
+        <!--nav start-->
+          {include file="./templates/style/nav.html"}
+        <!--nav end-->
+      </div>
+
+    </div>
+    <!--mobile header start-->
+    <div class="m-header">
+      <div class="am-g am-show-sm-only">
+        <div class="am-u-sm-2">
+          <div class="menu-bars">
+            <a href="#doc-oc-demo1" data-am-offcanvas="{effect: 'push'}"><i class="am-menu-toggle-icon am-icon-bars"></i></a>
+            <!-- 侧边栏内容 -->
+            <nav data-am-widget="menu" class="am-menu  am-menu-offcanvas1" data-am-menu-offcanvas >
+              <a href="javascript: void(0)" class="am-menu-toggle"></a>
+
+              <div class="am-offcanvas" >
+                <div class="am-offcanvas-bar">
+                  <ul class="am-menu-nav am-avg-sm-1">
+
+                  </ul>
+
+                </div>
+              </div>
+            </nav>
+
+          </div>
+        </div>
+        <div class="am-u-sm-5 am-u-end">
+          <div class="m-logo">
+            <a href=""><img src="../../templates/style/images/logo.png" alt=""></a>
+          </div>
+        </div>
+      </div>
+      <!--mobile header end-->
+    </div>
+
+
+
+
+    <!--===========layout-container================-->
+    <div class="layout-container">
+      <div class="page-header">
+        <div class="am-container">
+          <h1 class="page-header-title">公司动态</h1>
+        </div>
+      </div>
+
+      <div class="breadcrumb-box">
+        <div class="am-container">
+          <ol class="am-breadcrumb">
+            <li><a href="../index.html">首页</a></li>
+            <li class="am-active">公司动态</li>
+          </ol>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <div class="section--header">
+          <h2 class="section--title">Latest News</h2>
+          <p class="section--description">
+            云适配与中建材信息技术股份有限公司（以下简称“中建信息”）联合举办的“战略
+            <br>合作签约仪式暨全国跨屏行动启动大会”在北京成功举办。
+          </p>
+        </div>
+
+        <div class="news-contaier">
+          <div class="blog">
+            <div class="am-g">
+
+
+              {Dz:nlist field="id,smallimage,title,looknum,author,cateid,url,abstract" limit="9" order="id desc" name='vo' cateid='7'}
+
+                          <div class="am-u-lg-4 am-u-md-6">
+
+                              <div class="article">
+
+                                <div class="article-img">
+                                   <img src="../../templates/style/images/news/{$vo.smallimage}" alt="" />
+                               </div>
+                                <div class="article-header">
+                                  <h2><a href="{$vo.url}" rel="">{$vo.title}</a></h2>
+                                  <ul class="article--meta">
+              						<li class="article--meta_item -date">{$vo.looknum}</li>
+              						<li class="article--meta_item comments">{$vo.author}</li>
+              					</ul>
+                                </div>
+                              <div class="article--content">
+              						<p>{$vo.abstract}</p>
+                                </div>
+                                <div class="article--footer">
+                						<a href="#" class="link">Read More</a>
+                                </div>
+
+                             </div>
+
+                            </div>
+              {/Dz:nlist}
+            </div>
+
+            </div>
+
+
+            <!--===========layout-footer================-->
+       {include file="./templates/style/footer.html"}
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>大智科技</title>
+    <link href="/templates/new/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/templates/new/css/master.css" rel="stylesheet">
+	<link href="/templates/new/css/index.css" rel="stylesheet">
+	<link href="/templates/new/css/model.css" rel="stylesheet">
+    <!--[if lt IE 9]>
+    <script src="/templates/new/js/html5shiv.js"></script>
+    <script src="/templates/new/js/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+<!-- ##########页首########## -->
+<!-- 顶部 -->
+<div class="container top">
+	<div class="row">
+		<div class="col-md-4">
+            
+        </div>
+		<div class="col-md-3">
+            
+        </div>
+		<div class="col-md-2">
+            <a href="#" class="mail ant">
+				<span class="glyphicon glyphicon-envelope"></span>发送邮件
+			</a>
+        </div>
+		<div class="col-md-3">
+			<a href="#" class="phone ant">
+				<span class="glyphicon glyphicon-phone"></span>联系电话：400 0000 2222
+			</a>
+        </div>
+	</div>
+</div>
+
+<!-- 公司logo -->
+<div class="container title-logo">
+	<div class="row">
+        <div class="col-md-4">
+			<a href="index.html">
+				<img class="img-responsive" src="/templates/new/images/header.jpg" alt="网站logo">
+			</a>
+        </div>
+		<div class="col-md-3">
+        </div>
+		<div class="col-md-2">
+        </div>
+		<div class="col-md-3">
+        </div>
+    </div>
+</div>
+
+<!-- 导航条 -->
+<nav class="navbar navbar-default" role="navigation">
+	<div class="container">
+
+			<ul class="nav navbar-nav" style="width:100%;">
+				
+					{Dz:navlist name="first" limit='8'}
+				<li class="dropdown nav-top"><a href="{$first.url}">{$first.title}</a></li>
+					{/Dz:navlist}
+			
+
+				
+
+
+			</ul>
+		
+	</div>
+</nav>
+
+<div class="line theme"></div>
+

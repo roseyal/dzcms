@@ -1,0 +1,77 @@
+{include file="./templates/chenlixiang/header.html"}
+    
+	
+    <div class="main"> 
+    	<h2>当前位置：首页>产品中心</h2>
+        	
+        <div class="left">
+        	<div class="title"><span></span>产品中心</div>
+            <ul>
+            	<li><a href="#">面膜系列</a></li>
+                <li class="curr"><a href="#">太极养美系列</a></li>
+                <li><a href="#">新七白系列</a></li>
+            </ul>
+            <div class="ad">
+            	<div class="s01"><span></span><p>客服中心</p><span></span></div>
+                <div class="s02"><b><i></i></b></div>
+                <div class="s03"><p>电话：010-57203888</p><p>地址：北京市崇文区崇外大街正仁大厦1段9单元</p></div>
+            </div>
+            <div class="tel">
+            	<div class="box01"><span>服务热线</span><i></i><p>400-888-2837</p></div>
+            </div>
+            <div class="yin"><img src="/templates/chenlixiang/style/images/yin01.png" /> </div>
+        </div>
+        
+        
+        <div class="right" id="center">
+        	<div class="title"><p class="curr"><a href="javascript:">新七美白系列</a></p><p><a href="javascript:">明星产品</a></p></div>
+            <div class="line"><b></b><i></i></div>
+            <div class="box02">
+            <div class="set01">
+                <ul>
+                {Dz:newslist order="id desc" limit="5"   name='vo' page="true" }
+                   <li>
+                   <a href="{$vo.url}">
+                   <img src="/templates/chenlixiang/style/images/013.png" style="border:solid 1px #d2e0ce" />
+                   <div class="txt">
+                            {$vo.title}
+                   </div>
+                   <span>详细</span>
+                   </a><p></p>
+
+                   </li>
+                {/Dz:newslist}
+                    
+            	</ul>
+                
+            </div>   
+        	</div>
+            <div class="num">
+            	<b><a href="javascript:">上一页</a></b>
+                <span class="curr"><a href="javascript:">1</a></span>
+                <span><a href="javascript:">2</a></span>
+                <span><a href="javascript:">3</a></span>
+                <span><a href="javascript:">4</a></span>
+                <b><a href="javascript:">下一页</a></b>
+            </div>
+        </div>
+    </div>
+    
+	
+<!--底部-->    
+    <div class="bottom">
+    	<div class="bb">
+                <ul>
+                	<li><a href="index.html">首页</a></li>
+                    <li><span></span><a href="news.html">公司新闻</a></li>
+                    <li><span></span><a href="product.html">产品中心</a></li>
+                    <li><span></span><a href="companyIdea.html">公司理念</a></li>
+                    <li><span></span><a href="contactUs.html">联系我们</a></li>
+                </ul>
+        </div>
+        <p>© 上海化妆品化妆品有限公司版权所有 沪ICP备11049051号</p>
+    </div>
+</body>
+<script src="/templates/chenlixiang/style/js/jquery.js"></script>
+<script src="/templates/chenlixiang/style/js/js.js"></script>
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="renderer" content="webkit|ie-comp|ie-stand">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui/css/H-ui.min.css" />
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui.admin/css/H-ui.admin.css" />
+<link rel="stylesheet" type="text/css" href="/public/lib/Hui-iconfont/1.0.8/iconfont.css" />
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui.admin/skin/default/skin.css" id="skin" />
+<link rel="stylesheet" type="text/css" href="/public/static/h-ui.admin/css/style.css" />
+<!--[if IE 6]>
+<script type="text/javascript" src="/public/lib/DD_belatedPNG_0.0.8a-min.js" ></script>
+<script>DD_belatedPNG.fix('*');</script>
+<![endif]-->
+
+<title>资讯列表</title>
+</head>
+<body>
+<nav class="breadcrumb"><i class="Hui-iconfont">&#xe67f;</i> 首页 <span class="c-gray en">&gt;</span> 导航管理 <span class="c-gray en">&gt;</span> 导航列表 <a class="btn btn-success radius r" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新" ><i class="Hui-iconfont">&#xe68f;</i></a></nav>
+		<div class="container ui-sortable">
+			<h1>导航列表</h1> 
+			<div class="panel panel-default">
+				<div class="panel-header clearfix">
+					<span class="l"><a href="javascript:;" id="del_law_all" class="btn btn-danger radius"><i class="icon-trash"></i> 批量删除</a>
+					<a href="{:url('Nav/addnav')}"  class="btn btn-primary radius"><i class="icon-plus"></i> 添加导航</a></span>
+					<span class="r"><a href="rnav.html" class="btn btn-danger radius"><i class="icon-trash"></i>进入回收站</a></span>
+				 </div>
+				<div class="panel-body">
+   <table class="table table-border table-bordered table-hover table-bg table-sort">
+					<thead>
+						<tr>
+					        
+					    </tr>
+						<tr class="text-c">
+							<th width="150"><input type="checkbox" id="checkbox-1"></th>
+							<th width="150">ID</th>
+							<th width="200">导航名字</th>
+							<th width="200">描述</th>
+						
+							<th width="180">上级导航</th>
+							<th width="150">是否在导航栏显示</th>
+							<th width="200">添加时间</th>
+							<th width="200">操作</th>
+						</tr>
+					</thead>
+					<tbody>
+					{foreach name="data" item="datas"}
+						<tr class="text-c">
+							<td><input type="checkbox" value="{$datas.id}" class="ids"></td>
+							<td>{$datas.id}</td>
+							<td>{$datas.name?:'无法显示'}</td>
+							<td>{$datas.description}</td>
+							
+							<td>{$datas.top}</td>
+							<td>{$datas.show?"显示":"不显示"}</td>
+							<td>{$datas.top}</td>
+							<td class="f-14 picture-manage">
+								<a title="编辑" href="javascript:;" onclick="article_edit('资讯编辑','upnav?id={$datas.id}','','')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+					 		 <a style="text-decoration:none" class="dabshan" data-id="{$datas.id}" href="javascript:;" title="删除">
+						<i class="Hui-iconfont">&#xe6e2;</i>
+					</a> 
+						
+			        		</td>
+						</tr>
+					{foreach name="$datas.second" item="list"}
+						<tr class="text-c">
+							<td><input type="checkbox" value="{$list.id}" class="ids"></td>
+							<td>{$list.id}</td>
+							<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;├─{$list.name?:'无法显示'}</td>
+							<td>{$list.description}</td>
+							
+							<td>{$list.top}</td>
+							<td>{$list.show?"显示":"不显示"}</td>
+							<td>{$list.top}</td>
+							<td class="f-14 picture-manage">
+								<a title="导航修改" href="javascript:;" onclick="article_edit('导航修改','upnav?id={$list.id}','','')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+						 <a style="text-decoration:none" class="dabshan" data-id="{$list.id}" href="javascript:;" title="删除">
+						<i class="Hui-iconfont">&#xe6e2;</i>
+					</a>
+			        		</td>
+						</tr>
+						{foreach name="$list.there" item="vo"}
+						<tr class="text-c">
+							<td><input type="checkbox" value="{$vo.id}" class="ids"></td>
+							<td>{$vo.id}</td>
+							<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└─{$vo.name?:'无法显示'}</td>
+							
+							<td>{$vo.description}</td>
+							
+							<td>{$vo.top}</td>
+							<td>{$vo.show?"显示":"不显示"}</td>
+							<td>{$vo.top}</td>
+							<td class="f-14 picture-manage">
+								<a title="导航修改" href="javascript:;" onclick="article_edit('导航修改','upnav?id={$vo.id}','','')" style="text-decoration:none"><i class="Hui-iconfont">&#xe6df;</i></a>
+					  <a style="text-decoration:none" class="dabshan" data-id="{$list.id}" href="javascript:;" title="删除">
+						<i class="Hui-iconfont">&#xe6e2;</i>
+					</a>
+			        		</td>
+						</tr>
+					{/foreach}
+					{/foreach}
+					{/foreach}
+					</tbody>
+				</table>
+				<table>
+</table>
+<div id="pageNav" class="pageNav"> 
+</div>
+{include file="public/foot"}
+</div>
+				</div>
+			</div>
+<!--_footer 作为公共模版分离出去-->
+<script type="text/javascript" src="/public/lib/jquery/1.9.1/jquery.min.js"></script> 
+<script type="text/javascript" src="/public/lib/layer/2.4/layer.js"></script>
+<script type="text/javascript" src="/public/static/h-ui/js/H-ui.min.js"></script> 
+<script type="text/javascript" src="/public/static/h-ui.admin/js/H-ui.admin.js"></script> <!--/_footer 作为公共模版分离出去-->
+
+<!--请在下方写此页面业务相关的脚本-->
+<script type="text/javascript" src="/public/lib/My97DatePicker/4.8/WdatePicker.js"></script> 
+<script type="text/javascript" src="/public/lib/datatables/1.10.0/jquery.dataTables.min.js"></script> 
+<script type="text/javascript" src="/public/lib/laypage/1.2/laypage.js"></script>
+<script type="text/javascript">
+/*资讯-编辑*/
+function article_edit(title,url,id,w,h){
+	var index = layer.open({
+		type: 2,
+		title: title,
+		content: url
+	});
+	layer.full(index);
+}
+/*导航-删除*/
+$('.dabshan').click(function(){
+    	var idds=$(this).attr('data-id');
+    	layer.confirm('确认要删除吗？',function(index){
+		$.ajax({
+            url:"{:url('Nav/do_delnav')}",
+            type:'POST',
+            data:{id:idds},
+            success:function(result){
+                    switch(result.status){
+                    case 1:
+                   layer.msg(result.msg, {
+                          icon: 1,
+                          time: 2000 
+                        }); 
+		setInterval(function () {location.href="{:url('Nav/listnav')}";
+                                },1000);
+                    break;
+                    case 2:
+                   layer.msg(result.msg, {
+                          icon: 2,
+                          time: 2000 
+                        });
+                    break;
+                    
+                }
+            },
+            error:function(){
+               layer.msg('未知错误', {icon: 2,time:2000});
+            }
+        });
+	});
+});	
+/*导航-批量删除*/
+$('#checkbox-1').click(function(){
+ 		if($(this).is(':checked',true)){
+ 			$('.ids').prop('checked',true);
+ 		}else{
+ 			$('.ids').prop('checked',false);
+ 		}
+ 	});
+ 	$('#del_law_all').click(function(){
+		var idds='';
+		$('.ids').each(function(){
+			if($(this).is(':checked')){
+				idds+=$(this).val()+',';
+			}
+		});
+		idds=idds.substr(0,idds.length-1);
+	   layer.confirm('确认要删除吗？',function(index){
+		$.ajax({
+            url:"{:url('Nav/do_delnav')}",
+            type:'POST',
+            data:{id:idds},
+            success:function(result){
+                    switch(result.status){
+                    case 1:
+                   layer.msg(result.msg, {
+                          icon: 1,
+                          time: 2000 
+                        }, function(){
+                        location.href="{:url('Nav/listnav')}";
+                    }); 
+                    break;
+                    case 2:
+                   layer.msg(result.msg, {
+                          icon: 2,
+                          time: 2000 
+                        });
+                    break;
+                    
+                }
+            },
+            error:function(){
+               layer.msg('未知错误', {icon: 2,time:2000});
+            }
+        });
+	});
+});	
+
+</script> 
+</body>
+</html>

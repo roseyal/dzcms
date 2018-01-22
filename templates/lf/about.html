@@ -1,0 +1,30 @@
+{include file="./templates/lf/header.html"}
+<!--幻灯片-->
+<div class="banner banner_s"><img src="/templates/lf/upload/banner_b.jpg" alt=""/></div>
+<!--幻灯片-->
+<!--主体盒子-->
+<div class="scd_bg">
+	<div class="scd clearfix">
+    	<div class="s_head clearfix">
+        	<a href="" class="on">关于我们</a>
+            <!-- <a href="">联系我们</a>
+            <a href="">在线留言</a> -->
+            <div class="pst">
+            	<a href="">首页</a> - <a href="">关于我们</a>
+            </div>
+        </div>
+        <div class="scd_m clearfix">
+        {Dz:nlist cateid="2" name="vo"}
+
+        	<dl class="about clearfix">
+            	<dt><img src="/public/Uploads/{$vo.smallimage}" alt=""/></dt>
+                <dd>
+                	<h1 style="font-size:16px; margin-bottom:20px;">{$vo.title}</h1>
+                	<p style="text-indent:2em; margin-bottom:15px;">{$vo.content}
+                </dd>
+            </dl>
+{/Dz:nlist}
+        </div>
+    </div>
+</div>
+{include file="./templates/lf/footer.html"}

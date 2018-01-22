@@ -1,0 +1,39 @@
+<header class="header">
+    <div class="header-container">
+        <div class="header-div pull-left">
+            <a class="header-logo">
+                <img src="/templates/new_temp/uploads/img.jpg" height="40" />
+            </a>
+            <button class="am-show-sm-only am-collapsed font f-btn" data-am-collapse="{target: '.header-nav'}">&#xe68b;</button>
+        </div>
+
+
+        <nav>
+            <ul class="header-nav am-collapse">
+                <li class="on"><a href="/">首页</a></li>
+                {Dz:navlist limit="5" name='vo'}
+                <li><a href="{$vo.url}">{$vo.title}</a></li>
+                {/Dz:navlist}
+                <!--<li><a href="about.html">关于我们</a></li>-->
+                <!--<li><a href="product_list.html">产品中心</a></li>-->
+                <!--<li><a href="new_list.html">新闻动态</a></li>-->
+                <!--<li><a href="case_list.html">产品应用</a></li>-->
+                <!--<li><a href="contact.html">联系我们</a></li>-->
+            </ul>
+            <div class="header-serch  am-hide-md-down">
+                <input type="text" name="name" value="" />
+                <em class="font">&#xe632;</em>
+            </div>
+        </nav>
+
+
+    </div>
+</header>
+<div  class="am-cf"></div>
+<div class="am-slider am-slider-default" data-am-flexslider="{playAfterPaused: 8000}">
+    <ul class="am-slides">
+        {Dz:banlist limit="3" name='vo'}
+        <li><img src="/templates/new_temp/uploads/{$vo.photo}" height="300" /></li>
+        {/Dz:banlist}
+    </ul>
+</div>

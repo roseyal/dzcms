@@ -1,0 +1,32 @@
+<body>
+	<!-------------nav begin--------------------->
+	<nav>
+    	<div class="top_big">
+            <div class="top_left">
+			{Dz:banlist where="id=12" name="vo"}
+			<a href=""><img src="/public/Uploads/{$vo.photo}"></a>
+			{/Dz:banlist}
+                
+            	<div class="logo_zi">
+				{Dz:banlist where="id=12" name="vo"}
+					<h2>{$vo.title}</h2> 
+                    <p>{$vo.shorttitle}</p>
+				{/Dz:banlist}
+                    
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="top_right">
+            	<ul>
+				{Dz:navlist order="id asc" name="yiji"}
+				<li><a href="{$yiji.url}">{$yiji.title}</a></li>
+				{/Dz:navlist}
+                	
+                	<div class="clear"></div>
+                </ul>
+            </div>
+            <div class="clear"></div>
+        <div>
+    </nav>
+    <!---------------------nav  end---------------------->
+    

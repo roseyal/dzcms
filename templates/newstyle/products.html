@@ -1,0 +1,42 @@
+{include file='./templates/newstyle/common/header.html'/}
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="1000" height="190" valign="middle"><img src="/templates/newstyle/images/pro_03.jpg" width="1000" height="150" /></td>
+  </tr>
+</table>
+<table width="1000" border="0" align="center" cellpadding="15" cellspacing="0" class="bk_e4e4e4">
+  <tr>
+
+  </tr>
+    </table></td>
+  </tr>
+</table>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="1000" height="20" valign="middle"></td>
+  </tr>
+</table>
+<table width="1000" border="0" align="center" cellpadding="15" cellspacing="0" class="bk_e4e4e4">
+  <tr>
+    {Dz:adlist order="id desc" limit="2" name='vo' page='false' }
+    <td width="1000" valign="middle" bgcolor="#FFFFFF"><table width="100%" border="0" cellspacing="0" cellpadding="15">
+      <tr>	
+        <td width="60%" align="left" class="bkdhx font_24">{$vo.title}</td>
+        <td width="40%" align="right" class="bkdhx font_14">咨询电话：<span class="fotn_c69000">021-00000000</span></td>
+      </tr>
+      <tr>
+        <td align="left" valign="top"><table width="100%" border="0" cellpadding="5" cellspacing="0" class="font_14">
+          <tr>
+            <td height="30" colspan="2" align="left" class="font_18 fotn_c69000"><strong>{$vo.synopsis}</strong></td>
+          </tr>
+          <tr>
+          {$vo.content}
+          </tr>
+        </table></td>
+        <td align="left"><img src="/../../public/Uploads/{$vo.photo}" width="435" height="178" /></td>
+      </tr>
+    </table></td>
+  </tr>
+ {/Dz:adlist}
+</table>
+{include file='./templates/newstyle/common/footer.html'/}

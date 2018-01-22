@@ -1,0 +1,76 @@
+{include file="./templates/lf/header.html"}
+<!--幻灯片-->
+<div class="banner" >
+	<div class="slider">
+        <div class="flexslider">
+          <ul class="slides">
+            <li><a href=""><img src="/templates/lf/upload/banner_a.jpg" alt="" /></a></li>
+            <li><a href=""><img src="/templates/lf/upload/banner_a.jpg" alt="" /></a></li>
+            <li><a href=""><img src="/templates/lf/upload/banner_a.jpg" alt="" /></a></li>
+          </ul>
+        </div>
+    </div>
+</div>
+<!--幻灯片-->
+<div class="space_hx">&nbsp;</div>
+<!--主体盒子-->
+<div class="i_maina clearfix">
+	<div class="box a">
+    	<div class="box_h">关于大智</div>
+        <div class="box_m">
+        	<div class="i_abt">
+            	<a href="{:url('Index/about')}">
+                	<img src="/templates/lf/upload/pic2.jpg" alt=""/>
+                    <div class="des"><p>大智科技有限公司</p></div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="box b">
+    	<div class="box_h">新闻动态</div>
+        <div class="box_m">
+        {DZ:nlist page="true" name="vo" cateid="5" limit="3"}
+        	<dl class="clearfix">
+            	<dt><a href="{$vo.url}"><img src="/public/Uploads/{$vo.smallimage}" alt=""/></a></dt>
+                <dd>
+                	<h5><a href="{$vo.url}">{$vo.title}</a></h5>
+                    <div class="time">{$vo.inputtime|date="Y-m-d",###}</div>
+                    <div class="des">{$vo.abstract}</div>
+                </dd>
+            </dl>
+{/DZ:nlist}
+        </div>
+    </div>
+    <div class="box c">
+    	<div class="box_h">公司视频</div>
+        <div class="box_m">
+        	<video controls pool="" width="328" height="203" poster="http://www.zhyichina.com/./data/uploads/files/2015-05-13/55540d8c8a515.jpg">
+            <source src="http://www.zhyichina.com/Vedio/CaraokSegwayOutdoor.mp4" type="video/mp4">
+            <source src="http://www.zhyichina.com/Vedio/CaraokSegwayOutdoor.mp4" type="video/webm">
+            <source src="http://www.zhyichina.com/Vedio/CaraokSegwayOutdoor.mp4" type="video/ogg">
+            您的浏览器版本太低请升级！！！
+            </video>
+        </div>
+    </div>
+</div>
+<div class="space_hx">&nbsp;</div>
+</div>
+<div class="space_hx">&nbsp;</div>
+<div class="i_mainc">
+        <div class="title"><a href="">产品展示</a></div>
+  <div class="i_pro">
+    <ul class="clearfix">
+    {DZ:nlist name="vo" cateid="3"}
+         <li >
+            <a href="{$vo.url}">
+            <img src="/public/Uploads/{$vo.smallimage}" alt=""/>
+              <p style="text-align:center;font-size:18px;">{$vo.title}</p>
+              </a>
+          </li>
+    {/DZ:nlist}
+    </ul>  
+  </div>
+<div class="space_hx">&nbsp;</div>
+</div>
+<div class="space_hx">&nbsp;</div>
+{include file="./templates/lf/footer.html"}

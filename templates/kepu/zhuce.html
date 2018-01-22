@@ -1,0 +1,172 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+{include file="./templates/kepu/head.html"}
+<!-- 
+<script type="text/javascript">
+	var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+	document.write(unescape("%3Cspan id='cnzz_stat_icon_1000167842'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s22.cnzz.com/z_stat.php%3Fid%3D1000167842' type='text/javascript'%3E%3C/script%3E"));
+</script>
+-->
+<script>
+$("#cnzz_stat_icon_1000167842").hide();
+$("#cnzz_stat_icon_1000167842 a").text("click");
+$("#cnzz_stat_icon_1000167842 a").attr("title","click");
+$(function(){
+	$(".menux li").mouseover(function(){
+		  $(this).children(".submenux").addClass("shh");
+		  $(this).children(".navmenux").addClass("shx");
+		});
+	$(".menux li").mouseout(function(){
+		  $(this).children(".submenux").removeClass("shh");
+		  $(this).children(".navmenux").removeClass("shx");
+		});
+	//产品技术导航
+	$(".hassub").click(function(){
+		var subs =  $(this).next();
+		var hide = subs.is(":hidden");
+		
+		$(".sub:not(.zhankai)").hide();
+		//子产品线显示
+		//菜单导航div 正常高度
+		var mpx = 280;
+		if(hide){//现在为隐藏
+    		var len = subs.find('dl').eq(0).children().size();
+    		var px = len *20;
+    		subs.show().height(px);
+			//计算外面div高度，随着子产品线展开收缩调整;
+    		mpx = (len - 1) *20 + mpx;
+		}
+		$(".submenux2").height(mpx);
+	});
+
+	var zhankais = $(".zhankai");
+	for(var i = 0 ; i <zhankais.length; i ++ ){
+		var len = $(zhankais[i]).find('dd').size();
+		var px = len * 24;
+		$(zhankais[i]).height(px).parent().show().height(px);
+	}
+	//处于产品维保服务链接到其他独立页面
+		$("a[href='products.php?info/69']").attr('href','services.php');
+	
+	//百度推送代码 start
+  var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';       
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+    //百度推送代码 end
+
+	//优酷视频播放
+	var vid = $("#youkuplayer").attr('vid');
+	if(vid != undefined){
+		var player = new YKU.Player('youkuplayer',{
+			styleid: '0',
+			client_id: 'dd1fc4444cd920df',
+			vid: vid,
+			newPlayer: true,
+			show_related: false,
+			autoplay: false
+		});
+	}	
+    
+});
+</script>	<div class="bodyer" style="padding-top: 2px">
+		<div class="insideCon">
+			<div class="title">
+				<p>
+					<a href="welcome.php">首页</a> > <a href="regist.php">注册</a>
+				</p>
+			</div>
+			<div class="registCon">
+				<h2>用户注册</h2>
+				<p>
+					如果您已经有账户，请点击<a href="/home/Index/login.html">登录</a>
+				</p>
+				
+				<form action="regist.php?post" method="post"  id="comment_form" name="comment_form">
+					<table border="0" cellpadding="0" cellspacing="0">
+						<tr>
+							<td>登录账号：</td>
+							<td><input type="text" name="username" id="username" /><font style="color:red">*</font>4-15位；英文或数字；</td>
+						</tr>
+						<tr>
+							<td>输入密码：</td>
+							<td><input type="password" name="password" id="password" /><font style="color:red">*</font>6-20位；英文或数字；区分大小写；</td>
+						</tr>
+						<tr>
+							<td>重输密码：</td>
+							<td><input type="password" name="password1" id="password1"/><font style="color:red">*</font>请再输入一遍上面填写的密码；</td>
+						</tr>
+						<tr>
+							<td>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</td>
+							<td><input type="text" name="name" id="name"/><font style="color:red">*</font></td>
+						</tr>
+						<tr>
+							<td>所在省份：</td>
+							<td>
+								<script language="javascript" src="js/PCASClass.js"></script>
+								<select name="province" id="province" style="border: 1px solid #e5e5e5;">
+								</select>&nbsp;&nbsp;&nbsp;<font style="color:red">*</font>
+								<select name="city" id="city" style="display: none;"></select>
+							</td>
+							<script type="text/javascript">
+							  new PCAS("province","city");
+							</script>
+						</tr>
+						<tr>
+							<td>公司名称：</td>
+							<td><input type="text" name="company" id="company" /><font style="color:red">*</font></td>
+						</tr>
+						<tr>
+							<td>联系电话：</td>
+							<td><input type="text" name="tel" id="tel"/><font style="color:red">*</font></td>
+						</tr>
+						<tr>
+							<td>电子邮箱：</td>
+							<td><input type="text" name="email" id="email"/><font style="color:red">*</font></td>
+						</tr>
+						<tr>
+							<td>用户类型：</td>
+							<td>
+									<input type="radio" class="radio" name="gender" id="gender" value="2" checked/><p>客户</p>
+									<input type="radio" class="radio" name="gender" id="gender" value="1"/><p>员工</p>
+							</td>
+						</tr>
+						<!-- <tr>
+							<td>标 识 码：</td>
+							<td><input type="text" name="major" id="major" />*客户请输入设备序列号；迪普科技员工请输入工号</td>
+						</tr> -->
+						<tr>
+							<td>验 证 码：</td>
+							<td><input type="text" name="captcha" id="captcha"
+								align="absmiddle" autocomplete="off" class="inputStyle2"
+								style="width:80px;" reg="^.+$" tip="请输入验证码" />&nbsp;&nbsp;<a
+								href="javascript:change_captcha();"><img id="captcha_pic"
+									src="https://www.dptech.com/index.php?captcha/index/427"
+									align="absmiddle" width="80" /></a>&nbsp;<a
+								href="javascript:change_captcha();"></a></td>
+						</tr>
+						<tr>
+							<td>&nbsp;</td>
+							<td>
+								<input type="button" onclick="return onSub()"  value="" class="submit"
+								style="background: url(img/input09.jpg) no-repeat"/>
+								<input type="reset" value="" class="submit" 
+							 	style="background: url(img/input10.jpg) no-repeat"/>
+							 </td>
+						</tr>
+					</table>
+				</form>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="footer insideFoot">
+	{include file="./templates/kepu/foot.html"}
+</div></body>
+</html>

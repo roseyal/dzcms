@@ -1,0 +1,36 @@
+{include file="./templates/blackdemo/public/head.html"}
+<!-- 查找最顶级栏目  -->
+<section id="single">
+	<!-- 查找子栏目  -->
+	<div class="cat_title">
+		<div class="wrapper">
+			<h2><strong>ABOUT</strong>关于我们</h2>
+			<p>我们是谁？<br/>Who are we?</p>
+		</div>
+	</div>
+	<div class="category">
+		<div class="wrapper">
+			<h1>关于</h1>
+            
+            <ul class="catbtn">
+            
+			</ul>
+		</div>
+	</div>
+	<article class="serv_detailed">
+		<div id="detailed">
+		<p class="t4">[专业+专注]</p>
+		{Dz:nlist name='vo'  cateid='2' }
+   <div class="t4Content">
+<ul>
+{$vo.content}
+</ul>
+</div>
+{/Dz:nlist}
+
+
+        </div>
+		<div id="case_footer"></div>
+	</article>
+</section>
+{include file="./templates/blackdemo/public/foot.html"}

@@ -1,0 +1,171 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>最新消息</title>
+<link type="text/css" rel="stylesheet" href="/templates/wanghao/css/base.css" />
+<link type="text/css" rel="stylesheet" href="/templates/wanghao/css/news.css" />
+</head>
+<body>
+<!--顶部-->
+<div class="top">
+    <b><img src="/templates/wanghao/images/logo.gif" /></b> 
+    <ul>
+          <li>
+              <a href="#">设为首页</a>
+              <div class="line2"></div>
+              <a href="#">收藏网站</a>
+              <div class="line2"></div>
+              <a href="#">联系我们</a>
+          </li>
+          
+           <div class="text2">
+            <input type="text" class="text" />
+            <input type="image" src="/templates/wanghao/images/Button.gif" class="imag"/>
+          </div>
+       </ul>    
+        
+         
+         
+</div>
+
+<!--导航-->
+<div class="nav">
+    <ul>
+        <li>
+           <a href="index.html" class="English"> 首页</a>
+           <a href="index.html">HOME</a>
+        </li>
+        {Dz:navlist name="vo"}
+            <li>
+           <a href="{$vo.url}" class="English">{$vo.title}</a>
+           <a href="{$vo.url}">SIXSIXSI</a> 
+        </li>
+        {/Dz:navlist}
+    </ul>
+</div>
+
+<!--banner-->
+<div class="banner">
+    <img src="/templates/wanghao/images/banner.gif" />
+
+</div>
+
+<!--当前位置-->
+<div class="Position">
+   <b><img src="/templates/wanghao/images/icon4.gif" /></b>
+   <span>首页>></span>
+   <p>最新消息</p>
+ 
+      
+</div>
+
+<!--容器-->
+<div class="Container">
+
+     <div class="Container_left">
+<!--产品信息左-->
+           <div class="Products_left">
+              <ul>
+                   <p>产品信息</p>
+                   <li><span>玻璃电子秤</span></li>
+                   <li><span>玻璃电子秤</span></li>
+                   <li><span>玻璃电子秤</span></li>
+              </ul> 
+              <a href="Products_Details.html">MORE>></a>     
+           </div>
+<!--联络我们左-->
+      <div class="Contact_left">
+               <div class="news_title">     
+                         <b><img src="/templates/wanghao/images/icon2.gif" /></b>   
+                         <span>联络我们</span>
+                         <a>CONTACT US</a>        
+                 </div> 
+                 <div class="Contact_text"> 
+                         <p><img src="/templates/wanghao/images/phone_03.gif" /></p>
+                         <li>地址：广州市天河路365号天俊阁1202 </li>
+                         <li>电话：0731-84821487  84824049</li>
+                         <li>传真：020 38812035</li>
+                         <li>手机：186xxxxxxxx</li>
+                         <li>邮箱：hncbjy@126.com </li>    
+                         <ul><input type="image" src="/templates/wanghao/images/Button2.gif" /><a>在线咨询</a></ul>
+                 </div>
+            </div>
+     </div>
+<!--最新消息-->
+     <div class="Container_right">
+               <div class="Container_title">
+                       <b><img src="/templates/wanghao/images/icon.gif" /></b>
+                       <p>最新消息</p>
+                       <span>THE LATEST NEWS</span>
+               </div>
+               <div class="news_text">
+                     <span>集团新闻：</span>
+                     {Dz:newslist page="true"  cateid="3"}
+                      <li>
+                             <a href="{$v.url}">
+                                 <img src="/templates/wanghao/images/Point1.gif" />{$v.abstract}
+                             </a>
+                             <p>[20-11-2014]</p>
+                      </li>  
+                     {/Dz:newslist}
+
+                   
+                     <li id="title">行业新闻：</li>
+                   {Dz:newslist page="true" limit="1" cateid="3"}
+                        <li>
+                             <a href="{$v.url}">
+                                 <img src="/templates/wanghao/images/Point1.gif" />浙江省“三名”企业培育工作组调研邦美电子商务有限公司
+                             </a>
+                             <p>[20-11-2014]</p>
+                     </li>
+                    {/Dz:newslist}
+
+                      
+                     
+               </div>
+               {$page}
+<!--                 <div class="Page">
+                     <p><a href="#">首页</a></p>
+                     <p><a href="#">上一页</a></p>
+                     <span><a href="#" class="number">1</a></span>
+                     <span><a href="#">2</a></span>
+                     <span><a href="#">3</a></span>
+                     <span><a href="#">4</a></span>
+                     <span><a href="#">5</a></span>
+                     <span><a href="#">6</a></span>
+                     <p><a href="#">下一页</a></p>   
+                     <p><a href="#">末页</a></p>
+               </div>  -->    
+        
+     </div>
+
+</div>
+<!--底部--> 
+<div class="clear"></div>
+<div class="bottom">
+   <ul>
+       <li><a href="">首页</a></li>
+       <li class="line"></li>
+       <li><a href="">公司简介</a></li>
+       <li class="line"></li>
+       <li><a href="">产品信息</a></li>
+        <li class="line"></li>
+       <li><a href="">最新消息</a></li>
+       <li class="line"></li>
+       <li><a href="">常见问题</a></li>
+       <li class="line"></li>
+       <li><a href="">经销网络</a></li>
+       <li class="line"></li>
+       <li><a href="">联络我们</a></li>
+   </ul>
+        <p class="bottom_text">©2015 可可饮料有限公司  版权所有  地址：广州市天河路365号天俊阁1202  电话：020- 38812035<br />
+                        湘ICP备11005311号  更多模板：<a href="http://www.mycodes.net/" target="_blank">源码之家</a></p>
+
+</div>
+
+
+
+
+</body>
+</html>

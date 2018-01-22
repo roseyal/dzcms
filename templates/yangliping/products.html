@@ -1,0 +1,27 @@
+{include file="./templates/yangliping/header.html"}
+<!--子页-->
+<div class="con3_bg">
+    <div class="con3">
+        <div class="con3_title">
+            <p>基地展示<span>products</span></p><a href="">更多>></a>
+        </div>
+        <ul class="con3_list">
+        {Dz:newslist name="vo" page="true" cateid="3" limit="2"}
+            <li>
+                <div>
+                   <a href="{$vo.url}" class="pro_img"><img src="/public/Uploads/{$vo.smallimage}" width="220" height="170" rel="/public/Uploads/{$vo.smallimage}"/></a>
+                    <span class="zoom"></span>
+                    <p><a href="">基地</a></p>
+                </div>
+              </li>
+              {/Dz:newslist}
+        </ul>
+          <div class="Page clearfix">
+               {$page}
+              </div> 
+                        
+        </div>
+    </div>
+</div>
+{include file="./templates/yangliping/footer.html"}
+

@@ -1,0 +1,118 @@
+{include file="templates/sheying/Public/header.html"}
+        <div id="met_global_nav_content">
+            <div class="lg-container" >
+
+                <div class="met_menu_section" data-section="metmm0">
+                    <div class="row">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="met-banner" >
+        <div class="carousel slide" id="met-banner-slide" data-ride="carousel">
+
+            <div class="carousel-inner " role="listbox">
+
+                <div class="item active">
+
+                    <picture>
+                        <source srcset="/templates/sheying/img/tupian2.png" media="(min-width: 768px)" />
+                        <img
+                                class="cover-image overlay-scale"
+                                srcset="../include/thumb.php?dir=../upload/201704/1491961291.png&x=600"
+                                alt=""
+                        />
+                    </picture>
+                    <div class="carousel-caption p-">
+                        <h3 class="animation-slide-top animation-delay-300" style="color:"></h3>
+                        <p class="animation-slide-bottom animation-delay-600" style="color:"></p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="met-column-nav product-search-body bordernone">
+        <div class="container">
+            <div class="row">
+
+
+                <div class="col-md-3 product_search navno">
+                    <div class="row">
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="met-product animsition type-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="less-page-content">
+
+                    <ul class="blocks blocks-100 blocks-xlg-5 blocks-md-4 blocks-sm-3 met-page-ajax met-grid" id="met-grid">
+
+                        {Dz:nlist order="id" limit="5"}
+                        <li class="">
+                            <div class="widget widget-article widget-shadow">
+                                <figure class="widget-header cover">
+                                    <a href="{$v.url}" title="全家福摄影棚拍摄" target='_self'>
+                                        <img class="cover-image" src="/public/Uploads/{$v.smallimage}" src="" alt="全家福摄影棚拍摄">
+                                    </a>
+                                </figure>
+                                <div class="widget-body">
+                                    <h3 class="widget-title">{$v.title}</h3>
+                                    <p class='red-600 font-size-20'>3500.00元</p>
+
+                                    <p>{$v.abstract}。</p>
+                                    <div class="widget-body-footer">
+                                        <div class="widget-actions pull-right">
+                                            <a href="" title="全家福摄影棚拍摄" >
+                                                <img src="/templates/sheying/img/index.jpg" alt="KIDS&LOOK" width="840" height="550" />
+                                                <span>189</span>
+                                            </a>
+                                        </div>
+                                        <a href="{$v.url}" title="全家福摄影棚拍摄" target='_self' class="btn btn-outline btn-primary">Detail</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        {/Dz:nlist}
+
+
+
+                    </ul>
+
+
+
+                    <div class="hidden-xs">
+                        <div class='met_pager'>
+                            <span class='PreSpan'>PgUp</span><a href=../product/ class='Ahover'>1</a><span class='NextSpan'>PgDn</span>
+                            <span class='PageText'>Go to</span>
+                            <input type='text' id='metPageT' data-pageurl='product.php?lang=en&class1=44&page=||1' value='1' />
+                            <input type='button' id='metPageB' value='Page' />
+                        </div>
+                    </div>
+                    <div class="met-page-ajax-body visible-xs-block">
+                        <button type="button" class="btn btn-default btn-block btn-squared ladda-button" id="met-page-btn" data-style="slide-left" data-url="http://show.metinfo.cn/muban/M1601005/364/product/?lang=en&class1=44&class2=0&class3=0&mbpagelist=1" data-page="1"><i class="icon wb-chevron-down margin-right-5" aria-hidden="true"></i>更多产品</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{include file="templates/sheying/Public/footer.html"}

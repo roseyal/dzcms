@@ -1,0 +1,44 @@
+{include file="./templates/lvse/header.html"}
+
+<div class="am-slider am-slider-default"
+     data-am-flexslider="{playAfterPaused: 8000 , controlNav: false, directionNav: false    }">
+    <a class="prevbtn" href="#" onClick="javascript :history.back(-1);"></a>
+    <div class="search-box">
+        <div><input type="text" name="" placeholder="      请输入您需要的环保类别"></div>
+        <div class="search-box-btn"></div>
+    </div>
+    <ul class="am-slides">
+        <li><img src="/templates/lvse/images/banner.jpg" alt=""></li>
+        <li><img src="/templates/lvse/images/banner.jpg" alt=""></li>
+        <li><img src="/templates/lvse/images/banner.jpg" alt=""></li>
+        <li><img src="/templates/lvse/images/banner.jpg" alt=""></li>
+    </ul>
+</div>
+<div>
+
+    <div class="article-protect-tab">
+        <span>公司新闻</span>
+        <span>行业新闻</span>
+        <span>环保知识</span>
+    </div>
+    <section class="article-contents">
+
+        <h4>{$info.title} </h4>
+        <main>
+            <p>{$info.content}</p>
+        </main>
+
+    </section>
+    <!-- <footer class="header-article-list">
+        <a class="prev-btn" href="article_list_content.html">
+            <span>上一篇</span>
+        </a>
+        <a class="next-btn" href="article_list_content.html">
+            <span>下一篇</span>
+        </a>
+    </footer> -->
+    <div class="feature">
+        <img class="sm" src="/templates/lvse/images/main5.jpg">
+    </div>
+</div>
+{include file="./templates/lvse/footer.html"}

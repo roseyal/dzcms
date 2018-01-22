@@ -1,0 +1,54 @@
+{include file='./templates/newstyle/common/header.html'/}
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="1000" height="190" valign="middle">
+      <img src="/templates/newstyle/images/new_03.jpg" width="1000" height="150" />
+    </td>
+  </tr>
+</table>
+<table width="1000" border="0" align="center" cellpadding="0" cellspacing="0">
+  <tr>
+    <td width="212" valign="top"><table border="0" cellpadding="0" cellspacing="10" bgcolor="#FFFFFF" class="bk_e4e4e4">
+      <tr>
+        <td width="190"><table border="0" cellspacing="10" cellpadding="0">
+          <tr>
+            <td align="right"><span  class="font_18 fotn_999">新闻资讯</span><br />
+                <span class="font_0A8BC4  font_24">News</span></td>
+          </tr>
+          <tr>
+            <td height="27" align="left" background="/templates/newstyle/images/left_07.jpg" class="font_fff" style=" padding-left:10px;">新闻资讯</td>
+          </tr>
+          <tr>
+            {include file='./templates/newstyle/common/menu.html'/}
+          </tr>
+        </table></td>
+      </tr>
+    </table></td>
+    <td width="20" valign="top">&nbsp;</td>
+    <td width="768" valign="top" bgcolor="#FFFFFF" class="bk_e4e4e4"><table width="100%" border="0" cellspacing="10" cellpadding="0">
+      <tr>
+        <td><table width="98%" border="0" align="center" cellpadding="0" cellspacing="0">
+          <tr>
+            <td height="30" align="left" class="font_14"><strong class="font_16">新闻资讯</strong></td>
+          </tr>
+          <tr>
+            <td height="3" background="/templates/newstyle/images/about_49.jpg"></td>
+          </tr>
+          <tr>
+            <td valign="top"><table width="95%" border="0" align="center" cellpadding="3" cellspacing="0">
+              {Dz:newslist order="id desc" limit="15"  name='vo' page='true'}
+              <tr>
+                <td width="3%" align="center" class="dhx font_st font_14">·</td>
+                <td width="86%" align="left" class="dhx"><a href="{$vo.url}">{$vo.title}</a></td>
+                <td width="11%" align="left" class="dhx fotn_999">{$vo.inputtime|date="Y-m-d",###}</td>
+              </tr>
+              </tr>
+              {/Dz:newslist}
+            </table></td>
+          </tr>
+        </table></td>
+      </tr>
+    </table>{$pages}</td>
+  </tr>
+</table>
+{include file='./templates/newstyle/common/footer.html'/}

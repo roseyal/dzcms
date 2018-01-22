@@ -1,0 +1,62 @@
+{include file="./templates/zhouhongcheng/head.html"}
+<!--头部-->
+<div class="banner banner_s"><img src="/templates/zhouhongcheng/Assets/upload/banner_a.jpg" alt=""/></div>
+<div class="space_hx">&nbsp;</div>
+<div class="scd clearfix">
+	<div class="scd_l">
+    	<div class="name">新闻中心</div>
+        <ul class="s_nav">
+        	<li>
+            	<a href="">临沂动态</a>
+            </li>
+            <li>
+            	<a href="">政策法规</a>
+            </li>
+            <li class="now">
+            	<a href="">行业新闻</a>
+            </li>
+            <li>
+            	<a href="">国际新闻</a>
+            </li>
+            <li>
+            	<a href="">分析与评论</a>
+            </li>
+            <li>
+            	<a href="">宏观经济</a>
+            </li>
+        </ul>
+    </div>
+    <div class="scd_r">
+    	<div class="dq">
+        	<span class="name">行业新闻</span>
+            <div class="pst">
+            	<span>您的位置：</span>
+                <a href="">首页</a>
+                <span>></span>
+                <a href="">新闻中心</a>
+                <span>></span>
+                <a href="" class="on">行业新闻</a>
+            </div>
+        </div>
+        <div class="scd_m">
+        	<ul class="news">
+            	{Dz:newslist order="id desc" limit="5" name='vo' page='true'}
+                <li>
+                
+                    <a href="{$vo.url}">
+                        <p>{$vo.title}</p>
+                        <em>{$vo.inputtime|date('Y-m-d');}</em>
+                    </a>
+                </li>
+                {/Dz:newslist}
+            </ul>
+            <div class="space_hx">&nbsp;</div>
+            <div class="pages" style="float:left;">
+                
+                {$page}
+                
+            </div>
+        </div>
+    </div>
+</div>
+{include file="./templates/zhouhongcheng/footer.html"}
